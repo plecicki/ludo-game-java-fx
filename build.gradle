@@ -1,9 +1,17 @@
 plugins {
     id 'java'
+    id 'org.openjfx.javafxplugin' version '0.0.10'
+    id 'application'
 }
 
 group 'org.example'
 version '1.0-SNAPSHOT'
+mainClassName = 'com.kodilla.ludogame.LudoGame'
+
+javafx {
+    version = "18.0.1"
+    modules = [ 'javafx.controls' ]
+}
 
 repositories {
     mavenCentral()
