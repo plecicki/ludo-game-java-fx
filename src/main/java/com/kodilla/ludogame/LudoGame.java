@@ -40,7 +40,7 @@ public class LudoGame extends Application {
         ImageView redPawn = new ImageView(imageRedPawn);
         redPawn.setFitHeight(40);
         redPawn.setFitWidth(40);
-        grid.add(redPawn, 7, 69, 10, 10);
+        grid.add(redPawn, 77, 61, 10, 10);
 //        grid.getChildren().remove(redPawn); EXAMPLE TO CHANGE POSITION DURING GAME
 //        grid.add(redPawn, 100, 100, 10, 10);
 

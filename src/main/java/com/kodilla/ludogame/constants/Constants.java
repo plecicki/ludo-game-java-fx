@@ -83,6 +83,31 @@ public class Constants {
         pawnPositions.add(new PawnPosition(15, 69)); //54
         pawnPositions.add(new PawnPosition(7, 69)); //55
         pawnPositions.add(new PawnPosition(7, 61)); //56
+        //Red win positions
+        pawnPositions.add(new PawnPosition(15, 61)); //1
+        pawnPositions.add(new PawnPosition(23, 61)); //2
+        pawnPositions.add(new PawnPosition(31, 61)); //3
+        pawnPositions.add(new PawnPosition(39, 61)); //4
+        pawnPositions.add(new PawnPosition(46, 61)); //5
+        //Green win positions
+        pawnPositions.add(new PawnPosition(62, 14)); //1
+        pawnPositions.add(new PawnPosition(62, 22)); //2
+        pawnPositions.add(new PawnPosition(62, 30)); //3
+        pawnPositions.add(new PawnPosition(62, 37)); //4
+        pawnPositions.add(new PawnPosition(62, 45)); //5
+        //Yellow win positions
+        pawnPositions.add(new PawnPosition(62, 107)); //1
+        pawnPositions.add(new PawnPosition(62, 100)); //2
+        pawnPositions.add(new PawnPosition(62, 92)); //3
+        pawnPositions.add(new PawnPosition(62, 84)); //4
+        pawnPositions.add(new PawnPosition(62, 76)); //5
+        //Blue win positions
+        pawnPositions.add(new PawnPosition(109, 61)); //1
+        pawnPositions.add(new PawnPosition(101, 61)); //2
+        pawnPositions.add(new PawnPosition(93, 61)); //3
+        pawnPositions.add(new PawnPosition(85, 61)); //4
+        pawnPositions.add(new PawnPosition(77, 61)); //5
+
         return pawnPositions;
     }
 }
