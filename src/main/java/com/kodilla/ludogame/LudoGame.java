@@ -13,7 +13,7 @@ import javafx.stage.Stage;
 public class LudoGame extends Application {
 
     private Image imageBackground = new Image("file:src/main/resources/ludo-game.png");
-    private Image imageRedPawn = new Image("file:src/main/resources/pawn-96.png");
+    private Image imageGreenPawn = new Image("file:src/main/resources/green-pawn.png");
 
     public static void main(String[] args) {
         launch(args);
@@ -30,15 +30,16 @@ public class LudoGame extends Application {
         grid.setAlignment(Pos.TOP_LEFT);
         grid.setHgap(10);
         grid.setVgap(10);
-        grid.setPadding(new Insets(0, 10, 0, 10));
+        grid.setPadding(new Insets(10, 10, 10, 10));
 
-        ImageView redPawn = new ImageView(imageRedPawn);
-        redPawn.setFitHeight(40);
-        redPawn.setFitWidth(40);
-        grid.add(redPawn, 30, 5);
+        ImageView greenPawn = new ImageView(imageGreenPawn);
+        greenPawn.setFitHeight(40);
+        greenPawn.setFitWidth(40);
+        grid.add(greenPawn, 42, 5);
 
-        Scene scene = new Scene(grid, 640, 750, Color.LIGHTGREEN);
+        Scene scene = new Scene(grid, 633, 750, Color.LIGHTGREEN);
 
+        primaryStage.setResizable(false);
         primaryStage.setTitle("Ludo Game");
         primaryStage.setScene(scene);
         primaryStage.show();
