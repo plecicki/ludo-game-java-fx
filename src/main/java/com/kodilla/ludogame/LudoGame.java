@@ -1,5 +1,6 @@
 package com.kodilla.ludogame;
 
+import com.kodilla.ludogame.background.SettingBackground;
 import com.kodilla.ludogame.constants.Constants;
 import com.kodilla.ludogame.pawns.Blue;
 import com.kodilla.ludogame.pawns.Green;
@@ -18,10 +19,6 @@ import javafx.stage.Stage;
 public class LudoGame extends Application {
 
     private Image imageBackground = new Image("file:src/main/resources/ludo-game.png");
-    private Image imageRedPawn = new Image("file:src/main/resources/red-pawn.png");
-    private Image imageGreenPawn = new Image("file:src/main/resources/green-pawn.png");
-    private Image imageBluePawn = new Image("file:src/main/resources/blue-pawn.png");
-    private Image imageYellowPawn = new Image("file:src/main/resources/yellow-pawn.png");
 
     public static void main(String[] args) {
         launch(args);
@@ -29,12 +26,9 @@ public class LudoGame extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        BackgroundSize backgroundSize = new BackgroundSize(BackgroundSize.AUTO, BackgroundSize.AUTO, true, true, true, false);
-        BackgroundImage backgroundImage = new BackgroundImage(imageBackground, BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT, backgroundSize);
-        Background background = new Background(backgroundImage);
 
         GridPane grid = new GridPane();
-        grid.setBackground(background);
+        grid.setBackground(new SettingBackground().setBackground());
         grid.setAlignment(Pos.TOP_LEFT);
         //grid.setGridLinesVisible(true); //TO DELETE
         grid.setHgap(5);
@@ -48,12 +42,6 @@ public class LudoGame extends Application {
 //        grid.add(redPawns[0], 77, 61, 10, 10);
 //        grid.getChildren().remove(redPawns[0]); //EXAMPLE TO CHANGE POSITION DURING GAME
 //        grid.add(redPawns[0], 100, 100, 10, 10);
-
-//        grid.add(new Green().setImage(), 109, 29, 10, 10);
-//
-//        grid.add(new Yellow().setImage(), 31, 106, 10, 10);
-//
-//        grid.add(new Blue().setImage(), 109, 106, 10, 10);
 
         for(int i=0; i<=3; i++) {
             grid.add(redPawns[i], new Constants().constantPawnPositions().get(i).getValueX(),

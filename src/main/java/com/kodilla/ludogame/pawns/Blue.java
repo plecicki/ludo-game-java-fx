@@ -5,7 +5,7 @@ import javafx.scene.image.ImageView;
 
 public class Blue implements allPawnsColors {
 
-    private Image imageBluePawn = new Image("file:src/main/resources/blue-pawn.png");
+    private Image imageBluePawn = new Image("file:src/main/resources/pawns/blue-pawn.png");
 
     public ImageView setImage() {
         ImageView bluePawn = new ImageView(imageBluePawn);
