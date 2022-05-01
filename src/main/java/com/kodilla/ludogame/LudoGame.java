@@ -2,7 +2,8 @@ package com.kodilla.ludogame;
 
 import com.kodilla.ludogame.background.SettingBackground;
 import com.kodilla.ludogame.constants.Constants;
-import com.kodilla.ludogame.controlPanel.TurnLabel;
+import com.kodilla.ludogame.controlPanel.DiceButton;
+import com.kodilla.ludogame.controlPanel.TurnLabels;
 import com.kodilla.ludogame.dice.DiceImage;
 import com.kodilla.ludogame.pawns.Blue;
 import com.kodilla.ludogame.pawns.Green;
@@ -57,7 +58,9 @@ public class LudoGame extends Application {
         }
 
         grid.add(new DiceImage().startDiceImageMethod(4), 8, 124, 30, 30);
-        grid.add(new TurnLabel().turnLabels(1),35,126,80,12);
+        grid.add(new TurnLabels().turnLabels(3),35,126,80,12);
+        grid.add(new DiceButton().throwDiceButton(),35,134, 100, 20);
+        grid.add(new TurnLabels().instructionLabels(3), 100, 108, 50, 50);
 
         Scene scene = new Scene(grid, 633, 750, Color.LIGHTGREEN);
 
