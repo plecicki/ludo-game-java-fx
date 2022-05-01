@@ -12,40 +12,58 @@ public class DiceImage {
     private Image imageDice5 = new Image("file:src/main/resources/dice/dice-5.png");
     private Image imageDice6 = new Image("file:src/main/resources/dice/dice-6.png");
 
-    public ImageView setImage1() {
+    private ImageView setImage1() {
         ImageView imageViewDice1 = new ImageView(imageDice1);
-        imageViewDice1.setFitHeight(100);
-        imageViewDice1.setFitWidth(100);
+        imageViewDice1.setFitHeight(120);
+        imageViewDice1.setFitWidth(120);
         return imageViewDice1;
     }
-    public ImageView setImage2() {
+    private ImageView setImage2() {
         ImageView imageViewDice2 = new ImageView(imageDice2);
-        imageViewDice2.setFitHeight(100);
-        imageViewDice2.setFitWidth(100);
+        imageViewDice2.setFitHeight(120);
+        imageViewDice2.setFitWidth(120);
         return imageViewDice2;
     }
-    public ImageView setImage3() {
+    private ImageView setImage3() {
         ImageView imageViewDice3 = new ImageView(imageDice3);
-        imageViewDice3.setFitHeight(100);
-        imageViewDice3.setFitWidth(100);
+        imageViewDice3.setFitHeight(120);
+        imageViewDice3.setFitWidth(120);
         return imageViewDice3;
     }
-    public ImageView setImage4() {
+    private ImageView setImage4() {
         ImageView imageViewDice4 = new ImageView(imageDice4);
-        imageViewDice4.setFitHeight(100);
-        imageViewDice4.setFitWidth(100);
+        imageViewDice4.setFitHeight(120);
+        imageViewDice4.setFitWidth(120);
         return imageViewDice4;
     }
-    public ImageView setImage5() {
+    private ImageView setImage5() {
         ImageView imageViewDice5 = new ImageView(imageDice5);
-        imageViewDice5.setFitHeight(100);
-        imageViewDice5.setFitWidth(100);
+        imageViewDice5.setFitHeight(120);
+        imageViewDice5.setFitWidth(120);
         return imageViewDice5;
     }
-    public ImageView setImage6() {
+    private ImageView setImage6() {
         ImageView imageViewDice6 = new ImageView(imageDice6);
-        imageViewDice6.setFitHeight(100);
-        imageViewDice6.setFitWidth(100);
+        imageViewDice6.setFitHeight(120);
+        imageViewDice6.setFitWidth(120);
         return imageViewDice6;
+    }
+
+    public ImageView startDiceImageMethod(int diceValue) {
+
+        if (diceValue == 1) {
+            return setImage1();
+        } else if (diceValue == 2) {
+            return setImage2();
+        } else if (diceValue == 3) {
+            return setImage3();
+        } else if (diceValue == 4) {
+            return setImage4();
+        } else if (diceValue == 5) {
+            return setImage5();
+        } else if (diceValue == 6) {
+            return setImage6();
+        }
+            return null;
     }
 }

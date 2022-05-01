@@ -2,6 +2,7 @@ package com.kodilla.ludogame;
 
 import com.kodilla.ludogame.background.SettingBackground;
 import com.kodilla.ludogame.constants.Constants;
+import com.kodilla.ludogame.dice.DiceImage;
 import com.kodilla.ludogame.pawns.Blue;
 import com.kodilla.ludogame.pawns.Green;
 import com.kodilla.ludogame.pawns.Red;
@@ -30,7 +31,7 @@ public class LudoGame extends Application {
         GridPane grid = new GridPane();
         grid.setBackground(new SettingBackground().setBackground());
         grid.setAlignment(Pos.TOP_LEFT);
-        //grid.setGridLinesVisible(true); //TO DELETE
+        grid.setGridLinesVisible(true); //TO DELETE
         grid.setHgap(5);
         grid.setVgap(5);
         grid.setPadding(new Insets(0, 0, 0, 0));
@@ -54,13 +55,13 @@ public class LudoGame extends Application {
                     new Constants().constantPawnPositions().get(i+12).getValueY(), 10, 10);
         }
 
+        grid.add(new DiceImage().startDiceImageMethod(4), 8, 124, 30, 30);
+
         Scene scene = new Scene(grid, 633, 750, Color.LIGHTGREEN);
 
         primaryStage.setResizable(false);
         primaryStage.setTitle("Ludo Game");
         primaryStage.setScene(scene);
         primaryStage.show();
-
-        System.out.println("AAAA");
     }
 }
