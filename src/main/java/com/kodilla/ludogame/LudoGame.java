@@ -2,6 +2,7 @@ package com.kodilla.ludogame;
 
 import com.kodilla.ludogame.background.SettingBackground;
 import com.kodilla.ludogame.constants.Constants;
+import com.kodilla.ludogame.constants.Labels;
 import com.kodilla.ludogame.controlPanel.DiceButton;
 import com.kodilla.ludogame.controlPanel.TurnLabels;
 import com.kodilla.ludogame.dice.DiceImage;
@@ -33,7 +34,7 @@ public class LudoGame extends Application {
         GridPane grid = new GridPane();
         grid.setBackground(new SettingBackground().setBackground());
         grid.setAlignment(Pos.TOP_LEFT);
-        grid.setGridLinesVisible(true); //TO DELETE
+        //grid.setGridLinesVisible(true); //TO DELETE
         grid.setHgap(5);
         grid.setVgap(5);
         grid.setPadding(new Insets(0, 0, 0, 0));
@@ -61,6 +62,8 @@ public class LudoGame extends Application {
         grid.add(new TurnLabels().turnLabels(3),35,126,80,12);
         grid.add(new DiceButton().throwDiceButton(),35,134, 100, 20);
         grid.add(new TurnLabels().instructionLabels(3), 100, 108, 50, 50);
+        grid.add(new Labels().setAuthorLabel(), 8, 1, 80, 7);
+        grid.add(new Labels().setGitHubLabel(), 85, 1, 80, 7);
 
         Scene scene = new Scene(grid, 633, 750, Color.LIGHTGREEN);
 
