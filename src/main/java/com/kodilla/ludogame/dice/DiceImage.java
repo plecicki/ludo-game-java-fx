@@ -13,12 +13,14 @@ public class DiceImage {
     private Image imageDice6 = new Image("file:src/main/resources/dice/dice-6.png");
 
     public ImageView actualImage;
+    public int actualDiceStatus;
 
     private ImageView setImage1() {
         ImageView imageViewDice1 = new ImageView(imageDice1);
         imageViewDice1.setFitHeight(120);
         imageViewDice1.setFitWidth(120);
         actualImage = imageViewDice1;
+        actualDiceStatus = 1;
         return imageViewDice1;
     }
     private ImageView setImage2() {
@@ -26,6 +28,7 @@ public class DiceImage {
         imageViewDice2.setFitHeight(120);
         imageViewDice2.setFitWidth(120);
         actualImage = imageViewDice2;
+        actualDiceStatus = 2;
         return imageViewDice2;
     }
     private ImageView setImage3() {
@@ -33,6 +36,7 @@ public class DiceImage {
         imageViewDice3.setFitHeight(120);
         imageViewDice3.setFitWidth(120);
         actualImage = imageViewDice3;
+        actualDiceStatus = 3;
         return imageViewDice3;
     }
     private ImageView setImage4() {
@@ -40,6 +44,7 @@ public class DiceImage {
         imageViewDice4.setFitHeight(120);
         imageViewDice4.setFitWidth(120);
         actualImage = imageViewDice4;
+        actualDiceStatus = 4;
         return imageViewDice4;
     }
     private ImageView setImage5() {
@@ -47,6 +52,7 @@ public class DiceImage {
         imageViewDice5.setFitHeight(120);
         imageViewDice5.setFitWidth(120);
         actualImage = imageViewDice5;
+        actualDiceStatus = 5;
         return imageViewDice5;
     }
     private ImageView setImage6() {
@@ -54,6 +60,7 @@ public class DiceImage {
         imageViewDice6.setFitHeight(120);
         imageViewDice6.setFitWidth(120);
         actualImage = imageViewDice6;
+        actualDiceStatus = 6;
         return imageViewDice6;
     }
 
@@ -77,5 +84,9 @@ public class DiceImage {
 
     public ImageView getActualImage() {
         return actualImage;
+    }
+
+    public int getActualDiceStatus() {
+        return actualDiceStatus;
     }
 }

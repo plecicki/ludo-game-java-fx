@@ -24,8 +24,6 @@ import javafx.stage.Stage;
 
 public class LudoGame extends Application {
 
-    private Image imageBackground = new Image("file:src/main/resources/ludo-game.png");
-
     public static void main(String[] args) {
         launch(args);
     }
@@ -64,20 +62,32 @@ public class LudoGame extends Application {
 
         DiceImage diceImage = new DiceImage();
         diceImage.startDiceImageMethod(1);
+
         ThrowDice throwDice = new ThrowDice();
 
+        TurnLabels turnLabels = new TurnLabels();
+        turnLabels.turnLabels(1);
+        turnLabels.instructionLabels(1);
+
         grid.add(diceImage.getActualImage(), 8, 124, 30, 30);
-        grid.add(new TurnLabels().turnLabels(3),35,126,80,12);
+        grid.add(turnLabels.getTurnLabel(),35,126,80,12);
         grid.add(diceButton,35,134, 100, 20);
-        grid.add(new TurnLabels().instructionLabels(3), 100, 108, 50, 50);
+        grid.add(turnLabels.getInfoLabel(), 100, 108, 50, 50);
         grid.add(new Labels().setAuthorLabel(), 8, 1, 80, 7);
         grid.add(new Labels().setGitHubLabel(), 85, 1, 80, 7);
 
         diceButton.setOnAction(value ->  {
+            //Dice Image
             grid.getChildren().remove(diceImage.getActualImage());
             throwDice.diceRandom();
             ImageView diceImageView = diceImage.startDiceImageMethod(throwDice.getDiceIndex());
             grid.add(diceImageView, 8, 124, 30, 30);
+
+            //Turn Label
+            grid.getChildren().remove(turnLabels.getTurnLabel());
+            throwDice.changeTurn(false /*TO DO*/);
+            turnLabels.turnLabels(throwDice.getPlayerIndexTurn());
+            grid.add(turnLabels.getTurnLabel(),35,126,80,12);
         });
 
         Scene scene = new Scene(grid, 633, 750, Color.LIGHTGREEN);

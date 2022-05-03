@@ -7,7 +7,10 @@ import javafx.scene.text.TextAlignment;
 
 public class TurnLabels {
 
-    public Label turnLabels(int playerIndex) {
+    private Label turnLabel;
+    private Label infoLabel;
+
+    public void turnLabels(int playerIndex) {
         Label turnLabel = new Label();
         turnLabel.setFont(new Font("Oswald",30));
         if (playerIndex == 1) {
@@ -23,10 +26,10 @@ public class TurnLabels {
             turnLabel.setText("Blue player's turn");
             turnLabel.setStyle("-fx-font-weight: bold; -fx-background-color: lightblue; -fx-text-fill: blue");
         }
-        return turnLabel;
+        this.turnLabel = turnLabel;
     }
 
-    public Label instructionLabels(int infoIndex) {
+    public void instructionLabels(int infoIndex) {
         Label infoLabel = new Label();
         infoLabel.setFont(new Font("Arial", 25));
         infoLabel.setStyle("-fx-font-weight: bold; -fx-background-color: #c9c9fa; -fx-text-fill: #585183");
@@ -39,6 +42,14 @@ public class TurnLabels {
         } else if (infoIndex == 3) {
             infoLabel.setText("No moves");
         }
+        this.infoLabel = infoLabel;
+    }
+
+    public Label getTurnLabel() {
+        return turnLabel;
+    }
+
+    public Label getInfoLabel() {
         return infoLabel;
     }
 }
