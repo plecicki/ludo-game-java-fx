@@ -6,6 +6,7 @@ import com.kodilla.ludogame.constants.Labels;
 import com.kodilla.ludogame.controlPanel.DiceButton;
 import com.kodilla.ludogame.controlPanel.TurnLabels;
 import com.kodilla.ludogame.dice.DiceImage;
+import com.kodilla.ludogame.dice.ThrowDice;
 import com.kodilla.ludogame.pawns.Blue;
 import com.kodilla.ludogame.pawns.Green;
 import com.kodilla.ludogame.pawns.Red;
@@ -14,6 +15,7 @@ import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
@@ -58,12 +60,25 @@ public class LudoGame extends Application {
                     new Constants().constantPawnPositions().get(i+12).getValueY(), 10, 10);
         }
 
-        grid.add(new DiceImage().startDiceImageMethod(4), 8, 124, 30, 30);
+        Button diceButton = new DiceButton().throwDiceButton();
+
+        DiceImage diceImage = new DiceImage();
+        diceImage.startDiceImageMethod(1);
+        ThrowDice throwDice = new ThrowDice();
+
+        grid.add(diceImage.getActualImage(), 8, 124, 30, 30);
         grid.add(new TurnLabels().turnLabels(3),35,126,80,12);
-        grid.add(new DiceButton().throwDiceButton(),35,134, 100, 20);
+        grid.add(diceButton,35,134, 100, 20);
         grid.add(new TurnLabels().instructionLabels(3), 100, 108, 50, 50);
         grid.add(new Labels().setAuthorLabel(), 8, 1, 80, 7);
         grid.add(new Labels().setGitHubLabel(), 85, 1, 80, 7);
+
+        diceButton.setOnAction(value ->  {
+            grid.getChildren().remove(diceImage.getActualImage());
+            throwDice.diceRandom();
+            ImageView diceImageView = diceImage.startDiceImageMethod(throwDice.getDiceIndex());
+            grid.add(diceImageView, 8, 124, 30, 30);
+        });
 
         Scene scene = new Scene(grid, 633, 750, Color.LIGHTGREEN);
 

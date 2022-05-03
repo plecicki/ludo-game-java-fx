@@ -16,9 +16,7 @@ public class DiceButton {
         button.setWrapText(true);
         button.setMaxSize(290, 30);
 
-        button.setOnAction(value ->  {
 
-        });
 
         return button;
     }
