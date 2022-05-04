@@ -22,6 +22,8 @@ public class OnClickPawn {
             if (actualPositionIndex >= 0 && actualPositionIndex < 4) {
                 if (diceStatus == 6) {
                     this.nextPositionIndex = 16;
+                } else {
+                    this.nextPositionIndex = actualPositionIndex;
                 }
             } else if (actualPositionIndex >= 16 && actualPositionIndex < 72) {
                 if (actualPositionIndex + diceStatus <= 76) {
@@ -36,13 +38,61 @@ public class OnClickPawn {
             if (actualPositionIndex >= 4 && actualPositionIndex < 8) {
                 if (diceStatus == 6) {
                     this.nextPositionIndex = 30;
+                } else {
+                    this.nextPositionIndex = actualPositionIndex;
                 }
+            } else if (actualPositionIndex >= 16 && actualPositionIndex < 72) {
+                if (actualPositionIndex >= 30 && actualPositionIndex < 72) {
+                    if (actualPositionIndex + diceStatus > 71) {
+                        this.nextPositionIndex = actualPositionIndex + diceStatus - 56;
+                    } else {
+                        this.nextPositionIndex = actualPositionIndex + diceStatus;
+                    }
+                } else if (actualPositionIndex >= 16 && actualPositionIndex<30) {
+                    if (actualPositionIndex + diceStatus > 29) {
+                        if (actualPositionIndex + diceStatus + 47 < 82) {
+                            this.nextPositionIndex = actualPositionIndex + diceStatus + 47;
+                        } else {
+                            this.nextPositionIndex = 81 - ((actualPositionIndex + diceStatus + 47) - 81);
+                        }
+                    } else {
+                        this.nextPositionIndex = actualPositionIndex + diceStatus;
+                    }
+                } else {
+                    //PAWN FINISHED
+                }
+            } else {
+                //PAWN FINISHED
             }
         } else if (pawnColor == 'Y') {
             if (actualPositionIndex >= 8 && actualPositionIndex < 12) {
                 if (diceStatus == 6) {
                     this.nextPositionIndex = 58;
+                } else {
+                    this.nextPositionIndex = actualPositionIndex;
                 }
+            } else if (actualPositionIndex >= 16 && actualPositionIndex < 72) {
+                if (actualPositionIndex >= 58 && actualPositionIndex < 72) {
+                    if (actualPositionIndex + diceStatus > 71) {
+                        this.nextPositionIndex = actualPositionIndex + diceStatus - 56;
+                    } else {
+                        this.nextPositionIndex = actualPositionIndex + diceStatus;
+                    }
+                } else if (actualPositionIndex >= 16 && actualPositionIndex < 58) {
+                    if (actualPositionIndex + diceStatus > 57) {
+                        if (actualPositionIndex + diceStatus + 24 < 87) {
+                            this.nextPositionIndex = actualPositionIndex + diceStatus + 24;
+                        } else {
+                            this.nextPositionIndex = 86 - ((actualPositionIndex + diceStatus + 24) - 86);
+                        }
+                    } else {
+                        this.nextPositionIndex = actualPositionIndex + diceStatus;
+                    }
+                } else {
+                    //PAWN FINISHED
+                }
+            } else {
+                //PAWN FINISHED
             }
         } else if (pawnColor == 'B') {
             if (actualPositionIndex >= 12 && actualPositionIndex < 16) {

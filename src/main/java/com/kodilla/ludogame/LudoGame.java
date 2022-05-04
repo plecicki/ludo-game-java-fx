@@ -122,33 +122,66 @@ public class LudoGame extends Application {
             onClickPawn.start(throwDice.getDiceIndex(), redP[0].getActualPositionIndex(), 'R');
             grid.add(redPawns[0], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
                     new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
-            onClickPawn.setActualPositionIndex(onClickPawn.getNextPositionIndex());
+            redP[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
         });
         redPawns[1].setOnMouseClicked((MouseEvent e) -> {
             grid.getChildren().remove(redPawns[1]);
+            onClickPawn.start(throwDice.getDiceIndex(), redP[1].getActualPositionIndex(), 'R');
+            grid.add(redPawns[1], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
+                    new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
+            redP[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+            System.out.println("1");
         });
         redPawns[2].setOnMouseClicked((MouseEvent e) -> {
             grid.getChildren().remove(redPawns[2]);
+            onClickPawn.start(throwDice.getDiceIndex(), redP[2].getActualPositionIndex(), 'R');
+            grid.add(redPawns[2], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
+                    new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
+            redP[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
         });
         redPawns[3].setOnMouseClicked((MouseEvent e) -> {
             grid.getChildren().remove(redPawns[3]);
+            onClickPawn.start(throwDice.getDiceIndex(), redP[3].getActualPositionIndex(), 'R');
+            grid.add(redPawns[3], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
+                    new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
+            redP[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
         });
 
         greenPawns[0].setOnMouseClicked((MouseEvent e) -> {
             grid.getChildren().remove(greenPawns[0]);
+            onClickPawn.start(throwDice.getDiceIndex(), greenP[0].getActualPositionIndex(), 'G');
+            grid.add(greenPawns[0], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
+                    new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
+            greenP[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
         });
         greenPawns[1].setOnMouseClicked((MouseEvent e) -> {
             grid.getChildren().remove(greenPawns[1]);
+            onClickPawn.start(throwDice.getDiceIndex(), greenP[1].getActualPositionIndex(), 'G');
+            grid.add(greenPawns[1], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
+                    new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
+            greenP[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
         });
         greenPawns[2].setOnMouseClicked((MouseEvent e) -> {
             grid.getChildren().remove(greenPawns[2]);
+            onClickPawn.start(throwDice.getDiceIndex(), greenP[2].getActualPositionIndex(), 'G');
+            grid.add(greenPawns[2], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
+                    new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
+            greenP[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
         });
         greenPawns[3].setOnMouseClicked((MouseEvent e) -> {
             grid.getChildren().remove(greenPawns[3]);
+            onClickPawn.start(throwDice.getDiceIndex(), greenP[3].getActualPositionIndex(), 'G');
+            grid.add(greenPawns[3], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
+                    new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
+            greenP[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
         });
 
         yellowPawns[0].setOnMouseClicked((MouseEvent e) -> {
             grid.getChildren().remove(yellowPawns[0]);
+            onClickPawn.start(throwDice.getDiceIndex(), yellowP[0].getActualPositionIndex(), 'Y');
+            grid.add(yellowPawns[0], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
+                    new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
+            yellowP[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
         });
         yellowPawns[1].setOnMouseClicked((MouseEvent e) -> {
             grid.getChildren().remove(yellowPawns[1]);
