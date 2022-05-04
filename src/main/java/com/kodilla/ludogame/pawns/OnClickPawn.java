@@ -8,6 +8,7 @@ public class OnClickPawn {
     private int actualPositionIndex;
     private int nextPositionIndex;
     private char pawnColor;
+    private int whoseTurn;
 
     public void start(int diceStatus, int actualPositionIndex, char pawnColor) {
         this.diceStatus = diceStatus;
@@ -155,5 +156,13 @@ public class OnClickPawn {
 
     public void setPawnColor(char pawnColor) {
         this.pawnColor = pawnColor;
+    }
+
+    public int getWhoseTurn() {
+        return whoseTurn;
+    }
+
+    public void setWhoseTurn(int whoseTurn) {
+        this.whoseTurn = whoseTurn;
     }
 }

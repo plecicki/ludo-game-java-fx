@@ -4,7 +4,7 @@ import com.kodilla.ludogame.constants.PawnPosition;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
-public class Blue implements allPawnsColors {
+public class Blue implements AllPawnsColors {
 
     private Image imageBluePawn = new Image("file:src/main/resources/pawns/blue-pawn.png");
     private PawnPosition actualPosition;
