@@ -33,6 +33,7 @@ public class OnClickPawn {
                 }
             } else {
                 //PAWN FINISHED
+                this.nextPositionIndex = actualPositionIndex;
             }
         } else if (pawnColor == 'G') {
             if (actualPositionIndex >= 4 && actualPositionIndex < 8) {
@@ -58,11 +59,10 @@ public class OnClickPawn {
                     } else {
                         this.nextPositionIndex = actualPositionIndex + diceStatus;
                     }
-                } else {
-                    //PAWN FINISHED
                 }
             } else {
                 //PAWN FINISHED
+                this.nextPositionIndex = actualPositionIndex;
             }
         } else if (pawnColor == 'Y') {
             if (actualPositionIndex >= 8 && actualPositionIndex < 12) {
@@ -88,17 +88,39 @@ public class OnClickPawn {
                     } else {
                         this.nextPositionIndex = actualPositionIndex + diceStatus;
                     }
-                } else {
-                    //PAWN FINISHED
                 }
             } else {
                 //PAWN FINISHED
+                this.nextPositionIndex = actualPositionIndex;
             }
         } else if (pawnColor == 'B') {
             if (actualPositionIndex >= 12 && actualPositionIndex < 16) {
                 if (diceStatus == 6) {
                     this.nextPositionIndex = 44;
+                } else {
+                    this.nextPositionIndex = actualPositionIndex;
                 }
+            } else if (actualPositionIndex >= 16 && actualPositionIndex < 72) {
+                if (actualPositionIndex >= 44 && actualPositionIndex < 72) {
+                    if (actualPositionIndex + diceStatus > 71) {
+                        this.nextPositionIndex = actualPositionIndex + diceStatus - 56;
+                    } else {
+                        this.nextPositionIndex = actualPositionIndex + diceStatus;
+                    }
+                } else if (actualPositionIndex >= 16 && actualPositionIndex < 44) {
+                    if (actualPositionIndex + diceStatus > 43) {
+                        if (actualPositionIndex + diceStatus + 43 < 92) {
+                            this.nextPositionIndex = actualPositionIndex + diceStatus + 43;
+                        } else {
+                            this.nextPositionIndex = 91 - ((actualPositionIndex + diceStatus + 43) - 91);
+                        }
+                    } else {
+                        this.nextPositionIndex = actualPositionIndex + diceStatus;
+                    }
+                }
+            } else {
+                //PAWN FINISHED
+                this.nextPositionIndex = actualPositionIndex;
             }
         }
     }
