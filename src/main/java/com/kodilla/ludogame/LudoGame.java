@@ -7,10 +7,7 @@ import com.kodilla.ludogame.controlPanel.DiceButton;
 import com.kodilla.ludogame.controlPanel.TurnLabels;
 import com.kodilla.ludogame.dice.DiceImage;
 import com.kodilla.ludogame.dice.ThrowDice;
-import com.kodilla.ludogame.pawns.Blue;
-import com.kodilla.ludogame.pawns.Green;
-import com.kodilla.ludogame.pawns.Red;
-import com.kodilla.ludogame.pawns.Yellow;
+import com.kodilla.ludogame.pawns.*;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -58,21 +55,25 @@ public class LudoGame extends Application {
                     new Constants().constantPawnPositions().get(i).getValueY(), 10, 10);
             redP[i].setActualPosition(new Constants().constantPawnPositions().get(i).getValueX(),
                     new Constants().constantPawnPositions().get(i).getValueY());
+            redP[i].setActualPositionIndex(i);
 
             grid.add(greenPawns[i], new Constants().constantPawnPositions().get(i+4).getValueX(),
                     new Constants().constantPawnPositions().get(i+4).getValueY(), 10, 10);
             greenP[i].setActualPosition(new Constants().constantPawnPositions().get(i+4).getValueX(),
                     new Constants().constantPawnPositions().get(i+4).getValueY());
+            greenP[i].setActualPositionIndex(i+4);
 
             grid.add(yellowPawns[i], new Constants().constantPawnPositions().get(i+8).getValueX(),
                     new Constants().constantPawnPositions().get(i+8).getValueY(), 10, 10);
             yellowP[i].setActualPosition(new Constants().constantPawnPositions().get(i+8).getValueX(),
                     new Constants().constantPawnPositions().get(i+8).getValueY());
+            yellowP[i].setActualPositionIndex(i+8);
 
             grid.add(bluePawns[i], new Constants().constantPawnPositions().get(i+12).getValueX(),
                     new Constants().constantPawnPositions().get(i+12).getValueY(), 10, 10);
             blueP[i].setActualPosition(new Constants().constantPawnPositions().get(i+12).getValueX(),
                     new Constants().constantPawnPositions().get(i+12).getValueY());
+            blueP[i].setActualPositionIndex(i+12);
         }
 
         Button diceButton = new DiceButton().throwDiceButton();
@@ -114,8 +115,14 @@ public class LudoGame extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
 
+        OnClickPawn onClickPawn = new OnClickPawn();
+
         redPawns[0].setOnMouseClicked((MouseEvent e) -> {
             grid.getChildren().remove(redPawns[0]);
+            onClickPawn.start(throwDice.getDiceIndex(), redP[0].getActualPositionIndex(), 'R');
+            grid.add(redPawns[0], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
+                    new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
+            onClickPawn.setActualPositionIndex(onClickPawn.getNextPositionIndex());
         });
         redPawns[1].setOnMouseClicked((MouseEvent e) -> {
             grid.getChildren().remove(redPawns[1]);

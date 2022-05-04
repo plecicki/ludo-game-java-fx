@@ -8,4 +8,6 @@ public interface allPawnsColors {
     ImageView setImage();
     void setActualPosition(int x, int y);
     PawnPosition getActualPosition();
+    void setActualPositionIndex(int actualPositionIndex);
+    int getActualPositionIndex();
 }
