@@ -11,7 +11,7 @@ import javafx.scene.text.FontWeight;
 import javafx.scene.text.TextAlignment;
 
 public class DiceButton {
-    private boolean available;
+    private boolean available = false;
 
     public Button throwDiceButton() {
         Button button = new Button();
@@ -24,10 +24,10 @@ public class DiceButton {
         return button;
     }
 
-    public void availableMove(char color, int diceValue,
+    public void availableMove(int whoseTurn, int diceValue,
                               Red[] reds, Green[] greens,
                               Yellow[] yellows, Blue[] blues) {
-        if (color == 'R') {
+        if (whoseTurn == 1) {
             if (reds[0].getActualPositionIndex() == 0 &&
                     reds[1].getActualPositionIndex() == 1 &&
                     reds[2].getActualPositionIndex() == 2 &&
@@ -45,7 +45,7 @@ public class DiceButton {
             } else {
                 available = true;
             }
-        } else if (color == 'G') {
+        } else if (whoseTurn == 2) {
             if (greens[0].getActualPositionIndex() == 4 &&
                     greens[1].getActualPositionIndex() == 5 &&
                     greens[2].getActualPositionIndex() == 6 &&
@@ -63,7 +63,7 @@ public class DiceButton {
             } else {
                 available = true;
             }
-        } else if (color == 'Y') {
+        } else if (whoseTurn == 3) {
             if (yellows[0].getActualPositionIndex() == 8 &&
                     yellows[1].getActualPositionIndex() == 9 &&
                     yellows[2].getActualPositionIndex() == 10 &&
@@ -81,7 +81,7 @@ public class DiceButton {
             } else {
                 available = true;
             }
-        } else if (color == 'B') {
+        } else if (whoseTurn == 4) {
             if (blues[0].getActualPositionIndex() == 12 &&
                     blues[1].getActualPositionIndex() == 13 &&
                     blues[2].getActualPositionIndex() == 14 &&

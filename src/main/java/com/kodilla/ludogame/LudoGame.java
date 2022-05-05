@@ -105,21 +105,24 @@ public class LudoGame extends Application {
             ImageView diceImageView = diceImage.startDiceImageMethod(throwDice.getDiceIndex());
             grid.add(diceImageView, 8, 124, 30, 30);
 
-            diceButtonObject.availableMove(onClickPawn.getPawnColor(), onClickPawn.getDiceStatus(),
+            diceButtonObject.availableMove(onClickPawn.getWhoseTurn(), throwDice.getDiceIndex(),
                     redP, greenP, yellowP, blueP);
+
             if (diceButtonObject.isAvailable()) {
                 diceButton.setDisable(true); //TO DO 'On click' Pawns
             } else {
+                diceButton.setDisable(false);
                 //Turn Label
                 grid.getChildren().remove(turnLabels.getTurnLabel());
-                turnLabels.turnLabels(onClickPawn.getWhoseTurn());
-                grid.add(turnLabels.getTurnLabel(), 35, 126, 80, 12);
 
                 if (onClickPawn.getWhoseTurn()<4) {
                     onClickPawn.setWhoseTurn(onClickPawn.getWhoseTurn() + 1);
                 } else if (onClickPawn.getWhoseTurn() == 4) {
                     onClickPawn.setWhoseTurn(1);
                 }
+
+                turnLabels.turnLabels(onClickPawn.getWhoseTurn());
+                grid.add(turnLabels.getTurnLabel(), 35, 126, 80, 12);
             }
         });
 
