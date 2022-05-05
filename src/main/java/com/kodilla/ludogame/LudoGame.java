@@ -76,7 +76,8 @@ public class LudoGame extends Application {
             blueP[i].setActualPositionIndex(i + 12);
         }
 
-        Button diceButton = new DiceButton().throwDiceButton();
+        DiceButton diceButtonObject = new DiceButton();
+        Button diceButton = diceButtonObject.throwDiceButton();
 
         DiceImage diceImage = new DiceImage();
         diceImage.startDiceImageMethod(1);
@@ -104,7 +105,22 @@ public class LudoGame extends Application {
             ImageView diceImageView = diceImage.startDiceImageMethod(throwDice.getDiceIndex());
             grid.add(diceImageView, 8, 124, 30, 30);
 
+            diceButtonObject.availableMove(onClickPawn.getPawnColor(), onClickPawn.getDiceStatus(),
+                    redP, greenP, yellowP, blueP);
+            if (diceButtonObject.isAvailable()) {
+                diceButton.setDisable(true); //TO DO 'On click' Pawns
+            } else {
+                //Turn Label
+                grid.getChildren().remove(turnLabels.getTurnLabel());
+                turnLabels.turnLabels(onClickPawn.getWhoseTurn());
+                grid.add(turnLabels.getTurnLabel(), 35, 126, 80, 12);
 
+                if (onClickPawn.getWhoseTurn()<4) {
+                    onClickPawn.setWhoseTurn(onClickPawn.getWhoseTurn() + 1);
+                } else if (onClickPawn.getWhoseTurn() == 4) {
+                    onClickPawn.setWhoseTurn(1);
+                }
+            }
         });
 
         Scene scene = new Scene(grid, 633, 750, Color.LIGHTGREEN);
@@ -130,6 +146,8 @@ public class LudoGame extends Application {
                 grid.getChildren().remove(turnLabels.getTurnLabel());
                 turnLabels.turnLabels(onClickPawn.getWhoseTurn());
                 grid.add(turnLabels.getTurnLabel(), 35, 126, 80, 12);
+
+                diceButton.setDisable(false);
             }
         });
         redPawns[1].setOnMouseClicked((MouseEvent e) -> {
@@ -147,6 +165,8 @@ public class LudoGame extends Application {
                 grid.getChildren().remove(turnLabels.getTurnLabel());
                 turnLabels.turnLabels(onClickPawn.getWhoseTurn());
                 grid.add(turnLabels.getTurnLabel(), 35, 126, 80, 12);
+
+                diceButton.setDisable(false);
             }
         });
         redPawns[2].setOnMouseClicked((MouseEvent e) -> {
@@ -164,6 +184,8 @@ public class LudoGame extends Application {
                 grid.getChildren().remove(turnLabels.getTurnLabel());
                 turnLabels.turnLabels(onClickPawn.getWhoseTurn());
                 grid.add(turnLabels.getTurnLabel(), 35, 126, 80, 12);
+
+                diceButton.setDisable(false);
             }
         });
         redPawns[3].setOnMouseClicked((MouseEvent e) -> {
@@ -181,6 +203,8 @@ public class LudoGame extends Application {
                 grid.getChildren().remove(turnLabels.getTurnLabel());
                 turnLabels.turnLabels(onClickPawn.getWhoseTurn());
                 grid.add(turnLabels.getTurnLabel(), 35, 126, 80, 12);
+
+                diceButton.setDisable(false);
             }
         });
 
@@ -199,6 +223,8 @@ public class LudoGame extends Application {
                 grid.getChildren().remove(turnLabels.getTurnLabel());
                 turnLabels.turnLabels(onClickPawn.getWhoseTurn());
                 grid.add(turnLabels.getTurnLabel(), 35, 126, 80, 12);
+
+                diceButton.setDisable(false);
             }
         });
         greenPawns[1].setOnMouseClicked((MouseEvent e) -> {
@@ -216,6 +242,8 @@ public class LudoGame extends Application {
                 grid.getChildren().remove(turnLabels.getTurnLabel());
                 turnLabels.turnLabels(onClickPawn.getWhoseTurn());
                 grid.add(turnLabels.getTurnLabel(), 35, 126, 80, 12);
+
+                diceButton.setDisable(false);
             }
         });
         greenPawns[2].setOnMouseClicked((MouseEvent e) -> {
@@ -233,6 +261,8 @@ public class LudoGame extends Application {
                 grid.getChildren().remove(turnLabels.getTurnLabel());
                 turnLabels.turnLabels(onClickPawn.getWhoseTurn());
                 grid.add(turnLabels.getTurnLabel(), 35, 126, 80, 12);
+
+                diceButton.setDisable(false);
             }
         });
         greenPawns[3].setOnMouseClicked((MouseEvent e) -> {
@@ -250,6 +280,8 @@ public class LudoGame extends Application {
                 grid.getChildren().remove(turnLabels.getTurnLabel());
                 turnLabels.turnLabels(onClickPawn.getWhoseTurn());
                 grid.add(turnLabels.getTurnLabel(), 35, 126, 80, 12);
+
+                diceButton.setDisable(false);
             }
         });
 
@@ -268,6 +300,8 @@ public class LudoGame extends Application {
                 grid.getChildren().remove(turnLabels.getTurnLabel());
                 turnLabels.turnLabels(onClickPawn.getWhoseTurn());
                 grid.add(turnLabels.getTurnLabel(), 35, 126, 80, 12);
+
+                diceButton.setDisable(false);
             }
         });
         yellowPawns[1].setOnMouseClicked((MouseEvent e) -> {
@@ -285,6 +319,8 @@ public class LudoGame extends Application {
                 grid.getChildren().remove(turnLabels.getTurnLabel());
                 turnLabels.turnLabels(onClickPawn.getWhoseTurn());
                 grid.add(turnLabels.getTurnLabel(), 35, 126, 80, 12);
+
+                diceButton.setDisable(false);
             }
         });
         yellowPawns[2].setOnMouseClicked((MouseEvent e) -> {
@@ -302,6 +338,8 @@ public class LudoGame extends Application {
                 grid.getChildren().remove(turnLabels.getTurnLabel());
                 turnLabels.turnLabels(onClickPawn.getWhoseTurn());
                 grid.add(turnLabels.getTurnLabel(), 35, 126, 80, 12);
+
+                diceButton.setDisable(false);
             }
         });
         yellowPawns[3].setOnMouseClicked((MouseEvent e) -> {
@@ -319,6 +357,8 @@ public class LudoGame extends Application {
                 grid.getChildren().remove(turnLabels.getTurnLabel());
                 turnLabels.turnLabels(onClickPawn.getWhoseTurn());
                 grid.add(turnLabels.getTurnLabel(), 35, 126, 80, 12);
+
+                diceButton.setDisable(false);
             }
         });
 
@@ -337,6 +377,8 @@ public class LudoGame extends Application {
                 grid.getChildren().remove(turnLabels.getTurnLabel());
                 turnLabels.turnLabels(onClickPawn.getWhoseTurn());
                 grid.add(turnLabels.getTurnLabel(), 35, 126, 80, 12);
+
+                diceButton.setDisable(false);
             }
         });
         bluePawns[1].setOnMouseClicked((MouseEvent e) -> {
@@ -354,6 +396,8 @@ public class LudoGame extends Application {
                 grid.getChildren().remove(turnLabels.getTurnLabel());
                 turnLabels.turnLabels(onClickPawn.getWhoseTurn());
                 grid.add(turnLabels.getTurnLabel(), 35, 126, 80, 12);
+
+                diceButton.setDisable(false);
             }
         });
         bluePawns[2].setOnMouseClicked((MouseEvent e) -> {
@@ -371,6 +415,8 @@ public class LudoGame extends Application {
                 grid.getChildren().remove(turnLabels.getTurnLabel());
                 turnLabels.turnLabels(onClickPawn.getWhoseTurn());
                 grid.add(turnLabels.getTurnLabel(), 35, 126, 80, 12);
+
+                diceButton.setDisable(false);
             }
         });
         bluePawns[3].setOnMouseClicked((MouseEvent e) -> {
@@ -388,6 +434,8 @@ public class LudoGame extends Application {
                 grid.getChildren().remove(turnLabels.getTurnLabel());
                 turnLabels.turnLabels(onClickPawn.getWhoseTurn());
                 grid.add(turnLabels.getTurnLabel(), 35, 126, 80, 12);
+
+                diceButton.setDisable(false);
             }
         });
     }
