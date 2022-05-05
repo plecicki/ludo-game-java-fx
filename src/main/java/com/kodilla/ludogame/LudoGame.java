@@ -109,9 +109,11 @@ public class LudoGame extends Application {
                     redP, greenP, yellowP, blueP);
 
             if (diceButtonObject.isAvailable()) {
-                diceButton.setDisable(true); //TO DO 'On click' Pawns
+                diceButton.setDisable(true);
+                diceButtonObject.setWasClicked(true);
             } else {
                 diceButton.setDisable(false);
+                diceButtonObject.setWasClicked(false);
                 //Turn Label
                 grid.getChildren().remove(turnLabels.getTurnLabel());
 
@@ -135,7 +137,9 @@ public class LudoGame extends Application {
 
 
         redPawns[0].setOnMouseClicked((MouseEvent e) -> {
-            if (onClickPawn.getWhoseTurn() == 1) {
+            if ((onClickPawn.getWhoseTurn() == 1 && diceButtonObject.isWasClicked() == true) &&
+                    !(throwDice.getDiceIndex() != 6 && (redP[0].getActualPositionIndex() == 0 ||
+                            (redP[0].getActualPositionIndex() >= 72 && redP[0].getActualPositionIndex() < 77)))) {
                 grid.getChildren().remove(redPawns[0]);
                 onClickPawn.start(throwDice.getDiceIndex(), redP[0].getActualPositionIndex(), 'R');
                 grid.add(redPawns[0], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
@@ -151,10 +155,13 @@ public class LudoGame extends Application {
                 grid.add(turnLabels.getTurnLabel(), 35, 126, 80, 12);
 
                 diceButton.setDisable(false);
+                diceButtonObject.setWasClicked(false);
             }
         });
         redPawns[1].setOnMouseClicked((MouseEvent e) -> {
-            if (onClickPawn.getWhoseTurn() == 1) {
+            if ((onClickPawn.getWhoseTurn() == 1 && diceButtonObject.isWasClicked() == true) &&
+            !(throwDice.getDiceIndex() != 6 && (redP[1].getActualPositionIndex() == 1 ||
+                    (redP[1].getActualPositionIndex() >= 72 && redP[1].getActualPositionIndex() < 77)))) {
                 grid.getChildren().remove(redPawns[1]);
                 onClickPawn.start(throwDice.getDiceIndex(), redP[1].getActualPositionIndex(), 'R');
                 grid.add(redPawns[1], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
@@ -170,10 +177,13 @@ public class LudoGame extends Application {
                 grid.add(turnLabels.getTurnLabel(), 35, 126, 80, 12);
 
                 diceButton.setDisable(false);
+                diceButtonObject.setWasClicked(false);
             }
         });
         redPawns[2].setOnMouseClicked((MouseEvent e) -> {
-            if (onClickPawn.getWhoseTurn() == 1) {
+            if ((onClickPawn.getWhoseTurn() == 1 && diceButtonObject.isWasClicked() == true) &&
+            !(throwDice.getDiceIndex() != 6 && (redP[2].getActualPositionIndex() == 2 ||
+                    (redP[2].getActualPositionIndex() >= 72 && redP[2].getActualPositionIndex() < 77)))) {
                 grid.getChildren().remove(redPawns[2]);
                 onClickPawn.start(throwDice.getDiceIndex(), redP[2].getActualPositionIndex(), 'R');
                 grid.add(redPawns[2], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
@@ -189,10 +199,13 @@ public class LudoGame extends Application {
                 grid.add(turnLabels.getTurnLabel(), 35, 126, 80, 12);
 
                 diceButton.setDisable(false);
+                diceButtonObject.setWasClicked(false);
             }
         });
         redPawns[3].setOnMouseClicked((MouseEvent e) -> {
-            if (onClickPawn.getWhoseTurn() == 1) {
+            if ((onClickPawn.getWhoseTurn() == 1 && diceButtonObject.isWasClicked() == true) &&
+            !(throwDice.getDiceIndex() != 6 && (redP[3].getActualPositionIndex() == 3 ||
+                    (redP[3].getActualPositionIndex() >= 72 && redP[3].getActualPositionIndex() < 77)))) {
                 grid.getChildren().remove(redPawns[3]);
                 onClickPawn.start(throwDice.getDiceIndex(), redP[3].getActualPositionIndex(), 'R');
                 grid.add(redPawns[3], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
@@ -208,11 +221,14 @@ public class LudoGame extends Application {
                 grid.add(turnLabels.getTurnLabel(), 35, 126, 80, 12);
 
                 diceButton.setDisable(false);
+                diceButtonObject.setWasClicked(false);
             }
         });
 
         greenPawns[0].setOnMouseClicked((MouseEvent e) -> {
-            if (onClickPawn.getWhoseTurn() == 2) {
+            if ((onClickPawn.getWhoseTurn() == 2 && diceButtonObject.isWasClicked() == true) &&
+                    !(throwDice.getDiceIndex() != 6 && (greenP[0].getActualPositionIndex() == 4 ||
+                            (greenP[0].getActualPositionIndex() >= 77 && greenP[0].getActualPositionIndex() < 82)))) {
                 grid.getChildren().remove(greenPawns[0]);
                 onClickPawn.start(throwDice.getDiceIndex(), greenP[0].getActualPositionIndex(), 'G');
                 grid.add(greenPawns[0], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
@@ -228,10 +244,13 @@ public class LudoGame extends Application {
                 grid.add(turnLabels.getTurnLabel(), 35, 126, 80, 12);
 
                 diceButton.setDisable(false);
+                diceButtonObject.setWasClicked(false);
             }
         });
         greenPawns[1].setOnMouseClicked((MouseEvent e) -> {
-            if (onClickPawn.getWhoseTurn() == 2) {
+            if ((onClickPawn.getWhoseTurn() == 2 && diceButtonObject.isWasClicked() == true) &&
+                    !(throwDice.getDiceIndex() != 6 && (greenP[1].getActualPositionIndex() == 5 ||
+                            (greenP[1].getActualPositionIndex() >= 77 && greenP[1].getActualPositionIndex() < 82)))) {
                 grid.getChildren().remove(greenPawns[1]);
                 onClickPawn.start(throwDice.getDiceIndex(), greenP[1].getActualPositionIndex(), 'G');
                 grid.add(greenPawns[1], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
@@ -247,10 +266,13 @@ public class LudoGame extends Application {
                 grid.add(turnLabels.getTurnLabel(), 35, 126, 80, 12);
 
                 diceButton.setDisable(false);
+                diceButtonObject.setWasClicked(false);
             }
         });
         greenPawns[2].setOnMouseClicked((MouseEvent e) -> {
-            if (onClickPawn.getWhoseTurn() == 2) {
+            if ((onClickPawn.getWhoseTurn() == 2 && diceButtonObject.isWasClicked() == true) &&
+                    !(throwDice.getDiceIndex() != 6 && (greenP[2].getActualPositionIndex() == 6 ||
+                            (greenP[2].getActualPositionIndex() >= 77 && greenP[2].getActualPositionIndex() < 82)))) {
                 grid.getChildren().remove(greenPawns[2]);
                 onClickPawn.start(throwDice.getDiceIndex(), greenP[2].getActualPositionIndex(), 'G');
                 grid.add(greenPawns[2], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
@@ -266,10 +288,13 @@ public class LudoGame extends Application {
                 grid.add(turnLabels.getTurnLabel(), 35, 126, 80, 12);
 
                 diceButton.setDisable(false);
+                diceButtonObject.setWasClicked(false);
             }
         });
         greenPawns[3].setOnMouseClicked((MouseEvent e) -> {
-            if (onClickPawn.getWhoseTurn() == 2) {
+            if ((onClickPawn.getWhoseTurn() == 2 && diceButtonObject.isWasClicked() == true) &&
+                    !(throwDice.getDiceIndex() != 6 && (greenP[3].getActualPositionIndex() == 7 ||
+                            (greenP[3].getActualPositionIndex() >= 77 && greenP[3].getActualPositionIndex() < 82)))) {
                 grid.getChildren().remove(greenPawns[3]);
                 onClickPawn.start(throwDice.getDiceIndex(), greenP[3].getActualPositionIndex(), 'G');
                 grid.add(greenPawns[3], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
@@ -285,11 +310,14 @@ public class LudoGame extends Application {
                 grid.add(turnLabels.getTurnLabel(), 35, 126, 80, 12);
 
                 diceButton.setDisable(false);
+                diceButtonObject.setWasClicked(false);
             }
         });
 
         yellowPawns[0].setOnMouseClicked((MouseEvent e) -> {
-            if (onClickPawn.getWhoseTurn() == 3) {
+            if ((onClickPawn.getWhoseTurn() == 3 && diceButtonObject.isWasClicked() == true) &&
+                    !(throwDice.getDiceIndex() != 6 && (yellowP[0].getActualPositionIndex() == 8 ||
+                            (yellowP[0].getActualPositionIndex() >= 82 && yellowP[0].getActualPositionIndex() < 87)))) {
                 grid.getChildren().remove(yellowPawns[0]);
                 onClickPawn.start(throwDice.getDiceIndex(), yellowP[0].getActualPositionIndex(), 'Y');
                 grid.add(yellowPawns[0], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
@@ -305,10 +333,13 @@ public class LudoGame extends Application {
                 grid.add(turnLabels.getTurnLabel(), 35, 126, 80, 12);
 
                 diceButton.setDisable(false);
+                diceButtonObject.setWasClicked(false);
             }
         });
         yellowPawns[1].setOnMouseClicked((MouseEvent e) -> {
-            if (onClickPawn.getWhoseTurn() == 3) {
+            if ((onClickPawn.getWhoseTurn() == 3 && diceButtonObject.isWasClicked() == true) &&
+                    !(throwDice.getDiceIndex() != 6 && (yellowP[1].getActualPositionIndex() == 9 ||
+                            (yellowP[1].getActualPositionIndex() >= 82 && yellowP[1].getActualPositionIndex() < 87)))) {
                 grid.getChildren().remove(yellowPawns[1]);
                 onClickPawn.start(throwDice.getDiceIndex(), yellowP[1].getActualPositionIndex(), 'Y');
                 grid.add(yellowPawns[1], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
@@ -324,10 +355,13 @@ public class LudoGame extends Application {
                 grid.add(turnLabels.getTurnLabel(), 35, 126, 80, 12);
 
                 diceButton.setDisable(false);
+                diceButtonObject.setWasClicked(false);
             }
         });
         yellowPawns[2].setOnMouseClicked((MouseEvent e) -> {
-            if (onClickPawn.getWhoseTurn() == 3) {
+            if ((onClickPawn.getWhoseTurn() == 3 && diceButtonObject.isWasClicked() == true) &&
+                    !(throwDice.getDiceIndex() != 6 && (yellowP[2].getActualPositionIndex() == 10 ||
+                            (yellowP[2].getActualPositionIndex() >= 82 && yellowP[2].getActualPositionIndex() < 87)))) {
                 grid.getChildren().remove(yellowPawns[2]);
                 onClickPawn.start(throwDice.getDiceIndex(), yellowP[2].getActualPositionIndex(), 'Y');
                 grid.add(yellowPawns[2], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
@@ -343,10 +377,13 @@ public class LudoGame extends Application {
                 grid.add(turnLabels.getTurnLabel(), 35, 126, 80, 12);
 
                 diceButton.setDisable(false);
+                diceButtonObject.setWasClicked(false);
             }
         });
         yellowPawns[3].setOnMouseClicked((MouseEvent e) -> {
-            if (onClickPawn.getWhoseTurn() == 3) {
+            if ((onClickPawn.getWhoseTurn() == 3 && diceButtonObject.isWasClicked() == true) &&
+                    !(throwDice.getDiceIndex() != 6 && (yellowP[3].getActualPositionIndex() == 11 ||
+                            (yellowP[3].getActualPositionIndex() >= 82 && yellowP[3].getActualPositionIndex() < 87)))) {
                 grid.getChildren().remove(yellowPawns[3]);
                 onClickPawn.start(throwDice.getDiceIndex(), yellowP[3].getActualPositionIndex(), 'Y');
                 grid.add(yellowPawns[3], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
@@ -362,11 +399,14 @@ public class LudoGame extends Application {
                 grid.add(turnLabels.getTurnLabel(), 35, 126, 80, 12);
 
                 diceButton.setDisable(false);
+                diceButtonObject.setWasClicked(false);
             }
         });
 
         bluePawns[0].setOnMouseClicked((MouseEvent e) -> {
-            if (onClickPawn.getWhoseTurn() == 4) {
+            if ((onClickPawn.getWhoseTurn() == 4 && diceButtonObject.isWasClicked() == true) &&
+                    !(throwDice.getDiceIndex() != 6 && (blueP[0].getActualPositionIndex() == 12 ||
+                            (blueP[0].getActualPositionIndex() >= 87 && blueP[0].getActualPositionIndex() < 92)))) {
                 grid.getChildren().remove(bluePawns[0]);
                 onClickPawn.start(throwDice.getDiceIndex(), blueP[0].getActualPositionIndex(), 'B');
                 grid.add(bluePawns[0], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
@@ -382,10 +422,13 @@ public class LudoGame extends Application {
                 grid.add(turnLabels.getTurnLabel(), 35, 126, 80, 12);
 
                 diceButton.setDisable(false);
+                diceButtonObject.setWasClicked(false);
             }
         });
         bluePawns[1].setOnMouseClicked((MouseEvent e) -> {
-            if (onClickPawn.getWhoseTurn() == 4) {
+            if ((onClickPawn.getWhoseTurn() == 4 && diceButtonObject.isWasClicked() == true) &&
+                    !(throwDice.getDiceIndex() != 6 && (blueP[1].getActualPositionIndex() == 13 ||
+                            (blueP[1].getActualPositionIndex() >= 87 && blueP[1].getActualPositionIndex() < 92)))) {
                 grid.getChildren().remove(bluePawns[1]);
                 onClickPawn.start(throwDice.getDiceIndex(), blueP[1].getActualPositionIndex(), 'B');
                 grid.add(bluePawns[1], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
@@ -401,10 +444,13 @@ public class LudoGame extends Application {
                 grid.add(turnLabels.getTurnLabel(), 35, 126, 80, 12);
 
                 diceButton.setDisable(false);
+                diceButtonObject.setWasClicked(false);
             }
         });
         bluePawns[2].setOnMouseClicked((MouseEvent e) -> {
-            if (onClickPawn.getWhoseTurn() == 4) {
+            if ((onClickPawn.getWhoseTurn() == 4 && diceButtonObject.isWasClicked() == true) &&
+                    !(throwDice.getDiceIndex() != 6 && (blueP[2].getActualPositionIndex() == 14 ||
+                            (blueP[2].getActualPositionIndex() >= 87 && blueP[2].getActualPositionIndex() < 92)))) {
                 grid.getChildren().remove(bluePawns[2]);
                 onClickPawn.start(throwDice.getDiceIndex(), blueP[2].getActualPositionIndex(), 'B');
                 grid.add(bluePawns[2], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
@@ -420,10 +466,13 @@ public class LudoGame extends Application {
                 grid.add(turnLabels.getTurnLabel(), 35, 126, 80, 12);
 
                 diceButton.setDisable(false);
+                diceButtonObject.setWasClicked(false);
             }
         });
         bluePawns[3].setOnMouseClicked((MouseEvent e) -> {
-            if (onClickPawn.getWhoseTurn() == 4) {
+            if ((onClickPawn.getWhoseTurn() == 4 && diceButtonObject.isWasClicked() == true) &&
+                    !(throwDice.getDiceIndex() != 6 && (blueP[3].getActualPositionIndex() == 15 ||
+                            (blueP[3].getActualPositionIndex() >= 87 && blueP[3].getActualPositionIndex() < 92)))) {
                 grid.getChildren().remove(bluePawns[3]);
                 onClickPawn.start(throwDice.getDiceIndex(), blueP[3].getActualPositionIndex(), 'B');
                 grid.add(bluePawns[3], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
@@ -439,6 +488,7 @@ public class LudoGame extends Application {
                 grid.add(turnLabels.getTurnLabel(), 35, 126, 80, 12);
 
                 diceButton.setDisable(false);
+                diceButtonObject.setWasClicked(false);
             }
         });
     }

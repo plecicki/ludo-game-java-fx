@@ -3,7 +3,7 @@ package com.kodilla.ludogame.dice;
 import java.util.Random;
 
 public class ThrowDice {
-    public int diceIndex = 1;
+    private int diceIndex = 1;
 
     public void diceRandom() {
         Random randDice = new Random();

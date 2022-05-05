@@ -12,6 +12,7 @@ import javafx.scene.text.TextAlignment;
 
 public class DiceButton {
     private boolean available = false;
+    private boolean wasClicked = false;
 
     public Button throwDiceButton() {
         Button button = new Button();
@@ -108,5 +109,13 @@ public class DiceButton {
 
     public void setAvailable(boolean available) {
         this.available = available;
+    }
+
+    public boolean isWasClicked() {
+        return wasClicked;
+    }
+
+    public void setWasClicked(boolean wasClicked) {
+        this.wasClicked = wasClicked;
     }
 }

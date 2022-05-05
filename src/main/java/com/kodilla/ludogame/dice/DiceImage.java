@@ -12,8 +12,8 @@ public class DiceImage {
     private Image imageDice5 = new Image("file:src/main/resources/dice/dice-5.png");
     private Image imageDice6 = new Image("file:src/main/resources/dice/dice-6.png");
 
-    public ImageView actualImage;
-    public int actualDiceStatus;
+    private ImageView actualImage;
+    private int actualDiceStatus;
 
     private ImageView setImage1() {
         ImageView imageViewDice1 = new ImageView(imageDice1);
