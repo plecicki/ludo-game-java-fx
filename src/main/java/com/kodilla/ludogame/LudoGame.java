@@ -145,6 +145,26 @@ public class LudoGame extends Application {
                 grid.add(redPawns[0], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
                         new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
                 redP[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+
+                for (int i=0; i <= 3; i++) {
+                    if (redP[0].getActualPositionIndex() == greenP[i].getActualPositionIndex()) {
+                        grid.getChildren().remove(greenPawns[i]);
+                        greenP[i].setActualPositionIndex(i+4);
+                        grid.add(greenPawns[i], new Constants().constantPawnPositions().get(greenP[i].getActualPositionIndex()).getValueX(),
+                                new Constants().constantPawnPositions().get(greenP[i].getActualPositionIndex()).getValueY(), 10, 10);
+                    } else if (redP[0].getActualPositionIndex() == yellowP[i].getActualPositionIndex()) {
+                        grid.getChildren().remove(yellowPawns[i]);
+                        yellowP[i].setActualPositionIndex(i+8);
+                        grid.add(yellowPawns[i], new Constants().constantPawnPositions().get(yellowP[i].getActualPositionIndex()).getValueX(),
+                                new Constants().constantPawnPositions().get(yellowP[i].getActualPositionIndex()).getValueY(), 10, 10);
+                    } else if (redP[0].getActualPositionIndex() == blueP[i].getActualPositionIndex()) {
+                        grid.getChildren().remove(bluePawns[i]);
+                        blueP[i].setActualPositionIndex(i+12);
+                        grid.add(bluePawns[i], new Constants().constantPawnPositions().get(blueP[i].getActualPositionIndex()).getValueX(),
+                                new Constants().constantPawnPositions().get(blueP[i].getActualPositionIndex()).getValueY(), 10, 10);
+                    }
+                }
+
                 if (throwDice.getDiceIndex() != 6) {
                     onClickPawn.setWhoseTurn(2);
                 }
@@ -167,6 +187,26 @@ public class LudoGame extends Application {
                 grid.add(redPawns[1], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
                         new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
                 redP[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+
+                for (int i=0; i <= 3; i++) {
+                    if (redP[1].getActualPositionIndex() == greenP[i].getActualPositionIndex()) {
+                        grid.getChildren().remove(greenPawns[i]);
+                        greenP[i].setActualPositionIndex(i+4);
+                        grid.add(greenPawns[i], new Constants().constantPawnPositions().get(greenP[i].getActualPositionIndex()).getValueX(),
+                                new Constants().constantPawnPositions().get(greenP[i].getActualPositionIndex()).getValueY(), 10, 10);
+                    } else if (redP[1].getActualPositionIndex() == yellowP[i].getActualPositionIndex()) {
+                        grid.getChildren().remove(yellowPawns[i]);
+                        yellowP[i].setActualPositionIndex(i+8);
+                        grid.add(yellowPawns[i], new Constants().constantPawnPositions().get(yellowP[i].getActualPositionIndex()).getValueX(),
+                                new Constants().constantPawnPositions().get(yellowP[i].getActualPositionIndex()).getValueY(), 10, 10);
+                    } else if (redP[1].getActualPositionIndex() == blueP[i].getActualPositionIndex()) {
+                        grid.getChildren().remove(bluePawns[i]);
+                        blueP[i].setActualPositionIndex(i+12);
+                        grid.add(bluePawns[i], new Constants().constantPawnPositions().get(blueP[i].getActualPositionIndex()).getValueX(),
+                                new Constants().constantPawnPositions().get(blueP[i].getActualPositionIndex()).getValueY(), 10, 10);
+                    }
+                }
+
                 if (throwDice.getDiceIndex() != 6) {
                     onClickPawn.setWhoseTurn(2);
                 }
@@ -189,6 +229,26 @@ public class LudoGame extends Application {
                 grid.add(redPawns[2], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
                         new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
                 redP[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+
+                for (int i=0; i <= 3; i++) {
+                    if (redP[2].getActualPositionIndex() == greenP[i].getActualPositionIndex()) {
+                        grid.getChildren().remove(greenPawns[i]);
+                        greenP[i].setActualPositionIndex(i+4);
+                        grid.add(greenPawns[i], new Constants().constantPawnPositions().get(greenP[i].getActualPositionIndex()).getValueX(),
+                                new Constants().constantPawnPositions().get(greenP[i].getActualPositionIndex()).getValueY(), 10, 10);
+                    } else if (redP[2].getActualPositionIndex() == yellowP[i].getActualPositionIndex()) {
+                        grid.getChildren().remove(yellowPawns[i]);
+                        yellowP[i].setActualPositionIndex(i+8);
+                        grid.add(yellowPawns[i], new Constants().constantPawnPositions().get(yellowP[i].getActualPositionIndex()).getValueX(),
+                                new Constants().constantPawnPositions().get(yellowP[i].getActualPositionIndex()).getValueY(), 10, 10);
+                    } else if (redP[2].getActualPositionIndex() == blueP[i].getActualPositionIndex()) {
+                        grid.getChildren().remove(bluePawns[i]);
+                        blueP[i].setActualPositionIndex(i+12);
+                        grid.add(bluePawns[i], new Constants().constantPawnPositions().get(blueP[i].getActualPositionIndex()).getValueX(),
+                                new Constants().constantPawnPositions().get(blueP[i].getActualPositionIndex()).getValueY(), 10, 10);
+                    }
+                }
+
                 if (throwDice.getDiceIndex() != 6) {
                     onClickPawn.setWhoseTurn(2);
                 }
@@ -211,6 +271,26 @@ public class LudoGame extends Application {
                 grid.add(redPawns[3], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
                         new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
                 redP[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+
+                for (int i=0; i <= 3; i++) {
+                    if (redP[3].getActualPositionIndex() == greenP[i].getActualPositionIndex()) {
+                        grid.getChildren().remove(greenPawns[i]);
+                        greenP[i].setActualPositionIndex(i+4);
+                        grid.add(greenPawns[i], new Constants().constantPawnPositions().get(greenP[i].getActualPositionIndex()).getValueX(),
+                                new Constants().constantPawnPositions().get(greenP[i].getActualPositionIndex()).getValueY(), 10, 10);
+                    } else if (redP[3].getActualPositionIndex() == yellowP[i].getActualPositionIndex()) {
+                        grid.getChildren().remove(yellowPawns[i]);
+                        yellowP[i].setActualPositionIndex(i+8);
+                        grid.add(yellowPawns[i], new Constants().constantPawnPositions().get(yellowP[i].getActualPositionIndex()).getValueX(),
+                                new Constants().constantPawnPositions().get(yellowP[i].getActualPositionIndex()).getValueY(), 10, 10);
+                    } else if (redP[3].getActualPositionIndex() == blueP[i].getActualPositionIndex()) {
+                        grid.getChildren().remove(bluePawns[i]);
+                        blueP[i].setActualPositionIndex(i+12);
+                        grid.add(bluePawns[i], new Constants().constantPawnPositions().get(blueP[i].getActualPositionIndex()).getValueX(),
+                                new Constants().constantPawnPositions().get(blueP[i].getActualPositionIndex()).getValueY(), 10, 10);
+                    }
+                }
+
                 if (throwDice.getDiceIndex() != 6) {
                     onClickPawn.setWhoseTurn(2);
                 }
@@ -234,6 +314,26 @@ public class LudoGame extends Application {
                 grid.add(greenPawns[0], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
                         new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
                 greenP[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+
+                for (int i=0; i <= 3; i++) {
+                    if (greenP[0].getActualPositionIndex() == redP[i].getActualPositionIndex()) {
+                        grid.getChildren().remove(redPawns[i]);
+                        redP[i].setActualPositionIndex(i);
+                        grid.add(redPawns[i], new Constants().constantPawnPositions().get(redP[i].getActualPositionIndex()).getValueX(),
+                                new Constants().constantPawnPositions().get(redP[i].getActualPositionIndex()).getValueY(), 10, 10);
+                    } else if (greenP[0].getActualPositionIndex() == yellowP[i].getActualPositionIndex()) {
+                        grid.getChildren().remove(yellowPawns[i]);
+                        yellowP[i].setActualPositionIndex(i+8);
+                        grid.add(yellowPawns[i], new Constants().constantPawnPositions().get(yellowP[i].getActualPositionIndex()).getValueX(),
+                                new Constants().constantPawnPositions().get(yellowP[i].getActualPositionIndex()).getValueY(), 10, 10);
+                    } else if (greenP[0].getActualPositionIndex() == blueP[i].getActualPositionIndex()) {
+                        grid.getChildren().remove(bluePawns[i]);
+                        blueP[i].setActualPositionIndex(i+12);
+                        grid.add(bluePawns[i], new Constants().constantPawnPositions().get(blueP[i].getActualPositionIndex()).getValueX(),
+                                new Constants().constantPawnPositions().get(blueP[i].getActualPositionIndex()).getValueY(), 10, 10);
+                    }
+                }
+
                 if (throwDice.getDiceIndex() != 6) {
                     onClickPawn.setWhoseTurn(3);
                 }
@@ -256,6 +356,26 @@ public class LudoGame extends Application {
                 grid.add(greenPawns[1], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
                         new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
                 greenP[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+
+                for (int i=0; i <= 3; i++) {
+                    if (greenP[1].getActualPositionIndex() == redP[i].getActualPositionIndex()) {
+                        grid.getChildren().remove(redPawns[i]);
+                        redP[i].setActualPositionIndex(i);
+                        grid.add(redPawns[i], new Constants().constantPawnPositions().get(redP[i].getActualPositionIndex()).getValueX(),
+                                new Constants().constantPawnPositions().get(redP[i].getActualPositionIndex()).getValueY(), 10, 10);
+                    } else if (greenP[1].getActualPositionIndex() == yellowP[i].getActualPositionIndex()) {
+                        grid.getChildren().remove(yellowPawns[i]);
+                        yellowP[i].setActualPositionIndex(i+8);
+                        grid.add(yellowPawns[i], new Constants().constantPawnPositions().get(yellowP[i].getActualPositionIndex()).getValueX(),
+                                new Constants().constantPawnPositions().get(yellowP[i].getActualPositionIndex()).getValueY(), 10, 10);
+                    } else if (greenP[1].getActualPositionIndex() == blueP[i].getActualPositionIndex()) {
+                        grid.getChildren().remove(bluePawns[i]);
+                        blueP[i].setActualPositionIndex(i+12);
+                        grid.add(bluePawns[i], new Constants().constantPawnPositions().get(blueP[i].getActualPositionIndex()).getValueX(),
+                                new Constants().constantPawnPositions().get(blueP[i].getActualPositionIndex()).getValueY(), 10, 10);
+                    }
+                }
+
                 if (throwDice.getDiceIndex() != 6) {
                     onClickPawn.setWhoseTurn(3);
                 }
@@ -278,6 +398,26 @@ public class LudoGame extends Application {
                 grid.add(greenPawns[2], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
                         new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
                 greenP[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+
+                for (int i=0; i <= 3; i++) {
+                    if (greenP[2].getActualPositionIndex() == redP[i].getActualPositionIndex()) {
+                        grid.getChildren().remove(redPawns[i]);
+                        redP[i].setActualPositionIndex(i);
+                        grid.add(redPawns[i], new Constants().constantPawnPositions().get(redP[i].getActualPositionIndex()).getValueX(),
+                                new Constants().constantPawnPositions().get(redP[i].getActualPositionIndex()).getValueY(), 10, 10);
+                    } else if (greenP[2].getActualPositionIndex() == yellowP[i].getActualPositionIndex()) {
+                        grid.getChildren().remove(yellowPawns[i]);
+                        yellowP[i].setActualPositionIndex(i+8);
+                        grid.add(yellowPawns[i], new Constants().constantPawnPositions().get(yellowP[i].getActualPositionIndex()).getValueX(),
+                                new Constants().constantPawnPositions().get(yellowP[i].getActualPositionIndex()).getValueY(), 10, 10);
+                    } else if (greenP[2].getActualPositionIndex() == blueP[i].getActualPositionIndex()) {
+                        grid.getChildren().remove(bluePawns[i]);
+                        blueP[i].setActualPositionIndex(i+12);
+                        grid.add(bluePawns[i], new Constants().constantPawnPositions().get(blueP[i].getActualPositionIndex()).getValueX(),
+                                new Constants().constantPawnPositions().get(blueP[i].getActualPositionIndex()).getValueY(), 10, 10);
+                    }
+                }
+
                 if (throwDice.getDiceIndex() != 6) {
                     onClickPawn.setWhoseTurn(3);
                 }
@@ -300,6 +440,26 @@ public class LudoGame extends Application {
                 grid.add(greenPawns[3], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
                         new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
                 greenP[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+
+                for (int i=0; i <= 3; i++) {
+                    if (greenP[3].getActualPositionIndex() == redP[i].getActualPositionIndex()) {
+                        grid.getChildren().remove(redPawns[i]);
+                        redP[i].setActualPositionIndex(i);
+                        grid.add(redPawns[i], new Constants().constantPawnPositions().get(redP[i].getActualPositionIndex()).getValueX(),
+                                new Constants().constantPawnPositions().get(redP[i].getActualPositionIndex()).getValueY(), 10, 10);
+                    } else if (greenP[3].getActualPositionIndex() == yellowP[i].getActualPositionIndex()) {
+                        grid.getChildren().remove(yellowPawns[i]);
+                        yellowP[i].setActualPositionIndex(i+8);
+                        grid.add(yellowPawns[i], new Constants().constantPawnPositions().get(yellowP[i].getActualPositionIndex()).getValueX(),
+                                new Constants().constantPawnPositions().get(yellowP[i].getActualPositionIndex()).getValueY(), 10, 10);
+                    } else if (greenP[3].getActualPositionIndex() == blueP[i].getActualPositionIndex()) {
+                        grid.getChildren().remove(bluePawns[i]);
+                        blueP[i].setActualPositionIndex(i+12);
+                        grid.add(bluePawns[i], new Constants().constantPawnPositions().get(blueP[i].getActualPositionIndex()).getValueX(),
+                                new Constants().constantPawnPositions().get(blueP[i].getActualPositionIndex()).getValueY(), 10, 10);
+                    }
+                }
+
                 if (throwDice.getDiceIndex() != 6) {
                     onClickPawn.setWhoseTurn(3);
                 }
@@ -323,6 +483,26 @@ public class LudoGame extends Application {
                 grid.add(yellowPawns[0], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
                         new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
                 yellowP[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+
+                for (int i=0; i <= 3; i++) {
+                    if (yellowP[0].getActualPositionIndex() == redP[i].getActualPositionIndex()) {
+                        grid.getChildren().remove(redPawns[i]);
+                        redP[i].setActualPositionIndex(i);
+                        grid.add(redPawns[i], new Constants().constantPawnPositions().get(redP[i].getActualPositionIndex()).getValueX(),
+                                new Constants().constantPawnPositions().get(redP[i].getActualPositionIndex()).getValueY(), 10, 10);
+                    } else if (yellowP[0].getActualPositionIndex() == greenP[i].getActualPositionIndex()) {
+                        grid.getChildren().remove(greenPawns[i]);
+                        greenP[i].setActualPositionIndex(i+4);
+                        grid.add(greenPawns[i], new Constants().constantPawnPositions().get(greenP[i].getActualPositionIndex()).getValueX(),
+                                new Constants().constantPawnPositions().get(greenP[i].getActualPositionIndex()).getValueY(), 10, 10);
+                    } else if (yellowP[0].getActualPositionIndex() == blueP[i].getActualPositionIndex()) {
+                        grid.getChildren().remove(bluePawns[i]);
+                        blueP[i].setActualPositionIndex(i+12);
+                        grid.add(bluePawns[i], new Constants().constantPawnPositions().get(blueP[i].getActualPositionIndex()).getValueX(),
+                                new Constants().constantPawnPositions().get(blueP[i].getActualPositionIndex()).getValueY(), 10, 10);
+                    }
+                }
+
                 if (throwDice.getDiceIndex() != 6) {
                     onClickPawn.setWhoseTurn(4);
                 }
@@ -345,6 +525,26 @@ public class LudoGame extends Application {
                 grid.add(yellowPawns[1], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
                         new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
                 yellowP[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+
+                for (int i=0; i <= 3; i++) {
+                    if (yellowP[1].getActualPositionIndex() == redP[i].getActualPositionIndex()) {
+                        grid.getChildren().remove(redPawns[i]);
+                        redP[i].setActualPositionIndex(i);
+                        grid.add(redPawns[i], new Constants().constantPawnPositions().get(redP[i].getActualPositionIndex()).getValueX(),
+                                new Constants().constantPawnPositions().get(redP[i].getActualPositionIndex()).getValueY(), 10, 10);
+                    } else if (yellowP[1].getActualPositionIndex() == greenP[i].getActualPositionIndex()) {
+                        grid.getChildren().remove(greenPawns[i]);
+                        greenP[i].setActualPositionIndex(i+4);
+                        grid.add(greenPawns[i], new Constants().constantPawnPositions().get(greenP[i].getActualPositionIndex()).getValueX(),
+                                new Constants().constantPawnPositions().get(greenP[i].getActualPositionIndex()).getValueY(), 10, 10);
+                    } else if (yellowP[1].getActualPositionIndex() == blueP[i].getActualPositionIndex()) {
+                        grid.getChildren().remove(bluePawns[i]);
+                        blueP[i].setActualPositionIndex(i+12);
+                        grid.add(bluePawns[i], new Constants().constantPawnPositions().get(blueP[i].getActualPositionIndex()).getValueX(),
+                                new Constants().constantPawnPositions().get(blueP[i].getActualPositionIndex()).getValueY(), 10, 10);
+                    }
+                }
+
                 if (throwDice.getDiceIndex() != 6) {
                     onClickPawn.setWhoseTurn(4);
                 }
@@ -367,6 +567,26 @@ public class LudoGame extends Application {
                 grid.add(yellowPawns[2], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
                         new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
                 yellowP[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+
+                for (int i=0; i <= 3; i++) {
+                    if (yellowP[2].getActualPositionIndex() == redP[i].getActualPositionIndex()) {
+                        grid.getChildren().remove(redPawns[i]);
+                        redP[i].setActualPositionIndex(i);
+                        grid.add(redPawns[i], new Constants().constantPawnPositions().get(redP[i].getActualPositionIndex()).getValueX(),
+                                new Constants().constantPawnPositions().get(redP[i].getActualPositionIndex()).getValueY(), 10, 10);
+                    } else if (yellowP[2].getActualPositionIndex() == greenP[i].getActualPositionIndex()) {
+                        grid.getChildren().remove(greenPawns[i]);
+                        greenP[i].setActualPositionIndex(i+4);
+                        grid.add(greenPawns[i], new Constants().constantPawnPositions().get(greenP[i].getActualPositionIndex()).getValueX(),
+                                new Constants().constantPawnPositions().get(greenP[i].getActualPositionIndex()).getValueY(), 10, 10);
+                    } else if (yellowP[2].getActualPositionIndex() == blueP[i].getActualPositionIndex()) {
+                        grid.getChildren().remove(bluePawns[i]);
+                        blueP[i].setActualPositionIndex(i+12);
+                        grid.add(bluePawns[i], new Constants().constantPawnPositions().get(blueP[i].getActualPositionIndex()).getValueX(),
+                                new Constants().constantPawnPositions().get(blueP[i].getActualPositionIndex()).getValueY(), 10, 10);
+                    }
+                }
+
                 if (throwDice.getDiceIndex() != 6) {
                     onClickPawn.setWhoseTurn(4);
                 }
@@ -389,6 +609,26 @@ public class LudoGame extends Application {
                 grid.add(yellowPawns[3], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
                         new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
                 yellowP[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+
+                for (int i=0; i <= 3; i++) {
+                    if (yellowP[3].getActualPositionIndex() == redP[i].getActualPositionIndex()) {
+                        grid.getChildren().remove(redPawns[i]);
+                        redP[i].setActualPositionIndex(i);
+                        grid.add(redPawns[i], new Constants().constantPawnPositions().get(redP[i].getActualPositionIndex()).getValueX(),
+                                new Constants().constantPawnPositions().get(redP[i].getActualPositionIndex()).getValueY(), 10, 10);
+                    } else if (yellowP[3].getActualPositionIndex() == greenP[i].getActualPositionIndex()) {
+                        grid.getChildren().remove(greenPawns[i]);
+                        greenP[i].setActualPositionIndex(i+4);
+                        grid.add(greenPawns[i], new Constants().constantPawnPositions().get(greenP[i].getActualPositionIndex()).getValueX(),
+                                new Constants().constantPawnPositions().get(greenP[i].getActualPositionIndex()).getValueY(), 10, 10);
+                    } else if (yellowP[3].getActualPositionIndex() == blueP[i].getActualPositionIndex()) {
+                        grid.getChildren().remove(bluePawns[i]);
+                        blueP[i].setActualPositionIndex(i+12);
+                        grid.add(bluePawns[i], new Constants().constantPawnPositions().get(blueP[i].getActualPositionIndex()).getValueX(),
+                                new Constants().constantPawnPositions().get(blueP[i].getActualPositionIndex()).getValueY(), 10, 10);
+                    }
+                }
+
                 if (throwDice.getDiceIndex() != 6) {
                     onClickPawn.setWhoseTurn(4);
                 }
@@ -412,6 +652,26 @@ public class LudoGame extends Application {
                 grid.add(bluePawns[0], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
                         new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
                 blueP[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+
+                for (int i=0; i <= 3; i++) {
+                    if (blueP[0].getActualPositionIndex() == redP[i].getActualPositionIndex()) {
+                        grid.getChildren().remove(redPawns[i]);
+                        redP[i].setActualPositionIndex(i);
+                        grid.add(redPawns[i], new Constants().constantPawnPositions().get(redP[i].getActualPositionIndex()).getValueX(),
+                                new Constants().constantPawnPositions().get(redP[i].getActualPositionIndex()).getValueY(), 10, 10);
+                    } else if (blueP[0].getActualPositionIndex() == greenP[i].getActualPositionIndex()) {
+                        grid.getChildren().remove(greenPawns[i]);
+                        greenP[i].setActualPositionIndex(i+4);
+                        grid.add(greenPawns[i], new Constants().constantPawnPositions().get(greenP[i].getActualPositionIndex()).getValueX(),
+                                new Constants().constantPawnPositions().get(greenP[i].getActualPositionIndex()).getValueY(), 10, 10);
+                    } else if (blueP[0].getActualPositionIndex() == yellowP[i].getActualPositionIndex()) {
+                        grid.getChildren().remove(yellowPawns[i]);
+                        yellowP[i].setActualPositionIndex(i+8);
+                        grid.add(yellowPawns[i], new Constants().constantPawnPositions().get(yellowP[i].getActualPositionIndex()).getValueX(),
+                                new Constants().constantPawnPositions().get(yellowP[i].getActualPositionIndex()).getValueY(), 10, 10);
+                    }
+                }
+
                 if (throwDice.getDiceIndex() != 6) {
                     onClickPawn.setWhoseTurn(1);
                 }
@@ -434,6 +694,26 @@ public class LudoGame extends Application {
                 grid.add(bluePawns[1], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
                         new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
                 blueP[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+
+                for (int i=0; i <= 3; i++) {
+                    if (blueP[1].getActualPositionIndex() == redP[i].getActualPositionIndex()) {
+                        grid.getChildren().remove(redPawns[i]);
+                        redP[i].setActualPositionIndex(i);
+                        grid.add(redPawns[i], new Constants().constantPawnPositions().get(redP[i].getActualPositionIndex()).getValueX(),
+                                new Constants().constantPawnPositions().get(redP[i].getActualPositionIndex()).getValueY(), 10, 10);
+                    } else if (blueP[1].getActualPositionIndex() == greenP[i].getActualPositionIndex()) {
+                        grid.getChildren().remove(greenPawns[i]);
+                        greenP[i].setActualPositionIndex(i+4);
+                        grid.add(greenPawns[i], new Constants().constantPawnPositions().get(greenP[i].getActualPositionIndex()).getValueX(),
+                                new Constants().constantPawnPositions().get(greenP[i].getActualPositionIndex()).getValueY(), 10, 10);
+                    } else if (blueP[1].getActualPositionIndex() == yellowP[i].getActualPositionIndex()) {
+                        grid.getChildren().remove(yellowPawns[i]);
+                        yellowP[i].setActualPositionIndex(i+8);
+                        grid.add(yellowPawns[i], new Constants().constantPawnPositions().get(yellowP[i].getActualPositionIndex()).getValueX(),
+                                new Constants().constantPawnPositions().get(yellowP[i].getActualPositionIndex()).getValueY(), 10, 10);
+                    }
+                }
+
                 if (throwDice.getDiceIndex() != 6) {
                     onClickPawn.setWhoseTurn(1);
                 }
@@ -456,6 +736,26 @@ public class LudoGame extends Application {
                 grid.add(bluePawns[2], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
                         new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
                 blueP[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+
+                for (int i=0; i <= 3; i++) {
+                    if (blueP[2].getActualPositionIndex() == redP[i].getActualPositionIndex()) {
+                        grid.getChildren().remove(redPawns[i]);
+                        redP[i].setActualPositionIndex(i);
+                        grid.add(redPawns[i], new Constants().constantPawnPositions().get(redP[i].getActualPositionIndex()).getValueX(),
+                                new Constants().constantPawnPositions().get(redP[i].getActualPositionIndex()).getValueY(), 10, 10);
+                    } else if (blueP[2].getActualPositionIndex() == greenP[i].getActualPositionIndex()) {
+                        grid.getChildren().remove(greenPawns[i]);
+                        greenP[i].setActualPositionIndex(i+4);
+                        grid.add(greenPawns[i], new Constants().constantPawnPositions().get(greenP[i].getActualPositionIndex()).getValueX(),
+                                new Constants().constantPawnPositions().get(greenP[i].getActualPositionIndex()).getValueY(), 10, 10);
+                    } else if (blueP[2].getActualPositionIndex() == yellowP[i].getActualPositionIndex()) {
+                        grid.getChildren().remove(yellowPawns[i]);
+                        yellowP[i].setActualPositionIndex(i+8);
+                        grid.add(yellowPawns[i], new Constants().constantPawnPositions().get(yellowP[i].getActualPositionIndex()).getValueX(),
+                                new Constants().constantPawnPositions().get(yellowP[i].getActualPositionIndex()).getValueY(), 10, 10);
+                    }
+                }
+
                 if (throwDice.getDiceIndex() != 6) {
                     onClickPawn.setWhoseTurn(1);
                 }
@@ -478,6 +778,26 @@ public class LudoGame extends Application {
                 grid.add(bluePawns[3], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
                         new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
                 blueP[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+
+                for (int i=0; i <= 3; i++) {
+                    if (blueP[3].getActualPositionIndex() == redP[i].getActualPositionIndex()) {
+                        grid.getChildren().remove(redPawns[i]);
+                        redP[i].setActualPositionIndex(i);
+                        grid.add(redPawns[i], new Constants().constantPawnPositions().get(redP[i].getActualPositionIndex()).getValueX(),
+                                new Constants().constantPawnPositions().get(redP[i].getActualPositionIndex()).getValueY(), 10, 10);
+                    } else if (blueP[3].getActualPositionIndex() == greenP[i].getActualPositionIndex()) {
+                        grid.getChildren().remove(greenPawns[i]);
+                        greenP[i].setActualPositionIndex(i+4);
+                        grid.add(greenPawns[i], new Constants().constantPawnPositions().get(greenP[i].getActualPositionIndex()).getValueX(),
+                                new Constants().constantPawnPositions().get(greenP[i].getActualPositionIndex()).getValueY(), 10, 10);
+                    } else if (blueP[3].getActualPositionIndex() == yellowP[i].getActualPositionIndex()) {
+                        grid.getChildren().remove(yellowPawns[i]);
+                        yellowP[i].setActualPositionIndex(i+8);
+                        grid.add(yellowPawns[i], new Constants().constantPawnPositions().get(yellowP[i].getActualPositionIndex()).getValueX(),
+                                new Constants().constantPawnPositions().get(yellowP[i].getActualPositionIndex()).getValueY(), 10, 10);
+                    }
+                }
+
                 if (throwDice.getDiceIndex() != 6) {
                     onClickPawn.setWhoseTurn(1);
                 }
