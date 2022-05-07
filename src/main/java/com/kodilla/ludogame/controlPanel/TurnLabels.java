@@ -38,9 +38,7 @@ public class TurnLabels {
         if (infoIndex == 1) {
             infoLabel.setText("Throw\nthe dice");
         } else if (infoIndex == 2) {
-            infoLabel.setText("Choose\nthe pawn");
-        } else if (infoIndex == 3) {
-            infoLabel.setText("No moves");
+            infoLabel.setText("Choose\nthe pawn\nand click");
         }
         this.infoLabel = infoLabel;
     }
