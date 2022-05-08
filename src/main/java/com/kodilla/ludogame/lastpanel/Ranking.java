@@ -12,6 +12,10 @@ public class Ranking {
     private ArrayList<String> playersRanking;
     private Boolean[] areInRanking = {false, false, false, false};
 
+    public Ranking(ArrayList<String> playersRanking) {
+        this.playersRanking = playersRanking;
+    }
+
     public void checkIfRedWon(Red[] reds, int playerIndex) {
         if (reds[playerIndex].getActualPositionIndex() >= 72 && reds[playerIndex].getActualPositionIndex() < 77) {
             reds[playerIndex].setFinish(true);
@@ -22,6 +26,8 @@ public class Ranking {
                 areInRanking[0] == false) {
             this.playersRanking.add("RED");
             this.areInRanking[0] = true;
+
+            openEndFrame();
         }
     }
 
@@ -35,6 +41,8 @@ public class Ranking {
                 areInRanking[1] == false) {
             this.playersRanking.add("GREEN");
             this.areInRanking[1] = true;
+
+            openEndFrame();
         }
     }
 
@@ -48,6 +56,8 @@ public class Ranking {
                 areInRanking[2] == false) {
             this.playersRanking.add("YELLOW");
             this.areInRanking[2] = true;
+
+            openEndFrame();
         }
     }
 
@@ -61,6 +71,17 @@ public class Ranking {
                 areInRanking[3] == false) {
             this.playersRanking.add("BLUE");
             this.areInRanking[3] = true;
+
+            openEndFrame();
+        }
+    }
+
+    private void openEndFrame() {
+        if (areInRanking[0] == true &&
+                areInRanking[1] == true &&
+                areInRanking[2] == true &&
+                areInRanking[3] == true) {
+            new EndFrame(playersRanking).displayEndFrame();
         }
     }
 }

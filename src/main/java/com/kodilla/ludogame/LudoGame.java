@@ -8,6 +8,7 @@ import com.kodilla.ludogame.controlPanel.DiceButton;
 import com.kodilla.ludogame.controlPanel.TurnLabels;
 import com.kodilla.ludogame.dice.DiceImage;
 import com.kodilla.ludogame.dice.ThrowDice;
+import com.kodilla.ludogame.lastpanel.EndFrame;
 import com.kodilla.ludogame.lastpanel.Ranking;
 import com.kodilla.ludogame.pawns.*;
 import javafx.application.Application;
@@ -20,6 +21,8 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+
+import java.util.ArrayList;
 
 public class LudoGame extends Application {
 
@@ -73,7 +76,8 @@ public class LudoGame extends Application {
             blueP[i].setActualPositionIndex(i + 12);
         }
 
-        Ranking ranking = new Ranking();
+        ArrayList<String> rank = new ArrayList<>();
+        Ranking ranking = new Ranking(rank);
 
         DiceButton diceButtonObject = new DiceButton();
         Button diceButton = diceButtonObject.throwDiceButton();
