@@ -1,7 +1,5 @@
 package com.kodilla.ludogame.pawns;
 
-import com.kodilla.ludogame.constants.PawnPosition;
-
 public class OnClickPawn {
 
     private int diceStatus;
@@ -126,36 +124,8 @@ public class OnClickPawn {
         }
     }
 
-    public int getDiceStatus() {
-        return diceStatus;
-    }
-
-    public void setDiceStatus(int diceStatus) {
-        this.diceStatus = diceStatus;
-    }
-
-    public int getActualPositionIndex() {
-        return actualPositionIndex;
-    }
-
-    public void setActualPositionIndex(int actualPositionIndex) {
-        this.actualPositionIndex = actualPositionIndex;
-    }
-
     public int getNextPositionIndex() {
         return nextPositionIndex;
-    }
-
-    public void setNextPositionIndex(int nextPositionIndex) {
-        this.nextPositionIndex = nextPositionIndex;
-    }
-
-    public char getPawnColor() {
-        return pawnColor;
-    }
-
-    public void setPawnColor(char pawnColor) {
-        this.pawnColor = pawnColor;
     }
 
     public int getWhoseTurn() {

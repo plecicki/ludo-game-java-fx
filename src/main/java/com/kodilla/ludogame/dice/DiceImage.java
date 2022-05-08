@@ -85,8 +85,4 @@ public class DiceImage {
     public ImageView getActualImage() {
         return actualImage;
     }
-
-    public int getActualDiceStatus() {
-        return actualDiceStatus;
-    }
 }

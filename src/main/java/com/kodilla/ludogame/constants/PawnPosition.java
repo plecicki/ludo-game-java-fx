@@ -14,15 +14,7 @@ public class PawnPosition {
         return valueX;
     }
 
-    public void setValueX(int valueX) {
-        this.valueX = valueX;
-    }
-
     public int getValueY() {
         return valueY;
-    }
-
-    public void setValueY(int valueY) {
-        this.valueY = valueY;
     }
 }
