@@ -9,6 +9,7 @@ public class Blue implements AllPawnsColors {
     private Image imageBluePawn = new Image("file:src/main/resources/pawns/blue-pawn.png");
     private PawnPosition actualPosition;
     private int actualPositionIndex;
+    private boolean finish = false;
 
     public ImageView setImage() {
         ImageView bluePawn = new ImageView(imageBluePawn);
@@ -31,5 +32,13 @@ public class Blue implements AllPawnsColors {
 
     public void setActualPositionIndex(int actualPositionIndex) {
         this.actualPositionIndex = actualPositionIndex;
+    }
+
+    public boolean isFinish() {
+        return finish;
+    }
+
+    public void setFinish(boolean finish) {
+        this.finish = finish;
     }
 }
