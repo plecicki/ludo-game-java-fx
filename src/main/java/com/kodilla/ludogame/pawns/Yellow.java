@@ -1,5 +1,6 @@
 package com.kodilla.ludogame.pawns;
 
+import com.kodilla.ludogame.constants.Constants;
 import com.kodilla.ludogame.constants.PawnPosition;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -21,6 +22,18 @@ public class Yellow implements AllPawnsColors {
     public PawnPosition getActualPosition() {
         return actualPosition;
     }
+
+    public void gotCaptured(int i) {
+        setActualPositionIndex(i+8);
+    }
+    public int getValueX() {
+        return new Constants().constantPawnPositions().get(getActualPositionIndex()).getValueX();
+    }
+    public  int getValueY() {
+        return new Constants().constantPawnPositions().get(getActualPositionIndex()).getValueY();
+    }
+    public int getColspan() {return 10;}
+    public int getRowspan() {return 10;}
 
     public void setActualPosition(int x, int y) {
         this.actualPosition = new PawnPosition(x, y);
