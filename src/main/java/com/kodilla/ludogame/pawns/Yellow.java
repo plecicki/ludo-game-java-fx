@@ -7,13 +7,12 @@ import javafx.scene.image.ImageView;
 
 public class Yellow implements AllPawnsColors {
 
-    private Image imageYellowPawn = new Image("file:src/main/resources/pawns/yellow-pawn.png");
     private PawnPosition actualPosition;
     private int actualPositionIndex;
     private boolean finish = false;
 
-    public ImageView setImage() {
-        ImageView yellowPawn = new ImageView(imageYellowPawn);
+    public ImageView setImage(Image image) {
+        ImageView yellowPawn = new ImageView(image);
         yellowPawn.setFitHeight(40);
         yellowPawn.setFitWidth(40);
         return yellowPawn;

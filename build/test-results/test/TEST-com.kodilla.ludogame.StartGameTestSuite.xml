@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.ludogame.StartGameTestSuite" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-05-15T21:21:23" hostname="LAPTOP-F3PSJVM4" time="0.034">
+  <properties/>
+  <testcase name="When red pawns are at start's positionsthen they should be unmovable when dice status doesn'tequal six" classname="com.kodilla.ludogame.StartGameTestSuite" time="0.032"/>
+  <testcase name="When green pawns are at start's positionsthen they should be unmovable when dice status doesn'tequal six" classname="com.kodilla.ludogame.StartGameTestSuite" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

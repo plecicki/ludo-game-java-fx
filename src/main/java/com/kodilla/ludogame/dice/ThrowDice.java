@@ -14,4 +14,8 @@ public class ThrowDice {
     public int getDiceIndex() {
         return diceIndex;
     }
+
+    public void setDiceIndex(int diceIndex) {
+        this.diceIndex = diceIndex;
+    }
 }

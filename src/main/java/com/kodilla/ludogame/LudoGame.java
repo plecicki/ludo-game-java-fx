@@ -16,6 +16,7 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
@@ -40,15 +41,24 @@ public class LudoGame extends Application {
         grid.setVgap(5);
         grid.setPadding(new Insets(0, 0, 0, 0));
 
+        Image imageRedPawn = new Image("file:src/main/resources/pawns/red-pawn.png");
+        Image imageGreenPawn = new Image("file:src/main/resources/pawns/green-pawn.png");
+        Image imageYellowPawn = new Image("file:src/main/resources/pawns/yellow-pawn.png");
+        Image imageBluePawn = new Image("file:src/main/resources/pawns/blue-pawn.png");
+
         Red[] redP = {new Red(), new Red(), new Red(), new Red()};
         Green[] greenP = {new Green(), new Green(), new Green(), new Green()};
         Yellow[] yellowP = {new Yellow(), new Yellow(), new Yellow(), new Yellow()};
         Blue[] blueP = {new Blue(), new Blue(), new Blue(), new Blue()};
 
-        ImageView[] redPawns = {redP[0].setImage(), redP[1].setImage(), redP[2].setImage(), redP[3].setImage()};
-        ImageView[] greenPawns = {greenP[0].setImage(), greenP[1].setImage(), greenP[2].setImage(), greenP[3].setImage()};
-        ImageView[] yellowPawns = {yellowP[0].setImage(), yellowP[1].setImage(), yellowP[2].setImage(), yellowP[3].setImage()};
-        ImageView[] bluePawns = {blueP[0].setImage(), blueP[1].setImage(), blueP[2].setImage(), blueP[3].setImage()};
+        ImageView[] redPawns = {redP[0].setImage(imageRedPawn), redP[1].setImage(imageRedPawn),
+                redP[2].setImage(imageRedPawn), redP[3].setImage(imageRedPawn)};
+        ImageView[] greenPawns = {greenP[0].setImage(imageGreenPawn), greenP[1].setImage(imageGreenPawn),
+                greenP[2].setImage(imageGreenPawn), greenP[3].setImage(imageGreenPawn)};
+        ImageView[] yellowPawns = {yellowP[0].setImage(imageYellowPawn), yellowP[1].setImage(imageYellowPawn),
+                yellowP[2].setImage(imageYellowPawn), yellowP[3].setImage(imageYellowPawn)};
+        ImageView[] bluePawns = {blueP[0].setImage(imageBluePawn), blueP[1].setImage(imageBluePawn),
+                blueP[2].setImage(imageBluePawn), blueP[3].setImage(imageBluePawn)};
 
         for (int i = 0; i <= 3; i++) {
             grid.add(redPawns[i], new Constants().constantPawnPositions().get(i).getValueX(),
