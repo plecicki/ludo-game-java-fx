@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kodilla.ludogame.StartGameTestSuite" tests="6" skipped="0" failures="0" errors="0" timestamp="2022-05-16T11:04:34" hostname="LAPTOP-F3PSJVM4" time="0.068">
+<testsuite name="com.kodilla.ludogame.StartGameTestSuite" tests="10" skipped="0" failures="0" errors="0" timestamp="2022-05-16T11:33:45" hostname="LAPTOP-F3PSJVM4" time="0.063">
   <properties/>
-  <testcase name="When yellow pawns are at start's positionsthen they should be unmovable when dice status doesn'tequal six" classname="com.kodilla.ludogame.StartGameTestSuite" time="0.049"/>
+  <testcase name="When yellow pawns are at start's positionsthen they should be unmovable when dice status doesn'tequal six" classname="com.kodilla.ludogame.StartGameTestSuite" time="0.03"/>
   <testcase name="When red pawns are at start's positionsthen they should be unmovable when dice status doesn'tequal six" classname="com.kodilla.ludogame.StartGameTestSuite" time="0.001"/>
   <testcase name="When green pawns are at start's positionsthen they should be unmovable when dice status doesn'tequal six" classname="com.kodilla.ludogame.StartGameTestSuite" time="0.001"/>
-  <testcase name="Pawns should be unmovable before clickingdice button. Only after throwing the dice pawncan be moved" classname="com.kodilla.ludogame.StartGameTestSuite" time="0.002"/>
+  <testcase name="Pawns should be unmovable before clickingdice button. Only after throwing the dice pawncan be moved" classname="com.kodilla.ludogame.StartGameTestSuite" time="0.001"/>
   <testcase name="Pawns should be movable in correct orderand should be unmovable when other player/computermoving" classname="com.kodilla.ludogame.StartGameTestSuite" time="0.002"/>
-  <testcase name="When blue pawns are at start's positionsthen they should be unmovable when dice status doesn'tequal six" classname="com.kodilla.ludogame.StartGameTestSuite" time="0.003"/>
+  <testcase name="Yellow pawns should be moved after clickingat first position of their journey" classname="com.kodilla.ludogame.StartGameTestSuite" time="0.006"/>
+  <testcase name="Red pawns should be moved after clickingat first position of their journey" classname="com.kodilla.ludogame.StartGameTestSuite" time="0.002"/>
+  <testcase name="Green pawns should be moved after clickingat first position of their journey" classname="com.kodilla.ludogame.StartGameTestSuite" time="0.002"/>
+  <testcase name="When blue pawns are at start's positionsthen they should be unmovable when dice status doesn'tequal six" classname="com.kodilla.ludogame.StartGameTestSuite" time="0.002"/>
+  <testcase name="Blue pawns should be moved after clickingat first position of their journey" classname="com.kodilla.ludogame.StartGameTestSuite" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

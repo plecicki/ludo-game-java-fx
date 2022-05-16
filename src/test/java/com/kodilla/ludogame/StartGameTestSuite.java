@@ -1,5 +1,6 @@
 package com.kodilla.ludogame;
 
+import com.kodilla.ludogame.computer.ComputerPlaying;
 import com.kodilla.ludogame.constants.Constants;
 import com.kodilla.ludogame.controlPanel.DiceButton;
 import com.kodilla.ludogame.dice.ThrowDice;
@@ -283,6 +284,118 @@ public class StartGameTestSuite {
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, blueP, 13));
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, blueP, 14));
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, blueP, 15));
+    }
+
+    @DisplayName("Red pawns should be moved after clicking" +
+            "at first position of their journey")
+    @Test
+    void redPawnsShouldBeMovedFromStartPosition() {
+        //Given
+        fillingTablesWithPawnsAtStartPositions();
+        OnClickPawn onClickPawn = new OnClickPawn();
+        ThrowDice throwDice = new ThrowDice();
+
+        //When
+        throwDice.setDiceIndex(6);
+
+        onClickPawn.start(throwDice.getDiceIndex(), redP[0].getActualPositionIndex(), 'R');
+        redP[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), redP[1].getActualPositionIndex(), 'R');
+        redP[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), redP[2].getActualPositionIndex(), 'R');
+        redP[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), redP[3].getActualPositionIndex(), 'R');
+        redP[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+
+        //Then
+        Assertions.assertEquals(redP[0].getActualPositionIndex(), 16);
+        Assertions.assertEquals(redP[1].getActualPositionIndex(), 16);
+        Assertions.assertEquals(redP[2].getActualPositionIndex(), 16);
+        Assertions.assertEquals(redP[3].getActualPositionIndex(), 16);
+    }
+
+    @DisplayName("Green pawns should be moved after clicking" +
+            "at first position of their journey")
+    @Test
+    void greenPawnsShouldBeMovedFromStartPosition() {
+        //Given
+        fillingTablesWithPawnsAtStartPositions();
+        OnClickPawn onClickPawn = new OnClickPawn();
+        ThrowDice throwDice = new ThrowDice();
+
+        //When
+        throwDice.setDiceIndex(6);
+
+        onClickPawn.start(throwDice.getDiceIndex(), greenP[0].getActualPositionIndex(), 'G');
+        greenP[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), greenP[1].getActualPositionIndex(), 'G');
+        greenP[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), greenP[2].getActualPositionIndex(), 'G');
+        greenP[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), greenP[3].getActualPositionIndex(), 'G');
+        greenP[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+
+        //Then
+        Assertions.assertEquals(greenP[0].getActualPositionIndex(), 30);
+        Assertions.assertEquals(greenP[1].getActualPositionIndex(), 30);
+        Assertions.assertEquals(greenP[2].getActualPositionIndex(), 30);
+        Assertions.assertEquals(greenP[3].getActualPositionIndex(), 30);
+    }
+
+    @DisplayName("Yellow pawns should be moved after clicking" +
+            "at first position of their journey")
+    @Test
+    void yellowPawnsShouldBeMovedFromStartPosition() {
+        //Given
+        fillingTablesWithPawnsAtStartPositions();
+        OnClickPawn onClickPawn = new OnClickPawn();
+        ThrowDice throwDice = new ThrowDice();
+
+        //When
+        throwDice.setDiceIndex(6);
+
+        onClickPawn.start(throwDice.getDiceIndex(), yellowP[0].getActualPositionIndex(), 'Y');
+        yellowP[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), yellowP[1].getActualPositionIndex(), 'Y');
+        yellowP[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), yellowP[2].getActualPositionIndex(), 'Y');
+        yellowP[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), yellowP[3].getActualPositionIndex(), 'Y');
+        yellowP[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+
+        //Then
+        Assertions.assertEquals(yellowP[0].getActualPositionIndex(), 58);
+        Assertions.assertEquals(yellowP[1].getActualPositionIndex(), 58);
+        Assertions.assertEquals(yellowP[2].getActualPositionIndex(), 58);
+        Assertions.assertEquals(yellowP[3].getActualPositionIndex(), 58);
+    }
+
+    @DisplayName("Blue pawns should be moved after clicking" +
+            "at first position of their journey")
+    @Test
+    void bluePawnsShouldBeMovedFromStartPosition() {
+        //Given
+        fillingTablesWithPawnsAtStartPositions();
+        OnClickPawn onClickPawn = new OnClickPawn();
+        ThrowDice throwDice = new ThrowDice();
+
+        //When
+        throwDice.setDiceIndex(6);
+
+        onClickPawn.start(throwDice.getDiceIndex(), blueP[0].getActualPositionIndex(), 'B');
+        blueP[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), blueP[1].getActualPositionIndex(), 'B');
+        blueP[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), blueP[2].getActualPositionIndex(), 'B');
+        blueP[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), blueP[3].getActualPositionIndex(), 'B');
+        blueP[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+
+        //Then
+        Assertions.assertEquals(blueP[0].getActualPositionIndex(), 44);
+        Assertions.assertEquals(blueP[1].getActualPositionIndex(), 44);
+        Assertions.assertEquals(blueP[2].getActualPositionIndex(), 44);
+        Assertions.assertEquals(blueP[3].getActualPositionIndex(), 44);
     }
 
     void fillingTablesWithPawnsAtStartPositions() {
