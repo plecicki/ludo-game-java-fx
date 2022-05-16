@@ -1,6 +1,5 @@
 package com.kodilla.ludogame;
 
-import com.kodilla.ludogame.computer.ComputerPlaying;
 import com.kodilla.ludogame.constants.Constants;
 import com.kodilla.ludogame.controlPanel.DiceButton;
 import com.kodilla.ludogame.dice.ThrowDice;
@@ -17,10 +16,9 @@ public class StartGameTestSuite {
     private Blue[] blueP;
 
     @DisplayName("When red pawns are at start's positions" +
-    "then they should be unmovable when dice status doesn't" +
-    "equal six")
+    " then they should be unmovable when dice status equal one")
     @Test
-    void redPawnsShouldBeUnmovableAtStartPositionsWhenDiceStatusDoesntEqualSix() {
+    void redPawnsShouldBeUnmovableAtStartPositionsWhenDiceStatusEqualOne() {
         //Given
         fillingTablesWithPawnsAtStartPositions();
         OnClickPawn onClickPawn = new OnClickPawn();
@@ -37,27 +35,112 @@ public class StartGameTestSuite {
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redP, 1));
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redP, 2));
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redP, 3));
+    }
+
+    @DisplayName("When red pawns are at start's positions" +
+            " then they should be unmovable when dice status equal two")
+    @Test
+    void redPawnsShouldBeUnmovableAtStartPositionsWhenDiceStatusEqualTwo() {
+        //Given
+        fillingTablesWithPawnsAtStartPositions();
+        OnClickPawn onClickPawn = new OnClickPawn();
+        DiceButton diceButton = new DiceButton();
+        ThrowDice throwDice = new ThrowDice();
+
+        //When
+        onClickPawn.setWhoseTurn(1);
+        diceButton.setWasClicked(true);
         throwDice.setDiceIndex(2);
+
+        //Then
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redP, 0));
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redP, 1));
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redP, 2));
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redP, 3));
+    }
+
+    @DisplayName("When red pawns are at start's positions" +
+            " then they should be unmovable when dice status equal three")
+    @Test
+    void redPawnsShouldBeUnmovableAtStartPositionsWhenDiceStatusEqualThree() {
+        //Given
+        fillingTablesWithPawnsAtStartPositions();
+        OnClickPawn onClickPawn = new OnClickPawn();
+        DiceButton diceButton = new DiceButton();
+        ThrowDice throwDice = new ThrowDice();
+
+        //When
+        onClickPawn.setWhoseTurn(1);
+        diceButton.setWasClicked(true);
         throwDice.setDiceIndex(3);
+
+        //Then
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redP, 0));
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redP, 1));
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redP, 2));
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redP, 3));
-        throwDice.setDiceIndex(4);
+    }
+
+    @DisplayName("When red pawns are at start's positions" +
+            " then they should be unmovable when dice status equal fore")
+    @Test
+    void redPawnsShouldBeUnmovableAtStartPositionsWhenDiceStatusEqualFore() {
+        //Given
+        fillingTablesWithPawnsAtStartPositions();
+        OnClickPawn onClickPawn = new OnClickPawn();
+        DiceButton diceButton = new DiceButton();
+        ThrowDice throwDice = new ThrowDice();
+
+        //When
+        onClickPawn.setWhoseTurn(1);
+        diceButton.setWasClicked(true);
+        throwDice.setDiceIndex(1);
+
+        //Then
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redP, 0));
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redP, 1));
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redP, 2));
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redP, 3));
+    }
+
+    @DisplayName("When red pawns are at start's positions" +
+            " then they should be unmovable when dice status equal five")
+    @Test
+    void redPawnsShouldBeUnmovableAtStartPositionsWhenDiceStatusEqualFive() {
+        //Given
+        fillingTablesWithPawnsAtStartPositions();
+        OnClickPawn onClickPawn = new OnClickPawn();
+        DiceButton diceButton = new DiceButton();
+        ThrowDice throwDice = new ThrowDice();
+
+        //When
+        onClickPawn.setWhoseTurn(1);
+        diceButton.setWasClicked(true);
         throwDice.setDiceIndex(5);
+
+        //Then
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redP, 0));
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redP, 1));
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redP, 2));
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redP, 3));
+    }
+
+    @DisplayName("When red pawns are at start's positions" +
+            " then they should be movable when dice status equal six")
+    @Test
+    void redPawnsShouldBeMovableAtStartPositionsWhenDiceStatusEqualSix() {
+        //Given
+        fillingTablesWithPawnsAtStartPositions();
+        OnClickPawn onClickPawn = new OnClickPawn();
+        DiceButton diceButton = new DiceButton();
+        ThrowDice throwDice = new ThrowDice();
+
+        //When
+        onClickPawn.setWhoseTurn(1);
+        diceButton.setWasClicked(true);
         throwDice.setDiceIndex(6);
+
+        //Then
         Assertions.assertTrue(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redP, 0));
         Assertions.assertTrue(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redP, 1));
         Assertions.assertTrue(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redP, 2));
@@ -65,10 +148,9 @@ public class StartGameTestSuite {
     }
 
     @DisplayName("When green pawns are at start's positions" +
-            "then they should be unmovable when dice status doesn't" +
-            "equal six")
+            " then they should be unmovable when dice status equal one")
     @Test
-    void greenPawnsShouldBeUnmovableAtStartPositionsWhenDiceStatusDoesntEqualSix() {
+    void greenPawnsShouldBeUnmovableAtStartPositionsWhenDiceStatusEqualOne() {
         //Given
         fillingTablesWithPawnsAtStartPositions();
         OnClickPawn onClickPawn = new OnClickPawn();
@@ -85,27 +167,112 @@ public class StartGameTestSuite {
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenP, 5));
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenP, 6));
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenP, 7));
+    }
+
+    @DisplayName("When green pawns are at start's positions" +
+            " then they should be unmovable when dice status equal two")
+    @Test
+    void greenPawnsShouldBeUnmovableAtStartPositionsWhenDiceStatusEqualTwo() {
+        //Given
+        fillingTablesWithPawnsAtStartPositions();
+        OnClickPawn onClickPawn = new OnClickPawn();
+        DiceButton diceButton = new DiceButton();
+        ThrowDice throwDice = new ThrowDice();
+
+        //When
+        onClickPawn.setWhoseTurn(2);
+        diceButton.setWasClicked(true);
         throwDice.setDiceIndex(2);
+
+        //Then
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenP, 4));
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenP, 5));
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenP, 6));
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenP, 7));
+    }
+
+    @DisplayName("When green pawns are at start's positions" +
+            " then they should be unmovable when dice status equal three")
+    @Test
+    void greenPawnsShouldBeUnmovableAtStartPositionsWhenDiceStatusEqualThree() {
+        //Given
+        fillingTablesWithPawnsAtStartPositions();
+        OnClickPawn onClickPawn = new OnClickPawn();
+        DiceButton diceButton = new DiceButton();
+        ThrowDice throwDice = new ThrowDice();
+
+        //When
+        onClickPawn.setWhoseTurn(2);
+        diceButton.setWasClicked(true);
         throwDice.setDiceIndex(3);
+
+        //Then
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenP, 4));
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenP, 5));
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenP, 6));
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenP, 7));
-        throwDice.setDiceIndex(4);
+    }
+
+    @DisplayName("When green pawns are at start's positions" +
+            " then they should be unmovable when dice status equal fore")
+    @Test
+    void greenPawnsShouldBeUnmovableAtStartPositionsWhenDiceStatusEqualFore() {
+        //Given
+        fillingTablesWithPawnsAtStartPositions();
+        OnClickPawn onClickPawn = new OnClickPawn();
+        DiceButton diceButton = new DiceButton();
+        ThrowDice throwDice = new ThrowDice();
+
+        //When
+        onClickPawn.setWhoseTurn(2);
+        diceButton.setWasClicked(true);
+        throwDice.setDiceIndex(1);
+
+        //Then
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenP, 4));
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenP, 5));
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenP, 6));
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenP, 7));
+    }
+
+    @DisplayName("When green pawns are at start's positions" +
+            " then they should be unmovable when dice status equal five")
+    @Test
+    void greenPawnsShouldBeUnmovableAtStartPositionsWhenDiceStatusEqualFive() {
+        //Given
+        fillingTablesWithPawnsAtStartPositions();
+        OnClickPawn onClickPawn = new OnClickPawn();
+        DiceButton diceButton = new DiceButton();
+        ThrowDice throwDice = new ThrowDice();
+
+        //When
+        onClickPawn.setWhoseTurn(2);
+        diceButton.setWasClicked(true);
         throwDice.setDiceIndex(5);
+
+        //Then
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenP, 4));
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenP, 5));
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenP, 6));
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenP, 7));
+    }
+
+    @DisplayName("When green pawns are at start's positions" +
+            " then they should be movable when dice status equal six")
+    @Test
+    void greenPawnsShouldBeMovableAtStartPositionsWhenDiceStatusEqualSix() {
+        //Given
+        fillingTablesWithPawnsAtStartPositions();
+        OnClickPawn onClickPawn = new OnClickPawn();
+        DiceButton diceButton = new DiceButton();
+        ThrowDice throwDice = new ThrowDice();
+
+        //When
+        onClickPawn.setWhoseTurn(2);
+        diceButton.setWasClicked(true);
         throwDice.setDiceIndex(6);
+
+        //Then
         Assertions.assertTrue(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenP, 4));
         Assertions.assertTrue(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenP, 5));
         Assertions.assertTrue(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenP, 6));
@@ -113,10 +280,9 @@ public class StartGameTestSuite {
     }
 
     @DisplayName("When yellow pawns are at start's positions" +
-            "then they should be unmovable when dice status doesn't" +
-            "equal six")
+            " then they should be unmovable when dice status equal one")
     @Test
-    void yellowPawnsShouldBeUnmovableAtStartPositionsWhenDiceStatusDoesntEqualSix() {
+    void yellowPawnsShouldBeUnmovableAtStartPositionsWhenDiceStatusEqualOne() {
         //Given
         fillingTablesWithPawnsAtStartPositions();
         OnClickPawn onClickPawn = new OnClickPawn();
@@ -133,27 +299,112 @@ public class StartGameTestSuite {
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowP, 9));
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowP, 10));
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowP, 11));
+    }
+
+    @DisplayName("When yellow pawns are at start's positions" +
+            " then they should be unmovable when dice status equal two")
+    @Test
+    void yellowPawnsShouldBeUnmovableAtStartPositionsWhenDiceStatusEqualTwo() {
+        //Given
+        fillingTablesWithPawnsAtStartPositions();
+        OnClickPawn onClickPawn = new OnClickPawn();
+        DiceButton diceButton = new DiceButton();
+        ThrowDice throwDice = new ThrowDice();
+
+        //When
+        onClickPawn.setWhoseTurn(3);
+        diceButton.setWasClicked(true);
         throwDice.setDiceIndex(2);
+
+        //Then
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowP, 8));
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowP, 9));
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowP, 10));
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowP, 11));
+    }
+
+    @DisplayName("When yellow pawns are at start's positions" +
+            " then they should be unmovable when dice status equal three")
+    @Test
+    void yellowPawnsShouldBeUnmovableAtStartPositionsWhenDiceStatusEqualThree() {
+        //Given
+        fillingTablesWithPawnsAtStartPositions();
+        OnClickPawn onClickPawn = new OnClickPawn();
+        DiceButton diceButton = new DiceButton();
+        ThrowDice throwDice = new ThrowDice();
+
+        //When
+        onClickPawn.setWhoseTurn(3);
+        diceButton.setWasClicked(true);
         throwDice.setDiceIndex(3);
+
+        //Then
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowP, 8));
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowP, 9));
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowP, 10));
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowP, 11));
-        throwDice.setDiceIndex(4);
+    }
+
+    @DisplayName("When yellow pawns are at start's positions" +
+            " then they should be unmovable when dice status equal fore")
+    @Test
+    void yellowPawnsShouldBeUnmovableAtStartPositionsWhenDiceStatusEqualFore() {
+        //Given
+        fillingTablesWithPawnsAtStartPositions();
+        OnClickPawn onClickPawn = new OnClickPawn();
+        DiceButton diceButton = new DiceButton();
+        ThrowDice throwDice = new ThrowDice();
+
+        //When
+        onClickPawn.setWhoseTurn(3);
+        diceButton.setWasClicked(true);
+        throwDice.setDiceIndex(1);
+
+        //Then
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowP, 8));
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowP, 9));
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowP, 10));
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowP, 11));
+    }
+
+    @DisplayName("When yellow pawns are at start's positions" +
+            " then they should be unmovable when dice status equal five")
+    @Test
+    void yellowPawnsShouldBeUnmovableAtStartPositionsWhenDiceStatusEqualFive() {
+        //Given
+        fillingTablesWithPawnsAtStartPositions();
+        OnClickPawn onClickPawn = new OnClickPawn();
+        DiceButton diceButton = new DiceButton();
+        ThrowDice throwDice = new ThrowDice();
+
+        //When
+        onClickPawn.setWhoseTurn(3);
+        diceButton.setWasClicked(true);
         throwDice.setDiceIndex(5);
+
+        //Then
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowP, 8));
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowP, 9));
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowP, 10));
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowP, 11));
+    }
+
+    @DisplayName("When yellow pawns are at start's positions" +
+            " then they should be movable when dice status equal six")
+    @Test
+    void yellowPawnsShouldBeMovableAtStartPositionsWhenDiceStatusEqualSix() {
+        //Given
+        fillingTablesWithPawnsAtStartPositions();
+        OnClickPawn onClickPawn = new OnClickPawn();
+        DiceButton diceButton = new DiceButton();
+        ThrowDice throwDice = new ThrowDice();
+
+        //When
+        onClickPawn.setWhoseTurn(3);
+        diceButton.setWasClicked(true);
         throwDice.setDiceIndex(6);
+
+        //Then
         Assertions.assertTrue(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowP, 8));
         Assertions.assertTrue(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowP, 9));
         Assertions.assertTrue(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowP, 10));
@@ -161,10 +412,9 @@ public class StartGameTestSuite {
     }
 
     @DisplayName("When blue pawns are at start's positions" +
-            "then they should be unmovable when dice status doesn't" +
-            "equal six")
+            " then they should be unmovable when dice status equal one")
     @Test
-    void bluePawnsShouldBeUnmovableAtStartPositionsWhenDiceStatusDoesntEqualSix() {
+    void bluePawnsShouldBeUnmovableAtStartPositionsWhenDiceStatusEqualOne() {
         //Given
         fillingTablesWithPawnsAtStartPositions();
         OnClickPawn onClickPawn = new OnClickPawn();
@@ -181,27 +431,112 @@ public class StartGameTestSuite {
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, blueP, 13));
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, blueP, 14));
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, blueP, 15));
+    }
+
+    @DisplayName("When blue pawns are at start's positions" +
+            " then they should be unmovable when dice status equal two")
+    @Test
+    void bluePawnsShouldBeUnmovableAtStartPositionsWhenDiceStatusEqualTwo() {
+        //Given
+        fillingTablesWithPawnsAtStartPositions();
+        OnClickPawn onClickPawn = new OnClickPawn();
+        DiceButton diceButton = new DiceButton();
+        ThrowDice throwDice = new ThrowDice();
+
+        //When
+        onClickPawn.setWhoseTurn(4);
+        diceButton.setWasClicked(true);
         throwDice.setDiceIndex(2);
+
+        //Then
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, blueP, 12));
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, blueP, 13));
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, blueP, 14));
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, blueP, 15));
+    }
+
+    @DisplayName("When blue pawns are at start's positions" +
+            " then they should be unmovable when dice status equal three")
+    @Test
+    void bluePawnsShouldBeUnmovableAtStartPositionsWhenDiceStatusEqualThree() {
+        //Given
+        fillingTablesWithPawnsAtStartPositions();
+        OnClickPawn onClickPawn = new OnClickPawn();
+        DiceButton diceButton = new DiceButton();
+        ThrowDice throwDice = new ThrowDice();
+
+        //When
+        onClickPawn.setWhoseTurn(4);
+        diceButton.setWasClicked(true);
         throwDice.setDiceIndex(3);
+
+        //Then
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, blueP, 12));
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, blueP, 13));
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, blueP, 14));
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, blueP, 15));
-        throwDice.setDiceIndex(4);
+    }
+
+    @DisplayName("When blue pawns are at start's positions" +
+            " then they should be unmovable when dice status equal fore")
+    @Test
+    void bluePawnsShouldBeUnmovableAtStartPositionsWhenDiceStatusEqualFore() {
+        //Given
+        fillingTablesWithPawnsAtStartPositions();
+        OnClickPawn onClickPawn = new OnClickPawn();
+        DiceButton diceButton = new DiceButton();
+        ThrowDice throwDice = new ThrowDice();
+
+        //When
+        onClickPawn.setWhoseTurn(4);
+        diceButton.setWasClicked(true);
+        throwDice.setDiceIndex(1);
+
+        //Then
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, blueP, 12));
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, blueP, 13));
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, blueP, 14));
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, blueP, 15));
+    }
+
+    @DisplayName("When blue pawns are at start's positions" +
+            " then they should be unmovable when dice status equal five")
+    @Test
+    void bluePawnsShouldBeUnmovableAtStartPositionsWhenDiceStatusEqualFive() {
+        //Given
+        fillingTablesWithPawnsAtStartPositions();
+        OnClickPawn onClickPawn = new OnClickPawn();
+        DiceButton diceButton = new DiceButton();
+        ThrowDice throwDice = new ThrowDice();
+
+        //When
+        onClickPawn.setWhoseTurn(5);
+        diceButton.setWasClicked(true);
         throwDice.setDiceIndex(5);
+
+        //Then
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, blueP, 12));
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, blueP, 13));
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, blueP, 14));
         Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, blueP, 15));
+    }
+
+    @DisplayName("When blue pawns are at start's positions" +
+            " then they should be movable when dice status equal six")
+    @Test
+    void bluePawnsShouldBeMovableAtStartPositionsWhenDiceStatusEqualSix() {
+        //Given
+        fillingTablesWithPawnsAtStartPositions();
+        OnClickPawn onClickPawn = new OnClickPawn();
+        DiceButton diceButton = new DiceButton();
+        ThrowDice throwDice = new ThrowDice();
+
+        //When
+        onClickPawn.setWhoseTurn(4);
+        diceButton.setWasClicked(true);
         throwDice.setDiceIndex(6);
+
+        //Then
         Assertions.assertTrue(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, blueP, 12));
         Assertions.assertTrue(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, blueP, 13));
         Assertions.assertTrue(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, blueP, 14));
