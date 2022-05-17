@@ -8,18 +8,18 @@ import javafx.scene.input.MouseEvent;
 
 public class ComputerPlaying {
 
-    ImageView[] redIV;
-    ImageView[] greenIV;
-    ImageView[] yellowIV;
-    ImageView[] blueIV;
-    Button buttonDice;
+    private ImageView[] redIV;
+    private ImageView[] greenIV;
+    private ImageView[] yellowIV;
+    private ImageView[] blueIV;
+    private Button buttonDice;
 
     //Player play = true
     //Computer play = false
-    boolean redPlayer = true;
-    boolean greenPlayer = false;
-    boolean yellowPlayer = false;
-    boolean bluePlayer = false;
+    private boolean redPlayer = true;
+    private boolean greenPlayer = true;
+    private boolean yellowPlayer = true;
+    private boolean bluePlayer = true;
 
     public ComputerPlaying(ImageView[] redIV, ImageView[] greenIV, ImageView[] yellowIV, ImageView[] blueIV, Button buttonDice) {
         this.redIV = redIV;
@@ -75,5 +75,21 @@ public class ComputerPlaying {
                 }
             }
         }
+    }
+
+    public void setRedPlayer(boolean redPlayer) {
+        this.redPlayer = redPlayer;
+    }
+
+    public void setGreenPlayer(boolean greenPlayer) {
+        this.greenPlayer = greenPlayer;
+    }
+
+    public void setYellowPlayer(boolean yellowPlayer) {
+        this.yellowPlayer = yellowPlayer;
+    }
+
+    public void setBluePlayer(boolean bluePlayer) {
+        this.bluePlayer = bluePlayer;
     }
 }

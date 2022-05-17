@@ -3,6 +3,7 @@ package com.kodilla.ludogame.constants;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
@@ -29,5 +30,30 @@ public class Labels {
         Font font = Font.font("Arial", FontWeight.BOLD, FontPosture.REGULAR, 15);
         gitHub.setFont(font);
         return gitHub;
+    }
+
+    public Label setGameTitle() {
+        Label title = new Label();
+        title.setText("LUDO GAME");
+        Font font = Font.font("Anton", FontWeight.BOLD, FontPosture.REGULAR, 90);
+        title.setFont(font);
+        return title;
+    }
+
+    public Label setAboveCheckBoxesText() {
+        Label checkBoxLabel = new Label();
+        checkBoxLabel.setText("Select your pawns color/s\n(Can be more than one color)");
+        Font font = Font.font("Anton", FontWeight.BOLD, FontPosture.REGULAR, 20);
+        checkBoxLabel.setFont(font);
+        return checkBoxLabel;
+    }
+
+    public Label setExceptionText() {
+        Label exceptionLabel = new Label();
+        exceptionLabel.setText("You haven't selected color or colors");
+        Font font = Font.font("Anton", FontWeight.BOLD, FontPosture.REGULAR, 15);
+        exceptionLabel.setFont(font);
+        exceptionLabel.setTextFill(Color.DARKRED);
+        return exceptionLabel;
     }
 }

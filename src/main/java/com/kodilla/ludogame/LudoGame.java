@@ -2,8 +2,7 @@ package com.kodilla.ludogame;
 
 import com.kodilla.ludogame.background.SettingBackground;
 import com.kodilla.ludogame.computer.ComputerPlaying;
-import com.kodilla.ludogame.constants.Constants;
-import com.kodilla.ludogame.constants.Labels;
+import com.kodilla.ludogame.constants.*;
 import com.kodilla.ludogame.controlPanel.DiceButton;
 import com.kodilla.ludogame.controlPanel.TurnLabels;
 import com.kodilla.ludogame.dice.DiceImage;
@@ -16,6 +15,7 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -92,6 +92,8 @@ public class LudoGame extends Application {
         DiceButton diceButtonObject = new DiceButton();
         Button diceButton = diceButtonObject.throwDiceButton();
 
+        Buttons buttons = new Buttons();
+
         ComputerPlaying computerPlaying = new ComputerPlaying(redPawns, greenPawns, yellowPawns, bluePawns, diceButton);
 
         DiceImage diceImage = new DiceImage();
@@ -113,6 +115,66 @@ public class LudoGame extends Application {
         grid.add(new Labels().setAuthorLabel(), 8, 1, 80, 7);
         grid.add(new Labels().setGitHubLabel(), 85, 1, 80, 7);
 
+        Scene scene = new Scene(grid, 633, 750, Color.LIGHTGREEN);
+
+        primaryStage.setResizable(false);
+        primaryStage.setTitle("Ludo Game");
+
+        Button startButton = buttons.startButton();
+        Button continueButton = buttons.continueButton();
+
+        CheckBox checkBox1 = new CheckBoxes().setCheckBoxesInMenu(1);
+        CheckBox checkBox2 = new CheckBoxes().setCheckBoxesInMenu(2);
+        CheckBox checkBox3 = new CheckBoxes().setCheckBoxesInMenu(3);
+        CheckBox checkBox4 = new CheckBoxes().setCheckBoxesInMenu(4);
+
+        GridPane gridMenu = new GridPane();
+        gridMenu.setBackground(new Background(new BackgroundFill(Color.rgb(228, 247, 174), new CornerRadii(0), new Insets(0))));
+        gridMenu.setAlignment(Pos.TOP_LEFT);
+        gridMenu.setHgap(5);
+        gridMenu.setVgap(5);
+        gridMenu.setPadding(new Insets(0, 0, 0, 0));
+
+        gridMenu.add(startButton, 8, 134, 100, 20);
+        gridMenu.add(continueButton, 72, 134, 100, 20);
+        gridMenu.add(new Labels().setGameTitle(), 10, 1, 200, 40);
+        gridMenu.add(new GameLogo().setGameLogoParameters(), 33, 12, 100, 100);
+        gridMenu.add(new Labels().setAboveCheckBoxesText(), 8, 90, 100, 20);
+        gridMenu.add(checkBox1, 8, 100, 100, 20);
+        gridMenu.add(checkBox2, 8, 108, 100, 20);
+        gridMenu.add(checkBox3, 8, 116, 100, 20);
+        gridMenu.add(checkBox4, 8, 124, 100, 20);
+
+        Scene sceneMenu = new Scene(gridMenu, 633, 750, Color.LIGHTGREEN);
+        primaryStage.setScene(sceneMenu);
+        primaryStage.show();
+
+
+
+        startButton.setOnAction(value -> {
+            if (checkBox1.isSelected() ||
+                    checkBox2.isSelected() ||
+                    checkBox3.isSelected() ||
+                    checkBox4.isSelected()) {
+                if (!checkBox1.isSelected()) {
+                    computerPlaying.setRedPlayer(false);
+                }
+                if (!checkBox2.isSelected()) {
+                    computerPlaying.setGreenPlayer(false);
+                }
+                if (!checkBox3.isSelected()) {
+                    computerPlaying.setYellowPlayer(false);
+                }
+                if (!checkBox4.isSelected()) {
+                    computerPlaying.setBluePlayer(false);
+                }
+                primaryStage.setScene(scene);
+                primaryStage.show();
+                computerPlaying.play(onClickPawn.getWhoseTurn(), diceButtonObject.isWasClicked());
+            } else {
+                gridMenu.add(new Labels().setExceptionText(), 8, 142, 100, 20);
+            }
+        });
         diceButton.setOnAction(value -> {
             //Dice Image
             grid.getChildren().remove(diceImage.getActualImage());
@@ -148,14 +210,6 @@ public class LudoGame extends Application {
 
             computerPlaying.play(onClickPawn.getWhoseTurn(), diceButtonObject.isWasClicked());
         });
-
-        Scene scene = new Scene(grid, 633, 750, Color.LIGHTGREEN);
-
-        primaryStage.setResizable(false);
-        primaryStage.setTitle("Ludo Game");
-        primaryStage.setScene(scene);
-        primaryStage.show();
-
 
         redPawns[0].setOnMouseClicked((MouseEvent e) -> {
             if (onClickPawn.isThisPawnMovable(onClickPawn, diceButtonObject, throwDice, redP, 0)) {
