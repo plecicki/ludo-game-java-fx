@@ -84,4 +84,8 @@ public class Ranking {
             new EndFrame(playersRanking).displayEndFrame();
         }
     }
+
+    public ArrayList<String> getPlayersRanking() {
+        return playersRanking;
+    }
 }

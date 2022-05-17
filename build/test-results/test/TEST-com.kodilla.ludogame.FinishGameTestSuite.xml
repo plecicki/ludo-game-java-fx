@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.ludogame.FinishGameTestSuite" tests="25" skipped="0" failures="0" errors="0" timestamp="2022-05-17T13:52:26" hostname="LAPTOP-F3PSJVM4" time="0.58">
+  <properties/>
+  <testcase name="Green pawn should change positionfrom 29 to 77 when drawn number is 1" classname="com.kodilla.ludogame.FinishGameTestSuite" time="0.055"/>
+  <testcase name="Green pawn should change positionfrom 29 to 80 when drawn number is 6" classname="com.kodilla.ludogame.FinishGameTestSuite" time="0.001"/>
+  <testcase name="Green pawn should change positionfrom 29 to 78 when drawn number is 2" classname="com.kodilla.ludogame.FinishGameTestSuite" time="0.004"/>
+  <testcase name="Blue pawn should change positionfrom 43 to 89 when drawn number is 3" classname="com.kodilla.ludogame.FinishGameTestSuite" time="0.004"/>
+  <testcase name="Red pawn should change positionfrom 71 to 72 when drawn number is 1" classname="com.kodilla.ludogame.FinishGameTestSuite" time="0.002"/>
+  <testcase name="Red pawn should change positionfrom 71 to 75 when drawn number is 6" classname="com.kodilla.ludogame.FinishGameTestSuite" time="0.002"/>
+  <testcase name="Red pawn should change positionfrom 71 to 72 when drawn number is 3" classname="com.kodilla.ludogame.FinishGameTestSuite" time="0.003"/>
+  <testcase name="Yellow pawn should change positionfrom 57 to 86 when drawn number is 5" classname="com.kodilla.ludogame.FinishGameTestSuite" time="0.002"/>
+  <testcase name="Yellow pawn should change positionfrom 57 to 85 when drawn number is 4" classname="com.kodilla.ludogame.FinishGameTestSuite" time="0.002"/>
+  <testcase name="Green pawn should change positionfrom 29 to 80 when drawn number is 5" classname="com.kodilla.ludogame.FinishGameTestSuite" time="0.002"/>
+  <testcase name="Green pawn should change positionfrom 29 to 80 when drawn number is 4" classname="com.kodilla.ludogame.FinishGameTestSuite" time="0.002"/>
+  <testcase name="Blue pawn should change positionfrom 43 to 91 when drawn number is 5" classname="com.kodilla.ludogame.FinishGameTestSuite" time="0.002"/>
+  <testcase name="Blue pawn should change positionfrom 43 to 90 when drawn number is 4" classname="com.kodilla.ludogame.FinishGameTestSuite" time="0.001"/>
+  <testcase name="Red pawn should change positionfrom 71 to 72 when drawn number is 5" classname="com.kodilla.ludogame.FinishGameTestSuite" time="0.002"/>
+  <testcase name="Red pawn should change positionfrom 71 to 72 when drawn number is 4" classname="com.kodilla.ludogame.FinishGameTestSuite" time="0.004"/>
+  <testcase name="Yellow pawn should change positionfrom 57 to 82 when drawn number is 1" classname="com.kodilla.ludogame.FinishGameTestSuite" time="0.008"/>
+  <testcase name="Yellow pawn should change positionfrom 57 to 85 when drawn number is 6" classname="com.kodilla.ludogame.FinishGameTestSuite" time="0.002"/>
+  <testcase name="Yellow pawn should change positionfrom 57 to 83 when drawn number is 2" classname="com.kodilla.ludogame.FinishGameTestSuite" time="0.002"/>
+  <testcase name="Blue pawn should change positionfrom 43 to 87 when drawn number is 1" classname="com.kodilla.ludogame.FinishGameTestSuite" time="0.002"/>
+  <testcase name="Blue pawn should change positionfrom 43 to 90 when drawn number is 6" classname="com.kodilla.ludogame.FinishGameTestSuite" time="0.001"/>
+  <testcase name="Blue pawn should change positionfrom 43 to 88 when drawn number is 2" classname="com.kodilla.ludogame.FinishGameTestSuite" time="0.001"/>
+  <testcase name="After finishing the game the rankingshould be ready to display" classname="com.kodilla.ludogame.FinishGameTestSuite" time="0.431"/>
+  <testcase name="Yellow pawn should change positionfrom 57 to 84 when drawn number is 3" classname="com.kodilla.ludogame.FinishGameTestSuite" time="0.002"/>
+  <testcase name="Green pawn should change positionfrom 29 to 79 when drawn number is 3" classname="com.kodilla.ludogame.FinishGameTestSuite" time="0.002"/>
+  <testcase name="Red pawn should change positionfrom 71 to 72 when drawn number is 3" classname="com.kodilla.ludogame.FinishGameTestSuite" time="0.003"/>
+  <system-out><![CDATA[Test nr. 1: end
+Test nr. 2: end
+Test nr. 3: end
+Test nr. 4: end
+Test nr. 5: end
+Test nr. 6: end
+Test nr. 7: end
+Test nr. 8: end
+Test nr. 9: end
+Test nr. 10: end
+Test nr. 11: end
+Test nr. 12: end
+Test nr. 13: end
+Test nr. 14: end
+Test nr. 15: end
+Test nr. 16: end
+Test nr. 17: end
+Test nr. 18: end
+Test nr. 19: end
+Test nr. 20: end
+Test nr. 21: end
+In this moment new window with ranking is opened
+Test nr. 22: end
+Test nr. 23: end
+Test nr. 24: end
+Test nr. 25: end
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
