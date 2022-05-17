@@ -1,7 +1,6 @@
 package com.kodilla.ludogame;
 
 import com.kodilla.ludogame.constants.Constants;
-import com.kodilla.ludogame.controlPanel.DiceButton;
 import com.kodilla.ludogame.dice.ThrowDice;
 import com.kodilla.ludogame.pawns.*;
 import org.junit.jupiter.api.AfterEach;
@@ -11,7 +10,6 @@ import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
 
 public class CourseOfGameTestSuite {
 
@@ -1966,6 +1964,420 @@ public class CourseOfGameTestSuite {
 
         //Then
         Assertions.assertEquals(70, blueP[3].getActualPositionIndex());
+    }
+
+    @DisplayName("Blue [2] pawn's position should be changed"+
+            " from 19 to 22 and Red [3] should be captured" +
+            " from 22 to 2")
+    @Test
+    void capturingRed3ByBlue2() {
+        //Given
+        setPawnsAtPositions();
+        OnClickPawn onClickPawn = new OnClickPawn();
+        ThrowDice throwDice = new ThrowDice();
+
+        //When
+        throwDice.setDiceIndex(3);
+        onClickPawn.setWhoseTurn(4);
+
+        onClickPawn.start(throwDice.getDiceIndex(), blueP[2].getActualPositionIndex(), 'B');
+        blueP[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        redP[3].gotCaptured(3);
+
+        //Then
+        Assertions.assertEquals(22, blueP[2].getActualPositionIndex());
+        Assertions.assertEquals(3, redP[3].getActualPositionIndex());
+    }
+
+    @DisplayName("Blue [2] pawn's position should be changed"+
+            " from 19 to 24 and Yellow [1] should be captured" +
+            " from 24 to 9")
+    @Test
+    void capturingYellow1ByBlue2() {
+        //Given
+        setPawnsAtPositions();
+        OnClickPawn onClickPawn = new OnClickPawn();
+        ThrowDice throwDice = new ThrowDice();
+
+        //When
+        throwDice.setDiceIndex(5);
+        onClickPawn.setWhoseTurn(4);
+
+        onClickPawn.start(throwDice.getDiceIndex(), blueP[2].getActualPositionIndex(), 'B');
+        blueP[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        yellowP[1].gotCaptured(1);
+
+        //Then
+        Assertions.assertEquals(24, blueP[2].getActualPositionIndex());
+        Assertions.assertEquals(9, yellowP[1].getActualPositionIndex());
+    }
+
+    @DisplayName("Red [3] pawn's position should be changed"+
+            " from 22 to 24 and Yellow [1] should be captured" +
+            " from 24 to 10")
+    @Test
+    void capturingYellow1ByRed3() {
+        //Given
+        setPawnsAtPositions();
+        OnClickPawn onClickPawn = new OnClickPawn();
+        ThrowDice throwDice = new ThrowDice();
+
+        //When
+        throwDice.setDiceIndex(2);
+        onClickPawn.setWhoseTurn(1);
+
+        onClickPawn.start(throwDice.getDiceIndex(), redP[3].getActualPositionIndex(), 'R');
+        redP[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        yellowP[1].gotCaptured(1);
+
+        //Then
+        Assertions.assertEquals(24, redP[3].getActualPositionIndex());
+        Assertions.assertEquals(9, yellowP[1].getActualPositionIndex());
+    }
+
+    @DisplayName("Red [3] pawn's position should be changed"+
+            " from 22 to 28 and Green [0] should be captured" +
+            " from 28 to 4")
+    @Test
+    void capturingGreen0ByRed3() {
+        //Given
+        setPawnsAtPositions();
+        OnClickPawn onClickPawn = new OnClickPawn();
+        ThrowDice throwDice = new ThrowDice();
+
+        //When
+        throwDice.setDiceIndex(6);
+        onClickPawn.setWhoseTurn(1);
+
+        onClickPawn.start(throwDice.getDiceIndex(), redP[3].getActualPositionIndex(), 'R');
+        redP[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        greenP[0].gotCaptured(0);
+
+        //Then
+        Assertions.assertEquals(28, redP[3].getActualPositionIndex());
+        Assertions.assertEquals(4, greenP[0].getActualPositionIndex());
+    }
+
+    @DisplayName("Yellow [1] pawn's position should be changed"+
+            " from 24 to 28 and Green [0] should be captured" +
+            " from 28 to 4")
+    @Test
+    void capturingGreen0ByYellow1() {
+        //Given
+        setPawnsAtPositions();
+        OnClickPawn onClickPawn = new OnClickPawn();
+        ThrowDice throwDice = new ThrowDice();
+
+        //When
+        throwDice.setDiceIndex(4);
+        onClickPawn.setWhoseTurn(3);
+
+        onClickPawn.start(throwDice.getDiceIndex(), yellowP[1].getActualPositionIndex(), 'Y');
+        yellowP[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        greenP[0].gotCaptured(0);
+
+        //Then
+        Assertions.assertEquals(28, yellowP[1].getActualPositionIndex());
+        Assertions.assertEquals(4, greenP[0].getActualPositionIndex());
+    }
+
+    @DisplayName("Red [2] pawn's position should be changed"+
+            " from 33 to 36 and Green [3] should be captured" +
+            " from 36 to 6")
+    @Test
+    void capturingGreen3ByRed2() {
+        //Given
+        setPawnsAtPositions();
+        OnClickPawn onClickPawn = new OnClickPawn();
+        ThrowDice throwDice = new ThrowDice();
+
+        //When
+        throwDice.setDiceIndex(3);
+        onClickPawn.setWhoseTurn(1);
+
+        onClickPawn.start(throwDice.getDiceIndex(), redP[2].getActualPositionIndex(), 'R');
+        redP[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        greenP[3].gotCaptured(3);
+
+        //Then
+        Assertions.assertEquals(36, redP[2].getActualPositionIndex());
+        Assertions.assertEquals(7, greenP[3].getActualPositionIndex());
+    }
+
+    @DisplayName("Red [2] pawn's position should be changed"+
+            " from 33 to 38 and Blue [1] should be captured" +
+            " from 38 to 13")
+    @Test
+    void capturingBlue1ByRed2() {
+        //Given
+        setPawnsAtPositions();
+        OnClickPawn onClickPawn = new OnClickPawn();
+        ThrowDice throwDice = new ThrowDice();
+
+        //When
+        throwDice.setDiceIndex(5);
+        onClickPawn.setWhoseTurn(1);
+
+        onClickPawn.start(throwDice.getDiceIndex(), redP[2].getActualPositionIndex(), 'R');
+        redP[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        blueP[1].gotCaptured(1);
+
+        //Then
+        Assertions.assertEquals(38, redP[2].getActualPositionIndex());
+        Assertions.assertEquals(13, blueP[1].getActualPositionIndex());
+    }
+
+    @DisplayName("Green [3] pawn's position should be changed"+
+            " from 36 to 38 and Blue [1] should be captured" +
+            " from 38 to 13")
+    @Test
+    void capturingBlue1ByGreen3() {
+        //Given
+        setPawnsAtPositions();
+        OnClickPawn onClickPawn = new OnClickPawn();
+        ThrowDice throwDice = new ThrowDice();
+
+        //When
+        throwDice.setDiceIndex(2);
+        onClickPawn.setWhoseTurn(2);
+
+        onClickPawn.start(throwDice.getDiceIndex(), greenP[3].getActualPositionIndex(), 'G');
+        greenP[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        blueP[1].gotCaptured(1);
+
+        //Then
+        Assertions.assertEquals(38, greenP[3].getActualPositionIndex());
+        Assertions.assertEquals(13, blueP[1].getActualPositionIndex());
+    }
+
+    @DisplayName("Green [3] pawn's position should be changed"+
+            " from 36 to 42 and Blue [0] should be captured" +
+            " from 42 to 12")
+    @Test
+    void capturingBlue0ByGreen3() {
+        //Given
+        setPawnsAtPositions();
+        OnClickPawn onClickPawn = new OnClickPawn();
+        ThrowDice throwDice = new ThrowDice();
+
+        //When
+        throwDice.setDiceIndex(6);
+        onClickPawn.setWhoseTurn(2);
+
+        onClickPawn.start(throwDice.getDiceIndex(), greenP[3].getActualPositionIndex(), 'G');
+        greenP[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        blueP[0].gotCaptured(0);
+
+        //Then
+        Assertions.assertEquals(42, greenP[3].getActualPositionIndex());
+        Assertions.assertEquals(12, blueP[0].getActualPositionIndex());
+    }
+
+    @DisplayName("Green [2] pawn's position should be changed"+
+            " from 47 to 50 and Yellow [3] should be captured" +
+            " from 50 to 11")
+    @Test
+    void capturingYellow3ByGreen2() {
+        //Given
+        setPawnsAtPositions();
+        OnClickPawn onClickPawn = new OnClickPawn();
+        ThrowDice throwDice = new ThrowDice();
+
+        //When
+        throwDice.setDiceIndex(3);
+        onClickPawn.setWhoseTurn(2);
+
+        onClickPawn.start(throwDice.getDiceIndex(), greenP[2].getActualPositionIndex(), 'G');
+        greenP[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        yellowP[3].gotCaptured(3);
+
+        //Then
+        Assertions.assertEquals(50, greenP[2].getActualPositionIndex());
+        Assertions.assertEquals(11, yellowP[3].getActualPositionIndex());
+    }
+
+    @DisplayName("Green [2] pawn's position should be changed"+
+            " from 47 to 52 and Red [1] should be captured" +
+            " from 52 to 1")
+    @Test
+    void capturingRed1ByGreen2() {
+        //Given
+        setPawnsAtPositions();
+        OnClickPawn onClickPawn = new OnClickPawn();
+        ThrowDice throwDice = new ThrowDice();
+
+        //When
+        throwDice.setDiceIndex(5);
+        onClickPawn.setWhoseTurn(2);
+
+        onClickPawn.start(throwDice.getDiceIndex(), greenP[2].getActualPositionIndex(), 'G');
+        greenP[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        redP[1].gotCaptured(1);
+
+        //Then
+        Assertions.assertEquals(52, greenP[2].getActualPositionIndex());
+        Assertions.assertEquals(1, redP[1].getActualPositionIndex());
+    }
+
+    @DisplayName("Yellow [3] pawn's position should be changed"+
+            " from 50 to 52 and Red [1] should be captured" +
+            " from 52 to 1")
+    @Test
+    void capturingRed1ByYellow3() {
+        //Given
+        setPawnsAtPositions();
+        OnClickPawn onClickPawn = new OnClickPawn();
+        ThrowDice throwDice = new ThrowDice();
+
+        //When
+        throwDice.setDiceIndex(2);
+        onClickPawn.setWhoseTurn(3);
+
+        onClickPawn.start(throwDice.getDiceIndex(), yellowP[3].getActualPositionIndex(), 'Y');
+        yellowP[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        redP[1].gotCaptured(1);
+
+        //Then
+        Assertions.assertEquals(52, yellowP[3].getActualPositionIndex());
+        Assertions.assertEquals(1, redP[1].getActualPositionIndex());
+    }
+
+    @DisplayName("Red [1] pawn's position should be changed"+
+            " from 52 to 56 and Yellow [0] should be captured" +
+            " from 56 to 8")
+    @Test
+    void capturingYellow0ByRed1() {
+        //Given
+        setPawnsAtPositions();
+        OnClickPawn onClickPawn = new OnClickPawn();
+        ThrowDice throwDice = new ThrowDice();
+
+        //When
+        throwDice.setDiceIndex(4);
+        onClickPawn.setWhoseTurn(1);
+
+        onClickPawn.start(throwDice.getDiceIndex(), redP[1].getActualPositionIndex(), 'R');
+        redP[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        yellowP[0].gotCaptured(0);
+
+        //Then
+        Assertions.assertEquals(56, redP[1].getActualPositionIndex());
+        Assertions.assertEquals(8, yellowP[0].getActualPositionIndex());
+    }
+
+    @DisplayName("Yellow [2] pawn's position should be changed"+
+            " from 61 to 64 and Blue [3] should be captured" +
+            " from 64 to 15")
+    @Test
+    void capturingBlue3ByYellow2() {
+        //Given
+        setPawnsAtPositions();
+        OnClickPawn onClickPawn = new OnClickPawn();
+        ThrowDice throwDice = new ThrowDice();
+
+        //When
+        throwDice.setDiceIndex(3);
+        onClickPawn.setWhoseTurn(3);
+
+        onClickPawn.start(throwDice.getDiceIndex(), yellowP[2].getActualPositionIndex(), 'Y');
+        yellowP[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        blueP[3].gotCaptured(3);
+
+        //Then
+        Assertions.assertEquals(64, yellowP[2].getActualPositionIndex());
+        Assertions.assertEquals(15, blueP[3].getActualPositionIndex());
+    }
+
+    @DisplayName("Yellow [2] pawn's position should be changed"+
+            " from 61 to 66 and Green [1] should be captured" +
+            " from 66 to 5")
+    @Test
+    void capturingGreen1ByYellow2() {
+        //Given
+        setPawnsAtPositions();
+        OnClickPawn onClickPawn = new OnClickPawn();
+        ThrowDice throwDice = new ThrowDice();
+
+        //When
+        throwDice.setDiceIndex(5);
+        onClickPawn.setWhoseTurn(3);
+
+        onClickPawn.start(throwDice.getDiceIndex(), yellowP[2].getActualPositionIndex(), 'Y');
+        yellowP[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        greenP[1].gotCaptured(1);
+
+        //Then
+        Assertions.assertEquals(66, yellowP[2].getActualPositionIndex());
+        Assertions.assertEquals(5, greenP[1].getActualPositionIndex());
+    }
+
+    @DisplayName("Blue [3] pawn's position should be changed"+
+            " from 64 to 66 and Green [1] should be captured" +
+            " from 66 to 5")
+    @Test
+    void capturingGreen1ByBlue3() {
+        //Given
+        setPawnsAtPositions();
+        OnClickPawn onClickPawn = new OnClickPawn();
+        ThrowDice throwDice = new ThrowDice();
+
+        //When
+        throwDice.setDiceIndex(2);
+        onClickPawn.setWhoseTurn(4);
+
+        onClickPawn.start(throwDice.getDiceIndex(), blueP[3].getActualPositionIndex(), 'B');
+        blueP[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        greenP[1].gotCaptured(1);
+
+        //Then
+        Assertions.assertEquals(66, blueP[3].getActualPositionIndex());
+        Assertions.assertEquals(5, greenP[1].getActualPositionIndex());
+    }
+
+    @DisplayName("Blue [3] pawn's position should be changed"+
+            " from 64 to 70 and Red [0] should be captured" +
+            " from 70 to 0")
+    @Test
+    void capturingRed0ByBlue3() {
+        //Given
+        setPawnsAtPositions();
+        OnClickPawn onClickPawn = new OnClickPawn();
+        ThrowDice throwDice = new ThrowDice();
+
+        //When
+        throwDice.setDiceIndex(6);
+        onClickPawn.setWhoseTurn(4);
+
+        onClickPawn.start(throwDice.getDiceIndex(), blueP[3].getActualPositionIndex(), 'B');
+        blueP[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        redP[0].gotCaptured(0);
+
+        //Then
+        Assertions.assertEquals(70, blueP[3].getActualPositionIndex());
+        Assertions.assertEquals(0, redP[0].getActualPositionIndex());
+    }
+
+    @DisplayName("Green [1] pawn's position should be changed"+
+            " from 66 to 70 and Red [0] should be captured" +
+            " from 70 to 0")
+    @Test
+    void capturingRed0ByGreen1() {
+        //Given
+        setPawnsAtPositions();
+        OnClickPawn onClickPawn = new OnClickPawn();
+        ThrowDice throwDice = new ThrowDice();
+
+        //When
+        throwDice.setDiceIndex(4);
+        onClickPawn.setWhoseTurn(3);
+
+        onClickPawn.start(throwDice.getDiceIndex(), greenP[1].getActualPositionIndex(), 'G');
+        greenP[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        redP[0].gotCaptured(0);
+
+        //Then
+        Assertions.assertEquals(70, greenP[1].getActualPositionIndex());
+        Assertions.assertEquals(0, redP[0].getActualPositionIndex());
     }
 
     private void setPawnsAtPositions() {
