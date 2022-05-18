@@ -7,10 +7,12 @@ import com.kodilla.ludogame.controlPanel.DiceButton;
 import com.kodilla.ludogame.controlPanel.TurnLabels;
 import com.kodilla.ludogame.dice.DiceImage;
 import com.kodilla.ludogame.dice.ThrowDice;
-import com.kodilla.ludogame.lastpanel.EndFrame;
 import com.kodilla.ludogame.lastpanel.Ranking;
 import com.kodilla.ludogame.pawns.*;
+import com.kodilla.ludogame.savingToFile.ReadAndWriteFile;
+import com.kodilla.ludogame.savingToFile.StartGame;
 import javafx.application.Application;
+import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -22,7 +24,9 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class LudoGame extends Application {
@@ -40,6 +44,19 @@ public class LudoGame extends Application {
         grid.setHgap(5);
         grid.setVgap(5);
         grid.setPadding(new Insets(0, 0, 0, 0));
+
+        StartGame startGame = new StartGame();
+        ReadAndWriteFile readAndWriteFile = new ReadAndWriteFile();
+        ArrayList<String> savedLines = new ArrayList<>();
+        try {
+            savedLines = readAndWriteFile.getFileAsArrayList("save.txt");
+        } catch (IllegalArgumentException e) {
+            System.out.println("Error: " + e);
+        }
+        System.out.println(savedLines.get(0));
+        System.out.println(savedLines.get(1));
+        System.out.println(savedLines.get(2));
+        System.out.println(savedLines.get(3));
 
         Image imageRedPawn = new Image("file:src/main/resources/pawns/red-pawn.png");
         Image imageGreenPawn = new Image("file:src/main/resources/pawns/green-pawn.png");
@@ -60,34 +77,8 @@ public class LudoGame extends Application {
         ImageView[] bluePawns = {blueP[0].setImage(imageBluePawn), blueP[1].setImage(imageBluePawn),
                 blueP[2].setImage(imageBluePawn), blueP[3].setImage(imageBluePawn)};
 
-        for (int i = 0; i <= 3; i++) {
-            grid.add(redPawns[i], new Constants().constantPawnPositions().get(i).getValueX(),
-                    new Constants().constantPawnPositions().get(i).getValueY(), 10, 10);
-            redP[i].setActualPosition(new Constants().constantPawnPositions().get(i).getValueX(),
-                    new Constants().constantPawnPositions().get(i).getValueY());
-            redP[i].setActualPositionIndex(i);
-
-            grid.add(greenPawns[i], new Constants().constantPawnPositions().get(i + 4).getValueX(),
-                    new Constants().constantPawnPositions().get(i + 4).getValueY(), 10, 10);
-            greenP[i].setActualPosition(new Constants().constantPawnPositions().get(i + 4).getValueX(),
-                    new Constants().constantPawnPositions().get(i + 4).getValueY());
-            greenP[i].setActualPositionIndex(i + 4);
-
-            grid.add(yellowPawns[i], new Constants().constantPawnPositions().get(i + 8).getValueX(),
-                    new Constants().constantPawnPositions().get(i + 8).getValueY(), 10, 10);
-            yellowP[i].setActualPosition(new Constants().constantPawnPositions().get(i + 8).getValueX(),
-                    new Constants().constantPawnPositions().get(i + 8).getValueY());
-            yellowP[i].setActualPositionIndex(i + 8);
-
-            grid.add(bluePawns[i], new Constants().constantPawnPositions().get(i + 12).getValueX(),
-                    new Constants().constantPawnPositions().get(i + 12).getValueY(), 10, 10);
-            blueP[i].setActualPosition(new Constants().constantPawnPositions().get(i + 12).getValueX(),
-                    new Constants().constantPawnPositions().get(i + 12).getValueY());
-            blueP[i].setActualPositionIndex(i + 12);
-        }
-
         ArrayList<String> rank = new ArrayList<>();
-        Ranking ranking = new Ranking(rank);
+        Ranking ranking = new Ranking(rank, primaryStage);
 
         DiceButton diceButtonObject = new DiceButton();
         Button diceButton = diceButtonObject.throwDiceButton();
@@ -97,23 +88,17 @@ public class LudoGame extends Application {
         ComputerPlaying computerPlaying = new ComputerPlaying(redPawns, greenPawns, yellowPawns, bluePawns, diceButton);
 
         DiceImage diceImage = new DiceImage();
-        diceImage.startDiceImageMethod(1);
+
 
         ThrowDice throwDice = new ThrowDice();
 
         TurnLabels turnLabels = new TurnLabels();
-        turnLabels.turnLabels(1);
-        turnLabels.instructionLabels(1);
+
 
         OnClickPawn onClickPawn = new OnClickPawn();
-        onClickPawn.setWhoseTurn(1);
 
-        grid.add(diceImage.getActualImage(), 8, 124, 30, 30);
-        grid.add(turnLabels.getTurnLabel(), 35, 126, 80, 12);
+
         grid.add(diceButton, 35, 134, 100, 20);
-        grid.add(turnLabels.getInfoLabel(), 100, 110, 50, 50);
-        grid.add(new Labels().setAuthorLabel(), 8, 1, 80, 7);
-        grid.add(new Labels().setGitHubLabel(), 85, 1, 80, 7);
 
         Scene scene = new Scene(grid, 633, 750, Color.LIGHTGREEN);
 
@@ -149,7 +134,18 @@ public class LudoGame extends Application {
         primaryStage.setScene(sceneMenu);
         primaryStage.show();
 
-
+        primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+            public void handle(WindowEvent we) {
+                try {
+                    if (readAndWriteFile.getWindowNavigation() == 1) {
+                        readAndWriteFile.saveGame(redP,greenP,yellowP,blueP,throwDice,onClickPawn,diceButtonObject,
+                            checkBox1, checkBox2, checkBox3, checkBox4);
+                    }
+                } catch (IOException e) {
+                    System.out.println("Error during saving: " + e);
+                }
+            }
+        });
 
         startButton.setOnAction(value -> {
             if (checkBox1.isSelected() ||
@@ -168,12 +164,18 @@ public class LudoGame extends Application {
                 if (!checkBox4.isSelected()) {
                     computerPlaying.setBluePlayer(false);
                 }
+                startGame.setStartParameters(grid, redP, greenP, yellowP, blueP, redPawns,
+                        greenPawns, yellowPawns, bluePawns, diceImage, turnLabels, onClickPawn);
+                readAndWriteFile.setWindowNavigation(1);
                 primaryStage.setScene(scene);
                 primaryStage.show();
                 computerPlaying.play(onClickPawn.getWhoseTurn(), diceButtonObject.isWasClicked());
             } else {
                 gridMenu.add(new Labels().setExceptionText(), 8, 142, 100, 20);
             }
+        });
+        continueButton.setOnAction(value -> {
+
         });
         diceButton.setOnAction(value -> {
             //Dice Image

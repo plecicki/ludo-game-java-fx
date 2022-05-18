@@ -4,16 +4,19 @@ import com.kodilla.ludogame.pawns.Blue;
 import com.kodilla.ludogame.pawns.Green;
 import com.kodilla.ludogame.pawns.Red;
 import com.kodilla.ludogame.pawns.Yellow;
+import javafx.stage.Stage;
 
 import java.util.ArrayList;
 
 public class Ranking {
 
     private ArrayList<String> playersRanking;
+    private Stage primaryStage;
     private Boolean[] areInRanking = {false, false, false, false};
 
-    public Ranking(ArrayList<String> playersRanking) {
+    public Ranking(ArrayList<String> playersRanking, Stage primaryStage) {
         this.playersRanking = playersRanking;
+        this.primaryStage = primaryStage;
     }
 
     public void checkIfRedWon(Red[] reds, int playerIndex) {
@@ -81,7 +84,7 @@ public class Ranking {
                 areInRanking[1] == true &&
                 areInRanking[2] == true &&
                 areInRanking[3] == true) {
-            new EndFrame(playersRanking).displayEndFrame();
+            new EndFrame(playersRanking).displayEndFrame(primaryStage);
         }
     }
 

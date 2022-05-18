@@ -1,5 +1,6 @@
 package com.kodilla.ludogame.lastpanel;
 
+import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -7,6 +8,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
 import java.util.ArrayList;
 
@@ -18,7 +20,7 @@ public class EndFrame {
         this.rankingPlayers = rankingPlayers;
     }
 
-    public void displayEndFrame() {
+    public void displayEndFrame(Stage primaryStage) {
         GridPane grid = new GridPane();
         grid.setAlignment(Pos.TOP_LEFT);
         grid.setHgap(5);
@@ -40,5 +42,11 @@ public class EndFrame {
         rankingWindow.setTitle("Finish ranking");
         rankingWindow.setScene(scene);
         rankingWindow.show();
+
+        rankingWindow.setOnCloseRequest(new EventHandler<WindowEvent>() {
+            public void handle(WindowEvent we) {
+                primaryStage.close();
+            }
+        });
     }
 }

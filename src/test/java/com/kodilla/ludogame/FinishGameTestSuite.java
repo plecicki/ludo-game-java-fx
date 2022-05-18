@@ -5,6 +5,7 @@ import com.kodilla.ludogame.controlPanel.DiceButton;
 import com.kodilla.ludogame.dice.ThrowDice;
 import com.kodilla.ludogame.lastpanel.Ranking;
 import com.kodilla.ludogame.pawns.*;
+import javafx.stage.Stage;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
@@ -492,7 +493,8 @@ public class FinishGameTestSuite {
         OnClickPawn onClickPawn = new OnClickPawn();
         ThrowDice throwDice = new ThrowDice();
         ArrayList<String> rank = new ArrayList<>();
-        Ranking ranking = new Ranking(rank);
+        Stage stage = null;
+        Ranking ranking = new Ranking(rank, stage);
 
         //When
         throwDice.setDiceIndex(4);
