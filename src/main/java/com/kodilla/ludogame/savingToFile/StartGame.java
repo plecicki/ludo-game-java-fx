@@ -5,6 +5,7 @@ import com.kodilla.ludogame.constants.Labels;
 import com.kodilla.ludogame.controlPanel.DiceButton;
 import com.kodilla.ludogame.controlPanel.TurnLabels;
 import com.kodilla.ludogame.dice.DiceImage;
+import com.kodilla.ludogame.dice.ThrowDice;
 import com.kodilla.ludogame.pawns.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
@@ -65,7 +66,8 @@ public class StartGame {
                                       OnClickPawn onClickPawn, ArrayList<String> fileList,
                                       CheckBox checkBox1, CheckBox checkBox2,
                                       CheckBox checkBox3, CheckBox checkBox4,
-                                      DiceButton diceButtonObject, Button diceButton) {
+                                      DiceButton diceButtonObject, Button diceButton,
+                                      ThrowDice throwDice) {
 
         grid.add(redPawns[0],
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(1))).getValueX(),
@@ -212,6 +214,7 @@ public class StartGame {
         blueP[3].setActualPositionIndex(Integer.parseInt(fileList.get(16)));
 
         diceImage.startDiceImageMethod(Integer.parseInt(fileList.get(17)));
+        throwDice.setDiceIndex(Integer.parseInt(fileList.get(17)));
         turnLabels.turnLabels(Integer.parseInt(fileList.get(18)));
         turnLabels.instructionLabels(Integer.parseInt(fileList.get(19)));
         onClickPawn.setWhoseTurn(Integer.parseInt(fileList.get(20)));

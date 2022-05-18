@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kodilla.ludogame.FinishGameTestSuite" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-05-18T13:16:27" hostname="LAPTOP-F3PSJVM4" time="0.499">
-  <properties/>
-  <testcase name="After finishing the game the rankingshould be ready to display" classname="com.kodilla.ludogame.FinishGameTestSuite" time="0.499"/>
-  <system-out><![CDATA[In this moment new window with ranking is opened
-Test nr. 1: end
-]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

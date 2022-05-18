@@ -7,6 +7,7 @@ import com.kodilla.ludogame.controlPanel.DiceButton;
 import com.kodilla.ludogame.controlPanel.TurnLabels;
 import com.kodilla.ludogame.dice.DiceImage;
 import com.kodilla.ludogame.dice.ThrowDice;
+import com.kodilla.ludogame.lastpanel.EndFrame;
 import com.kodilla.ludogame.lastpanel.Ranking;
 import com.kodilla.ludogame.pawns.*;
 import com.kodilla.ludogame.savingToFile.ReadAndWriteFile;
@@ -138,6 +139,7 @@ public class LudoGame extends Application {
                             checkBox1, checkBox2, checkBox3, checkBox4);
                     } else if (readAndWriteFile.getWindowNavigation() == 2) {
                         readAndWriteFile.finishGame();
+                        new EndFrame(new ArrayList<>()).getEndFrame().getRankWind().close();
                     }
                 } catch (IOException e) {
                     System.out.println("Error during saving: " + e);
@@ -164,10 +166,14 @@ public class LudoGame extends Application {
 
         final ArrayList<String> savedLines1 = savedLines;
         continueButton.setOnAction(value -> {
+            checkBox1.setSelected(false);
+            checkBox2.setSelected(false);
+            checkBox3.setSelected(false);
+            checkBox4.setSelected(false);
             new CheckBoxes().chosenColorsAtContinueGame(savedLines1, computerPlaying);
             startGame.setContinueParameters(grid, redP, greenP, yellowP, blueP, redPawns,
                     greenPawns, yellowPawns, bluePawns, diceImage, turnLabels, onClickPawn, savedLines1,
-                    checkBox1, checkBox2, checkBox3, checkBox4, diceButtonObject, diceButton);
+                    checkBox1, checkBox2, checkBox3, checkBox4, diceButtonObject, diceButton, throwDice);
             readAndWriteFile.setWindowNavigation(1);
             primaryStage.setScene(scene);
             primaryStage.show();

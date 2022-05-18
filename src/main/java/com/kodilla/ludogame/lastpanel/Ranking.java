@@ -85,7 +85,8 @@ public class Ranking {
                 areInRanking[1] == true &&
                 areInRanking[2] == true &&
                 areInRanking[3] == true) {
-            new EndFrame(playersRanking).displayEndFrame(primaryStage, readAndWriteFile);
+            EndFrame endFrame = new EndFrame(playersRanking);
+            endFrame.displayEndFrame(primaryStage, readAndWriteFile, endFrame);
             readAndWriteFile.setWindowNavigation(2);
         }
     }
