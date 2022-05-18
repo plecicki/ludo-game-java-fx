@@ -5,6 +5,7 @@ import com.kodilla.ludogame.controlPanel.DiceButton;
 import com.kodilla.ludogame.dice.ThrowDice;
 import com.kodilla.ludogame.lastpanel.Ranking;
 import com.kodilla.ludogame.pawns.*;
+import com.kodilla.ludogame.savingToFile.ReadAndWriteFile;
 import javafx.stage.Stage;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
@@ -495,6 +496,7 @@ public class FinishGameTestSuite {
         ArrayList<String> rank = new ArrayList<>();
         Stage stage = null;
         Ranking ranking = new Ranking(rank, stage);
+        ReadAndWriteFile readAndWriteFile = new ReadAndWriteFile();
 
         //When
         throwDice.setDiceIndex(4);
@@ -510,10 +512,10 @@ public class FinishGameTestSuite {
 
         try {
             for (int i=0; i<4; i++) {
-                ranking.checkIfRedWon(redP, i);
-                ranking.checkIfGreenWon(greenP, i);
-                ranking.checkIfYellowWon(yellowP, i);
-                ranking.checkIfBlueWon(blueP, i);
+                ranking.checkIfRedWon(redP, i, readAndWriteFile);
+                ranking.checkIfGreenWon(greenP, i, readAndWriteFile);
+                ranking.checkIfYellowWon(yellowP, i, readAndWriteFile);
+                ranking.checkIfBlueWon(blueP, i, readAndWriteFile);
             }
         } catch (ExceptionInInitializerError e) {
             System.out.println("In this moment new window with ranking is opened");

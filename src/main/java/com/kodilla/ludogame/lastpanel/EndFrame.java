@@ -1,5 +1,6 @@
 package com.kodilla.ludogame.lastpanel;
 
+import com.kodilla.ludogame.savingToFile.ReadAndWriteFile;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -10,6 +11,7 @@ import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class EndFrame {
@@ -20,7 +22,7 @@ public class EndFrame {
         this.rankingPlayers = rankingPlayers;
     }
 
-    public void displayEndFrame(Stage primaryStage) {
+    public void displayEndFrame(Stage primaryStage, ReadAndWriteFile readAndWriteFile) {
         GridPane grid = new GridPane();
         grid.setAlignment(Pos.TOP_LEFT);
         grid.setHgap(5);
@@ -45,6 +47,11 @@ public class EndFrame {
 
         rankingWindow.setOnCloseRequest(new EventHandler<WindowEvent>() {
             public void handle(WindowEvent we) {
+            try {
+                readAndWriteFile.finishGame();
+            } catch (IOException e) {
+                System.out.println("Error during saving: " + e);
+            }
                 primaryStage.close();
             }
         });

@@ -53,10 +53,6 @@ public class LudoGame extends Application {
         } catch (IllegalArgumentException e) {
             System.out.println("Error: " + e);
         }
-        System.out.println(savedLines.get(0));
-        System.out.println(savedLines.get(1));
-        System.out.println(savedLines.get(2));
-        System.out.println(savedLines.get(3));
 
         Image imageRedPawn = new Image("file:src/main/resources/pawns/red-pawn.png");
         Image imageGreenPawn = new Image("file:src/main/resources/pawns/green-pawn.png");
@@ -106,7 +102,7 @@ public class LudoGame extends Application {
         primaryStage.setTitle("Ludo Game");
 
         Button startButton = buttons.startButton();
-        Button continueButton = buttons.continueButton();
+        Button continueButton = buttons.continueButton(savedLines);
 
         CheckBox checkBox1 = new CheckBoxes().setCheckBoxesInMenu(1);
         CheckBox checkBox2 = new CheckBoxes().setCheckBoxesInMenu(2);
@@ -140,6 +136,8 @@ public class LudoGame extends Application {
                     if (readAndWriteFile.getWindowNavigation() == 1) {
                         readAndWriteFile.saveGame(redP,greenP,yellowP,blueP,throwDice,onClickPawn,diceButtonObject,
                             checkBox1, checkBox2, checkBox3, checkBox4);
+                    } else if (readAndWriteFile.getWindowNavigation() == 2) {
+                        readAndWriteFile.finishGame();
                     }
                 } catch (IOException e) {
                     System.out.println("Error during saving: " + e);
@@ -152,18 +150,7 @@ public class LudoGame extends Application {
                     checkBox2.isSelected() ||
                     checkBox3.isSelected() ||
                     checkBox4.isSelected()) {
-                if (!checkBox1.isSelected()) {
-                    computerPlaying.setRedPlayer(false);
-                }
-                if (!checkBox2.isSelected()) {
-                    computerPlaying.setGreenPlayer(false);
-                }
-                if (!checkBox3.isSelected()) {
-                    computerPlaying.setYellowPlayer(false);
-                }
-                if (!checkBox4.isSelected()) {
-                    computerPlaying.setBluePlayer(false);
-                }
+                new CheckBoxes().chosenColorsAtNewGame(checkBox1, checkBox2, checkBox3, checkBox4, computerPlaying);
                 startGame.setStartParameters(grid, redP, greenP, yellowP, blueP, redPawns,
                         greenPawns, yellowPawns, bluePawns, diceImage, turnLabels, onClickPawn);
                 readAndWriteFile.setWindowNavigation(1);
@@ -174,8 +161,17 @@ public class LudoGame extends Application {
                 gridMenu.add(new Labels().setExceptionText(), 8, 142, 100, 20);
             }
         });
-        continueButton.setOnAction(value -> {
 
+        final ArrayList<String> savedLines1 = savedLines;
+        continueButton.setOnAction(value -> {
+            new CheckBoxes().chosenColorsAtContinueGame(savedLines1, computerPlaying);
+            startGame.setContinueParameters(grid, redP, greenP, yellowP, blueP, redPawns,
+                    greenPawns, yellowPawns, bluePawns, diceImage, turnLabels, onClickPawn, savedLines1,
+                    checkBox1, checkBox2, checkBox3, checkBox4, diceButtonObject, diceButton);
+            readAndWriteFile.setWindowNavigation(1);
+            primaryStage.setScene(scene);
+            primaryStage.show();
+            computerPlaying.play(onClickPawn.getWhoseTurn(), diceButtonObject.isWasClicked());
         });
         diceButton.setOnAction(value -> {
             //Dice Image
@@ -237,7 +233,7 @@ public class LudoGame extends Application {
                 turnLabels.instructionLabels(1);
                 grid.add(turnLabels.getInfoLabel(), 100, 110, 50, 50);
 
-                ranking.checkIfRedWon(redP, 0);
+                ranking.checkIfRedWon(redP, 0, readAndWriteFile);
 
                 computerPlaying.play(onClickPawn.getWhoseTurn(), diceButtonObject.isWasClicked());
             }
@@ -266,7 +262,7 @@ public class LudoGame extends Application {
                 turnLabels.instructionLabels(1);
                 grid.add(turnLabels.getInfoLabel(), 100, 110, 50, 50);
 
-                ranking.checkIfRedWon(redP, 1);
+                ranking.checkIfRedWon(redP, 1, readAndWriteFile);
 
                 computerPlaying.play(onClickPawn.getWhoseTurn(), diceButtonObject.isWasClicked());
             }
@@ -295,7 +291,7 @@ public class LudoGame extends Application {
                 turnLabels.instructionLabels(1);
                 grid.add(turnLabels.getInfoLabel(), 100, 110, 50, 50);
 
-                ranking.checkIfRedWon(redP, 2);
+                ranking.checkIfRedWon(redP, 2, readAndWriteFile);
 
                 computerPlaying.play(onClickPawn.getWhoseTurn(), diceButtonObject.isWasClicked());
             }
@@ -324,7 +320,7 @@ public class LudoGame extends Application {
                 turnLabels.instructionLabels(1);
                 grid.add(turnLabels.getInfoLabel(), 100, 110, 50, 50);
 
-                ranking.checkIfRedWon(redP, 3);
+                ranking.checkIfRedWon(redP, 3, readAndWriteFile);
 
                 computerPlaying.play(onClickPawn.getWhoseTurn(), diceButtonObject.isWasClicked());
             }
@@ -354,7 +350,7 @@ public class LudoGame extends Application {
                 turnLabels.instructionLabels(1);
                 grid.add(turnLabels.getInfoLabel(), 100, 110, 50, 50);
 
-                ranking.checkIfGreenWon(greenP, 0);
+                ranking.checkIfGreenWon(greenP, 0, readAndWriteFile);
 
                 computerPlaying.play(onClickPawn.getWhoseTurn(), diceButtonObject.isWasClicked());
             }
@@ -383,7 +379,7 @@ public class LudoGame extends Application {
                 turnLabels.instructionLabels(1);
                 grid.add(turnLabels.getInfoLabel(), 100, 110, 50, 50);
 
-                ranking.checkIfGreenWon(greenP, 1);
+                ranking.checkIfGreenWon(greenP, 1, readAndWriteFile);
 
                 computerPlaying.play(onClickPawn.getWhoseTurn(), diceButtonObject.isWasClicked());
             }
@@ -412,7 +408,7 @@ public class LudoGame extends Application {
                 turnLabels.instructionLabels(1);
                 grid.add(turnLabels.getInfoLabel(), 100, 110, 50, 50);
 
-                ranking.checkIfGreenWon(greenP, 2);
+                ranking.checkIfGreenWon(greenP, 2, readAndWriteFile);
 
                 computerPlaying.play(onClickPawn.getWhoseTurn(), diceButtonObject.isWasClicked());
             }
@@ -441,7 +437,7 @@ public class LudoGame extends Application {
                 turnLabels.instructionLabels(1);
                 grid.add(turnLabels.getInfoLabel(), 100, 110, 50, 50);
 
-                ranking.checkIfGreenWon(greenP, 3);
+                ranking.checkIfGreenWon(greenP, 3, readAndWriteFile);
 
                 computerPlaying.play(onClickPawn.getWhoseTurn(), diceButtonObject.isWasClicked());
             }
@@ -471,7 +467,7 @@ public class LudoGame extends Application {
                 turnLabels.instructionLabels(1);
                 grid.add(turnLabels.getInfoLabel(), 100, 110, 50, 50);
 
-                ranking.checkIfYellowWon(yellowP, 0);
+                ranking.checkIfYellowWon(yellowP, 0, readAndWriteFile);
 
                 computerPlaying.play(onClickPawn.getWhoseTurn(), diceButtonObject.isWasClicked());
             }
@@ -500,7 +496,7 @@ public class LudoGame extends Application {
                 turnLabels.instructionLabels(1);
                 grid.add(turnLabels.getInfoLabel(), 100, 110, 50, 50);
 
-                ranking.checkIfYellowWon(yellowP, 1);
+                ranking.checkIfYellowWon(yellowP, 1, readAndWriteFile);
 
                 computerPlaying.play(onClickPawn.getWhoseTurn(), diceButtonObject.isWasClicked());
             }
@@ -529,7 +525,7 @@ public class LudoGame extends Application {
                 turnLabels.instructionLabels(1);
                 grid.add(turnLabels.getInfoLabel(), 100, 110, 50, 50);
 
-                ranking.checkIfYellowWon(yellowP, 2);
+                ranking.checkIfYellowWon(yellowP, 2, readAndWriteFile);
 
                 computerPlaying.play(onClickPawn.getWhoseTurn(), diceButtonObject.isWasClicked());
             }
@@ -558,7 +554,7 @@ public class LudoGame extends Application {
                 turnLabels.instructionLabels(1);
                 grid.add(turnLabels.getInfoLabel(), 100, 110, 50, 50);
 
-                ranking.checkIfYellowWon(yellowP, 3);
+                ranking.checkIfYellowWon(yellowP, 3, readAndWriteFile);
 
                 computerPlaying.play(onClickPawn.getWhoseTurn(), diceButtonObject.isWasClicked());
             }
@@ -588,7 +584,7 @@ public class LudoGame extends Application {
                 turnLabels.instructionLabels(1);
                 grid.add(turnLabels.getInfoLabel(), 100, 110, 50, 50);
 
-                ranking.checkIfBlueWon(blueP, 0);
+                ranking.checkIfBlueWon(blueP, 0, readAndWriteFile);
 
                 computerPlaying.play(onClickPawn.getWhoseTurn(), diceButtonObject.isWasClicked());
             }
@@ -617,7 +613,7 @@ public class LudoGame extends Application {
                 turnLabels.instructionLabels(1);
                 grid.add(turnLabels.getInfoLabel(), 100, 110, 50, 50);
 
-                ranking.checkIfBlueWon(blueP, 1);
+                ranking.checkIfBlueWon(blueP, 1, readAndWriteFile);
 
                 computerPlaying.play(onClickPawn.getWhoseTurn(), diceButtonObject.isWasClicked());
             }
@@ -646,7 +642,7 @@ public class LudoGame extends Application {
                 turnLabels.instructionLabels(1);
                 grid.add(turnLabels.getInfoLabel(), 100, 110, 50, 50);
 
-                ranking.checkIfBlueWon(blueP, 2);
+                ranking.checkIfBlueWon(blueP, 2, readAndWriteFile);
 
                 computerPlaying.play(onClickPawn.getWhoseTurn(), diceButtonObject.isWasClicked());
             }
@@ -675,7 +671,7 @@ public class LudoGame extends Application {
                 turnLabels.instructionLabels(1);
                 grid.add(turnLabels.getInfoLabel(), 100, 110, 50, 50);
 
-                ranking.checkIfBlueWon(blueP, 3);
+                ranking.checkIfBlueWon(blueP, 3, readAndWriteFile);
 
                 computerPlaying.play(onClickPawn.getWhoseTurn(), diceButtonObject.isWasClicked());
             }

@@ -4,6 +4,7 @@ import com.kodilla.ludogame.pawns.Blue;
 import com.kodilla.ludogame.pawns.Green;
 import com.kodilla.ludogame.pawns.Red;
 import com.kodilla.ludogame.pawns.Yellow;
+import com.kodilla.ludogame.savingToFile.ReadAndWriteFile;
 import javafx.stage.Stage;
 
 import java.util.ArrayList;
@@ -19,7 +20,7 @@ public class Ranking {
         this.primaryStage = primaryStage;
     }
 
-    public void checkIfRedWon(Red[] reds, int playerIndex) {
+    public void checkIfRedWon(Red[] reds, int playerIndex, ReadAndWriteFile readAndWriteFile) {
         if (reds[playerIndex].getActualPositionIndex() >= 72 && reds[playerIndex].getActualPositionIndex() < 77) {
             reds[playerIndex].setFinish(true);
         }
@@ -30,11 +31,11 @@ public class Ranking {
             this.playersRanking.add("RED");
             this.areInRanking[0] = true;
 
-            openEndFrame();
+            openEndFrame(readAndWriteFile);
         }
     }
 
-    public void checkIfGreenWon(Green[] greens, int playerIndex) {
+    public void checkIfGreenWon(Green[] greens, int playerIndex, ReadAndWriteFile readAndWriteFile) {
         if (greens[playerIndex].getActualPositionIndex() >= 77 && greens[playerIndex].getActualPositionIndex() < 82) {
             greens[playerIndex].setFinish(true);
         }
@@ -45,11 +46,11 @@ public class Ranking {
             this.playersRanking.add("GREEN");
             this.areInRanking[1] = true;
 
-            openEndFrame();
+            openEndFrame(readAndWriteFile);
         }
     }
 
-    public void checkIfYellowWon(Yellow[] yellows, int playerIndex) {
+    public void checkIfYellowWon(Yellow[] yellows, int playerIndex, ReadAndWriteFile readAndWriteFile) {
         if (yellows[playerIndex].getActualPositionIndex() >= 82 && yellows[playerIndex].getActualPositionIndex() < 87) {
             yellows[playerIndex].setFinish(true);
         }
@@ -60,11 +61,11 @@ public class Ranking {
             this.playersRanking.add("YELLOW");
             this.areInRanking[2] = true;
 
-            openEndFrame();
+            openEndFrame(readAndWriteFile);
         }
     }
 
-    public void checkIfBlueWon(Blue[] blues, int playerIndex) {
+    public void checkIfBlueWon(Blue[] blues, int playerIndex, ReadAndWriteFile readAndWriteFile) {
         if (blues[playerIndex].getActualPositionIndex() >= 87 && blues[playerIndex].getActualPositionIndex() < 92) {
             blues[playerIndex].setFinish(true);
         }
@@ -75,16 +76,17 @@ public class Ranking {
             this.playersRanking.add("BLUE");
             this.areInRanking[3] = true;
 
-            openEndFrame();
+            openEndFrame(readAndWriteFile);
         }
     }
 
-    private void openEndFrame() {
+    private void openEndFrame(ReadAndWriteFile readAndWriteFile) {
         if (areInRanking[0] == true &&
                 areInRanking[1] == true &&
                 areInRanking[2] == true &&
                 areInRanking[3] == true) {
-            new EndFrame(playersRanking).displayEndFrame(primaryStage);
+            new EndFrame(playersRanking).displayEndFrame(primaryStage, readAndWriteFile);
+            readAndWriteFile.setWindowNavigation(2);
         }
     }
 
