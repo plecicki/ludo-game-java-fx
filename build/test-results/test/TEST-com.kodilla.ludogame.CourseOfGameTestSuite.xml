@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.ludogame.CourseOfGameTestSuite" tests="115" skipped="0" failures="0" errors="0" timestamp="2022-05-19T09:00:43" hostname="LAPTOP-F3PSJVM4" time="0.321">
+  <properties/>
+  <testcase name="Blue [2] pawn's position should be changed from 19 to 22 and Red [3] should be captured from 22 to 2" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.042"/>
+  <testcase name="Blue [3] pawn's position should be changed from 64 to 65 after throwing 1" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Blue [3] pawn's position should be changed from 64 to 66 after throwing 2" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Blue [3] pawn's position should be changed from 64 to 67 after throwing 3" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.002"/>
+  <testcase name="Blue [3] pawn's position should be changed from 64 to 68 after throwing 4" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Blue [3] pawn's position should be changed from 64 to 69 after throwing 5" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Blue [3] pawn's position should be changed from 64 to 70 after throwing 6" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.003"/>
+  <testcase name="Green [1] pawn's position should be changed from 66 to 70 and Red [0] should be captured from 70 to 0" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.002"/>
+  <testcase name="Blue [2] pawn's position should be changed from 19 to 24 and Yellow [1] should be captured from 24 to 9" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Max value of drawn numbers should be less than or equal to 6 and min value should be more than or equal to 1" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.004"/>
+  <testcase name="Green [0] pawn's position should be changed from 28 to 29 after throwing 1" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.002"/>
+  <testcase name="Green [0] pawn's position should be changed from 28 to 77 after throwing 2" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.002"/>
+  <testcase name="Green [0] pawn's position should be changed from 28 to 78 after throwing 3" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Green [0] pawn's position should be changed from 28 to 79 after throwing 4" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.002"/>
+  <testcase name="Green [0] pawn's position should be changed from 28 to 80 after throwing 5" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.003"/>
+  <testcase name="Green [0] pawn's position should be changed from 28 to 81 after throwing 6" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.002"/>
+  <testcase name="Green [2] pawn's position should be changed from 47 to 50 and Yellow [3] should be captured from 50 to 11" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.003"/>
+  <testcase name="Red [2] pawn's position should be changed from 33 to 36 and Green [3] should be captured from 36 to 6" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.003"/>
+  <testcase name="Green [1] pawn's position should be changed from 66 to 67 after throwing 1" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.0"/>
+  <testcase name="Green [1] pawn's position should be changed from 66 to 68 after throwing 2" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Green [1] pawn's position should be changed from 66 to 69 after throwing 3" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.003"/>
+  <testcase name="Green [1] pawn's position should be changed from 66 to 70 after throwing 4" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Green [1] pawn's position should be changed from 66 to 71 after throwing 5" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Green [1] pawn's position should be changed from 66 to 16 after throwing 6" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Blue [3] pawn's position should be changed from 64 to 66 and Green [1] should be captured from 66 to 5" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Yellow [3] pawn's position should be changed from 50 to 52 and Red [1] should be captured from 52 to 1" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.003"/>
+  <testcase name="Red [1] pawn's position should be changed from 52 to 56 and Yellow [0] should be captured from 56 to 8" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.003"/>
+  <testcase name="Green [2] pawn's position should be changed from 47 to 48 after throwing 1" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.004"/>
+  <testcase name="Green [2] pawn's position should be changed from 47 to 49 after throwing 2" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.002"/>
+  <testcase name="Green [2] pawn's position should be changed from 47 to 50 after throwing 3" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.002"/>
+  <testcase name="Green [2] pawn's position should be changed from 47 to 51 after throwing 4" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Green [2] pawn's position should be changed from 47 to 52 after throwing 5" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Green [2] pawn's position should be changed from 47 to 52 after throwing 6" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Green [3] pawn's position should be changed from 36 to 38 and Blue [1] should be captured from 38 to 13" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.003"/>
+  <testcase name="Red [0] pawn's position should be changed from 70 to 71 after throwing 1" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Red [0] pawn's position should be changed from 70 to 72 after throwing 2" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Red [0] pawn's position should be changed from 70 to 73 after throwing 3" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.002"/>
+  <testcase name="Red [0] pawn's position should be changed from 70 to 74 after throwing 4" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Red [0] pawn's position should be changed from 70 to 75 after throwing 5" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Red [0] pawn's position should be changed from 70 to 76 after throwing 6" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Green [3] pawn's position should be changed from 36 to 37 after throwing 1" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Green [3] pawn's position should be changed from 36 to 38 after throwing 2" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Green [3] pawn's position should be changed from 36 to 39 after throwing 3" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.0"/>
+  <testcase name="Green [3] pawn's position should be changed from 36 to 40 after throwing 4" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.0"/>
+  <testcase name="Green [3] pawn's position should be changed from 36 to 41 after throwing 5" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.0"/>
+  <testcase name="Green [3] pawn's position should be changed from 36 to 42 after throwing 6" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.002"/>
+  <testcase name="Yellow [2] pawn's position should be changed from 61 to 64 and Blue [3] should be captured from 64 to 15" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Red [1] pawn's position should be changed from 52 to 53 after throwing 1" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Red [1] pawn's position should be changed from 52 to 54 after throwing 2" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.0"/>
+  <testcase name="Red [1] pawn's position should be changed from 52 to 55 after throwing 3" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Red [1] pawn's position should be changed from 52 to 56 after throwing 4" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.0"/>
+  <testcase name="Red [1] pawn's position should be changed from 52 to 57 after throwing 5" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.0"/>
+  <testcase name="Red [1] pawn's position should be changed from 52 to 58 after throwing 6" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.0"/>
+  <testcase name="Red [3] pawn's position should be changed from 22 to 24 and Yellow [1] should be captured from 24 to 10" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.0"/>
+  <testcase name="Yellow [0] pawn's position should be changed from 56 to 57 after throwing 1" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.0"/>
+  <testcase name="Yellow [0] pawn's position should be changed from 56 to 82 after throwing 2" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Yellow [0] pawn's position should be changed from 56 to 83 after throwing 3" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Yellow [0] pawn's position should be changed from 56 to 84 after throwing 4" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Yellow [0] pawn's position should be changed from 56 to 85 after throwing 5" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Yellow [0] pawn's position should be changed from 56 to 86 after throwing 6" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Red [2] pawn's position should be changed from 33 to 34 after throwing 1" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Red [2] pawn's position should be changed from 33 to 35 after throwing 2" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Red [2] pawn's position should be changed from 33 to 36 after throwing 3" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Red [2] pawn's position should be changed from 33 to 37 after throwing 4" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Red [2] pawn's position should be changed from 33 to 38 after throwing 5" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Red [2] pawn's position should be changed from 33 to 38 after throwing 6" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Red [2] pawn's position should be changed from 33 to 38 and Blue [1] should be captured from 38 to 13" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Green [2] pawn's position should be changed from 47 to 52 and Red [1] should be captured from 52 to 1" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Yellow [1] pawn's position should be changed from 24 to 25 after throwing 1" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Yellow [1] pawn's position should be changed from 24 to 26 after throwing 2" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Yellow [1] pawn's position should be changed from 24 to 27 after throwing 3" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Yellow [1] pawn's position should be changed from 24 to 28 after throwing 4" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Yellow [1] pawn's position should be changed from 24 to 29 after throwing 5" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Yellow [1] pawn's position should be changed from 24 to 29 after throwing 6" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Red [3] pawn's position should be changed from 22 to 28 and Green [0] should be captured from 28 to 4" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Red [3] pawn's position should be changed from 22 to 23 after throwing 1" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Red [3] pawn's position should be changed from 22 to 24 after throwing 2" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.002"/>
+  <testcase name="Red [3] pawn's position should be changed from 22 to 25 after throwing 3" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.0"/>
+  <testcase name="Red [3] pawn's position should be changed from 22 to 26 after throwing 4" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Red [3] pawn's position should be changed from 22 to 27 after throwing 5" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Red [3] pawn's position should be changed from 22 to 28 after throwing 6" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Yellow [2] pawn's position should be changed from 61 to 62 after throwing 1" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.002"/>
+  <testcase name="Yellow [2] pawn's position should be changed from 61 to 63 after throwing 2" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.005"/>
+  <testcase name="Yellow [2] pawn's position should be changed from 61 to 64 after throwing 3" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.006"/>
+  <testcase name="Yellow [2] pawn's position should be changed from 61 to 65 after throwing 4" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.002"/>
+  <testcase name="Yellow [2] pawn's position should be changed from 61 to 66 after throwing 5" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.013"/>
+  <testcase name="Yellow [2] pawn's position should be changed from 61 to 67 after throwing 6" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.002"/>
+  <testcase name="Blue [0] pawn's position should be changed from 42 to 43 after throwing 1" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Blue [0] pawn's position should be changed from 42 to 87 after throwing 2" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.0"/>
+  <testcase name="Blue [0] pawn's position should be changed from 42 to 88 after throwing 3" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Blue [0] pawn's position should be changed from 42 to 89 after throwing 4" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Blue [0] pawn's position should be changed from 42 to 90 after throwing 5" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.0"/>
+  <testcase name="Blue [0] pawn's position should be changed from 42 to 91 after throwing 6" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.0"/>
+  <testcase name="Blue [3] pawn's position should be changed from 64 to 70 and Red [0] should be captured from 70 to 0" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Green [3] pawn's position should be changed from 36 to 42 and Blue [0] should be captured from 42 to 12" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.002"/>
+  <testcase name="Yellow [3] pawn's position should be changed from 50 to 51 after throwing 1" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Yellow [3] pawn's position should be changed from 50 to 52 after throwing 2" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.0"/>
+  <testcase name="Yellow [3] pawn's position should be changed from 50 to 53 after throwing 3" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.003"/>
+  <testcase name="Yellow [3] pawn's position should be changed from 50 to 54 after throwing 4" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Yellow [3] pawn's position should be changed from 50 to 55 after throwing 5" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.002"/>
+  <testcase name="Yellow [3] pawn's position should be changed from 50 to 55 after throwing 6" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Blue [1] pawn's position should be changed from 38 to 39 after throwing 1" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.002"/>
+  <testcase name="Blue [1] pawn's position should be changed from 38 to 40 after throwing 2" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Blue [1] pawn's position should be changed from 38 to 41 after throwing 3" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Blue [1] pawn's position should be changed from 38 to 42 after throwing 4" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.003"/>
+  <testcase name="Blue [1] pawn's position should be changed from 38 to 43 after throwing 5" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.002"/>
+  <testcase name="Blue [1] pawn's position should be changed from 38 to 87 after throwing 6" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Yellow [2] pawn's position should be changed from 61 to 66 and Green [1] should be captured from 66 to 5" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Yellow [1] pawn's position should be changed from 24 to 28 and Green [0] should be captured from 28 to 4" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Blue [2] pawn's position should be changed from 19 to 20 after throwing 1" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Blue [2] pawn's position should be changed from 19 to 21 after throwing 2" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.002"/>
+  <testcase name="Blue [2] pawn's position should be changed from 19 to 22 after throwing 3" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.001"/>
+  <testcase name="Blue [2] pawn's position should be changed from 19 to 23 after throwing 4" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.002"/>
+  <testcase name="Blue [2] pawn's position should be changed from 19 to 24 after throwing 5" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.002"/>
+  <testcase name="Blue [2] pawn's position should be changed from 19 to 25 after throwing 6" classname="com.kodilla.ludogame.CourseOfGameTestSuite" time="0.002"/>
+  <system-out><![CDATA[Test nr. 1: end
+Test nr. 2: end
+Test nr. 3: end
+Test nr. 4: end
+Test nr. 5: end
+Test nr. 6: end
+Test nr. 7: end
+Test nr. 8: end
+Test nr. 9: end
+Test nr. 10: end
+Test nr. 11: end
+Test nr. 12: end
+Test nr. 13: end
+Test nr. 14: end
+Test nr. 15: end
+Test nr. 16: end
+Test nr. 17: end
+Test nr. 18: end
+Test nr. 19: end
+Test nr. 20: end
+Test nr. 21: end
+Test nr. 22: end
+Test nr. 23: end
+Test nr. 24: end
+Test nr. 25: end
+Test nr. 26: end
+Test nr. 27: end
+Test nr. 28: end
+Test nr. 29: end
+Test nr. 30: end
+Test nr. 31: end
+Test nr. 32: end
+Test nr. 33: end
+Test nr. 34: end
+Test nr. 35: end
+Test nr. 36: end
+Test nr. 37: end
+Test nr. 38: end
+Test nr. 39: end
+Test nr. 40: end
+Test nr. 41: end
+Test nr. 42: end
+Test nr. 43: end
+Test nr. 44: end
+Test nr. 45: end
+Test nr. 46: end
+Test nr. 47: end
+Test nr. 48: end
+Test nr. 49: end
+Test nr. 50: end
+Test nr. 51: end
+Test nr. 52: end
+Test nr. 53: end
+Test nr. 54: end
+Test nr. 55: end
+Test nr. 56: end
+Test nr. 57: end
+Test nr. 58: end
+Test nr. 59: end
+Test nr. 60: end
+Test nr. 61: end
+Test nr. 62: end
+Test nr. 63: end
+Test nr. 64: end
+Test nr. 65: end
+Test nr. 66: end
+Test nr. 67: end
+Test nr. 68: end
+Test nr. 69: end
+Test nr. 70: end
+Test nr. 71: end
+Test nr. 72: end
+Test nr. 73: end
+Test nr. 74: end
+Test nr. 75: end
+Test nr. 76: end
+Test nr. 77: end
+Test nr. 78: end
+Test nr. 79: end
+Test nr. 80: end
+Test nr. 81: end
+Test nr. 82: end
+Test nr. 83: end
+Test nr. 84: end
+Test nr. 85: end
+Test nr. 86: end
+Test nr. 87: end
+Test nr. 88: end
+Test nr. 89: end
+Test nr. 90: end
+Test nr. 91: end
+Test nr. 92: end
+Test nr. 93: end
+Test nr. 94: end
+Test nr. 95: end
+Test nr. 96: end
+Test nr. 97: end
+Test nr. 98: end
+Test nr. 99: end
+Test nr. 100: end
+Test nr. 101: end
+Test nr. 102: end
+Test nr. 103: end
+Test nr. 104: end
+Test nr. 105: end
+Test nr. 106: end
+Test nr. 107: end
+Test nr. 108: end
+Test nr. 109: end
+Test nr. 110: end
+Test nr. 111: end
+Test nr. 112: end
+Test nr. 113: end
+Test nr. 114: end
+Test nr. 115: end
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
