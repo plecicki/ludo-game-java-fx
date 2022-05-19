@@ -76,27 +76,16 @@ public class LudoGame extends Application {
 
         ArrayList<String> rank = new ArrayList<>();
         Ranking ranking = new Ranking(rank, primaryStage);
-
         DiceButton diceButtonObject = new DiceButton();
         Button diceButton = diceButtonObject.throwDiceButton();
-
         Buttons buttons = new Buttons();
-
         ComputerPlaying computerPlaying = new ComputerPlaying(redPawns, greenPawns, yellowPawns, bluePawns, diceButton);
-
         DiceImage diceImage = new DiceImage();
-
-
         ThrowDice throwDice = new ThrowDice();
-
         TurnLabels turnLabels = new TurnLabels();
-
-
         OnClickPawn onClickPawn = new OnClickPawn();
 
-
         grid.add(diceButton, 35, 134, 100, 20);
-
         Scene scene = new Scene(grid, 633, 750, Color.LIGHTGREEN);
 
         primaryStage.setResizable(false);

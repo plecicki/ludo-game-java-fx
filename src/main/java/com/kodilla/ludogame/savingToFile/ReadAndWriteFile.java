@@ -1,6 +1,5 @@
 package com.kodilla.ludogame.savingToFile;
 
-import com.kodilla.ludogame.constants.CheckBoxes;
 import com.kodilla.ludogame.controlPanel.DiceButton;
 import com.kodilla.ludogame.dice.ThrowDice;
 import com.kodilla.ludogame.pawns.*;

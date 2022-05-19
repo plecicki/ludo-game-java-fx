@@ -1,7 +1,6 @@
 package com.kodilla.ludogame;
 
 import com.kodilla.ludogame.constants.Constants;
-import com.kodilla.ludogame.controlPanel.DiceButton;
 import com.kodilla.ludogame.dice.ThrowDice;
 import com.kodilla.ludogame.lastpanel.Ranking;
 import com.kodilla.ludogame.pawns.*;

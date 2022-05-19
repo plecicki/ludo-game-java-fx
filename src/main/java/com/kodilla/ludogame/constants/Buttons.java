@@ -1,6 +1,5 @@
 package com.kodilla.ludogame.constants;
 
-import com.kodilla.ludogame.savingToFile.ReadAndWriteFile;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.text.Font;

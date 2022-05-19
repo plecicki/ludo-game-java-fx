@@ -1,6 +1,5 @@
 package com.kodilla.ludogame.pawns;
 
-import com.kodilla.ludogame.constants.PawnPosition;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 

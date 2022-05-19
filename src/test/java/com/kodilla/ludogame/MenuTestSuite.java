@@ -1,13 +1,10 @@
 package com.kodilla.ludogame;
 
-import com.kodilla.ludogame.constants.Buttons;
 import com.kodilla.ludogame.constants.Constants;
 import com.kodilla.ludogame.controlPanel.DiceButton;
 import com.kodilla.ludogame.dice.ThrowDice;
 import com.kodilla.ludogame.pawns.*;
 import com.kodilla.ludogame.savingToFile.ReadAndWriteFile;
-import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
