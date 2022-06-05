@@ -67,5 +67,22 @@ Przykładowa zawartość pliku save.txt wraz z opisem kolejnych liczb
 0 - Czy została już rzucona kość i teraz gracz wybiera pionek do ruchu
 ```
 &nbsp;&nbsp;&nbsp;&nbsp;Program umożliwia zapisanie stanu niedokończonej gry. Zapis danych do pliku następuje podczas wyłączania gry klikając przycisk "X" znajdujący się w prawym górnym rogu okna podczas rozgrywki. Zapis gry usuwa się po zakończeniu rozgrywki i wyłączeniu jej. Gra może zostać nadpisana przez nową rozpoczętą rozgrywkę.
-
-
+## Testy jednostkowe
+![image](https://user-images.githubusercontent.com/84147482/172048239-c30a71fe-0716-43f7-8947-301a5c45b36c.png) ![image](https://user-images.githubusercontent.com/84147482/172048226-654133e4-132d-4ccb-9651-8e756292e91e.png) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;Projekt zawiera klasy z napisanymi testami jednostkowymi, które sprawdzają poprawność działania projektu podczas danej wykonanej operacji przez użytkownika. <br>
+### Zrealizowane testy jednostkowe
+- Początek gry (36 testów)
+  - Czy pionki są nieruchowe, gdy wyrzucono mniej niż 6
+  - Czy można wykonać ruch po wyrzuceniu 6
+  - Czy można wykonać ruch tylko podczas swojej kolejki
+  - Czy można wykonać ruch przed rzutem kostką
+  - Czy pionki zajmują właściwą pozycję po pierwszym ruchu
+- Przebieg gry (115 testów)
+  - Czy losowane wartości za pomocą kości są z przedziału od 1 do 6
+  - Czy pionki zajmują właściwe pozycje po wyrzuceniu danej liczby na kości
+  - Czy pionki wracają na pozycje startowe po zbiciu przez inne pionki
+- Koniec gry (25 testów)
+  - Czy pionki zajmują właściwe pozycje po dotarciu do końca
+  - Czy ranking końcowy wyświetla się prawidłowo
+- Odczyt stanu gry z pliku save.txt (9 testów)
+  - Czy informacje zawarte w pliku zapisu są prawidłowo odczytywane
