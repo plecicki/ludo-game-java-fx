@@ -1,6 +1,6 @@
-[comment]: <> (```diff)
-[comment]: <> (@@ English version below @@)
-[comment]: <> (```)
+```diff
+@@ English version below @@
+```
 # Gra planszowa "Chińczyk"
 Użyta biblioteka GUI - JavaFX <br>
 Autor - Piotr Łęcicki
@@ -86,3 +86,88 @@ Przykładowa zawartość pliku save.txt wraz z opisem kolejnych liczb
   - Czy ranking końcowy wyświetla się prawidłowo
 - Odczyt stanu gry z pliku save.txt (9 testów)
   - Czy informacje zawarte w pliku zapisu są prawidłowo odczytywane
+
+# Ludo Game
+Used GUI library - JavaFX <br>
+Author - Piotr Łęcicki
+## Menu
+![Menu with loadbutton](https://user-images.githubusercontent.com/84147482/172002735-45e584ca-6772-49c4-83a7-ce9a6adce474.png) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;After starting the program using command ```./gradlew run``` (System Windows) the main menu is displayed for setting,
+which pawns will be controlled by the player, and which by the computer. After selecting the colors and clicking the "NEW GAME" button, the game starts. <br>
+&nbsp;&nbsp;&nbsp;&nbsp;The program allows you to load the previous game by pressing the "LOAD GAME" button. Saving and reading a state of
+gameplay is done via the text file ``` save.txt ``` included in the project.
+### Deactivating the load game button
+![Menu without loadbutton](https://user-images.githubusercontent.com/84147482/172004561-f4719e7a-8e69-431f-8046-0353ae7f76c4.png) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;If the text file does not contain a game save, then the button is disabled and it is possible
+only start the game from the beginning. This happens when the game is played for the first time or the previous game has been played through to the end
+and there is nothing to load.
+### The requirement to mark at least one color
+![image](https://user-images.githubusercontent.com/84147482/172005568-9e897eea-3f0c-49e9-b298-76b4682f48d2.png) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;The program makes it impossible to skip the step of selecting at least one color of pawns controlled by player. In other case when
+no color will be selected and the player clicks the "NEW GAME" button, then a message will be displayed asking to select
+one or more options. This rule does not apply to loading a saved game, because datas, which pawns are controlled by the player and which by the computer are also loaded from the file.
+## Game
+![During game](https://user-images.githubusercontent.com/84147482/172011536-b53c97cb-a4dd-470c-b709-fec5d7f34302.png) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;The game consists in reaching the finish line with all pawns of your color before other players do it. After throwing the number 6, players may move from the starting fields one of the four pawns on the starting fields. After a pawn travels one full circle, it takes place on one of the five end fields.
+### Numbering fields on the board
+![numeration correct size](https://user-images.githubusercontent.com/84147482/172013630-73efe307-27c5-4179-b934-7b1e12e8a244.png) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;Every field visible on the board contains a unique index number. These numbers are not visible during the game. These numbers play a key role in the source code, which allows you to define in detail the positions of the pawns during the game.
+### Capturing pawns
+![Capturing part 1](https://user-images.githubusercontent.com/84147482/172014185-25a4f217-d9e2-4ea9-a477-bb380d0243cd.png) ![Capturing part 2](https://user-images.githubusercontent.com/84147482/172014230-a7576d4b-ed64-4237-bcb2-44d5c351253a.png) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;The game allows you to capture pieces of different colors. The captured pawn returns to the starting position, while the pawn that captured takes the position on which the captured player was. It is not possible to capture a pawn belonging to your own team, e.g. a red pawn cannot capture a second red pawn, in this situation both pawns are standing on the same field.
+### Control panel
+![control panel](https://user-images.githubusercontent.com/84147482/172015813-c2f45fb3-fc94-44be-8d13-7ee9486faf4a.png) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;The control panel shows the mechanism of throwing the dice with the button. After a given player draws a number, the button is blocked, which makes it impossible for the player to re-throw before making a move with a pawn. Additionally, there are two signs informing the player what to do and whose turn is. The attached picture shows the yellow player's turn, who has already rolled the dice and is currently choosing a pawn to move.
+### End of the game
+![final ranking](https://user-images.githubusercontent.com/84147482/172015449-bd918a49-9371-4497-af01-52d289b5d213.png) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;When all the pieces have taken their final positions, the final ranking is displayed and informing you which color took which position. 
+## Save
+Sample content of save.txt file with description of consecutive numbers
+```
+1 - Is there any saved game (enables / disables the "LOAD GAME" button)
+0 - Red pawn position no. 1
+19 - Red pawn position no. 2
+26 - Red pawn position no. 3
+29 - Red pawn position no. 4
+63 - Green pawn position no. 1
+5 - Green pawn position no. 2
+6 - Green pawn position no. 3
+7 - Green pawn position no. 4
+8 - Yellow pawn position no. 1
+61 - Yellow pawn position no. 2
+10 - Yellow pawn position no. 3
+11 - Yellow pawn position no. 4
+21 - Blue pawn position no. 1
+13 - Blue pawn position no. 2
+14 - Blue pawn position no. 3
+15 - Blue pawn position no. 4
+3 - Cube condition, last number rolled
+3 - Number of the player whose turn it is (Sets the appropriate inscription informing about it)
+2 - Is the dice button active
+3 - Number of the player whose turn it is (Sets the value of the class control field)
+1 - Are the red pawns controlled by the player or the computer
+0 - Are the green pawns controlled by the player or the computer
+1 - Are the yellow pawns controlled by the player or the computer
+0 - Are the blue pawns controlled by the player or the computer
+0 - Has a dice already been rolled and now the player chooses a pawn to move
+```
+&nbsp;&nbsp;&nbsp;&nbsp;The program allows you to save the state of an unfinished game. The data is saved to the file when the game is turned off by clicking the "X" button in the upper right corner of the window during the game. The game save is deleted after the game is over and the game is turned off. The game may be overwritten by a new game that has been just started.
+## Unit tests
+![image](https://user-images.githubusercontent.com/84147482/172048239-c30a71fe-0716-43f7-8947-301a5c45b36c.png) ![image](https://user-images.githubusercontent.com/84147482/172048226-654133e4-132d-4ccb-9651-8e756292e91e.png) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;The project contains classes with written unit tests that verify the correction of operations of the project during playing it by a user <br>
+### Realized unit tests
+- The beginning of the game (36 tests)
+  - Are the pieces unmoved when less than 6 has been thrown
+  - Is it possible to make a move after rolling a 6
+  - Can you only make a move during your turn
+  - Is it possible to make a move before rolling the dice
+  - Are the pawns in the correct positions after first move
+- The course of the game (115 tests)
+  - Are the values randomly selected with the dice between 1 and 6
+  - Are the pawns moving in the correct positions after rolling a number on the dice
+  - Do the pawns return to the starting positions after being captured by other pawns
+- Game over (25 tests)
+  - Are the pawns in the right positions after reaching the end
+  - Is the final ranking displayed correctly
+- Reading the game state from save.txt (9 tests)
+  - Are the informations in the save file read correctly
