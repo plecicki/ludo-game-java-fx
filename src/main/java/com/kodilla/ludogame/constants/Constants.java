@@ -4,7 +4,9 @@ import java.util.ArrayList;
 
 public class Constants {
 
-    public ArrayList<PawnPosition> constantPawnPositions() {
+    public static ArrayList<PawnPosition> PAWN_POSITIONS = constantPawnPositions();
+
+    private static ArrayList<PawnPosition> constantPawnPositions() {
         ArrayList<PawnPosition> pawnPositions = new ArrayList<>();
         //Red start positions
         pawnPositions.add(new PawnPosition(15, 13)); //Left-up 0

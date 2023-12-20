@@ -27,60 +27,57 @@ public class ReadAndWriteFile {
         return savedLines;
     }
 
-    public void saveGame(RedPawn[] redPawn, GreenPawn[] greenPawn, YellowPawn[] yellowPawn, BluePawn[] bluePawn,
+    public void saveGame(RedPawn[] redPawnArray, GreenPawn[] greenPawnArray,
+                         YellowPawn[] yellowPawnArray, BluePawn[] bluePawnArray,
                          ThrowDice throwDice, OnClickPawn onClickPawn,
                          DiceButton diceButtonObject, CheckBox checkBox1,
                          CheckBox checkBox2, CheckBox checkBox3, CheckBox checkBox4)
             throws IOException {
-        String writeToFile = "1\n";
-        writeToFile += redPawn[0].getActualPositionIndex() + "\n"; //1
-        writeToFile += redPawn[1].getActualPositionIndex() + "\n"; //2
-        writeToFile += redPawn[2].getActualPositionIndex() + "\n"; //3
-        writeToFile += redPawn[3].getActualPositionIndex() + "\n"; //4
-        writeToFile += greenPawn[0].getActualPositionIndex() + "\n"; //5
-        writeToFile += greenPawn[1].getActualPositionIndex() + "\n"; //6
-        writeToFile += greenPawn[2].getActualPositionIndex() + "\n"; //7
-        writeToFile += greenPawn[3].getActualPositionIndex() + "\n"; //8
-        writeToFile += yellowPawn[0].getActualPositionIndex() + "\n"; //9
-        writeToFile += yellowPawn[1].getActualPositionIndex() + "\n"; //10
-        writeToFile += yellowPawn[2].getActualPositionIndex() + "\n"; //11
-        writeToFile += yellowPawn[3].getActualPositionIndex() + "\n"; //12
-        writeToFile += bluePawn[0].getActualPositionIndex() + "\n"; //13
-        writeToFile += bluePawn[1].getActualPositionIndex() + "\n"; //14
-        writeToFile += bluePawn[2].getActualPositionIndex() + "\n"; //15
-        writeToFile += bluePawn[3].getActualPositionIndex() + "\n"; //16
-        writeToFile += throwDice.getDiceIndex() + "\n"; //17
-        writeToFile += onClickPawn.getWhoseTurn() + "\n"; //18
-        if (diceButtonObject.isAvailable()) {
-            writeToFile += "2\n"; //19
-        } else {
-            writeToFile += "1\n"; //19
+        StringBuilder writeToFile = new StringBuilder("1\n");
+        for (RedPawn redPawn : redPawnArray) {
+            writeToFile.append(redPawn.getActualPositionIndex()).append("\n"); //1-4
         }
-        writeToFile += onClickPawn.getWhoseTurn() + "\n"; //20
-        if (checkBox1.isSelected()) {
-            writeToFile += "1\n"; //21
+        for (GreenPawn greenPawn : greenPawnArray) {
+            writeToFile.append(greenPawn.getActualPositionIndex()).append("\n"); //5-8
+        }
+        for (YellowPawn yellowPawn : yellowPawnArray) {
+            writeToFile.append(yellowPawn.getActualPositionIndex()).append("\n"); //9-12
+        }
+        for (BluePawn bluePawn : bluePawnArray) {
+            writeToFile.append(bluePawn.getActualPositionIndex()).append("\n"); //13-16
+        }
+        writeToFile.append(throwDice.getDiceIndex()).append("\n"); //17
+        writeToFile.append(onClickPawn.getWhoseTurn()).append("\n"); //18
+        if (diceButtonObject.isAvailable()) {
+            writeToFile.append("2\n"); //19
         } else {
-            writeToFile += "0\n"; //21
+            writeToFile.append("1\n"); //19
+        }
+        writeToFile.append(onClickPawn.getWhoseTurn()).append("\n"); //20
+        if (checkBox1.isSelected()) {
+            writeToFile.append("1\n"); //21
+        } else {
+            writeToFile.append("0\n"); //21
         }
         if (checkBox2.isSelected()) {
-            writeToFile += "1\n"; //22
+            writeToFile.append("1\n"); //22
         } else {
-            writeToFile += "0\n"; //22
+            writeToFile.append("0\n"); //22
         }
         if (checkBox3.isSelected()) {
-            writeToFile += "1\n"; //23
+            writeToFile.append("1\n"); //23
         } else {
-            writeToFile += "0\n"; //23
+            writeToFile.append("0\n"); //23
         }
         if (checkBox4.isSelected()) {
-            writeToFile += "1\n"; //24
+            writeToFile.append("1\n"); //24
         } else {
-            writeToFile += "0\n"; //24
+            writeToFile.append("0\n"); //24
         }
         if (diceButtonObject.isWasClicked()) {
-            writeToFile += "1\n"; //24
+            writeToFile.append("1\n"); //24
         } else {
-            writeToFile += "0\n"; //24
+            writeToFile.append("0\n"); //24
         }
 
         PrintWriter printWriter = new PrintWriter("save.txt");

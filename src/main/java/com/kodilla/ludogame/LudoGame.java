@@ -32,6 +32,8 @@ import java.util.ArrayList;
 
 public class LudoGame extends Application {
 
+    private final ArrayList<PawnPosition> PAWN_POSITIONS = Constants.PAWN_POSITIONS;
+
     public static void main(String[] args) {
         launch(args);
     }
@@ -208,8 +210,8 @@ public class LudoGame extends Application {
             if (onClickPawn.isThisPawnMovable(onClickPawn, diceButtonObject, throwDice, redPawn, 0)) {
                 grid.getChildren().remove(redPawns[0]);
                 onClickPawn.start(throwDice.getDiceIndex(), redPawn[0].getActualPositionIndex(), 'R');
-                grid.add(redPawns[0], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
-                        new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
+                grid.add(redPawns[0], PAWN_POSITIONS.get(onClickPawn.getNextPositionIndex()).getValueX(),
+                        PAWN_POSITIONS.get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
                 redPawn[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
                 onClickPawn.capturingPawn(grid, redPawn, greenPawn, yellowPawn, bluePawn, redPawns, greenPawns, yellowPawns, bluePawns, 0);
@@ -237,8 +239,8 @@ public class LudoGame extends Application {
             if (onClickPawn.isThisPawnMovable(onClickPawn, diceButtonObject, throwDice, redPawn, 1)) {
                 grid.getChildren().remove(redPawns[1]);
                 onClickPawn.start(throwDice.getDiceIndex(), redPawn[1].getActualPositionIndex(), 'R');
-                grid.add(redPawns[1], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
-                        new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
+                grid.add(redPawns[1], PAWN_POSITIONS.get(onClickPawn.getNextPositionIndex()).getValueX(),
+                        PAWN_POSITIONS.get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
                 redPawn[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
                 onClickPawn.capturingPawn(grid, redPawn, greenPawn, yellowPawn, bluePawn, redPawns, greenPawns, yellowPawns, bluePawns, 1);
@@ -266,8 +268,8 @@ public class LudoGame extends Application {
             if (onClickPawn.isThisPawnMovable(onClickPawn, diceButtonObject, throwDice, redPawn, 2)) {
                 grid.getChildren().remove(redPawns[2]);
                 onClickPawn.start(throwDice.getDiceIndex(), redPawn[2].getActualPositionIndex(), 'R');
-                grid.add(redPawns[2], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
-                        new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
+                grid.add(redPawns[2], PAWN_POSITIONS.get(onClickPawn.getNextPositionIndex()).getValueX(),
+                        PAWN_POSITIONS.get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
                 redPawn[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
                 onClickPawn.capturingPawn(grid, redPawn, greenPawn, yellowPawn, bluePawn, redPawns, greenPawns, yellowPawns, bluePawns, 2);
@@ -295,8 +297,8 @@ public class LudoGame extends Application {
             if (onClickPawn.isThisPawnMovable(onClickPawn, diceButtonObject, throwDice, redPawn, 3)) {
                 grid.getChildren().remove(redPawns[3]);
                 onClickPawn.start(throwDice.getDiceIndex(), redPawn[3].getActualPositionIndex(), 'R');
-                grid.add(redPawns[3], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
-                        new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
+                grid.add(redPawns[3], PAWN_POSITIONS.get(onClickPawn.getNextPositionIndex()).getValueX(),
+                        PAWN_POSITIONS.get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
                 redPawn[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
                 onClickPawn.capturingPawn(grid, redPawn, greenPawn, yellowPawn, bluePawn, redPawns, greenPawns, yellowPawns, bluePawns, 3);
@@ -325,8 +327,8 @@ public class LudoGame extends Application {
             if (onClickPawn.isThisPawnMovable(onClickPawn, diceButtonObject, throwDice, greenPawn, 4)) {
                 grid.getChildren().remove(greenPawns[0]);
                 onClickPawn.start(throwDice.getDiceIndex(), greenPawn[0].getActualPositionIndex(), 'G');
-                grid.add(greenPawns[0], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
-                        new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
+                grid.add(greenPawns[0], PAWN_POSITIONS.get(onClickPawn.getNextPositionIndex()).getValueX(),
+                        PAWN_POSITIONS.get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
                 greenPawn[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
                 onClickPawn.capturingPawn(grid, redPawn, greenPawn, yellowPawn, bluePawn, redPawns, greenPawns, yellowPawns, bluePawns, 4);
@@ -354,8 +356,8 @@ public class LudoGame extends Application {
             if (onClickPawn.isThisPawnMovable(onClickPawn, diceButtonObject, throwDice, greenPawn, 5)) {
                 grid.getChildren().remove(greenPawns[1]);
                 onClickPawn.start(throwDice.getDiceIndex(), greenPawn[1].getActualPositionIndex(), 'G');
-                grid.add(greenPawns[1], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
-                        new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
+                grid.add(greenPawns[1], PAWN_POSITIONS.get(onClickPawn.getNextPositionIndex()).getValueX(),
+                        PAWN_POSITIONS.get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
                 greenPawn[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
                 onClickPawn.capturingPawn(grid, redPawn, greenPawn, yellowPawn, bluePawn, redPawns, greenPawns, yellowPawns, bluePawns, 5);
@@ -383,8 +385,8 @@ public class LudoGame extends Application {
             if (onClickPawn.isThisPawnMovable(onClickPawn, diceButtonObject, throwDice, greenPawn, 6)) {
                 grid.getChildren().remove(greenPawns[2]);
                 onClickPawn.start(throwDice.getDiceIndex(), greenPawn[2].getActualPositionIndex(), 'G');
-                grid.add(greenPawns[2], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
-                        new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
+                grid.add(greenPawns[2], PAWN_POSITIONS.get(onClickPawn.getNextPositionIndex()).getValueX(),
+                        PAWN_POSITIONS.get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
                 greenPawn[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
                 onClickPawn.capturingPawn(grid, redPawn, greenPawn, yellowPawn, bluePawn, redPawns, greenPawns, yellowPawns, bluePawns, 6);
@@ -412,8 +414,8 @@ public class LudoGame extends Application {
             if (onClickPawn.isThisPawnMovable(onClickPawn, diceButtonObject, throwDice, greenPawn, 7)) {
                 grid.getChildren().remove(greenPawns[3]);
                 onClickPawn.start(throwDice.getDiceIndex(), greenPawn[3].getActualPositionIndex(), 'G');
-                grid.add(greenPawns[3], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
-                        new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
+                grid.add(greenPawns[3], PAWN_POSITIONS.get(onClickPawn.getNextPositionIndex()).getValueX(),
+                        PAWN_POSITIONS.get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
                 greenPawn[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
                 onClickPawn.capturingPawn(grid, redPawn, greenPawn, yellowPawn, bluePawn, redPawns, greenPawns, yellowPawns, bluePawns, 7);
@@ -442,8 +444,8 @@ public class LudoGame extends Application {
             if (onClickPawn.isThisPawnMovable(onClickPawn, diceButtonObject, throwDice, yellowPawn, 8)) {
                 grid.getChildren().remove(yellowPawns[0]);
                 onClickPawn.start(throwDice.getDiceIndex(), yellowPawn[0].getActualPositionIndex(), 'Y');
-                grid.add(yellowPawns[0], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
-                        new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
+                grid.add(yellowPawns[0], PAWN_POSITIONS.get(onClickPawn.getNextPositionIndex()).getValueX(),
+                        PAWN_POSITIONS.get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
                 yellowPawn[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
                 onClickPawn.capturingPawn(grid, redPawn, greenPawn, yellowPawn, bluePawn, redPawns, greenPawns, yellowPawns, bluePawns, 8);
@@ -471,8 +473,8 @@ public class LudoGame extends Application {
             if (onClickPawn.isThisPawnMovable(onClickPawn, diceButtonObject, throwDice, yellowPawn, 9)) {
                 grid.getChildren().remove(yellowPawns[1]);
                 onClickPawn.start(throwDice.getDiceIndex(), yellowPawn[1].getActualPositionIndex(), 'Y');
-                grid.add(yellowPawns[1], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
-                        new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
+                grid.add(yellowPawns[1], PAWN_POSITIONS.get(onClickPawn.getNextPositionIndex()).getValueX(),
+                        PAWN_POSITIONS.get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
                 yellowPawn[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
                 onClickPawn.capturingPawn(grid, redPawn, greenPawn, yellowPawn, bluePawn, redPawns, greenPawns, yellowPawns, bluePawns, 9);
@@ -500,8 +502,8 @@ public class LudoGame extends Application {
             if (onClickPawn.isThisPawnMovable(onClickPawn, diceButtonObject, throwDice, yellowPawn, 10)) {
                 grid.getChildren().remove(yellowPawns[2]);
                 onClickPawn.start(throwDice.getDiceIndex(), yellowPawn[2].getActualPositionIndex(), 'Y');
-                grid.add(yellowPawns[2], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
-                        new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
+                grid.add(yellowPawns[2], PAWN_POSITIONS.get(onClickPawn.getNextPositionIndex()).getValueX(),
+                        PAWN_POSITIONS.get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
                 yellowPawn[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
                 onClickPawn.capturingPawn(grid, redPawn, greenPawn, yellowPawn, bluePawn, redPawns, greenPawns, yellowPawns, bluePawns, 10);
@@ -529,8 +531,8 @@ public class LudoGame extends Application {
             if (onClickPawn.isThisPawnMovable(onClickPawn, diceButtonObject, throwDice, yellowPawn, 11)) {
                 grid.getChildren().remove(yellowPawns[3]);
                 onClickPawn.start(throwDice.getDiceIndex(), yellowPawn[3].getActualPositionIndex(), 'Y');
-                grid.add(yellowPawns[3], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
-                        new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
+                grid.add(yellowPawns[3], PAWN_POSITIONS.get(onClickPawn.getNextPositionIndex()).getValueX(),
+                        PAWN_POSITIONS.get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
                 yellowPawn[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
                 onClickPawn.capturingPawn(grid, redPawn, greenPawn, yellowPawn, bluePawn, redPawns, greenPawns, yellowPawns, bluePawns, 11);
@@ -559,8 +561,8 @@ public class LudoGame extends Application {
             if (onClickPawn.isThisPawnMovable(onClickPawn, diceButtonObject, throwDice, bluePawn, 12)) {
                 grid.getChildren().remove(bluePawns[0]);
                 onClickPawn.start(throwDice.getDiceIndex(), bluePawn[0].getActualPositionIndex(), 'B');
-                grid.add(bluePawns[0], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
-                        new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
+                grid.add(bluePawns[0], PAWN_POSITIONS.get(onClickPawn.getNextPositionIndex()).getValueX(),
+                        PAWN_POSITIONS.get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
                 bluePawn[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
                 onClickPawn.capturingPawn(grid, redPawn, greenPawn, yellowPawn, bluePawn, redPawns, greenPawns, yellowPawns, bluePawns, 12);
@@ -588,8 +590,8 @@ public class LudoGame extends Application {
             if (onClickPawn.isThisPawnMovable(onClickPawn, diceButtonObject, throwDice, bluePawn, 13)) {
                 grid.getChildren().remove(bluePawns[1]);
                 onClickPawn.start(throwDice.getDiceIndex(), bluePawn[1].getActualPositionIndex(), 'B');
-                grid.add(bluePawns[1], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
-                        new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
+                grid.add(bluePawns[1], PAWN_POSITIONS.get(onClickPawn.getNextPositionIndex()).getValueX(),
+                        PAWN_POSITIONS.get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
                 bluePawn[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
                 onClickPawn.capturingPawn(grid, redPawn, greenPawn, yellowPawn, bluePawn, redPawns, greenPawns, yellowPawns, bluePawns, 13);
@@ -617,8 +619,8 @@ public class LudoGame extends Application {
             if (onClickPawn.isThisPawnMovable(onClickPawn, diceButtonObject, throwDice, bluePawn, 14)) {
                 grid.getChildren().remove(bluePawns[2]);
                 onClickPawn.start(throwDice.getDiceIndex(), bluePawn[2].getActualPositionIndex(), 'B');
-                grid.add(bluePawns[2], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
-                        new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
+                grid.add(bluePawns[2], PAWN_POSITIONS.get(onClickPawn.getNextPositionIndex()).getValueX(),
+                        PAWN_POSITIONS.get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
                 bluePawn[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
                 onClickPawn.capturingPawn(grid, redPawn, greenPawn, yellowPawn, bluePawn, redPawns, greenPawns, yellowPawns, bluePawns, 14);
@@ -646,8 +648,8 @@ public class LudoGame extends Application {
             if (onClickPawn.isThisPawnMovable(onClickPawn, diceButtonObject, throwDice, bluePawn, 15)) {
                 grid.getChildren().remove(bluePawns[3]);
                 onClickPawn.start(throwDice.getDiceIndex(), bluePawn[3].getActualPositionIndex(), 'B');
-                grid.add(bluePawns[3], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
-                        new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
+                grid.add(bluePawns[3], PAWN_POSITIONS.get(onClickPawn.getNextPositionIndex()).getValueX(),
+                        PAWN_POSITIONS.get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
                 bluePawn[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
                 onClickPawn.capturingPawn(grid, redPawn, greenPawn, yellowPawn, bluePawn, redPawns, greenPawns, yellowPawns, bluePawns, 15);

@@ -26,10 +26,10 @@ public class GreenPawn implements Pawn {
         setActualPositionIndex(i+4);
     }
     public int getValueX() {
-        return new Constants().constantPawnPositions().get(getActualPositionIndex()).getValueX();
+        return Constants.PAWN_POSITIONS.get(getActualPositionIndex()).getValueX();
     }
     public  int getValueY() {
-        return new Constants().constantPawnPositions().get(getActualPositionIndex()).getValueY();
+        return Constants.PAWN_POSITIONS.get(getActualPositionIndex()).getValueY();
     }
     public int getColspan() {return 10;}
     public int getRowspan() {return 10;}
