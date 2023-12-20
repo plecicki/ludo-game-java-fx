@@ -60,19 +60,19 @@ public class LudoGame extends Application {
         Image imageYellowPawn = new Image("file:src/main/resources/pawns/yellow-pawn.png");
         Image imageBluePawn = new Image("file:src/main/resources/pawns/blue-pawn.png");
 
-        Red[] redP = {new Red(), new Red(), new Red(), new Red()};
-        Green[] greenP = {new Green(), new Green(), new Green(), new Green()};
-        Yellow[] yellowP = {new Yellow(), new Yellow(), new Yellow(), new Yellow()};
-        Blue[] blueP = {new Blue(), new Blue(), new Blue(), new Blue()};
+        RedPawn[] redPawn = {new RedPawn(), new RedPawn(), new RedPawn(), new RedPawn()};
+        GreenPawn[] greenPawn = {new GreenPawn(), new GreenPawn(), new GreenPawn(), new GreenPawn()};
+        YellowPawn[] yellowPawn = {new YellowPawn(), new YellowPawn(), new YellowPawn(), new YellowPawn()};
+        BluePawn[] bluePawn = {new BluePawn(), new BluePawn(), new BluePawn(), new BluePawn()};
 
-        ImageView[] redPawns = {redP[0].setImage(imageRedPawn), redP[1].setImage(imageRedPawn),
-                redP[2].setImage(imageRedPawn), redP[3].setImage(imageRedPawn)};
-        ImageView[] greenPawns = {greenP[0].setImage(imageGreenPawn), greenP[1].setImage(imageGreenPawn),
-                greenP[2].setImage(imageGreenPawn), greenP[3].setImage(imageGreenPawn)};
-        ImageView[] yellowPawns = {yellowP[0].setImage(imageYellowPawn), yellowP[1].setImage(imageYellowPawn),
-                yellowP[2].setImage(imageYellowPawn), yellowP[3].setImage(imageYellowPawn)};
-        ImageView[] bluePawns = {blueP[0].setImage(imageBluePawn), blueP[1].setImage(imageBluePawn),
-                blueP[2].setImage(imageBluePawn), blueP[3].setImage(imageBluePawn)};
+        ImageView[] redPawns = {redPawn[0].setImage(imageRedPawn), redPawn[1].setImage(imageRedPawn),
+                redPawn[2].setImage(imageRedPawn), redPawn[3].setImage(imageRedPawn)};
+        ImageView[] greenPawns = {greenPawn[0].setImage(imageGreenPawn), greenPawn[1].setImage(imageGreenPawn),
+                greenPawn[2].setImage(imageGreenPawn), greenPawn[3].setImage(imageGreenPawn)};
+        ImageView[] yellowPawns = {yellowPawn[0].setImage(imageYellowPawn), yellowPawn[1].setImage(imageYellowPawn),
+                yellowPawn[2].setImage(imageYellowPawn), yellowPawn[3].setImage(imageYellowPawn)};
+        ImageView[] bluePawns = {bluePawn[0].setImage(imageBluePawn), bluePawn[1].setImage(imageBluePawn),
+                bluePawn[2].setImage(imageBluePawn), bluePawn[3].setImage(imageBluePawn)};
 
         ArrayList<String> rank = new ArrayList<>();
         Ranking ranking = new Ranking(rank, primaryStage);
@@ -124,7 +124,7 @@ public class LudoGame extends Application {
             public void handle(WindowEvent we) {
                 try {
                     if (readAndWriteFile.getWindowNavigation() == 1) {
-                        readAndWriteFile.saveGame(redP,greenP,yellowP,blueP,throwDice,onClickPawn,diceButtonObject,
+                        readAndWriteFile.saveGame(redPawn, greenPawn, yellowPawn, bluePawn,throwDice,onClickPawn,diceButtonObject,
                             checkBox1, checkBox2, checkBox3, checkBox4);
                     } else if (readAndWriteFile.getWindowNavigation() == 2) {
                         readAndWriteFile.finishGame();
@@ -142,7 +142,7 @@ public class LudoGame extends Application {
                     checkBox3.isSelected() ||
                     checkBox4.isSelected()) {
                 new CheckBoxes().chosenColorsAtNewGame(checkBox1, checkBox2, checkBox3, checkBox4, computerPlaying);
-                startGame.setStartParameters(grid, redP, greenP, yellowP, blueP, redPawns,
+                startGame.setStartParameters(grid, redPawn, greenPawn, yellowPawn, bluePawn, redPawns,
                         greenPawns, yellowPawns, bluePawns, diceImage, turnLabels, onClickPawn);
                 readAndWriteFile.setWindowNavigation(1);
                 primaryStage.setScene(scene);
@@ -160,7 +160,7 @@ public class LudoGame extends Application {
             checkBox3.setSelected(false);
             checkBox4.setSelected(false);
             new CheckBoxes().chosenColorsAtContinueGame(savedLines1, computerPlaying);
-            startGame.setContinueParameters(grid, redP, greenP, yellowP, blueP, redPawns,
+            startGame.setContinueParameters(grid, redPawn, greenPawn, yellowPawn, bluePawn, redPawns,
                     greenPawns, yellowPawns, bluePawns, diceImage, turnLabels, onClickPawn, savedLines1,
                     checkBox1, checkBox2, checkBox3, checkBox4, diceButtonObject, diceButton, throwDice);
             readAndWriteFile.setWindowNavigation(1);
@@ -176,7 +176,7 @@ public class LudoGame extends Application {
             grid.add(diceImageView, 8, 124, 30, 30);
 
             diceButtonObject.availableMove(onClickPawn.getWhoseTurn(), throwDice.getDiceIndex(),
-                    redP, greenP, yellowP, blueP);
+                    redPawn, greenPawn, yellowPawn, bluePawn);
 
             if (diceButtonObject.isAvailable()) {
                 diceButton.setDisable(true);
@@ -205,14 +205,14 @@ public class LudoGame extends Application {
         });
 
         redPawns[0].setOnMouseClicked((MouseEvent e) -> {
-            if (onClickPawn.isThisPawnMovable(onClickPawn, diceButtonObject, throwDice, redP, 0)) {
+            if (onClickPawn.isThisPawnMovable(onClickPawn, diceButtonObject, throwDice, redPawn, 0)) {
                 grid.getChildren().remove(redPawns[0]);
-                onClickPawn.start(throwDice.getDiceIndex(), redP[0].getActualPositionIndex(), 'R');
+                onClickPawn.start(throwDice.getDiceIndex(), redPawn[0].getActualPositionIndex(), 'R');
                 grid.add(redPawns[0], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
                         new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
-                redP[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+                redPawn[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
-                onClickPawn.capturingPawn(grid, redP, greenP, yellowP, blueP, redPawns, greenPawns, yellowPawns, bluePawns, 0);
+                onClickPawn.capturingPawn(grid, redPawn, greenPawn, yellowPawn, bluePawn, redPawns, greenPawns, yellowPawns, bluePawns, 0);
 
                 onClickPawn.setWhoIsNext(throwDice, onClickPawn, 0);
 
@@ -228,20 +228,20 @@ public class LudoGame extends Application {
                 turnLabels.instructionLabels(1);
                 grid.add(turnLabels.getInfoLabel(), 100, 110, 50, 50);
 
-                ranking.checkIfRedWon(redP, 0, readAndWriteFile);
+                ranking.checkIfRedWon(redPawn, 0, readAndWriteFile);
 
                 computerPlaying.play(onClickPawn.getWhoseTurn(), diceButtonObject.isWasClicked());
             }
         });
         redPawns[1].setOnMouseClicked((MouseEvent e) -> {
-            if (onClickPawn.isThisPawnMovable(onClickPawn, diceButtonObject, throwDice, redP, 1)) {
+            if (onClickPawn.isThisPawnMovable(onClickPawn, diceButtonObject, throwDice, redPawn, 1)) {
                 grid.getChildren().remove(redPawns[1]);
-                onClickPawn.start(throwDice.getDiceIndex(), redP[1].getActualPositionIndex(), 'R');
+                onClickPawn.start(throwDice.getDiceIndex(), redPawn[1].getActualPositionIndex(), 'R');
                 grid.add(redPawns[1], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
                         new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
-                redP[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+                redPawn[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
-                onClickPawn.capturingPawn(grid, redP, greenP, yellowP, blueP, redPawns, greenPawns, yellowPawns, bluePawns, 1);
+                onClickPawn.capturingPawn(grid, redPawn, greenPawn, yellowPawn, bluePawn, redPawns, greenPawns, yellowPawns, bluePawns, 1);
 
                 onClickPawn.setWhoIsNext(throwDice, onClickPawn, 1);
 
@@ -257,20 +257,20 @@ public class LudoGame extends Application {
                 turnLabels.instructionLabels(1);
                 grid.add(turnLabels.getInfoLabel(), 100, 110, 50, 50);
 
-                ranking.checkIfRedWon(redP, 1, readAndWriteFile);
+                ranking.checkIfRedWon(redPawn, 1, readAndWriteFile);
 
                 computerPlaying.play(onClickPawn.getWhoseTurn(), diceButtonObject.isWasClicked());
             }
         });
         redPawns[2].setOnMouseClicked((MouseEvent e) -> {
-            if (onClickPawn.isThisPawnMovable(onClickPawn, diceButtonObject, throwDice, redP, 2)) {
+            if (onClickPawn.isThisPawnMovable(onClickPawn, diceButtonObject, throwDice, redPawn, 2)) {
                 grid.getChildren().remove(redPawns[2]);
-                onClickPawn.start(throwDice.getDiceIndex(), redP[2].getActualPositionIndex(), 'R');
+                onClickPawn.start(throwDice.getDiceIndex(), redPawn[2].getActualPositionIndex(), 'R');
                 grid.add(redPawns[2], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
                         new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
-                redP[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+                redPawn[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
-                onClickPawn.capturingPawn(grid, redP, greenP, yellowP, blueP, redPawns, greenPawns, yellowPawns, bluePawns, 2);
+                onClickPawn.capturingPawn(grid, redPawn, greenPawn, yellowPawn, bluePawn, redPawns, greenPawns, yellowPawns, bluePawns, 2);
 
                 onClickPawn.setWhoIsNext(throwDice, onClickPawn, 2);
 
@@ -286,20 +286,20 @@ public class LudoGame extends Application {
                 turnLabels.instructionLabels(1);
                 grid.add(turnLabels.getInfoLabel(), 100, 110, 50, 50);
 
-                ranking.checkIfRedWon(redP, 2, readAndWriteFile);
+                ranking.checkIfRedWon(redPawn, 2, readAndWriteFile);
 
                 computerPlaying.play(onClickPawn.getWhoseTurn(), diceButtonObject.isWasClicked());
             }
         });
         redPawns[3].setOnMouseClicked((MouseEvent e) -> {
-            if (onClickPawn.isThisPawnMovable(onClickPawn, diceButtonObject, throwDice, redP, 3)) {
+            if (onClickPawn.isThisPawnMovable(onClickPawn, diceButtonObject, throwDice, redPawn, 3)) {
                 grid.getChildren().remove(redPawns[3]);
-                onClickPawn.start(throwDice.getDiceIndex(), redP[3].getActualPositionIndex(), 'R');
+                onClickPawn.start(throwDice.getDiceIndex(), redPawn[3].getActualPositionIndex(), 'R');
                 grid.add(redPawns[3], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
                         new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
-                redP[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+                redPawn[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
-                onClickPawn.capturingPawn(grid, redP, greenP, yellowP, blueP, redPawns, greenPawns, yellowPawns, bluePawns, 3);
+                onClickPawn.capturingPawn(grid, redPawn, greenPawn, yellowPawn, bluePawn, redPawns, greenPawns, yellowPawns, bluePawns, 3);
 
                 onClickPawn.setWhoIsNext(throwDice, onClickPawn, 3);
 
@@ -315,21 +315,21 @@ public class LudoGame extends Application {
                 turnLabels.instructionLabels(1);
                 grid.add(turnLabels.getInfoLabel(), 100, 110, 50, 50);
 
-                ranking.checkIfRedWon(redP, 3, readAndWriteFile);
+                ranking.checkIfRedWon(redPawn, 3, readAndWriteFile);
 
                 computerPlaying.play(onClickPawn.getWhoseTurn(), diceButtonObject.isWasClicked());
             }
         });
 
         greenPawns[0].setOnMouseClicked((MouseEvent e) -> {
-            if (onClickPawn.isThisPawnMovable(onClickPawn, diceButtonObject, throwDice, greenP, 4)) {
+            if (onClickPawn.isThisPawnMovable(onClickPawn, diceButtonObject, throwDice, greenPawn, 4)) {
                 grid.getChildren().remove(greenPawns[0]);
-                onClickPawn.start(throwDice.getDiceIndex(), greenP[0].getActualPositionIndex(), 'G');
+                onClickPawn.start(throwDice.getDiceIndex(), greenPawn[0].getActualPositionIndex(), 'G');
                 grid.add(greenPawns[0], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
                         new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
-                greenP[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+                greenPawn[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
-                onClickPawn.capturingPawn(grid, redP, greenP, yellowP, blueP, redPawns, greenPawns, yellowPawns, bluePawns, 4);
+                onClickPawn.capturingPawn(grid, redPawn, greenPawn, yellowPawn, bluePawn, redPawns, greenPawns, yellowPawns, bluePawns, 4);
 
                 onClickPawn.setWhoIsNext(throwDice, onClickPawn, 4);
 
@@ -345,20 +345,20 @@ public class LudoGame extends Application {
                 turnLabels.instructionLabels(1);
                 grid.add(turnLabels.getInfoLabel(), 100, 110, 50, 50);
 
-                ranking.checkIfGreenWon(greenP, 0, readAndWriteFile);
+                ranking.checkIfGreenWon(greenPawn, 0, readAndWriteFile);
 
                 computerPlaying.play(onClickPawn.getWhoseTurn(), diceButtonObject.isWasClicked());
             }
         });
         greenPawns[1].setOnMouseClicked((MouseEvent e) -> {
-            if (onClickPawn.isThisPawnMovable(onClickPawn, diceButtonObject, throwDice, greenP, 5)) {
+            if (onClickPawn.isThisPawnMovable(onClickPawn, diceButtonObject, throwDice, greenPawn, 5)) {
                 grid.getChildren().remove(greenPawns[1]);
-                onClickPawn.start(throwDice.getDiceIndex(), greenP[1].getActualPositionIndex(), 'G');
+                onClickPawn.start(throwDice.getDiceIndex(), greenPawn[1].getActualPositionIndex(), 'G');
                 grid.add(greenPawns[1], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
                         new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
-                greenP[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+                greenPawn[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
-                onClickPawn.capturingPawn(grid, redP, greenP, yellowP, blueP, redPawns, greenPawns, yellowPawns, bluePawns, 5);
+                onClickPawn.capturingPawn(grid, redPawn, greenPawn, yellowPawn, bluePawn, redPawns, greenPawns, yellowPawns, bluePawns, 5);
 
                 onClickPawn.setWhoIsNext(throwDice, onClickPawn, 5);
 
@@ -374,20 +374,20 @@ public class LudoGame extends Application {
                 turnLabels.instructionLabels(1);
                 grid.add(turnLabels.getInfoLabel(), 100, 110, 50, 50);
 
-                ranking.checkIfGreenWon(greenP, 1, readAndWriteFile);
+                ranking.checkIfGreenWon(greenPawn, 1, readAndWriteFile);
 
                 computerPlaying.play(onClickPawn.getWhoseTurn(), diceButtonObject.isWasClicked());
             }
         });
         greenPawns[2].setOnMouseClicked((MouseEvent e) -> {
-            if (onClickPawn.isThisPawnMovable(onClickPawn, diceButtonObject, throwDice, greenP, 6)) {
+            if (onClickPawn.isThisPawnMovable(onClickPawn, diceButtonObject, throwDice, greenPawn, 6)) {
                 grid.getChildren().remove(greenPawns[2]);
-                onClickPawn.start(throwDice.getDiceIndex(), greenP[2].getActualPositionIndex(), 'G');
+                onClickPawn.start(throwDice.getDiceIndex(), greenPawn[2].getActualPositionIndex(), 'G');
                 grid.add(greenPawns[2], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
                         new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
-                greenP[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+                greenPawn[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
-                onClickPawn.capturingPawn(grid, redP, greenP, yellowP, blueP, redPawns, greenPawns, yellowPawns, bluePawns, 6);
+                onClickPawn.capturingPawn(grid, redPawn, greenPawn, yellowPawn, bluePawn, redPawns, greenPawns, yellowPawns, bluePawns, 6);
 
                 onClickPawn.setWhoIsNext(throwDice, onClickPawn, 6);
 
@@ -403,20 +403,20 @@ public class LudoGame extends Application {
                 turnLabels.instructionLabels(1);
                 grid.add(turnLabels.getInfoLabel(), 100, 110, 50, 50);
 
-                ranking.checkIfGreenWon(greenP, 2, readAndWriteFile);
+                ranking.checkIfGreenWon(greenPawn, 2, readAndWriteFile);
 
                 computerPlaying.play(onClickPawn.getWhoseTurn(), diceButtonObject.isWasClicked());
             }
         });
         greenPawns[3].setOnMouseClicked((MouseEvent e) -> {
-            if (onClickPawn.isThisPawnMovable(onClickPawn, diceButtonObject, throwDice, greenP, 7)) {
+            if (onClickPawn.isThisPawnMovable(onClickPawn, diceButtonObject, throwDice, greenPawn, 7)) {
                 grid.getChildren().remove(greenPawns[3]);
-                onClickPawn.start(throwDice.getDiceIndex(), greenP[3].getActualPositionIndex(), 'G');
+                onClickPawn.start(throwDice.getDiceIndex(), greenPawn[3].getActualPositionIndex(), 'G');
                 grid.add(greenPawns[3], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
                         new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
-                greenP[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+                greenPawn[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
-                onClickPawn.capturingPawn(grid, redP, greenP, yellowP, blueP, redPawns, greenPawns, yellowPawns, bluePawns, 7);
+                onClickPawn.capturingPawn(grid, redPawn, greenPawn, yellowPawn, bluePawn, redPawns, greenPawns, yellowPawns, bluePawns, 7);
 
                 onClickPawn.setWhoIsNext(throwDice, onClickPawn, 7);
 
@@ -432,21 +432,21 @@ public class LudoGame extends Application {
                 turnLabels.instructionLabels(1);
                 grid.add(turnLabels.getInfoLabel(), 100, 110, 50, 50);
 
-                ranking.checkIfGreenWon(greenP, 3, readAndWriteFile);
+                ranking.checkIfGreenWon(greenPawn, 3, readAndWriteFile);
 
                 computerPlaying.play(onClickPawn.getWhoseTurn(), diceButtonObject.isWasClicked());
             }
         });
 
         yellowPawns[0].setOnMouseClicked((MouseEvent e) -> {
-            if (onClickPawn.isThisPawnMovable(onClickPawn, diceButtonObject, throwDice, yellowP, 8)) {
+            if (onClickPawn.isThisPawnMovable(onClickPawn, diceButtonObject, throwDice, yellowPawn, 8)) {
                 grid.getChildren().remove(yellowPawns[0]);
-                onClickPawn.start(throwDice.getDiceIndex(), yellowP[0].getActualPositionIndex(), 'Y');
+                onClickPawn.start(throwDice.getDiceIndex(), yellowPawn[0].getActualPositionIndex(), 'Y');
                 grid.add(yellowPawns[0], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
                         new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
-                yellowP[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+                yellowPawn[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
-                onClickPawn.capturingPawn(grid, redP, greenP, yellowP, blueP, redPawns, greenPawns, yellowPawns, bluePawns, 8);
+                onClickPawn.capturingPawn(grid, redPawn, greenPawn, yellowPawn, bluePawn, redPawns, greenPawns, yellowPawns, bluePawns, 8);
 
                 onClickPawn.setWhoIsNext(throwDice, onClickPawn, 8);
 
@@ -462,20 +462,20 @@ public class LudoGame extends Application {
                 turnLabels.instructionLabels(1);
                 grid.add(turnLabels.getInfoLabel(), 100, 110, 50, 50);
 
-                ranking.checkIfYellowWon(yellowP, 0, readAndWriteFile);
+                ranking.checkIfYellowWon(yellowPawn, 0, readAndWriteFile);
 
                 computerPlaying.play(onClickPawn.getWhoseTurn(), diceButtonObject.isWasClicked());
             }
         });
         yellowPawns[1].setOnMouseClicked((MouseEvent e) -> {
-            if (onClickPawn.isThisPawnMovable(onClickPawn, diceButtonObject, throwDice, yellowP, 9)) {
+            if (onClickPawn.isThisPawnMovable(onClickPawn, diceButtonObject, throwDice, yellowPawn, 9)) {
                 grid.getChildren().remove(yellowPawns[1]);
-                onClickPawn.start(throwDice.getDiceIndex(), yellowP[1].getActualPositionIndex(), 'Y');
+                onClickPawn.start(throwDice.getDiceIndex(), yellowPawn[1].getActualPositionIndex(), 'Y');
                 grid.add(yellowPawns[1], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
                         new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
-                yellowP[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+                yellowPawn[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
-                onClickPawn.capturingPawn(grid, redP, greenP, yellowP, blueP, redPawns, greenPawns, yellowPawns, bluePawns, 9);
+                onClickPawn.capturingPawn(grid, redPawn, greenPawn, yellowPawn, bluePawn, redPawns, greenPawns, yellowPawns, bluePawns, 9);
 
                 onClickPawn.setWhoIsNext(throwDice, onClickPawn, 9);
 
@@ -491,20 +491,20 @@ public class LudoGame extends Application {
                 turnLabels.instructionLabels(1);
                 grid.add(turnLabels.getInfoLabel(), 100, 110, 50, 50);
 
-                ranking.checkIfYellowWon(yellowP, 1, readAndWriteFile);
+                ranking.checkIfYellowWon(yellowPawn, 1, readAndWriteFile);
 
                 computerPlaying.play(onClickPawn.getWhoseTurn(), diceButtonObject.isWasClicked());
             }
         });
         yellowPawns[2].setOnMouseClicked((MouseEvent e) -> {
-            if (onClickPawn.isThisPawnMovable(onClickPawn, diceButtonObject, throwDice, yellowP, 10)) {
+            if (onClickPawn.isThisPawnMovable(onClickPawn, diceButtonObject, throwDice, yellowPawn, 10)) {
                 grid.getChildren().remove(yellowPawns[2]);
-                onClickPawn.start(throwDice.getDiceIndex(), yellowP[2].getActualPositionIndex(), 'Y');
+                onClickPawn.start(throwDice.getDiceIndex(), yellowPawn[2].getActualPositionIndex(), 'Y');
                 grid.add(yellowPawns[2], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
                         new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
-                yellowP[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+                yellowPawn[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
-                onClickPawn.capturingPawn(grid, redP, greenP, yellowP, blueP, redPawns, greenPawns, yellowPawns, bluePawns, 10);
+                onClickPawn.capturingPawn(grid, redPawn, greenPawn, yellowPawn, bluePawn, redPawns, greenPawns, yellowPawns, bluePawns, 10);
 
                 onClickPawn.setWhoIsNext(throwDice, onClickPawn, 10);
 
@@ -520,20 +520,20 @@ public class LudoGame extends Application {
                 turnLabels.instructionLabels(1);
                 grid.add(turnLabels.getInfoLabel(), 100, 110, 50, 50);
 
-                ranking.checkIfYellowWon(yellowP, 2, readAndWriteFile);
+                ranking.checkIfYellowWon(yellowPawn, 2, readAndWriteFile);
 
                 computerPlaying.play(onClickPawn.getWhoseTurn(), diceButtonObject.isWasClicked());
             }
         });
         yellowPawns[3].setOnMouseClicked((MouseEvent e) -> {
-            if (onClickPawn.isThisPawnMovable(onClickPawn, diceButtonObject, throwDice, yellowP, 11)) {
+            if (onClickPawn.isThisPawnMovable(onClickPawn, diceButtonObject, throwDice, yellowPawn, 11)) {
                 grid.getChildren().remove(yellowPawns[3]);
-                onClickPawn.start(throwDice.getDiceIndex(), yellowP[3].getActualPositionIndex(), 'Y');
+                onClickPawn.start(throwDice.getDiceIndex(), yellowPawn[3].getActualPositionIndex(), 'Y');
                 grid.add(yellowPawns[3], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
                         new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
-                yellowP[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+                yellowPawn[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
-                onClickPawn.capturingPawn(grid, redP, greenP, yellowP, blueP, redPawns, greenPawns, yellowPawns, bluePawns, 11);
+                onClickPawn.capturingPawn(grid, redPawn, greenPawn, yellowPawn, bluePawn, redPawns, greenPawns, yellowPawns, bluePawns, 11);
 
                 onClickPawn.setWhoIsNext(throwDice, onClickPawn, 11);
 
@@ -549,21 +549,21 @@ public class LudoGame extends Application {
                 turnLabels.instructionLabels(1);
                 grid.add(turnLabels.getInfoLabel(), 100, 110, 50, 50);
 
-                ranking.checkIfYellowWon(yellowP, 3, readAndWriteFile);
+                ranking.checkIfYellowWon(yellowPawn, 3, readAndWriteFile);
 
                 computerPlaying.play(onClickPawn.getWhoseTurn(), diceButtonObject.isWasClicked());
             }
         });
 
         bluePawns[0].setOnMouseClicked((MouseEvent e) -> {
-            if (onClickPawn.isThisPawnMovable(onClickPawn, diceButtonObject, throwDice, blueP, 12)) {
+            if (onClickPawn.isThisPawnMovable(onClickPawn, diceButtonObject, throwDice, bluePawn, 12)) {
                 grid.getChildren().remove(bluePawns[0]);
-                onClickPawn.start(throwDice.getDiceIndex(), blueP[0].getActualPositionIndex(), 'B');
+                onClickPawn.start(throwDice.getDiceIndex(), bluePawn[0].getActualPositionIndex(), 'B');
                 grid.add(bluePawns[0], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
                         new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
-                blueP[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+                bluePawn[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
-                onClickPawn.capturingPawn(grid, redP, greenP, yellowP, blueP, redPawns, greenPawns, yellowPawns, bluePawns, 12);
+                onClickPawn.capturingPawn(grid, redPawn, greenPawn, yellowPawn, bluePawn, redPawns, greenPawns, yellowPawns, bluePawns, 12);
 
                 onClickPawn.setWhoIsNext(throwDice, onClickPawn, 12);
 
@@ -579,20 +579,20 @@ public class LudoGame extends Application {
                 turnLabels.instructionLabels(1);
                 grid.add(turnLabels.getInfoLabel(), 100, 110, 50, 50);
 
-                ranking.checkIfBlueWon(blueP, 0, readAndWriteFile);
+                ranking.checkIfBlueWon(bluePawn, 0, readAndWriteFile);
 
                 computerPlaying.play(onClickPawn.getWhoseTurn(), diceButtonObject.isWasClicked());
             }
         });
         bluePawns[1].setOnMouseClicked((MouseEvent e) -> {
-            if (onClickPawn.isThisPawnMovable(onClickPawn, diceButtonObject, throwDice, blueP, 13)) {
+            if (onClickPawn.isThisPawnMovable(onClickPawn, diceButtonObject, throwDice, bluePawn, 13)) {
                 grid.getChildren().remove(bluePawns[1]);
-                onClickPawn.start(throwDice.getDiceIndex(), blueP[1].getActualPositionIndex(), 'B');
+                onClickPawn.start(throwDice.getDiceIndex(), bluePawn[1].getActualPositionIndex(), 'B');
                 grid.add(bluePawns[1], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
                         new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
-                blueP[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+                bluePawn[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
-                onClickPawn.capturingPawn(grid, redP, greenP, yellowP, blueP, redPawns, greenPawns, yellowPawns, bluePawns, 13);
+                onClickPawn.capturingPawn(grid, redPawn, greenPawn, yellowPawn, bluePawn, redPawns, greenPawns, yellowPawns, bluePawns, 13);
 
                 onClickPawn.setWhoIsNext(throwDice, onClickPawn, 13);
 
@@ -608,20 +608,20 @@ public class LudoGame extends Application {
                 turnLabels.instructionLabels(1);
                 grid.add(turnLabels.getInfoLabel(), 100, 110, 50, 50);
 
-                ranking.checkIfBlueWon(blueP, 1, readAndWriteFile);
+                ranking.checkIfBlueWon(bluePawn, 1, readAndWriteFile);
 
                 computerPlaying.play(onClickPawn.getWhoseTurn(), diceButtonObject.isWasClicked());
             }
         });
         bluePawns[2].setOnMouseClicked((MouseEvent e) -> {
-            if (onClickPawn.isThisPawnMovable(onClickPawn, diceButtonObject, throwDice, blueP, 14)) {
+            if (onClickPawn.isThisPawnMovable(onClickPawn, diceButtonObject, throwDice, bluePawn, 14)) {
                 grid.getChildren().remove(bluePawns[2]);
-                onClickPawn.start(throwDice.getDiceIndex(), blueP[2].getActualPositionIndex(), 'B');
+                onClickPawn.start(throwDice.getDiceIndex(), bluePawn[2].getActualPositionIndex(), 'B');
                 grid.add(bluePawns[2], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
                         new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
-                blueP[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+                bluePawn[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
-                onClickPawn.capturingPawn(grid, redP, greenP, yellowP, blueP, redPawns, greenPawns, yellowPawns, bluePawns, 14);
+                onClickPawn.capturingPawn(grid, redPawn, greenPawn, yellowPawn, bluePawn, redPawns, greenPawns, yellowPawns, bluePawns, 14);
 
                 onClickPawn.setWhoIsNext(throwDice, onClickPawn, 14);
 
@@ -637,20 +637,20 @@ public class LudoGame extends Application {
                 turnLabels.instructionLabels(1);
                 grid.add(turnLabels.getInfoLabel(), 100, 110, 50, 50);
 
-                ranking.checkIfBlueWon(blueP, 2, readAndWriteFile);
+                ranking.checkIfBlueWon(bluePawn, 2, readAndWriteFile);
 
                 computerPlaying.play(onClickPawn.getWhoseTurn(), diceButtonObject.isWasClicked());
             }
         });
         bluePawns[3].setOnMouseClicked((MouseEvent e) -> {
-            if (onClickPawn.isThisPawnMovable(onClickPawn, diceButtonObject, throwDice, blueP, 15)) {
+            if (onClickPawn.isThisPawnMovable(onClickPawn, diceButtonObject, throwDice, bluePawn, 15)) {
                 grid.getChildren().remove(bluePawns[3]);
-                onClickPawn.start(throwDice.getDiceIndex(), blueP[3].getActualPositionIndex(), 'B');
+                onClickPawn.start(throwDice.getDiceIndex(), bluePawn[3].getActualPositionIndex(), 'B');
                 grid.add(bluePawns[3], new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueX(),
                         new Constants().constantPawnPositions().get(onClickPawn.getNextPositionIndex()).getValueY(), 10, 10);
-                blueP[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+                bluePawn[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
-                onClickPawn.capturingPawn(grid, redP, greenP, yellowP, blueP, redPawns, greenPawns, yellowPawns, bluePawns, 15);
+                onClickPawn.capturingPawn(grid, redPawn, greenPawn, yellowPawn, bluePawn, redPawns, greenPawns, yellowPawns, bluePawns, 15);
 
                 onClickPawn.setWhoIsNext(throwDice, onClickPawn, 15);
 
@@ -666,7 +666,7 @@ public class LudoGame extends Application {
                 turnLabels.instructionLabels(1);
                 grid.add(turnLabels.getInfoLabel(), 100, 110, 50, 50);
 
-                ranking.checkIfBlueWon(blueP, 3, readAndWriteFile);
+                ranking.checkIfBlueWon(bluePawn, 3, readAndWriteFile);
 
                 computerPlaying.play(onClickPawn.getWhoseTurn(), diceButtonObject.isWasClicked());
             }

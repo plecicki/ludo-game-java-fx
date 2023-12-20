@@ -16,7 +16,7 @@ import java.util.ArrayList;
 
 public class StartGame {
 
-    public void setStartParameters(GridPane grid, Red[] redP, Green[] greenP, Yellow[] yellowP, Blue[] blueP,
+    public void setStartParameters(GridPane grid, RedPawn[] redPawn, GreenPawn[] greenPawn, YellowPawn[] yellowPawn, BluePawn[] bluePawn,
                                    ImageView[] redPawns, ImageView[] greenPawns,
                                    ImageView[] yellowPawns, ImageView[] bluePawns,
                                    DiceImage diceImage, TurnLabels turnLabels,
@@ -24,27 +24,27 @@ public class StartGame {
         for (int i = 0; i <= 3; i++) {
             grid.add(redPawns[i], new Constants().constantPawnPositions().get(i).getValueX(),
                     new Constants().constantPawnPositions().get(i).getValueY(), 10, 10);
-            redP[i].setActualPosition(new Constants().constantPawnPositions().get(i).getValueX(),
+            redPawn[i].setActualPosition(new Constants().constantPawnPositions().get(i).getValueX(),
                     new Constants().constantPawnPositions().get(i).getValueY());
-            redP[i].setActualPositionIndex(i);
+            redPawn[i].setActualPositionIndex(i);
 
             grid.add(greenPawns[i], new Constants().constantPawnPositions().get(i + 4).getValueX(),
                     new Constants().constantPawnPositions().get(i + 4).getValueY(), 10, 10);
-            greenP[i].setActualPosition(new Constants().constantPawnPositions().get(i + 4).getValueX(),
+            greenPawn[i].setActualPosition(new Constants().constantPawnPositions().get(i + 4).getValueX(),
                     new Constants().constantPawnPositions().get(i + 4).getValueY());
-            greenP[i].setActualPositionIndex(i + 4);
+            greenPawn[i].setActualPositionIndex(i + 4);
 
             grid.add(yellowPawns[i], new Constants().constantPawnPositions().get(i + 8).getValueX(),
                     new Constants().constantPawnPositions().get(i + 8).getValueY(), 10, 10);
-            yellowP[i].setActualPosition(new Constants().constantPawnPositions().get(i + 8).getValueX(),
+            yellowPawn[i].setActualPosition(new Constants().constantPawnPositions().get(i + 8).getValueX(),
                     new Constants().constantPawnPositions().get(i + 8).getValueY());
-            yellowP[i].setActualPositionIndex(i + 8);
+            yellowPawn[i].setActualPositionIndex(i + 8);
 
             grid.add(bluePawns[i], new Constants().constantPawnPositions().get(i + 12).getValueX(),
                     new Constants().constantPawnPositions().get(i + 12).getValueY(), 10, 10);
-            blueP[i].setActualPosition(new Constants().constantPawnPositions().get(i + 12).getValueX(),
+            bluePawn[i].setActualPosition(new Constants().constantPawnPositions().get(i + 12).getValueX(),
                     new Constants().constantPawnPositions().get(i + 12).getValueY());
-            blueP[i].setActualPositionIndex(i + 12);
+            bluePawn[i].setActualPositionIndex(i + 12);
         }
 
         diceImage.startDiceImageMethod(1);
@@ -59,7 +59,7 @@ public class StartGame {
         grid.add(new Labels().setGitHubLabel(), 85, 1, 80, 7);
     }
 
-    public void setContinueParameters(GridPane grid, Red[] redP, Green[] greenP, Yellow[] yellowP, Blue[] blueP,
+    public void setContinueParameters(GridPane grid, RedPawn[] redPawn, GreenPawn[] greenPawn, YellowPawn[] yellowPawn, BluePawn[] bluePawn,
                                       ImageView[] redPawns, ImageView[] greenPawns,
                                       ImageView[] yellowPawns, ImageView[] bluePawns,
                                       DiceImage diceImage, TurnLabels turnLabels,
@@ -73,145 +73,145 @@ public class StartGame {
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(1))).getValueX(),
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(1))).getValueY(),
                 10, 10);
-        redP[0].setActualPosition(
+        redPawn[0].setActualPosition(
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(1))).getValueX(),
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(1))).getValueY());
-        redP[0].setActualPositionIndex(Integer.parseInt(fileList.get(1)));
+        redPawn[0].setActualPositionIndex(Integer.parseInt(fileList.get(1)));
 
         grid.add(redPawns[1],
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(2))).getValueX(),
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(2))).getValueY(),
                 10, 10);
-        redP[1].setActualPosition(
+        redPawn[1].setActualPosition(
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(2))).getValueX(),
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(2))).getValueY());
-        redP[1].setActualPositionIndex(Integer.parseInt(fileList.get(2)));
+        redPawn[1].setActualPositionIndex(Integer.parseInt(fileList.get(2)));
 
         grid.add(redPawns[2],
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(3))).getValueX(),
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(3))).getValueY(),
                 10, 10);
-        redP[2].setActualPosition(
+        redPawn[2].setActualPosition(
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(3))).getValueX(),
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(3))).getValueY());
-        redP[2].setActualPositionIndex(Integer.parseInt(fileList.get(3)));
+        redPawn[2].setActualPositionIndex(Integer.parseInt(fileList.get(3)));
 
         grid.add(redPawns[3],
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(4))).getValueX(),
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(4))).getValueY(),
                 10, 10);
-        redP[3].setActualPosition(
+        redPawn[3].setActualPosition(
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(4))).getValueX(),
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(4))).getValueY());
-        redP[3].setActualPositionIndex(Integer.parseInt(fileList.get(4)));
+        redPawn[3].setActualPositionIndex(Integer.parseInt(fileList.get(4)));
 
         grid.add(greenPawns[0],
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(5))).getValueX(),
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(5))).getValueY(),
                 10, 10);
-        greenP[0].setActualPosition(
+        greenPawn[0].setActualPosition(
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(5))).getValueX(),
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(5))).getValueY());
-        greenP[0].setActualPositionIndex(Integer.parseInt(fileList.get(5)));
+        greenPawn[0].setActualPositionIndex(Integer.parseInt(fileList.get(5)));
 
         grid.add(greenPawns[1],
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(6))).getValueX(),
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(6))).getValueY(),
                 10, 10);
-        greenP[1].setActualPosition(
+        greenPawn[1].setActualPosition(
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(6))).getValueX(),
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(6))).getValueY());
-        greenP[1].setActualPositionIndex(Integer.parseInt(fileList.get(6)));
+        greenPawn[1].setActualPositionIndex(Integer.parseInt(fileList.get(6)));
 
         grid.add(greenPawns[2],
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(7))).getValueX(),
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(7))).getValueY(),
                 10, 10);
-        greenP[2].setActualPosition(
+        greenPawn[2].setActualPosition(
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(7))).getValueX(),
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(7))).getValueY());
-        greenP[2].setActualPositionIndex(Integer.parseInt(fileList.get(7)));
+        greenPawn[2].setActualPositionIndex(Integer.parseInt(fileList.get(7)));
 
         grid.add(greenPawns[3],
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(8))).getValueX(),
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(8))).getValueY(),
                 10, 10);
-        greenP[3].setActualPosition(
+        greenPawn[3].setActualPosition(
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(8))).getValueX(),
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(8))).getValueY());
-        greenP[3].setActualPositionIndex(Integer.parseInt(fileList.get(8)));
+        greenPawn[3].setActualPositionIndex(Integer.parseInt(fileList.get(8)));
 
         grid.add(yellowPawns[0],
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(9))).getValueX(),
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(9))).getValueY(),
                 10, 10);
-        yellowP[0].setActualPosition(
+        yellowPawn[0].setActualPosition(
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(9))).getValueX(),
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(9))).getValueY());
-        yellowP[0].setActualPositionIndex(Integer.parseInt(fileList.get(9)));
+        yellowPawn[0].setActualPositionIndex(Integer.parseInt(fileList.get(9)));
 
         grid.add(yellowPawns[1],
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(10))).getValueX(),
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(10))).getValueY(),
                 10, 10);
-        yellowP[1].setActualPosition(
+        yellowPawn[1].setActualPosition(
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(10))).getValueX(),
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(10))).getValueY());
-        yellowP[1].setActualPositionIndex(Integer.parseInt(fileList.get(10)));
+        yellowPawn[1].setActualPositionIndex(Integer.parseInt(fileList.get(10)));
 
         grid.add(yellowPawns[2],
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(11))).getValueX(),
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(11))).getValueY(),
                 10, 10);
-        yellowP[2].setActualPosition(
+        yellowPawn[2].setActualPosition(
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(11))).getValueX(),
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(11))).getValueY());
-        yellowP[2].setActualPositionIndex(Integer.parseInt(fileList.get(11)));
+        yellowPawn[2].setActualPositionIndex(Integer.parseInt(fileList.get(11)));
 
         grid.add(yellowPawns[3],
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(12))).getValueX(),
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(12))).getValueY(),
                 10, 10);
-        yellowP[3].setActualPosition(
+        yellowPawn[3].setActualPosition(
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(12))).getValueX(),
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(12))).getValueY());
-        yellowP[3].setActualPositionIndex(Integer.parseInt(fileList.get(12)));
+        yellowPawn[3].setActualPositionIndex(Integer.parseInt(fileList.get(12)));
 
         grid.add(bluePawns[0],
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(13))).getValueX(),
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(13))).getValueY(),
                 10, 10);
-        blueP[0].setActualPosition(
+        bluePawn[0].setActualPosition(
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(13))).getValueX(),
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(13))).getValueY());
-        blueP[0].setActualPositionIndex(Integer.parseInt(fileList.get(13)));
+        bluePawn[0].setActualPositionIndex(Integer.parseInt(fileList.get(13)));
 
         grid.add(bluePawns[1],
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(14))).getValueX(),
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(14))).getValueY(),
                 10, 10);
-        blueP[1].setActualPosition(
+        bluePawn[1].setActualPosition(
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(14))).getValueX(),
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(14))).getValueY());
-        blueP[1].setActualPositionIndex(Integer.parseInt(fileList.get(14)));
+        bluePawn[1].setActualPositionIndex(Integer.parseInt(fileList.get(14)));
 
         grid.add(bluePawns[2],
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(15))).getValueX(),
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(15))).getValueY(),
                 10, 10);
-        blueP[2].setActualPosition(
+        bluePawn[2].setActualPosition(
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(15))).getValueX(),
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(15))).getValueY());
-        blueP[2].setActualPositionIndex(Integer.parseInt(fileList.get(15)));
+        bluePawn[2].setActualPositionIndex(Integer.parseInt(fileList.get(15)));
 
         grid.add(bluePawns[3],
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(16))).getValueX(),
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(16))).getValueY(),
                 10, 10);
-        blueP[3].setActualPosition(
+        bluePawn[3].setActualPosition(
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(16))).getValueX(),
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(16))).getValueY());
-        blueP[3].setActualPositionIndex(Integer.parseInt(fileList.get(16)));
+        bluePawn[3].setActualPositionIndex(Integer.parseInt(fileList.get(16)));
 
         diceImage.startDiceImageMethod(Integer.parseInt(fileList.get(17)));
         throwDice.setDiceIndex(Integer.parseInt(fileList.get(17)));

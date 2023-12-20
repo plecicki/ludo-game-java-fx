@@ -8,10 +8,10 @@ import org.junit.jupiter.api.*;
 
 public class StartGameTestSuite {
 
-    private Red[] redP;
-    private Green[] greenP;
-    private Yellow[] yellowP;
-    private Blue[] blueP;
+    private RedPawn[] redPawn;
+    private GreenPawn[] greenPawn;
+    private YellowPawn[] yellowPawn;
+    private BluePawn[] bluePawn;
     private static int testCount = 0;
 
     @AfterEach
@@ -36,10 +36,10 @@ public class StartGameTestSuite {
         throwDice.setDiceIndex(1);
 
         //Then
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redP, 0));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redP, 1));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redP, 2));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redP, 3));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redPawn, 0));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redPawn, 1));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redPawn, 2));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redPawn, 3));
     }
 
     @DisplayName("When red pawns are at start's positions" +
@@ -58,10 +58,10 @@ public class StartGameTestSuite {
         throwDice.setDiceIndex(2);
 
         //Then
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redP, 0));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redP, 1));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redP, 2));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redP, 3));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redPawn, 0));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redPawn, 1));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redPawn, 2));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redPawn, 3));
     }
 
     @DisplayName("When red pawns are at start's positions" +
@@ -80,10 +80,10 @@ public class StartGameTestSuite {
         throwDice.setDiceIndex(3);
 
         //Then
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redP, 0));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redP, 1));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redP, 2));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redP, 3));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redPawn, 0));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redPawn, 1));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redPawn, 2));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redPawn, 3));
     }
 
     @DisplayName("When red pawns are at start's positions" +
@@ -102,10 +102,10 @@ public class StartGameTestSuite {
         throwDice.setDiceIndex(1);
 
         //Then
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redP, 0));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redP, 1));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redP, 2));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redP, 3));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redPawn, 0));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redPawn, 1));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redPawn, 2));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redPawn, 3));
     }
 
     @DisplayName("When red pawns are at start's positions" +
@@ -124,10 +124,10 @@ public class StartGameTestSuite {
         throwDice.setDiceIndex(5);
 
         //Then
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redP, 0));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redP, 1));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redP, 2));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redP, 3));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redPawn, 0));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redPawn, 1));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redPawn, 2));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redPawn, 3));
     }
 
     @DisplayName("When red pawns are at start's positions" +
@@ -146,10 +146,10 @@ public class StartGameTestSuite {
         throwDice.setDiceIndex(6);
 
         //Then
-        Assertions.assertTrue(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redP, 0));
-        Assertions.assertTrue(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redP, 1));
-        Assertions.assertTrue(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redP, 2));
-        Assertions.assertTrue(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redP, 3));
+        Assertions.assertTrue(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redPawn, 0));
+        Assertions.assertTrue(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redPawn, 1));
+        Assertions.assertTrue(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redPawn, 2));
+        Assertions.assertTrue(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redPawn, 3));
     }
 
     @DisplayName("When green pawns are at start's positions" +
@@ -168,10 +168,10 @@ public class StartGameTestSuite {
         throwDice.setDiceIndex(1);
 
         //Then
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenP, 4));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenP, 5));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenP, 6));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenP, 7));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenPawn, 4));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenPawn, 5));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenPawn, 6));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenPawn, 7));
     }
 
     @DisplayName("When green pawns are at start's positions" +
@@ -190,10 +190,10 @@ public class StartGameTestSuite {
         throwDice.setDiceIndex(2);
 
         //Then
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenP, 4));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenP, 5));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenP, 6));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenP, 7));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenPawn, 4));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenPawn, 5));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenPawn, 6));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenPawn, 7));
     }
 
     @DisplayName("When green pawns are at start's positions" +
@@ -212,10 +212,10 @@ public class StartGameTestSuite {
         throwDice.setDiceIndex(3);
 
         //Then
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenP, 4));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenP, 5));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenP, 6));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenP, 7));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenPawn, 4));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenPawn, 5));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenPawn, 6));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenPawn, 7));
     }
 
     @DisplayName("When green pawns are at start's positions" +
@@ -234,10 +234,10 @@ public class StartGameTestSuite {
         throwDice.setDiceIndex(1);
 
         //Then
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenP, 4));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenP, 5));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenP, 6));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenP, 7));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenPawn, 4));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenPawn, 5));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenPawn, 6));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenPawn, 7));
     }
 
     @DisplayName("When green pawns are at start's positions" +
@@ -256,10 +256,10 @@ public class StartGameTestSuite {
         throwDice.setDiceIndex(5);
 
         //Then
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenP, 4));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenP, 5));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenP, 6));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenP, 7));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenPawn, 4));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenPawn, 5));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenPawn, 6));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenPawn, 7));
     }
 
     @DisplayName("When green pawns are at start's positions" +
@@ -278,10 +278,10 @@ public class StartGameTestSuite {
         throwDice.setDiceIndex(6);
 
         //Then
-        Assertions.assertTrue(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenP, 4));
-        Assertions.assertTrue(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenP, 5));
-        Assertions.assertTrue(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenP, 6));
-        Assertions.assertTrue(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenP, 7));
+        Assertions.assertTrue(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenPawn, 4));
+        Assertions.assertTrue(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenPawn, 5));
+        Assertions.assertTrue(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenPawn, 6));
+        Assertions.assertTrue(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenPawn, 7));
     }
 
     @DisplayName("When yellow pawns are at start's positions" +
@@ -300,10 +300,10 @@ public class StartGameTestSuite {
         throwDice.setDiceIndex(1);
 
         //Then
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowP, 8));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowP, 9));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowP, 10));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowP, 11));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowPawn, 8));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowPawn, 9));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowPawn, 10));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowPawn, 11));
     }
 
     @DisplayName("When yellow pawns are at start's positions" +
@@ -322,10 +322,10 @@ public class StartGameTestSuite {
         throwDice.setDiceIndex(2);
 
         //Then
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowP, 8));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowP, 9));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowP, 10));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowP, 11));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowPawn, 8));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowPawn, 9));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowPawn, 10));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowPawn, 11));
     }
 
     @DisplayName("When yellow pawns are at start's positions" +
@@ -344,10 +344,10 @@ public class StartGameTestSuite {
         throwDice.setDiceIndex(3);
 
         //Then
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowP, 8));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowP, 9));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowP, 10));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowP, 11));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowPawn, 8));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowPawn, 9));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowPawn, 10));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowPawn, 11));
     }
 
     @DisplayName("When yellow pawns are at start's positions" +
@@ -366,10 +366,10 @@ public class StartGameTestSuite {
         throwDice.setDiceIndex(1);
 
         //Then
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowP, 8));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowP, 9));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowP, 10));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowP, 11));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowPawn, 8));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowPawn, 9));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowPawn, 10));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowPawn, 11));
     }
 
     @DisplayName("When yellow pawns are at start's positions" +
@@ -388,10 +388,10 @@ public class StartGameTestSuite {
         throwDice.setDiceIndex(5);
 
         //Then
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowP, 8));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowP, 9));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowP, 10));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowP, 11));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowPawn, 8));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowPawn, 9));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowPawn, 10));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowPawn, 11));
     }
 
     @DisplayName("When yellow pawns are at start's positions" +
@@ -410,10 +410,10 @@ public class StartGameTestSuite {
         throwDice.setDiceIndex(6);
 
         //Then
-        Assertions.assertTrue(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowP, 8));
-        Assertions.assertTrue(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowP, 9));
-        Assertions.assertTrue(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowP, 10));
-        Assertions.assertTrue(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowP, 11));
+        Assertions.assertTrue(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowPawn, 8));
+        Assertions.assertTrue(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowPawn, 9));
+        Assertions.assertTrue(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowPawn, 10));
+        Assertions.assertTrue(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowPawn, 11));
     }
 
     @DisplayName("When blue pawns are at start's positions" +
@@ -432,10 +432,10 @@ public class StartGameTestSuite {
         throwDice.setDiceIndex(1);
 
         //Then
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, blueP, 12));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, blueP, 13));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, blueP, 14));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, blueP, 15));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, bluePawn, 12));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, bluePawn, 13));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, bluePawn, 14));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, bluePawn, 15));
     }
 
     @DisplayName("When blue pawns are at start's positions" +
@@ -454,10 +454,10 @@ public class StartGameTestSuite {
         throwDice.setDiceIndex(2);
 
         //Then
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, blueP, 12));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, blueP, 13));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, blueP, 14));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, blueP, 15));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, bluePawn, 12));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, bluePawn, 13));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, bluePawn, 14));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, bluePawn, 15));
     }
 
     @DisplayName("When blue pawns are at start's positions" +
@@ -476,10 +476,10 @@ public class StartGameTestSuite {
         throwDice.setDiceIndex(3);
 
         //Then
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, blueP, 12));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, blueP, 13));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, blueP, 14));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, blueP, 15));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, bluePawn, 12));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, bluePawn, 13));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, bluePawn, 14));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, bluePawn, 15));
     }
 
     @DisplayName("When blue pawns are at start's positions" +
@@ -498,10 +498,10 @@ public class StartGameTestSuite {
         throwDice.setDiceIndex(1);
 
         //Then
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, blueP, 12));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, blueP, 13));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, blueP, 14));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, blueP, 15));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, bluePawn, 12));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, bluePawn, 13));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, bluePawn, 14));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, bluePawn, 15));
     }
 
     @DisplayName("When blue pawns are at start's positions" +
@@ -520,10 +520,10 @@ public class StartGameTestSuite {
         throwDice.setDiceIndex(5);
 
         //Then
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, blueP, 12));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, blueP, 13));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, blueP, 14));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, blueP, 15));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, bluePawn, 12));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, bluePawn, 13));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, bluePawn, 14));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, bluePawn, 15));
     }
 
     @DisplayName("When blue pawns are at start's positions" +
@@ -542,10 +542,10 @@ public class StartGameTestSuite {
         throwDice.setDiceIndex(6);
 
         //Then
-        Assertions.assertTrue(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, blueP, 12));
-        Assertions.assertTrue(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, blueP, 13));
-        Assertions.assertTrue(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, blueP, 14));
-        Assertions.assertTrue(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, blueP, 15));
+        Assertions.assertTrue(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, bluePawn, 12));
+        Assertions.assertTrue(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, bluePawn, 13));
+        Assertions.assertTrue(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, bluePawn, 14));
+        Assertions.assertTrue(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, bluePawn, 15));
     }
 
     @DisplayName("When is red's turn, then after throwing a dice" +
@@ -565,10 +565,10 @@ public class StartGameTestSuite {
 
         //Then
         for (int i=0; i<=3; i++) {
-            Assertions.assertTrue(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redP, i));
-            Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenP, i+4));
-            Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowP, i+8));
-            Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, blueP, i+12));
+            Assertions.assertTrue(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redPawn, i));
+            Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenPawn, i+4));
+            Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowPawn, i+8));
+            Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, bluePawn, i+12));
         }
     }
 
@@ -589,10 +589,10 @@ public class StartGameTestSuite {
 
         //Then
         for (int i=0; i<=3; i++) {
-            Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redP, i));
-            Assertions.assertTrue(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenP, i+4));
-            Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowP, i+8));
-            Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, blueP, i+12));
+            Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redPawn, i));
+            Assertions.assertTrue(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenPawn, i+4));
+            Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowPawn, i+8));
+            Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, bluePawn, i+12));
         }
     }
 
@@ -613,10 +613,10 @@ public class StartGameTestSuite {
 
         //Then
         for (int i=0; i<=3; i++) {
-            Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redP, i));
-            Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenP, i+4));
-            Assertions.assertTrue(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowP, i+8));
-            Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, blueP, i+12));
+            Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redPawn, i));
+            Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenPawn, i+4));
+            Assertions.assertTrue(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowPawn, i+8));
+            Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, bluePawn, i+12));
         }
     }
 
@@ -637,10 +637,10 @@ public class StartGameTestSuite {
 
         //Then
         for (int i=0; i<=3; i++) {
-            Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redP, i));
-            Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenP, i+4));
-            Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowP, i+8));
-            Assertions.assertTrue(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, blueP, i+12));
+            Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redPawn, i));
+            Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenPawn, i+4));
+            Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowPawn, i+8));
+            Assertions.assertTrue(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, bluePawn, i+12));
         }
     }
 
@@ -661,10 +661,10 @@ public class StartGameTestSuite {
         onClickPawn.setWhoseTurn(1);
 
         //Then
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redP, 0));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redP, 1));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redP, 2));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redP, 3));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redPawn, 0));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redPawn, 1));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redPawn, 2));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, redPawn, 3));
     }
 
     @DisplayName("Green pawns should be unmovable before clicking" +
@@ -684,10 +684,10 @@ public class StartGameTestSuite {
         onClickPawn.setWhoseTurn(2);
 
         //Then
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenP, 4));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenP, 5));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenP, 6));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenP, 7));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenPawn, 4));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenPawn, 5));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenPawn, 6));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, greenPawn, 7));
     }
 
     @DisplayName("Yellow pawns should be unmovable before clicking" +
@@ -707,10 +707,10 @@ public class StartGameTestSuite {
         onClickPawn.setWhoseTurn(3);
 
         //Then
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowP, 8));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowP, 9));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowP, 10));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowP, 11));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowPawn, 8));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowPawn, 9));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowPawn, 10));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, yellowPawn, 11));
     }
 
     @DisplayName("Blue pawns should be unmovable before clicking" +
@@ -730,10 +730,10 @@ public class StartGameTestSuite {
         onClickPawn.setWhoseTurn(4);
 
         //Then
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, blueP, 12));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, blueP, 13));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, blueP, 14));
-        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, blueP, 15));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, bluePawn, 12));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, bluePawn, 13));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, bluePawn, 14));
+        Assertions.assertFalse(onClickPawn.isThisPawnMovable(onClickPawn, diceButton, throwDice, bluePawn, 15));
     }
 
     @DisplayName("Red pawns should be moved after clicking" +
@@ -748,20 +748,20 @@ public class StartGameTestSuite {
         //When
         throwDice.setDiceIndex(6);
 
-        onClickPawn.start(throwDice.getDiceIndex(), redP[0].getActualPositionIndex(), 'R');
-        redP[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
-        onClickPawn.start(throwDice.getDiceIndex(), redP[1].getActualPositionIndex(), 'R');
-        redP[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
-        onClickPawn.start(throwDice.getDiceIndex(), redP[2].getActualPositionIndex(), 'R');
-        redP[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
-        onClickPawn.start(throwDice.getDiceIndex(), redP[3].getActualPositionIndex(), 'R');
-        redP[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), redPawn[0].getActualPositionIndex(), 'R');
+        redPawn[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), redPawn[1].getActualPositionIndex(), 'R');
+        redPawn[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), redPawn[2].getActualPositionIndex(), 'R');
+        redPawn[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), redPawn[3].getActualPositionIndex(), 'R');
+        redPawn[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(redP[0].getActualPositionIndex(), 16);
-        Assertions.assertEquals(redP[1].getActualPositionIndex(), 16);
-        Assertions.assertEquals(redP[2].getActualPositionIndex(), 16);
-        Assertions.assertEquals(redP[3].getActualPositionIndex(), 16);
+        Assertions.assertEquals(redPawn[0].getActualPositionIndex(), 16);
+        Assertions.assertEquals(redPawn[1].getActualPositionIndex(), 16);
+        Assertions.assertEquals(redPawn[2].getActualPositionIndex(), 16);
+        Assertions.assertEquals(redPawn[3].getActualPositionIndex(), 16);
     }
 
     @DisplayName("Green pawns should be moved after clicking" +
@@ -776,20 +776,20 @@ public class StartGameTestSuite {
         //When
         throwDice.setDiceIndex(6);
 
-        onClickPawn.start(throwDice.getDiceIndex(), greenP[0].getActualPositionIndex(), 'G');
-        greenP[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
-        onClickPawn.start(throwDice.getDiceIndex(), greenP[1].getActualPositionIndex(), 'G');
-        greenP[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
-        onClickPawn.start(throwDice.getDiceIndex(), greenP[2].getActualPositionIndex(), 'G');
-        greenP[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
-        onClickPawn.start(throwDice.getDiceIndex(), greenP[3].getActualPositionIndex(), 'G');
-        greenP[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), greenPawn[0].getActualPositionIndex(), 'G');
+        greenPawn[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), greenPawn[1].getActualPositionIndex(), 'G');
+        greenPawn[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), greenPawn[2].getActualPositionIndex(), 'G');
+        greenPawn[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), greenPawn[3].getActualPositionIndex(), 'G');
+        greenPawn[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(greenP[0].getActualPositionIndex(), 30);
-        Assertions.assertEquals(greenP[1].getActualPositionIndex(), 30);
-        Assertions.assertEquals(greenP[2].getActualPositionIndex(), 30);
-        Assertions.assertEquals(greenP[3].getActualPositionIndex(), 30);
+        Assertions.assertEquals(greenPawn[0].getActualPositionIndex(), 30);
+        Assertions.assertEquals(greenPawn[1].getActualPositionIndex(), 30);
+        Assertions.assertEquals(greenPawn[2].getActualPositionIndex(), 30);
+        Assertions.assertEquals(greenPawn[3].getActualPositionIndex(), 30);
     }
 
     @DisplayName("Yellow pawns should be moved after clicking" +
@@ -804,20 +804,20 @@ public class StartGameTestSuite {
         //When
         throwDice.setDiceIndex(6);
 
-        onClickPawn.start(throwDice.getDiceIndex(), yellowP[0].getActualPositionIndex(), 'Y');
-        yellowP[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
-        onClickPawn.start(throwDice.getDiceIndex(), yellowP[1].getActualPositionIndex(), 'Y');
-        yellowP[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
-        onClickPawn.start(throwDice.getDiceIndex(), yellowP[2].getActualPositionIndex(), 'Y');
-        yellowP[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
-        onClickPawn.start(throwDice.getDiceIndex(), yellowP[3].getActualPositionIndex(), 'Y');
-        yellowP[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), yellowPawn[0].getActualPositionIndex(), 'Y');
+        yellowPawn[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), yellowPawn[1].getActualPositionIndex(), 'Y');
+        yellowPawn[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), yellowPawn[2].getActualPositionIndex(), 'Y');
+        yellowPawn[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), yellowPawn[3].getActualPositionIndex(), 'Y');
+        yellowPawn[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(yellowP[0].getActualPositionIndex(), 58);
-        Assertions.assertEquals(yellowP[1].getActualPositionIndex(), 58);
-        Assertions.assertEquals(yellowP[2].getActualPositionIndex(), 58);
-        Assertions.assertEquals(yellowP[3].getActualPositionIndex(), 58);
+        Assertions.assertEquals(yellowPawn[0].getActualPositionIndex(), 58);
+        Assertions.assertEquals(yellowPawn[1].getActualPositionIndex(), 58);
+        Assertions.assertEquals(yellowPawn[2].getActualPositionIndex(), 58);
+        Assertions.assertEquals(yellowPawn[3].getActualPositionIndex(), 58);
     }
 
     @DisplayName("Blue pawns should be moved after clicking" +
@@ -832,49 +832,49 @@ public class StartGameTestSuite {
         //When
         throwDice.setDiceIndex(6);
 
-        onClickPawn.start(throwDice.getDiceIndex(), blueP[0].getActualPositionIndex(), 'B');
-        blueP[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
-        onClickPawn.start(throwDice.getDiceIndex(), blueP[1].getActualPositionIndex(), 'B');
-        blueP[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
-        onClickPawn.start(throwDice.getDiceIndex(), blueP[2].getActualPositionIndex(), 'B');
-        blueP[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
-        onClickPawn.start(throwDice.getDiceIndex(), blueP[3].getActualPositionIndex(), 'B');
-        blueP[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), bluePawn[0].getActualPositionIndex(), 'B');
+        bluePawn[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), bluePawn[1].getActualPositionIndex(), 'B');
+        bluePawn[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), bluePawn[2].getActualPositionIndex(), 'B');
+        bluePawn[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), bluePawn[3].getActualPositionIndex(), 'B');
+        bluePawn[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(blueP[0].getActualPositionIndex(), 44);
-        Assertions.assertEquals(blueP[1].getActualPositionIndex(), 44);
-        Assertions.assertEquals(blueP[2].getActualPositionIndex(), 44);
-        Assertions.assertEquals(blueP[3].getActualPositionIndex(), 44);
+        Assertions.assertEquals(bluePawn[0].getActualPositionIndex(), 44);
+        Assertions.assertEquals(bluePawn[1].getActualPositionIndex(), 44);
+        Assertions.assertEquals(bluePawn[2].getActualPositionIndex(), 44);
+        Assertions.assertEquals(bluePawn[3].getActualPositionIndex(), 44);
     }
 
     void fillingTablesWithPawnsAtStartPositions() {
-        Red[] reds = {new Red(), new Red(), new Red(), new Red()};
-        Green[] greens = {new Green(), new Green(), new Green(), new Green()};
-        Yellow[] yellows = {new Yellow(), new Yellow(), new Yellow(), new Yellow()};
-        Blue[] blues = {new Blue(), new Blue(), new Blue(), new Blue()};
+        RedPawn[] redPawns = {new RedPawn(), new RedPawn(), new RedPawn(), new RedPawn()};
+        GreenPawn[] greenPawns = {new GreenPawn(), new GreenPawn(), new GreenPawn(), new GreenPawn()};
+        YellowPawn[] yellowPawns = {new YellowPawn(), new YellowPawn(), new YellowPawn(), new YellowPawn()};
+        BluePawn[] bluePawns = {new BluePawn(), new BluePawn(), new BluePawn(), new BluePawn()};
 
-        redP = reds;
-        greenP = greens;
-        yellowP = yellows;
-        blueP = blues;
+        redPawn = redPawns;
+        greenPawn = greenPawns;
+        yellowPawn = yellowPawns;
+        bluePawn = bluePawns;
 
         for (int i = 0; i <= 3; i++) {
-            redP[i].setActualPosition(new Constants().constantPawnPositions().get(i).getValueX(),
+            redPawn[i].setActualPosition(new Constants().constantPawnPositions().get(i).getValueX(),
                     new Constants().constantPawnPositions().get(i).getValueY());
-            redP[i].setActualPositionIndex(i);
+            redPawn[i].setActualPositionIndex(i);
 
-            greenP[i].setActualPosition(new Constants().constantPawnPositions().get(i + 4).getValueX(),
+            greenPawn[i].setActualPosition(new Constants().constantPawnPositions().get(i + 4).getValueX(),
                     new Constants().constantPawnPositions().get(i + 4).getValueY());
-            greenP[i].setActualPositionIndex(i + 4);
+            greenPawn[i].setActualPositionIndex(i + 4);
 
-            yellowP[i].setActualPosition(new Constants().constantPawnPositions().get(i + 8).getValueX(),
+            yellowPawn[i].setActualPosition(new Constants().constantPawnPositions().get(i + 8).getValueX(),
                     new Constants().constantPawnPositions().get(i + 8).getValueY());
-            yellowP[i].setActualPositionIndex(i + 8);
+            yellowPawn[i].setActualPositionIndex(i + 8);
 
-            blueP[i].setActualPosition(new Constants().constantPawnPositions().get(i + 12).getValueX(),
+            bluePawn[i].setActualPosition(new Constants().constantPawnPositions().get(i + 12).getValueX(),
                     new Constants().constantPawnPositions().get(i + 12).getValueY());
-            blueP[i].setActualPositionIndex(i + 12);
+            bluePawn[i].setActualPositionIndex(i + 12);
         }
     }
 }

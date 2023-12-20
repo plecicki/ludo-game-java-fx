@@ -15,10 +15,10 @@ import java.util.ArrayList;
 
 public class MenuTestSuite {
 
-    private Red[] redP;
-    private Green[] greenP;
-    private Yellow[] yellowP;
-    private Blue[] blueP;
+    private RedPawn[] redPawn;
+    private GreenPawn[] greenPawn;
+    private YellowPawn[] yellowPawn;
+    private BluePawn[] bluePawn;
 
     @DisplayName("Checking, if red pawns position are correctly read")
     @Test
@@ -30,28 +30,28 @@ public class MenuTestSuite {
         ArrayList<String> fileList = readAndWriteFile.getFileAsArrayList("save.txt");
 
         //When
-        redP[0].setActualPosition(
+        redPawn[0].setActualPosition(
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(1))).getValueX(),
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(1))).getValueY());
-        redP[0].setActualPositionIndex(Integer.parseInt(fileList.get(1)));
-        redP[1].setActualPosition(
+        redPawn[0].setActualPositionIndex(Integer.parseInt(fileList.get(1)));
+        redPawn[1].setActualPosition(
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(2))).getValueX(),
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(2))).getValueY());
-        redP[1].setActualPositionIndex(Integer.parseInt(fileList.get(2)));
-        redP[2].setActualPosition(
+        redPawn[1].setActualPositionIndex(Integer.parseInt(fileList.get(2)));
+        redPawn[2].setActualPosition(
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(3))).getValueX(),
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(3))).getValueY());
-        redP[2].setActualPositionIndex(Integer.parseInt(fileList.get(3)));
-        redP[3].setActualPosition(
+        redPawn[2].setActualPositionIndex(Integer.parseInt(fileList.get(3)));
+        redPawn[3].setActualPosition(
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(4))).getValueX(),
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(4))).getValueY());
-        redP[3].setActualPositionIndex(Integer.parseInt(fileList.get(4)));
+        redPawn[3].setActualPositionIndex(Integer.parseInt(fileList.get(4)));
 
         //Then
-        Assertions.assertEquals(0, redP[0].getActualPositionIndex());
-        Assertions.assertEquals(1, redP[1].getActualPositionIndex());
-        Assertions.assertEquals(2, redP[2].getActualPositionIndex());
-        Assertions.assertEquals(20, redP[3].getActualPositionIndex());
+        Assertions.assertEquals(0, redPawn[0].getActualPositionIndex());
+        Assertions.assertEquals(1, redPawn[1].getActualPositionIndex());
+        Assertions.assertEquals(2, redPawn[2].getActualPositionIndex());
+        Assertions.assertEquals(20, redPawn[3].getActualPositionIndex());
     }
 
     @DisplayName("Checking, if green pawns position are correctly read")
@@ -64,28 +64,28 @@ public class MenuTestSuite {
         ArrayList<String> fileList = readAndWriteFile.getFileAsArrayList("save.txt");
 
         //When
-        greenP[0].setActualPosition(
+        greenPawn[0].setActualPosition(
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(5))).getValueX(),
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(5))).getValueY());
-        greenP[0].setActualPositionIndex(Integer.parseInt(fileList.get(5)));
-        greenP[1].setActualPosition(
+        greenPawn[0].setActualPositionIndex(Integer.parseInt(fileList.get(5)));
+        greenPawn[1].setActualPosition(
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(6))).getValueX(),
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(6))).getValueY());
-        greenP[1].setActualPositionIndex(Integer.parseInt(fileList.get(6)));
-        greenP[2].setActualPosition(
+        greenPawn[1].setActualPositionIndex(Integer.parseInt(fileList.get(6)));
+        greenPawn[2].setActualPosition(
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(7))).getValueX(),
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(7))).getValueY());
-        greenP[2].setActualPositionIndex(Integer.parseInt(fileList.get(7)));
-        greenP[3].setActualPosition(
+        greenPawn[2].setActualPositionIndex(Integer.parseInt(fileList.get(7)));
+        greenPawn[3].setActualPosition(
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(8))).getValueX(),
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(8))).getValueY());
-        greenP[3].setActualPositionIndex(Integer.parseInt(fileList.get(8)));
+        greenPawn[3].setActualPositionIndex(Integer.parseInt(fileList.get(8)));
 
         //Then
-        Assertions.assertEquals(80, greenP[0].getActualPositionIndex());
-        Assertions.assertEquals(5, greenP[1].getActualPositionIndex());
-        Assertions.assertEquals(6, greenP[2].getActualPositionIndex());
-        Assertions.assertEquals(7, greenP[3].getActualPositionIndex());
+        Assertions.assertEquals(80, greenPawn[0].getActualPositionIndex());
+        Assertions.assertEquals(5, greenPawn[1].getActualPositionIndex());
+        Assertions.assertEquals(6, greenPawn[2].getActualPositionIndex());
+        Assertions.assertEquals(7, greenPawn[3].getActualPositionIndex());
     }
 
     @DisplayName("Checking, if yellow pawns position are correctly read")
@@ -98,28 +98,28 @@ public class MenuTestSuite {
         ArrayList<String> fileList = readAndWriteFile.getFileAsArrayList("save.txt");
 
         //When
-        yellowP[0].setActualPosition(
+        yellowPawn[0].setActualPosition(
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(9))).getValueX(),
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(9))).getValueY());
-        yellowP[0].setActualPositionIndex(Integer.parseInt(fileList.get(9)));
-        yellowP[1].setActualPosition(
+        yellowPawn[0].setActualPositionIndex(Integer.parseInt(fileList.get(9)));
+        yellowPawn[1].setActualPosition(
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(10))).getValueX(),
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(10))).getValueY());
-        yellowP[1].setActualPositionIndex(Integer.parseInt(fileList.get(10)));
-        yellowP[2].setActualPosition(
+        yellowPawn[1].setActualPositionIndex(Integer.parseInt(fileList.get(10)));
+        yellowPawn[2].setActualPosition(
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(11))).getValueX(),
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(11))).getValueY());
-        yellowP[2].setActualPositionIndex(Integer.parseInt(fileList.get(11)));
-        yellowP[3].setActualPosition(
+        yellowPawn[2].setActualPositionIndex(Integer.parseInt(fileList.get(11)));
+        yellowPawn[3].setActualPosition(
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(12))).getValueX(),
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(12))).getValueY());
-        yellowP[3].setActualPositionIndex(Integer.parseInt(fileList.get(12)));
+        yellowPawn[3].setActualPositionIndex(Integer.parseInt(fileList.get(12)));
 
         //Then
-        Assertions.assertEquals(8, yellowP[0].getActualPositionIndex());
-        Assertions.assertEquals(40, yellowP[1].getActualPositionIndex());
-        Assertions.assertEquals(10, yellowP[2].getActualPositionIndex());
-        Assertions.assertEquals(69, yellowP[3].getActualPositionIndex());
+        Assertions.assertEquals(8, yellowPawn[0].getActualPositionIndex());
+        Assertions.assertEquals(40, yellowPawn[1].getActualPositionIndex());
+        Assertions.assertEquals(10, yellowPawn[2].getActualPositionIndex());
+        Assertions.assertEquals(69, yellowPawn[3].getActualPositionIndex());
     }
 
     @DisplayName("Checking, if blue pawns position are correctly read")
@@ -132,28 +132,28 @@ public class MenuTestSuite {
         ArrayList<String> fileList = readAndWriteFile.getFileAsArrayList("save.txt");
 
         //When
-        blueP[0].setActualPosition(
+        bluePawn[0].setActualPosition(
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(13))).getValueX(),
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(13))).getValueY());
-        blueP[0].setActualPositionIndex(Integer.parseInt(fileList.get(13)));
-        blueP[1].setActualPosition(
+        bluePawn[0].setActualPositionIndex(Integer.parseInt(fileList.get(13)));
+        bluePawn[1].setActualPosition(
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(14))).getValueX(),
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(14))).getValueY());
-        blueP[1].setActualPositionIndex(Integer.parseInt(fileList.get(14)));
-        blueP[2].setActualPosition(
+        bluePawn[1].setActualPositionIndex(Integer.parseInt(fileList.get(14)));
+        bluePawn[2].setActualPosition(
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(15))).getValueX(),
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(15))).getValueY());
-        blueP[2].setActualPositionIndex(Integer.parseInt(fileList.get(15)));
-        blueP[3].setActualPosition(
+        bluePawn[2].setActualPositionIndex(Integer.parseInt(fileList.get(15)));
+        bluePawn[3].setActualPosition(
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(16))).getValueX(),
                 new Constants().constantPawnPositions().get(Integer.parseInt(fileList.get(16))).getValueY());
-        blueP[3].setActualPositionIndex(Integer.parseInt(fileList.get(16)));
+        bluePawn[3].setActualPositionIndex(Integer.parseInt(fileList.get(16)));
 
         //Then
-        Assertions.assertEquals(60, blueP[0].getActualPositionIndex());
-        Assertions.assertEquals(13, blueP[1].getActualPositionIndex());
-        Assertions.assertEquals(14, blueP[2].getActualPositionIndex());
-        Assertions.assertEquals(15, blueP[3].getActualPositionIndex());
+        Assertions.assertEquals(60, bluePawn[0].getActualPositionIndex());
+        Assertions.assertEquals(13, bluePawn[1].getActualPositionIndex());
+        Assertions.assertEquals(14, bluePawn[2].getActualPositionIndex());
+        Assertions.assertEquals(15, bluePawn[3].getActualPositionIndex());
     }
 
     @DisplayName("Checking, if dice status is correctly read")
@@ -260,14 +260,14 @@ public class MenuTestSuite {
     }
 
     void fillingTablesWithPawns() {
-        Red[] reds = {new Red(), new Red(), new Red(), new Red()};
-        Green[] greens = {new Green(), new Green(), new Green(), new Green()};
-        Yellow[] yellows = {new Yellow(), new Yellow(), new Yellow(), new Yellow()};
-        Blue[] blues = {new Blue(), new Blue(), new Blue(), new Blue()};
+        RedPawn[] redPawns = {new RedPawn(), new RedPawn(), new RedPawn(), new RedPawn()};
+        GreenPawn[] greenPawns = {new GreenPawn(), new GreenPawn(), new GreenPawn(), new GreenPawn()};
+        YellowPawn[] yellowPawns = {new YellowPawn(), new YellowPawn(), new YellowPawn(), new YellowPawn()};
+        BluePawn[] bluePawns = {new BluePawn(), new BluePawn(), new BluePawn(), new BluePawn()};
 
-        redP = reds;
-        greenP = greens;
-        yellowP = yellows;
-        blueP = blues;
+        redPawn = redPawns;
+        greenPawn = greenPawns;
+        yellowPawn = yellowPawns;
+        bluePawn = bluePawns;
     }
 }

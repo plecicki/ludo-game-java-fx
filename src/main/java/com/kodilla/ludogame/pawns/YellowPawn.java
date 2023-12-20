@@ -5,17 +5,17 @@ import com.kodilla.ludogame.constants.PawnPosition;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
-public class Blue implements AllPawnsColors {
+public class YellowPawn implements Pawn {
 
     private PawnPosition actualPosition;
     private int actualPositionIndex;
     private boolean finish = false;
 
     public ImageView setImage(Image image) {
-        ImageView bluePawn = new ImageView(image);
-        bluePawn.setFitHeight(40);
-        bluePawn.setFitWidth(40);
-        return bluePawn;
+        ImageView yellowPawn = new ImageView(image);
+        yellowPawn.setFitHeight(40);
+        yellowPawn.setFitWidth(40);
+        return yellowPawn;
     }
 
     public PawnPosition getActualPosition() {
@@ -23,7 +23,7 @@ public class Blue implements AllPawnsColors {
     }
 
     public void gotCaptured(int i) {
-        setActualPositionIndex(i+12);
+        setActualPositionIndex(i+8);
     }
     public int getValueX() {
         return new Constants().constantPawnPositions().get(getActualPositionIndex()).getValueX();

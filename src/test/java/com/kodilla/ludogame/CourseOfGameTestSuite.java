@@ -13,10 +13,10 @@ import java.util.Collections;
 
 public class CourseOfGameTestSuite {
 
-    private Red[] redP;
-    private Green[] greenP;
-    private Yellow[] yellowP;
-    private Blue[] blueP;
+    private RedPawn[] redPawn;
+    private GreenPawn[] greenPawn;
+    private YellowPawn[] yellowPawn;
+    private BluePawn[] bluePawn;
     private static int testCount = 0;
 
     @AfterEach
@@ -59,11 +59,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(1);
         onClickPawn.setWhoseTurn(1);
 
-        onClickPawn.start(throwDice.getDiceIndex(), redP[0].getActualPositionIndex(), 'R');
-        redP[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), redPawn[0].getActualPositionIndex(), 'R');
+        redPawn[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(71, redP[0].getActualPositionIndex());
+        Assertions.assertEquals(71, redPawn[0].getActualPositionIndex());
     }
 
     @DisplayName("Red [0] pawn's position should be changed"+
@@ -79,11 +79,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(2);
         onClickPawn.setWhoseTurn(1);
 
-        onClickPawn.start(throwDice.getDiceIndex(), redP[0].getActualPositionIndex(), 'R');
-        redP[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), redPawn[0].getActualPositionIndex(), 'R');
+        redPawn[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(72, redP[0].getActualPositionIndex());
+        Assertions.assertEquals(72, redPawn[0].getActualPositionIndex());
     }
 
     @DisplayName("Red [0] pawn's position should be changed"+
@@ -99,11 +99,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(3);
         onClickPawn.setWhoseTurn(1);
 
-        onClickPawn.start(throwDice.getDiceIndex(), redP[0].getActualPositionIndex(), 'R');
-        redP[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), redPawn[0].getActualPositionIndex(), 'R');
+        redPawn[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(73, redP[0].getActualPositionIndex());
+        Assertions.assertEquals(73, redPawn[0].getActualPositionIndex());
     }
 
     @DisplayName("Red [0] pawn's position should be changed"+
@@ -119,11 +119,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(4);
         onClickPawn.setWhoseTurn(1);
 
-        onClickPawn.start(throwDice.getDiceIndex(), redP[0].getActualPositionIndex(), 'R');
-        redP[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), redPawn[0].getActualPositionIndex(), 'R');
+        redPawn[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(74, redP[0].getActualPositionIndex());
+        Assertions.assertEquals(74, redPawn[0].getActualPositionIndex());
     }
 
     @DisplayName("Red [0] pawn's position should be changed"+
@@ -139,11 +139,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(5);
         onClickPawn.setWhoseTurn(1);
 
-        onClickPawn.start(throwDice.getDiceIndex(), redP[0].getActualPositionIndex(), 'R');
-        redP[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), redPawn[0].getActualPositionIndex(), 'R');
+        redPawn[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(75, redP[0].getActualPositionIndex());
+        Assertions.assertEquals(75, redPawn[0].getActualPositionIndex());
     }
 
     @DisplayName("Red [0] pawn's position should be changed"+
@@ -159,11 +159,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(6);
         onClickPawn.setWhoseTurn(1);
 
-        onClickPawn.start(throwDice.getDiceIndex(), redP[0].getActualPositionIndex(), 'R');
-        redP[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), redPawn[0].getActualPositionIndex(), 'R');
+        redPawn[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(76, redP[0].getActualPositionIndex());
+        Assertions.assertEquals(76, redPawn[0].getActualPositionIndex());
     }
 
     @DisplayName("Red [1] pawn's position should be changed"+
@@ -179,11 +179,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(1);
         onClickPawn.setWhoseTurn(1);
 
-        onClickPawn.start(throwDice.getDiceIndex(), redP[1].getActualPositionIndex(), 'R');
-        redP[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), redPawn[1].getActualPositionIndex(), 'R');
+        redPawn[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(53, redP[1].getActualPositionIndex());
+        Assertions.assertEquals(53, redPawn[1].getActualPositionIndex());
     }
 
     @DisplayName("Red [1] pawn's position should be changed"+
@@ -199,11 +199,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(2);
         onClickPawn.setWhoseTurn(1);
 
-        onClickPawn.start(throwDice.getDiceIndex(), redP[1].getActualPositionIndex(), 'R');
-        redP[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), redPawn[1].getActualPositionIndex(), 'R');
+        redPawn[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(54, redP[1].getActualPositionIndex());
+        Assertions.assertEquals(54, redPawn[1].getActualPositionIndex());
     }
 
     @DisplayName("Red [1] pawn's position should be changed"+
@@ -219,11 +219,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(3);
         onClickPawn.setWhoseTurn(1);
 
-        onClickPawn.start(throwDice.getDiceIndex(), redP[1].getActualPositionIndex(), 'R');
-        redP[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), redPawn[1].getActualPositionIndex(), 'R');
+        redPawn[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(55, redP[1].getActualPositionIndex());
+        Assertions.assertEquals(55, redPawn[1].getActualPositionIndex());
     }
 
     @DisplayName("Red [1] pawn's position should be changed"+
@@ -239,11 +239,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(4);
         onClickPawn.setWhoseTurn(1);
 
-        onClickPawn.start(throwDice.getDiceIndex(), redP[1].getActualPositionIndex(), 'R');
-        redP[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), redPawn[1].getActualPositionIndex(), 'R');
+        redPawn[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(56, redP[1].getActualPositionIndex());
+        Assertions.assertEquals(56, redPawn[1].getActualPositionIndex());
     }
 
     @DisplayName("Red [1] pawn's position should be changed"+
@@ -259,11 +259,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(5);
         onClickPawn.setWhoseTurn(1);
 
-        onClickPawn.start(throwDice.getDiceIndex(), redP[1].getActualPositionIndex(), 'R');
-        redP[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), redPawn[1].getActualPositionIndex(), 'R');
+        redPawn[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(57, redP[1].getActualPositionIndex());
+        Assertions.assertEquals(57, redPawn[1].getActualPositionIndex());
     }
 
     @DisplayName("Red [1] pawn's position should be changed"+
@@ -279,11 +279,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(6);
         onClickPawn.setWhoseTurn(1);
 
-        onClickPawn.start(throwDice.getDiceIndex(), redP[1].getActualPositionIndex(), 'R');
-        redP[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), redPawn[1].getActualPositionIndex(), 'R');
+        redPawn[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(58, redP[1].getActualPositionIndex());
+        Assertions.assertEquals(58, redPawn[1].getActualPositionIndex());
     }
 
     @DisplayName("Red [2] pawn's position should be changed"+
@@ -299,11 +299,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(1);
         onClickPawn.setWhoseTurn(1);
 
-        onClickPawn.start(throwDice.getDiceIndex(), redP[2].getActualPositionIndex(), 'R');
-        redP[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), redPawn[2].getActualPositionIndex(), 'R');
+        redPawn[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(34, redP[2].getActualPositionIndex());
+        Assertions.assertEquals(34, redPawn[2].getActualPositionIndex());
     }
 
     @DisplayName("Red [2] pawn's position should be changed"+
@@ -319,11 +319,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(2);
         onClickPawn.setWhoseTurn(1);
 
-        onClickPawn.start(throwDice.getDiceIndex(), redP[2].getActualPositionIndex(), 'R');
-        redP[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), redPawn[2].getActualPositionIndex(), 'R');
+        redPawn[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(35, redP[2].getActualPositionIndex());
+        Assertions.assertEquals(35, redPawn[2].getActualPositionIndex());
     }
 
     @DisplayName("Red [2] pawn's position should be changed"+
@@ -339,11 +339,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(3);
         onClickPawn.setWhoseTurn(1);
 
-        onClickPawn.start(throwDice.getDiceIndex(), redP[2].getActualPositionIndex(), 'R');
-        redP[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), redPawn[2].getActualPositionIndex(), 'R');
+        redPawn[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(36, redP[2].getActualPositionIndex());
+        Assertions.assertEquals(36, redPawn[2].getActualPositionIndex());
     }
 
     @DisplayName("Red [2] pawn's position should be changed"+
@@ -359,11 +359,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(4);
         onClickPawn.setWhoseTurn(1);
 
-        onClickPawn.start(throwDice.getDiceIndex(), redP[2].getActualPositionIndex(), 'R');
-        redP[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), redPawn[2].getActualPositionIndex(), 'R');
+        redPawn[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(37, redP[2].getActualPositionIndex());
+        Assertions.assertEquals(37, redPawn[2].getActualPositionIndex());
     }
 
     @DisplayName("Red [2] pawn's position should be changed"+
@@ -379,11 +379,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(5);
         onClickPawn.setWhoseTurn(1);
 
-        onClickPawn.start(throwDice.getDiceIndex(), redP[2].getActualPositionIndex(), 'R');
-        redP[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), redPawn[2].getActualPositionIndex(), 'R');
+        redPawn[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(38, redP[2].getActualPositionIndex());
+        Assertions.assertEquals(38, redPawn[2].getActualPositionIndex());
     }
 
     @DisplayName("Red [2] pawn's position should be changed"+
@@ -399,11 +399,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(6);
         onClickPawn.setWhoseTurn(1);
 
-        onClickPawn.start(throwDice.getDiceIndex(), redP[2].getActualPositionIndex(), 'R');
-        redP[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), redPawn[2].getActualPositionIndex(), 'R');
+        redPawn[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(39, redP[2].getActualPositionIndex());
+        Assertions.assertEquals(39, redPawn[2].getActualPositionIndex());
     }
 
     @DisplayName("Red [3] pawn's position should be changed"+
@@ -419,11 +419,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(1);
         onClickPawn.setWhoseTurn(1);
 
-        onClickPawn.start(throwDice.getDiceIndex(), redP[3].getActualPositionIndex(), 'R');
-        redP[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), redPawn[3].getActualPositionIndex(), 'R');
+        redPawn[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(23, redP[3].getActualPositionIndex());
+        Assertions.assertEquals(23, redPawn[3].getActualPositionIndex());
     }
 
     @DisplayName("Red [3] pawn's position should be changed"+
@@ -439,11 +439,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(2);
         onClickPawn.setWhoseTurn(1);
 
-        onClickPawn.start(throwDice.getDiceIndex(), redP[3].getActualPositionIndex(), 'R');
-        redP[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), redPawn[3].getActualPositionIndex(), 'R');
+        redPawn[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(24, redP[3].getActualPositionIndex());
+        Assertions.assertEquals(24, redPawn[3].getActualPositionIndex());
     }
 
     @DisplayName("Red [3] pawn's position should be changed"+
@@ -459,11 +459,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(3);
         onClickPawn.setWhoseTurn(1);
 
-        onClickPawn.start(throwDice.getDiceIndex(), redP[3].getActualPositionIndex(), 'R');
-        redP[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), redPawn[3].getActualPositionIndex(), 'R');
+        redPawn[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(25, redP[3].getActualPositionIndex());
+        Assertions.assertEquals(25, redPawn[3].getActualPositionIndex());
     }
 
     @DisplayName("Red [3] pawn's position should be changed"+
@@ -479,11 +479,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(4);
         onClickPawn.setWhoseTurn(1);
 
-        onClickPawn.start(throwDice.getDiceIndex(), redP[3].getActualPositionIndex(), 'R');
-        redP[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), redPawn[3].getActualPositionIndex(), 'R');
+        redPawn[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(26, redP[3].getActualPositionIndex());
+        Assertions.assertEquals(26, redPawn[3].getActualPositionIndex());
     }
 
     @DisplayName("Red [3] pawn's position should be changed"+
@@ -499,11 +499,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(5);
         onClickPawn.setWhoseTurn(1);
 
-        onClickPawn.start(throwDice.getDiceIndex(), redP[3].getActualPositionIndex(), 'R');
-        redP[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), redPawn[3].getActualPositionIndex(), 'R');
+        redPawn[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(27, redP[3].getActualPositionIndex());
+        Assertions.assertEquals(27, redPawn[3].getActualPositionIndex());
     }
 
     @DisplayName("Red [3] pawn's position should be changed"+
@@ -519,11 +519,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(6);
         onClickPawn.setWhoseTurn(1);
 
-        onClickPawn.start(throwDice.getDiceIndex(), redP[3].getActualPositionIndex(), 'R');
-        redP[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), redPawn[3].getActualPositionIndex(), 'R');
+        redPawn[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(28, redP[3].getActualPositionIndex());
+        Assertions.assertEquals(28, redPawn[3].getActualPositionIndex());
     }
 
     @DisplayName("Green [0] pawn's position should be changed"+
@@ -539,11 +539,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(1);
         onClickPawn.setWhoseTurn(2);
 
-        onClickPawn.start(throwDice.getDiceIndex(), greenP[0].getActualPositionIndex(), 'G');
-        greenP[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), greenPawn[0].getActualPositionIndex(), 'G');
+        greenPawn[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(29, greenP[0].getActualPositionIndex());
+        Assertions.assertEquals(29, greenPawn[0].getActualPositionIndex());
     }
 
     @DisplayName("Green [0] pawn's position should be changed"+
@@ -559,11 +559,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(2);
         onClickPawn.setWhoseTurn(2);
 
-        onClickPawn.start(throwDice.getDiceIndex(), greenP[0].getActualPositionIndex(), 'G');
-        greenP[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), greenPawn[0].getActualPositionIndex(), 'G');
+        greenPawn[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(77, greenP[0].getActualPositionIndex());
+        Assertions.assertEquals(77, greenPawn[0].getActualPositionIndex());
     }
 
     @DisplayName("Green [0] pawn's position should be changed"+
@@ -579,11 +579,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(3);
         onClickPawn.setWhoseTurn(2);
 
-        onClickPawn.start(throwDice.getDiceIndex(), greenP[0].getActualPositionIndex(), 'G');
-        greenP[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), greenPawn[0].getActualPositionIndex(), 'G');
+        greenPawn[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(78, greenP[0].getActualPositionIndex());
+        Assertions.assertEquals(78, greenPawn[0].getActualPositionIndex());
     }
 
     @DisplayName("Green [0] pawn's position should be changed"+
@@ -599,11 +599,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(4);
         onClickPawn.setWhoseTurn(2);
 
-        onClickPawn.start(throwDice.getDiceIndex(), greenP[0].getActualPositionIndex(), 'G');
-        greenP[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), greenPawn[0].getActualPositionIndex(), 'G');
+        greenPawn[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(79, greenP[0].getActualPositionIndex());
+        Assertions.assertEquals(79, greenPawn[0].getActualPositionIndex());
     }
 
     @DisplayName("Green [0] pawn's position should be changed"+
@@ -619,11 +619,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(5);
         onClickPawn.setWhoseTurn(2);
 
-        onClickPawn.start(throwDice.getDiceIndex(), greenP[0].getActualPositionIndex(), 'G');
-        greenP[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), greenPawn[0].getActualPositionIndex(), 'G');
+        greenPawn[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(80, greenP[0].getActualPositionIndex());
+        Assertions.assertEquals(80, greenPawn[0].getActualPositionIndex());
     }
 
     @DisplayName("Green [0] pawn's position should be changed"+
@@ -639,11 +639,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(6);
         onClickPawn.setWhoseTurn(2);
 
-        onClickPawn.start(throwDice.getDiceIndex(), greenP[0].getActualPositionIndex(), 'G');
-        greenP[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), greenPawn[0].getActualPositionIndex(), 'G');
+        greenPawn[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(81, greenP[0].getActualPositionIndex());
+        Assertions.assertEquals(81, greenPawn[0].getActualPositionIndex());
     }
 
     @DisplayName("Green [1] pawn's position should be changed"+
@@ -659,11 +659,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(1);
         onClickPawn.setWhoseTurn(2);
 
-        onClickPawn.start(throwDice.getDiceIndex(), greenP[1].getActualPositionIndex(), 'G');
-        greenP[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), greenPawn[1].getActualPositionIndex(), 'G');
+        greenPawn[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(67, greenP[1].getActualPositionIndex());
+        Assertions.assertEquals(67, greenPawn[1].getActualPositionIndex());
     }
 
     @DisplayName("Green [1] pawn's position should be changed"+
@@ -679,11 +679,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(2);
         onClickPawn.setWhoseTurn(2);
 
-        onClickPawn.start(throwDice.getDiceIndex(), greenP[1].getActualPositionIndex(), 'G');
-        greenP[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), greenPawn[1].getActualPositionIndex(), 'G');
+        greenPawn[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(68, greenP[1].getActualPositionIndex());
+        Assertions.assertEquals(68, greenPawn[1].getActualPositionIndex());
     }
 
     @DisplayName("Green [1] pawn's position should be changed"+
@@ -699,11 +699,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(3);
         onClickPawn.setWhoseTurn(2);
 
-        onClickPawn.start(throwDice.getDiceIndex(), greenP[1].getActualPositionIndex(), 'G');
-        greenP[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), greenPawn[1].getActualPositionIndex(), 'G');
+        greenPawn[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(69, greenP[1].getActualPositionIndex());
+        Assertions.assertEquals(69, greenPawn[1].getActualPositionIndex());
     }
 
     @DisplayName("Green [1] pawn's position should be changed"+
@@ -719,11 +719,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(4);
         onClickPawn.setWhoseTurn(2);
 
-        onClickPawn.start(throwDice.getDiceIndex(), greenP[1].getActualPositionIndex(), 'G');
-        greenP[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), greenPawn[1].getActualPositionIndex(), 'G');
+        greenPawn[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(70, greenP[1].getActualPositionIndex());
+        Assertions.assertEquals(70, greenPawn[1].getActualPositionIndex());
     }
 
     @DisplayName("Green [1] pawn's position should be changed"+
@@ -739,11 +739,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(5);
         onClickPawn.setWhoseTurn(2);
 
-        onClickPawn.start(throwDice.getDiceIndex(), greenP[1].getActualPositionIndex(), 'G');
-        greenP[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), greenPawn[1].getActualPositionIndex(), 'G');
+        greenPawn[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(71, greenP[1].getActualPositionIndex());
+        Assertions.assertEquals(71, greenPawn[1].getActualPositionIndex());
     }
 
     @DisplayName("Green [1] pawn's position should be changed"+
@@ -759,11 +759,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(6);
         onClickPawn.setWhoseTurn(2);
 
-        onClickPawn.start(throwDice.getDiceIndex(), greenP[1].getActualPositionIndex(), 'G');
-        greenP[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), greenPawn[1].getActualPositionIndex(), 'G');
+        greenPawn[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(16, greenP[1].getActualPositionIndex());
+        Assertions.assertEquals(16, greenPawn[1].getActualPositionIndex());
     }
 
     @DisplayName("Green [2] pawn's position should be changed"+
@@ -779,11 +779,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(1);
         onClickPawn.setWhoseTurn(2);
 
-        onClickPawn.start(throwDice.getDiceIndex(), greenP[2].getActualPositionIndex(), 'G');
-        greenP[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), greenPawn[2].getActualPositionIndex(), 'G');
+        greenPawn[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(48, greenP[2].getActualPositionIndex());
+        Assertions.assertEquals(48, greenPawn[2].getActualPositionIndex());
     }
 
     @DisplayName("Green [2] pawn's position should be changed"+
@@ -799,11 +799,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(2);
         onClickPawn.setWhoseTurn(2);
 
-        onClickPawn.start(throwDice.getDiceIndex(), greenP[2].getActualPositionIndex(), 'G');
-        greenP[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), greenPawn[2].getActualPositionIndex(), 'G');
+        greenPawn[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(49, greenP[2].getActualPositionIndex());
+        Assertions.assertEquals(49, greenPawn[2].getActualPositionIndex());
     }
 
     @DisplayName("Green [2] pawn's position should be changed"+
@@ -819,11 +819,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(3);
         onClickPawn.setWhoseTurn(2);
 
-        onClickPawn.start(throwDice.getDiceIndex(), greenP[2].getActualPositionIndex(), 'G');
-        greenP[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), greenPawn[2].getActualPositionIndex(), 'G');
+        greenPawn[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(50, greenP[2].getActualPositionIndex());
+        Assertions.assertEquals(50, greenPawn[2].getActualPositionIndex());
     }
 
     @DisplayName("Green [2] pawn's position should be changed"+
@@ -839,11 +839,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(4);
         onClickPawn.setWhoseTurn(2);
 
-        onClickPawn.start(throwDice.getDiceIndex(), greenP[2].getActualPositionIndex(), 'G');
-        greenP[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), greenPawn[2].getActualPositionIndex(), 'G');
+        greenPawn[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(51, greenP[2].getActualPositionIndex());
+        Assertions.assertEquals(51, greenPawn[2].getActualPositionIndex());
     }
 
     @DisplayName("Green [2] pawn's position should be changed"+
@@ -859,11 +859,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(5);
         onClickPawn.setWhoseTurn(2);
 
-        onClickPawn.start(throwDice.getDiceIndex(), greenP[2].getActualPositionIndex(), 'G');
-        greenP[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), greenPawn[2].getActualPositionIndex(), 'G');
+        greenPawn[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(52, greenP[2].getActualPositionIndex());
+        Assertions.assertEquals(52, greenPawn[2].getActualPositionIndex());
     }
 
     @DisplayName("Green [2] pawn's position should be changed"+
@@ -879,11 +879,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(6);
         onClickPawn.setWhoseTurn(2);
 
-        onClickPawn.start(throwDice.getDiceIndex(), greenP[2].getActualPositionIndex(), 'G');
-        greenP[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), greenPawn[2].getActualPositionIndex(), 'G');
+        greenPawn[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(53, greenP[2].getActualPositionIndex());
+        Assertions.assertEquals(53, greenPawn[2].getActualPositionIndex());
     }
 
     @DisplayName("Green [3] pawn's position should be changed"+
@@ -899,11 +899,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(1);
         onClickPawn.setWhoseTurn(2);
 
-        onClickPawn.start(throwDice.getDiceIndex(), greenP[3].getActualPositionIndex(), 'G');
-        greenP[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), greenPawn[3].getActualPositionIndex(), 'G');
+        greenPawn[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(37, greenP[3].getActualPositionIndex());
+        Assertions.assertEquals(37, greenPawn[3].getActualPositionIndex());
     }
 
     @DisplayName("Green [3] pawn's position should be changed"+
@@ -919,11 +919,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(2);
         onClickPawn.setWhoseTurn(2);
 
-        onClickPawn.start(throwDice.getDiceIndex(), greenP[3].getActualPositionIndex(), 'G');
-        greenP[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), greenPawn[3].getActualPositionIndex(), 'G');
+        greenPawn[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(38, greenP[3].getActualPositionIndex());
+        Assertions.assertEquals(38, greenPawn[3].getActualPositionIndex());
     }
 
     @DisplayName("Green [3] pawn's position should be changed"+
@@ -939,11 +939,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(3);
         onClickPawn.setWhoseTurn(2);
 
-        onClickPawn.start(throwDice.getDiceIndex(), greenP[3].getActualPositionIndex(), 'G');
-        greenP[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), greenPawn[3].getActualPositionIndex(), 'G');
+        greenPawn[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(39, greenP[3].getActualPositionIndex());
+        Assertions.assertEquals(39, greenPawn[3].getActualPositionIndex());
     }
 
     @DisplayName("Green [3] pawn's position should be changed"+
@@ -959,11 +959,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(4);
         onClickPawn.setWhoseTurn(2);
 
-        onClickPawn.start(throwDice.getDiceIndex(), greenP[3].getActualPositionIndex(), 'G');
-        greenP[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), greenPawn[3].getActualPositionIndex(), 'G');
+        greenPawn[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(40, greenP[3].getActualPositionIndex());
+        Assertions.assertEquals(40, greenPawn[3].getActualPositionIndex());
     }
 
     @DisplayName("Green [3] pawn's position should be changed"+
@@ -979,11 +979,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(5);
         onClickPawn.setWhoseTurn(2);
 
-        onClickPawn.start(throwDice.getDiceIndex(), greenP[3].getActualPositionIndex(), 'G');
-        greenP[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), greenPawn[3].getActualPositionIndex(), 'G');
+        greenPawn[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(41, greenP[3].getActualPositionIndex());
+        Assertions.assertEquals(41, greenPawn[3].getActualPositionIndex());
     }
 
     @DisplayName("Green [3] pawn's position should be changed"+
@@ -999,11 +999,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(6);
         onClickPawn.setWhoseTurn(2);
 
-        onClickPawn.start(throwDice.getDiceIndex(), greenP[3].getActualPositionIndex(), 'G');
-        greenP[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), greenPawn[3].getActualPositionIndex(), 'G');
+        greenPawn[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(42, greenP[3].getActualPositionIndex());
+        Assertions.assertEquals(42, greenPawn[3].getActualPositionIndex());
     }
 
     @DisplayName("Yellow [0] pawn's position should be changed"+
@@ -1019,11 +1019,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(1);
         onClickPawn.setWhoseTurn(3);
 
-        onClickPawn.start(throwDice.getDiceIndex(), yellowP[0].getActualPositionIndex(), 'Y');
-        yellowP[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), yellowPawn[0].getActualPositionIndex(), 'Y');
+        yellowPawn[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(57, yellowP[0].getActualPositionIndex());
+        Assertions.assertEquals(57, yellowPawn[0].getActualPositionIndex());
     }
 
     @DisplayName("Yellow [0] pawn's position should be changed"+
@@ -1039,11 +1039,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(2);
         onClickPawn.setWhoseTurn(3);
 
-        onClickPawn.start(throwDice.getDiceIndex(), yellowP[0].getActualPositionIndex(), 'Y');
-        yellowP[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), yellowPawn[0].getActualPositionIndex(), 'Y');
+        yellowPawn[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(82, yellowP[0].getActualPositionIndex());
+        Assertions.assertEquals(82, yellowPawn[0].getActualPositionIndex());
     }
 
     @DisplayName("Yellow [0] pawn's position should be changed"+
@@ -1059,11 +1059,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(3);
         onClickPawn.setWhoseTurn(3);
 
-        onClickPawn.start(throwDice.getDiceIndex(), yellowP[0].getActualPositionIndex(), 'Y');
-        yellowP[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), yellowPawn[0].getActualPositionIndex(), 'Y');
+        yellowPawn[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(83, yellowP[0].getActualPositionIndex());
+        Assertions.assertEquals(83, yellowPawn[0].getActualPositionIndex());
     }
 
     @DisplayName("Yellow [0] pawn's position should be changed"+
@@ -1079,11 +1079,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(4);
         onClickPawn.setWhoseTurn(3);
 
-        onClickPawn.start(throwDice.getDiceIndex(), yellowP[0].getActualPositionIndex(), 'Y');
-        yellowP[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), yellowPawn[0].getActualPositionIndex(), 'Y');
+        yellowPawn[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(84, yellowP[0].getActualPositionIndex());
+        Assertions.assertEquals(84, yellowPawn[0].getActualPositionIndex());
     }
 
     @DisplayName("Yellow [0] pawn's position should be changed"+
@@ -1099,11 +1099,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(5);
         onClickPawn.setWhoseTurn(3);
 
-        onClickPawn.start(throwDice.getDiceIndex(), yellowP[0].getActualPositionIndex(), 'Y');
-        yellowP[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), yellowPawn[0].getActualPositionIndex(), 'Y');
+        yellowPawn[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(85, yellowP[0].getActualPositionIndex());
+        Assertions.assertEquals(85, yellowPawn[0].getActualPositionIndex());
     }
 
     @DisplayName("Yellow [0] pawn's position should be changed"+
@@ -1119,11 +1119,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(6);
         onClickPawn.setWhoseTurn(3);
 
-        onClickPawn.start(throwDice.getDiceIndex(), yellowP[0].getActualPositionIndex(), 'Y');
-        yellowP[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), yellowPawn[0].getActualPositionIndex(), 'Y');
+        yellowPawn[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(86, yellowP[0].getActualPositionIndex());
+        Assertions.assertEquals(86, yellowPawn[0].getActualPositionIndex());
     }
 
     @DisplayName("Yellow [1] pawn's position should be changed"+
@@ -1139,11 +1139,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(1);
         onClickPawn.setWhoseTurn(3);
 
-        onClickPawn.start(throwDice.getDiceIndex(), yellowP[1].getActualPositionIndex(), 'Y');
-        yellowP[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), yellowPawn[1].getActualPositionIndex(), 'Y');
+        yellowPawn[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(25, yellowP[1].getActualPositionIndex());
+        Assertions.assertEquals(25, yellowPawn[1].getActualPositionIndex());
     }
 
     @DisplayName("Yellow [1] pawn's position should be changed"+
@@ -1159,11 +1159,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(2);
         onClickPawn.setWhoseTurn(3);
 
-        onClickPawn.start(throwDice.getDiceIndex(), yellowP[1].getActualPositionIndex(), 'Y');
-        yellowP[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), yellowPawn[1].getActualPositionIndex(), 'Y');
+        yellowPawn[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(26, yellowP[1].getActualPositionIndex());
+        Assertions.assertEquals(26, yellowPawn[1].getActualPositionIndex());
     }
 
     @DisplayName("Yellow [1] pawn's position should be changed"+
@@ -1179,11 +1179,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(3);
         onClickPawn.setWhoseTurn(3);
 
-        onClickPawn.start(throwDice.getDiceIndex(), yellowP[1].getActualPositionIndex(), 'Y');
-        yellowP[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), yellowPawn[1].getActualPositionIndex(), 'Y');
+        yellowPawn[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(27, yellowP[1].getActualPositionIndex());
+        Assertions.assertEquals(27, yellowPawn[1].getActualPositionIndex());
     }
 
     @DisplayName("Yellow [1] pawn's position should be changed"+
@@ -1199,11 +1199,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(4);
         onClickPawn.setWhoseTurn(3);
 
-        onClickPawn.start(throwDice.getDiceIndex(), yellowP[1].getActualPositionIndex(), 'Y');
-        yellowP[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), yellowPawn[1].getActualPositionIndex(), 'Y');
+        yellowPawn[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(28, yellowP[1].getActualPositionIndex());
+        Assertions.assertEquals(28, yellowPawn[1].getActualPositionIndex());
     }
 
     @DisplayName("Yellow [1] pawn's position should be changed"+
@@ -1219,11 +1219,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(5);
         onClickPawn.setWhoseTurn(3);
 
-        onClickPawn.start(throwDice.getDiceIndex(), yellowP[1].getActualPositionIndex(), 'Y');
-        yellowP[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), yellowPawn[1].getActualPositionIndex(), 'Y');
+        yellowPawn[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(29, yellowP[1].getActualPositionIndex());
+        Assertions.assertEquals(29, yellowPawn[1].getActualPositionIndex());
     }
 
     @DisplayName("Yellow [1] pawn's position should be changed"+
@@ -1239,11 +1239,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(6);
         onClickPawn.setWhoseTurn(3);
 
-        onClickPawn.start(throwDice.getDiceIndex(), yellowP[1].getActualPositionIndex(), 'Y');
-        yellowP[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), yellowPawn[1].getActualPositionIndex(), 'Y');
+        yellowPawn[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(30, yellowP[1].getActualPositionIndex());
+        Assertions.assertEquals(30, yellowPawn[1].getActualPositionIndex());
     }
 
     @DisplayName("Yellow [2] pawn's position should be changed"+
@@ -1259,11 +1259,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(1);
         onClickPawn.setWhoseTurn(3);
 
-        onClickPawn.start(throwDice.getDiceIndex(), yellowP[2].getActualPositionIndex(), 'Y');
-        yellowP[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), yellowPawn[2].getActualPositionIndex(), 'Y');
+        yellowPawn[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(62, yellowP[2].getActualPositionIndex());
+        Assertions.assertEquals(62, yellowPawn[2].getActualPositionIndex());
     }
 
     @DisplayName("Yellow [2] pawn's position should be changed"+
@@ -1279,11 +1279,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(2);
         onClickPawn.setWhoseTurn(3);
 
-        onClickPawn.start(throwDice.getDiceIndex(), yellowP[2].getActualPositionIndex(), 'Y');
-        yellowP[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), yellowPawn[2].getActualPositionIndex(), 'Y');
+        yellowPawn[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(63, yellowP[2].getActualPositionIndex());
+        Assertions.assertEquals(63, yellowPawn[2].getActualPositionIndex());
     }
 
     @DisplayName("Yellow [2] pawn's position should be changed"+
@@ -1299,11 +1299,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(3);
         onClickPawn.setWhoseTurn(3);
 
-        onClickPawn.start(throwDice.getDiceIndex(), yellowP[2].getActualPositionIndex(), 'Y');
-        yellowP[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), yellowPawn[2].getActualPositionIndex(), 'Y');
+        yellowPawn[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(64, yellowP[2].getActualPositionIndex());
+        Assertions.assertEquals(64, yellowPawn[2].getActualPositionIndex());
     }
 
     @DisplayName("Yellow [2] pawn's position should be changed"+
@@ -1319,11 +1319,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(4);
         onClickPawn.setWhoseTurn(3);
 
-        onClickPawn.start(throwDice.getDiceIndex(), yellowP[2].getActualPositionIndex(), 'Y');
-        yellowP[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), yellowPawn[2].getActualPositionIndex(), 'Y');
+        yellowPawn[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(65, yellowP[2].getActualPositionIndex());
+        Assertions.assertEquals(65, yellowPawn[2].getActualPositionIndex());
     }
 
     @DisplayName("Yellow [2] pawn's position should be changed"+
@@ -1339,11 +1339,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(5);
         onClickPawn.setWhoseTurn(3);
 
-        onClickPawn.start(throwDice.getDiceIndex(), yellowP[2].getActualPositionIndex(), 'Y');
-        yellowP[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), yellowPawn[2].getActualPositionIndex(), 'Y');
+        yellowPawn[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(66, yellowP[2].getActualPositionIndex());
+        Assertions.assertEquals(66, yellowPawn[2].getActualPositionIndex());
     }
 
     @DisplayName("Yellow [2] pawn's position should be changed"+
@@ -1359,11 +1359,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(6);
         onClickPawn.setWhoseTurn(3);
 
-        onClickPawn.start(throwDice.getDiceIndex(), yellowP[2].getActualPositionIndex(), 'Y');
-        yellowP[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), yellowPawn[2].getActualPositionIndex(), 'Y');
+        yellowPawn[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(67, yellowP[2].getActualPositionIndex());
+        Assertions.assertEquals(67, yellowPawn[2].getActualPositionIndex());
     }
 
     @DisplayName("Yellow [3] pawn's position should be changed"+
@@ -1379,11 +1379,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(1);
         onClickPawn.setWhoseTurn(3);
 
-        onClickPawn.start(throwDice.getDiceIndex(), yellowP[3].getActualPositionIndex(), 'Y');
-        yellowP[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), yellowPawn[3].getActualPositionIndex(), 'Y');
+        yellowPawn[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(51, yellowP[3].getActualPositionIndex());
+        Assertions.assertEquals(51, yellowPawn[3].getActualPositionIndex());
     }
 
     @DisplayName("Yellow [3] pawn's position should be changed"+
@@ -1399,11 +1399,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(2);
         onClickPawn.setWhoseTurn(3);
 
-        onClickPawn.start(throwDice.getDiceIndex(), yellowP[3].getActualPositionIndex(), 'Y');
-        yellowP[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), yellowPawn[3].getActualPositionIndex(), 'Y');
+        yellowPawn[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(52, yellowP[3].getActualPositionIndex());
+        Assertions.assertEquals(52, yellowPawn[3].getActualPositionIndex());
     }
 
     @DisplayName("Yellow [3] pawn's position should be changed"+
@@ -1419,11 +1419,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(3);
         onClickPawn.setWhoseTurn(3);
 
-        onClickPawn.start(throwDice.getDiceIndex(), yellowP[3].getActualPositionIndex(), 'Y');
-        yellowP[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), yellowPawn[3].getActualPositionIndex(), 'Y');
+        yellowPawn[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(53, yellowP[3].getActualPositionIndex());
+        Assertions.assertEquals(53, yellowPawn[3].getActualPositionIndex());
     }
 
     @DisplayName("Yellow [3] pawn's position should be changed"+
@@ -1439,11 +1439,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(4);
         onClickPawn.setWhoseTurn(3);
 
-        onClickPawn.start(throwDice.getDiceIndex(), yellowP[3].getActualPositionIndex(), 'Y');
-        yellowP[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), yellowPawn[3].getActualPositionIndex(), 'Y');
+        yellowPawn[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(54, yellowP[3].getActualPositionIndex());
+        Assertions.assertEquals(54, yellowPawn[3].getActualPositionIndex());
     }
 
     @DisplayName("Yellow [3] pawn's position should be changed"+
@@ -1459,11 +1459,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(5);
         onClickPawn.setWhoseTurn(3);
 
-        onClickPawn.start(throwDice.getDiceIndex(), yellowP[3].getActualPositionIndex(), 'Y');
-        yellowP[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), yellowPawn[3].getActualPositionIndex(), 'Y');
+        yellowPawn[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(55, yellowP[3].getActualPositionIndex());
+        Assertions.assertEquals(55, yellowPawn[3].getActualPositionIndex());
     }
 
     @DisplayName("Yellow [3] pawn's position should be changed"+
@@ -1479,11 +1479,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(6);
         onClickPawn.setWhoseTurn(3);
 
-        onClickPawn.start(throwDice.getDiceIndex(), yellowP[3].getActualPositionIndex(), 'Y');
-        yellowP[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), yellowPawn[3].getActualPositionIndex(), 'Y');
+        yellowPawn[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(56, yellowP[3].getActualPositionIndex());
+        Assertions.assertEquals(56, yellowPawn[3].getActualPositionIndex());
     }
 
     @DisplayName("Blue [0] pawn's position should be changed"+
@@ -1499,11 +1499,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(1);
         onClickPawn.setWhoseTurn(4);
 
-        onClickPawn.start(throwDice.getDiceIndex(), blueP[0].getActualPositionIndex(), 'B');
-        blueP[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), bluePawn[0].getActualPositionIndex(), 'B');
+        bluePawn[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(43, blueP[0].getActualPositionIndex());
+        Assertions.assertEquals(43, bluePawn[0].getActualPositionIndex());
     }
 
     @DisplayName("Blue [0] pawn's position should be changed"+
@@ -1519,11 +1519,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(2);
         onClickPawn.setWhoseTurn(4);
 
-        onClickPawn.start(throwDice.getDiceIndex(), blueP[0].getActualPositionIndex(), 'B');
-        blueP[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), bluePawn[0].getActualPositionIndex(), 'B');
+        bluePawn[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(87, blueP[0].getActualPositionIndex());
+        Assertions.assertEquals(87, bluePawn[0].getActualPositionIndex());
     }
 
     @DisplayName("Blue [0] pawn's position should be changed"+
@@ -1539,11 +1539,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(3);
         onClickPawn.setWhoseTurn(4);
 
-        onClickPawn.start(throwDice.getDiceIndex(), blueP[0].getActualPositionIndex(), 'B');
-        blueP[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), bluePawn[0].getActualPositionIndex(), 'B');
+        bluePawn[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(88, blueP[0].getActualPositionIndex());
+        Assertions.assertEquals(88, bluePawn[0].getActualPositionIndex());
     }
 
     @DisplayName("Blue [0] pawn's position should be changed"+
@@ -1559,11 +1559,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(4);
         onClickPawn.setWhoseTurn(4);
 
-        onClickPawn.start(throwDice.getDiceIndex(), blueP[0].getActualPositionIndex(), 'B');
-        blueP[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), bluePawn[0].getActualPositionIndex(), 'B');
+        bluePawn[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(89, blueP[0].getActualPositionIndex());
+        Assertions.assertEquals(89, bluePawn[0].getActualPositionIndex());
     }
 
     @DisplayName("Blue [0] pawn's position should be changed"+
@@ -1579,11 +1579,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(5);
         onClickPawn.setWhoseTurn(4);
 
-        onClickPawn.start(throwDice.getDiceIndex(), blueP[0].getActualPositionIndex(), 'B');
-        blueP[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), bluePawn[0].getActualPositionIndex(), 'B');
+        bluePawn[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(90, blueP[0].getActualPositionIndex());
+        Assertions.assertEquals(90, bluePawn[0].getActualPositionIndex());
     }
 
     @DisplayName("Blue [0] pawn's position should be changed"+
@@ -1599,11 +1599,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(6);
         onClickPawn.setWhoseTurn(4);
 
-        onClickPawn.start(throwDice.getDiceIndex(), blueP[0].getActualPositionIndex(), 'B');
-        blueP[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), bluePawn[0].getActualPositionIndex(), 'B');
+        bluePawn[0].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(91, blueP[0].getActualPositionIndex());
+        Assertions.assertEquals(91, bluePawn[0].getActualPositionIndex());
     }
 
     @DisplayName("Blue [1] pawn's position should be changed"+
@@ -1619,11 +1619,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(1);
         onClickPawn.setWhoseTurn(4);
 
-        onClickPawn.start(throwDice.getDiceIndex(), blueP[1].getActualPositionIndex(), 'B');
-        blueP[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), bluePawn[1].getActualPositionIndex(), 'B');
+        bluePawn[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(39, blueP[1].getActualPositionIndex());
+        Assertions.assertEquals(39, bluePawn[1].getActualPositionIndex());
     }
 
     @DisplayName("Blue [1] pawn's position should be changed"+
@@ -1639,11 +1639,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(2);
         onClickPawn.setWhoseTurn(4);
 
-        onClickPawn.start(throwDice.getDiceIndex(), blueP[1].getActualPositionIndex(), 'B');
-        blueP[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), bluePawn[1].getActualPositionIndex(), 'B');
+        bluePawn[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(40, blueP[1].getActualPositionIndex());
+        Assertions.assertEquals(40, bluePawn[1].getActualPositionIndex());
     }
 
     @DisplayName("Blue [1] pawn's position should be changed"+
@@ -1659,11 +1659,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(3);
         onClickPawn.setWhoseTurn(4);
 
-        onClickPawn.start(throwDice.getDiceIndex(), blueP[1].getActualPositionIndex(), 'B');
-        blueP[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), bluePawn[1].getActualPositionIndex(), 'B');
+        bluePawn[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(41, blueP[1].getActualPositionIndex());
+        Assertions.assertEquals(41, bluePawn[1].getActualPositionIndex());
     }
 
     @DisplayName("Blue [1] pawn's position should be changed"+
@@ -1679,11 +1679,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(4);
         onClickPawn.setWhoseTurn(4);
 
-        onClickPawn.start(throwDice.getDiceIndex(), blueP[1].getActualPositionIndex(), 'B');
-        blueP[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), bluePawn[1].getActualPositionIndex(), 'B');
+        bluePawn[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(42, blueP[1].getActualPositionIndex());
+        Assertions.assertEquals(42, bluePawn[1].getActualPositionIndex());
     }
 
     @DisplayName("Blue [1] pawn's position should be changed"+
@@ -1699,11 +1699,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(5);
         onClickPawn.setWhoseTurn(4);
 
-        onClickPawn.start(throwDice.getDiceIndex(), blueP[1].getActualPositionIndex(), 'B');
-        blueP[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), bluePawn[1].getActualPositionIndex(), 'B');
+        bluePawn[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(43, blueP[1].getActualPositionIndex());
+        Assertions.assertEquals(43, bluePawn[1].getActualPositionIndex());
     }
 
     @DisplayName("Blue [1] pawn's position should be changed"+
@@ -1719,11 +1719,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(6);
         onClickPawn.setWhoseTurn(4);
 
-        onClickPawn.start(throwDice.getDiceIndex(), blueP[1].getActualPositionIndex(), 'B');
-        blueP[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), bluePawn[1].getActualPositionIndex(), 'B');
+        bluePawn[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(87, blueP[1].getActualPositionIndex());
+        Assertions.assertEquals(87, bluePawn[1].getActualPositionIndex());
     }
 
     @DisplayName("Blue [2] pawn's position should be changed"+
@@ -1739,11 +1739,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(1);
         onClickPawn.setWhoseTurn(4);
 
-        onClickPawn.start(throwDice.getDiceIndex(), blueP[2].getActualPositionIndex(), 'B');
-        blueP[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), bluePawn[2].getActualPositionIndex(), 'B');
+        bluePawn[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(20, blueP[2].getActualPositionIndex());
+        Assertions.assertEquals(20, bluePawn[2].getActualPositionIndex());
     }
 
     @DisplayName("Blue [2] pawn's position should be changed"+
@@ -1759,11 +1759,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(2);
         onClickPawn.setWhoseTurn(4);
 
-        onClickPawn.start(throwDice.getDiceIndex(), blueP[2].getActualPositionIndex(), 'B');
-        blueP[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), bluePawn[2].getActualPositionIndex(), 'B');
+        bluePawn[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(21, blueP[2].getActualPositionIndex());
+        Assertions.assertEquals(21, bluePawn[2].getActualPositionIndex());
     }
 
     @DisplayName("Blue [2] pawn's position should be changed"+
@@ -1779,11 +1779,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(3);
         onClickPawn.setWhoseTurn(4);
 
-        onClickPawn.start(throwDice.getDiceIndex(), blueP[2].getActualPositionIndex(), 'B');
-        blueP[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), bluePawn[2].getActualPositionIndex(), 'B');
+        bluePawn[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(22, blueP[2].getActualPositionIndex());
+        Assertions.assertEquals(22, bluePawn[2].getActualPositionIndex());
     }
 
     @DisplayName("Blue [2] pawn's position should be changed"+
@@ -1799,11 +1799,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(4);
         onClickPawn.setWhoseTurn(4);
 
-        onClickPawn.start(throwDice.getDiceIndex(), blueP[2].getActualPositionIndex(), 'B');
-        blueP[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), bluePawn[2].getActualPositionIndex(), 'B');
+        bluePawn[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(23, blueP[2].getActualPositionIndex());
+        Assertions.assertEquals(23, bluePawn[2].getActualPositionIndex());
     }
 
     @DisplayName("Blue [2] pawn's position should be changed"+
@@ -1819,11 +1819,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(5);
         onClickPawn.setWhoseTurn(4);
 
-        onClickPawn.start(throwDice.getDiceIndex(), blueP[2].getActualPositionIndex(), 'B');
-        blueP[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), bluePawn[2].getActualPositionIndex(), 'B');
+        bluePawn[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(24, blueP[2].getActualPositionIndex());
+        Assertions.assertEquals(24, bluePawn[2].getActualPositionIndex());
     }
 
     @DisplayName("Blue [2] pawn's position should be changed"+
@@ -1839,11 +1839,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(6);
         onClickPawn.setWhoseTurn(4);
 
-        onClickPawn.start(throwDice.getDiceIndex(), blueP[2].getActualPositionIndex(), 'B');
-        blueP[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), bluePawn[2].getActualPositionIndex(), 'B');
+        bluePawn[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(25, blueP[2].getActualPositionIndex());
+        Assertions.assertEquals(25, bluePawn[2].getActualPositionIndex());
     }
 
     @DisplayName("Blue [3] pawn's position should be changed"+
@@ -1859,11 +1859,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(1);
         onClickPawn.setWhoseTurn(4);
 
-        onClickPawn.start(throwDice.getDiceIndex(), blueP[3].getActualPositionIndex(), 'B');
-        blueP[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), bluePawn[3].getActualPositionIndex(), 'B');
+        bluePawn[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(65, blueP[3].getActualPositionIndex());
+        Assertions.assertEquals(65, bluePawn[3].getActualPositionIndex());
     }
 
     @DisplayName("Blue [3] pawn's position should be changed"+
@@ -1879,11 +1879,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(2);
         onClickPawn.setWhoseTurn(4);
 
-        onClickPawn.start(throwDice.getDiceIndex(), blueP[3].getActualPositionIndex(), 'B');
-        blueP[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), bluePawn[3].getActualPositionIndex(), 'B');
+        bluePawn[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(66, blueP[3].getActualPositionIndex());
+        Assertions.assertEquals(66, bluePawn[3].getActualPositionIndex());
     }
 
     @DisplayName("Blue [3] pawn's position should be changed"+
@@ -1899,11 +1899,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(3);
         onClickPawn.setWhoseTurn(4);
 
-        onClickPawn.start(throwDice.getDiceIndex(), blueP[3].getActualPositionIndex(), 'B');
-        blueP[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), bluePawn[3].getActualPositionIndex(), 'B');
+        bluePawn[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(67, blueP[3].getActualPositionIndex());
+        Assertions.assertEquals(67, bluePawn[3].getActualPositionIndex());
     }
 
     @DisplayName("Blue [3] pawn's position should be changed"+
@@ -1919,11 +1919,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(4);
         onClickPawn.setWhoseTurn(4);
 
-        onClickPawn.start(throwDice.getDiceIndex(), blueP[3].getActualPositionIndex(), 'B');
-        blueP[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), bluePawn[3].getActualPositionIndex(), 'B');
+        bluePawn[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(68, blueP[3].getActualPositionIndex());
+        Assertions.assertEquals(68, bluePawn[3].getActualPositionIndex());
     }
 
     @DisplayName("Blue [3] pawn's position should be changed"+
@@ -1939,11 +1939,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(5);
         onClickPawn.setWhoseTurn(4);
 
-        onClickPawn.start(throwDice.getDiceIndex(), blueP[3].getActualPositionIndex(), 'B');
-        blueP[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), bluePawn[3].getActualPositionIndex(), 'B');
+        bluePawn[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(69, blueP[3].getActualPositionIndex());
+        Assertions.assertEquals(69, bluePawn[3].getActualPositionIndex());
     }
 
     @DisplayName("Blue [3] pawn's position should be changed"+
@@ -1959,11 +1959,11 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(6);
         onClickPawn.setWhoseTurn(4);
 
-        onClickPawn.start(throwDice.getDiceIndex(), blueP[3].getActualPositionIndex(), 'B');
-        blueP[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        onClickPawn.start(throwDice.getDiceIndex(), bluePawn[3].getActualPositionIndex(), 'B');
+        bluePawn[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
 
         //Then
-        Assertions.assertEquals(70, blueP[3].getActualPositionIndex());
+        Assertions.assertEquals(70, bluePawn[3].getActualPositionIndex());
     }
 
     @DisplayName("Blue [2] pawn's position should be changed"+
@@ -1980,13 +1980,13 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(3);
         onClickPawn.setWhoseTurn(4);
 
-        onClickPawn.start(throwDice.getDiceIndex(), blueP[2].getActualPositionIndex(), 'B');
-        blueP[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
-        redP[3].gotCaptured(3);
+        onClickPawn.start(throwDice.getDiceIndex(), bluePawn[2].getActualPositionIndex(), 'B');
+        bluePawn[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        redPawn[3].gotCaptured(3);
 
         //Then
-        Assertions.assertEquals(22, blueP[2].getActualPositionIndex());
-        Assertions.assertEquals(3, redP[3].getActualPositionIndex());
+        Assertions.assertEquals(22, bluePawn[2].getActualPositionIndex());
+        Assertions.assertEquals(3, redPawn[3].getActualPositionIndex());
     }
 
     @DisplayName("Blue [2] pawn's position should be changed"+
@@ -2003,13 +2003,13 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(5);
         onClickPawn.setWhoseTurn(4);
 
-        onClickPawn.start(throwDice.getDiceIndex(), blueP[2].getActualPositionIndex(), 'B');
-        blueP[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
-        yellowP[1].gotCaptured(1);
+        onClickPawn.start(throwDice.getDiceIndex(), bluePawn[2].getActualPositionIndex(), 'B');
+        bluePawn[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        yellowPawn[1].gotCaptured(1);
 
         //Then
-        Assertions.assertEquals(24, blueP[2].getActualPositionIndex());
-        Assertions.assertEquals(9, yellowP[1].getActualPositionIndex());
+        Assertions.assertEquals(24, bluePawn[2].getActualPositionIndex());
+        Assertions.assertEquals(9, yellowPawn[1].getActualPositionIndex());
     }
 
     @DisplayName("Red [3] pawn's position should be changed"+
@@ -2026,13 +2026,13 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(2);
         onClickPawn.setWhoseTurn(1);
 
-        onClickPawn.start(throwDice.getDiceIndex(), redP[3].getActualPositionIndex(), 'R');
-        redP[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
-        yellowP[1].gotCaptured(1);
+        onClickPawn.start(throwDice.getDiceIndex(), redPawn[3].getActualPositionIndex(), 'R');
+        redPawn[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        yellowPawn[1].gotCaptured(1);
 
         //Then
-        Assertions.assertEquals(24, redP[3].getActualPositionIndex());
-        Assertions.assertEquals(9, yellowP[1].getActualPositionIndex());
+        Assertions.assertEquals(24, redPawn[3].getActualPositionIndex());
+        Assertions.assertEquals(9, yellowPawn[1].getActualPositionIndex());
     }
 
     @DisplayName("Red [3] pawn's position should be changed"+
@@ -2049,13 +2049,13 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(6);
         onClickPawn.setWhoseTurn(1);
 
-        onClickPawn.start(throwDice.getDiceIndex(), redP[3].getActualPositionIndex(), 'R');
-        redP[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
-        greenP[0].gotCaptured(0);
+        onClickPawn.start(throwDice.getDiceIndex(), redPawn[3].getActualPositionIndex(), 'R');
+        redPawn[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        greenPawn[0].gotCaptured(0);
 
         //Then
-        Assertions.assertEquals(28, redP[3].getActualPositionIndex());
-        Assertions.assertEquals(4, greenP[0].getActualPositionIndex());
+        Assertions.assertEquals(28, redPawn[3].getActualPositionIndex());
+        Assertions.assertEquals(4, greenPawn[0].getActualPositionIndex());
     }
 
     @DisplayName("Yellow [1] pawn's position should be changed"+
@@ -2072,13 +2072,13 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(4);
         onClickPawn.setWhoseTurn(3);
 
-        onClickPawn.start(throwDice.getDiceIndex(), yellowP[1].getActualPositionIndex(), 'Y');
-        yellowP[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
-        greenP[0].gotCaptured(0);
+        onClickPawn.start(throwDice.getDiceIndex(), yellowPawn[1].getActualPositionIndex(), 'Y');
+        yellowPawn[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        greenPawn[0].gotCaptured(0);
 
         //Then
-        Assertions.assertEquals(28, yellowP[1].getActualPositionIndex());
-        Assertions.assertEquals(4, greenP[0].getActualPositionIndex());
+        Assertions.assertEquals(28, yellowPawn[1].getActualPositionIndex());
+        Assertions.assertEquals(4, greenPawn[0].getActualPositionIndex());
     }
 
     @DisplayName("Red [2] pawn's position should be changed"+
@@ -2095,13 +2095,13 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(3);
         onClickPawn.setWhoseTurn(1);
 
-        onClickPawn.start(throwDice.getDiceIndex(), redP[2].getActualPositionIndex(), 'R');
-        redP[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
-        greenP[3].gotCaptured(3);
+        onClickPawn.start(throwDice.getDiceIndex(), redPawn[2].getActualPositionIndex(), 'R');
+        redPawn[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        greenPawn[3].gotCaptured(3);
 
         //Then
-        Assertions.assertEquals(36, redP[2].getActualPositionIndex());
-        Assertions.assertEquals(7, greenP[3].getActualPositionIndex());
+        Assertions.assertEquals(36, redPawn[2].getActualPositionIndex());
+        Assertions.assertEquals(7, greenPawn[3].getActualPositionIndex());
     }
 
     @DisplayName("Red [2] pawn's position should be changed"+
@@ -2118,13 +2118,13 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(5);
         onClickPawn.setWhoseTurn(1);
 
-        onClickPawn.start(throwDice.getDiceIndex(), redP[2].getActualPositionIndex(), 'R');
-        redP[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
-        blueP[1].gotCaptured(1);
+        onClickPawn.start(throwDice.getDiceIndex(), redPawn[2].getActualPositionIndex(), 'R');
+        redPawn[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        bluePawn[1].gotCaptured(1);
 
         //Then
-        Assertions.assertEquals(38, redP[2].getActualPositionIndex());
-        Assertions.assertEquals(13, blueP[1].getActualPositionIndex());
+        Assertions.assertEquals(38, redPawn[2].getActualPositionIndex());
+        Assertions.assertEquals(13, bluePawn[1].getActualPositionIndex());
     }
 
     @DisplayName("Green [3] pawn's position should be changed"+
@@ -2141,13 +2141,13 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(2);
         onClickPawn.setWhoseTurn(2);
 
-        onClickPawn.start(throwDice.getDiceIndex(), greenP[3].getActualPositionIndex(), 'G');
-        greenP[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
-        blueP[1].gotCaptured(1);
+        onClickPawn.start(throwDice.getDiceIndex(), greenPawn[3].getActualPositionIndex(), 'G');
+        greenPawn[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        bluePawn[1].gotCaptured(1);
 
         //Then
-        Assertions.assertEquals(38, greenP[3].getActualPositionIndex());
-        Assertions.assertEquals(13, blueP[1].getActualPositionIndex());
+        Assertions.assertEquals(38, greenPawn[3].getActualPositionIndex());
+        Assertions.assertEquals(13, bluePawn[1].getActualPositionIndex());
     }
 
     @DisplayName("Green [3] pawn's position should be changed"+
@@ -2164,13 +2164,13 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(6);
         onClickPawn.setWhoseTurn(2);
 
-        onClickPawn.start(throwDice.getDiceIndex(), greenP[3].getActualPositionIndex(), 'G');
-        greenP[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
-        blueP[0].gotCaptured(0);
+        onClickPawn.start(throwDice.getDiceIndex(), greenPawn[3].getActualPositionIndex(), 'G');
+        greenPawn[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        bluePawn[0].gotCaptured(0);
 
         //Then
-        Assertions.assertEquals(42, greenP[3].getActualPositionIndex());
-        Assertions.assertEquals(12, blueP[0].getActualPositionIndex());
+        Assertions.assertEquals(42, greenPawn[3].getActualPositionIndex());
+        Assertions.assertEquals(12, bluePawn[0].getActualPositionIndex());
     }
 
     @DisplayName("Green [2] pawn's position should be changed"+
@@ -2187,13 +2187,13 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(3);
         onClickPawn.setWhoseTurn(2);
 
-        onClickPawn.start(throwDice.getDiceIndex(), greenP[2].getActualPositionIndex(), 'G');
-        greenP[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
-        yellowP[3].gotCaptured(3);
+        onClickPawn.start(throwDice.getDiceIndex(), greenPawn[2].getActualPositionIndex(), 'G');
+        greenPawn[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        yellowPawn[3].gotCaptured(3);
 
         //Then
-        Assertions.assertEquals(50, greenP[2].getActualPositionIndex());
-        Assertions.assertEquals(11, yellowP[3].getActualPositionIndex());
+        Assertions.assertEquals(50, greenPawn[2].getActualPositionIndex());
+        Assertions.assertEquals(11, yellowPawn[3].getActualPositionIndex());
     }
 
     @DisplayName("Green [2] pawn's position should be changed"+
@@ -2210,13 +2210,13 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(5);
         onClickPawn.setWhoseTurn(2);
 
-        onClickPawn.start(throwDice.getDiceIndex(), greenP[2].getActualPositionIndex(), 'G');
-        greenP[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
-        redP[1].gotCaptured(1);
+        onClickPawn.start(throwDice.getDiceIndex(), greenPawn[2].getActualPositionIndex(), 'G');
+        greenPawn[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        redPawn[1].gotCaptured(1);
 
         //Then
-        Assertions.assertEquals(52, greenP[2].getActualPositionIndex());
-        Assertions.assertEquals(1, redP[1].getActualPositionIndex());
+        Assertions.assertEquals(52, greenPawn[2].getActualPositionIndex());
+        Assertions.assertEquals(1, redPawn[1].getActualPositionIndex());
     }
 
     @DisplayName("Yellow [3] pawn's position should be changed"+
@@ -2233,13 +2233,13 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(2);
         onClickPawn.setWhoseTurn(3);
 
-        onClickPawn.start(throwDice.getDiceIndex(), yellowP[3].getActualPositionIndex(), 'Y');
-        yellowP[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
-        redP[1].gotCaptured(1);
+        onClickPawn.start(throwDice.getDiceIndex(), yellowPawn[3].getActualPositionIndex(), 'Y');
+        yellowPawn[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        redPawn[1].gotCaptured(1);
 
         //Then
-        Assertions.assertEquals(52, yellowP[3].getActualPositionIndex());
-        Assertions.assertEquals(1, redP[1].getActualPositionIndex());
+        Assertions.assertEquals(52, yellowPawn[3].getActualPositionIndex());
+        Assertions.assertEquals(1, redPawn[1].getActualPositionIndex());
     }
 
     @DisplayName("Red [1] pawn's position should be changed"+
@@ -2256,13 +2256,13 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(4);
         onClickPawn.setWhoseTurn(1);
 
-        onClickPawn.start(throwDice.getDiceIndex(), redP[1].getActualPositionIndex(), 'R');
-        redP[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
-        yellowP[0].gotCaptured(0);
+        onClickPawn.start(throwDice.getDiceIndex(), redPawn[1].getActualPositionIndex(), 'R');
+        redPawn[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        yellowPawn[0].gotCaptured(0);
 
         //Then
-        Assertions.assertEquals(56, redP[1].getActualPositionIndex());
-        Assertions.assertEquals(8, yellowP[0].getActualPositionIndex());
+        Assertions.assertEquals(56, redPawn[1].getActualPositionIndex());
+        Assertions.assertEquals(8, yellowPawn[0].getActualPositionIndex());
     }
 
     @DisplayName("Yellow [2] pawn's position should be changed"+
@@ -2279,13 +2279,13 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(3);
         onClickPawn.setWhoseTurn(3);
 
-        onClickPawn.start(throwDice.getDiceIndex(), yellowP[2].getActualPositionIndex(), 'Y');
-        yellowP[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
-        blueP[3].gotCaptured(3);
+        onClickPawn.start(throwDice.getDiceIndex(), yellowPawn[2].getActualPositionIndex(), 'Y');
+        yellowPawn[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        bluePawn[3].gotCaptured(3);
 
         //Then
-        Assertions.assertEquals(64, yellowP[2].getActualPositionIndex());
-        Assertions.assertEquals(15, blueP[3].getActualPositionIndex());
+        Assertions.assertEquals(64, yellowPawn[2].getActualPositionIndex());
+        Assertions.assertEquals(15, bluePawn[3].getActualPositionIndex());
     }
 
     @DisplayName("Yellow [2] pawn's position should be changed"+
@@ -2302,13 +2302,13 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(5);
         onClickPawn.setWhoseTurn(3);
 
-        onClickPawn.start(throwDice.getDiceIndex(), yellowP[2].getActualPositionIndex(), 'Y');
-        yellowP[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
-        greenP[1].gotCaptured(1);
+        onClickPawn.start(throwDice.getDiceIndex(), yellowPawn[2].getActualPositionIndex(), 'Y');
+        yellowPawn[2].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        greenPawn[1].gotCaptured(1);
 
         //Then
-        Assertions.assertEquals(66, yellowP[2].getActualPositionIndex());
-        Assertions.assertEquals(5, greenP[1].getActualPositionIndex());
+        Assertions.assertEquals(66, yellowPawn[2].getActualPositionIndex());
+        Assertions.assertEquals(5, greenPawn[1].getActualPositionIndex());
     }
 
     @DisplayName("Blue [3] pawn's position should be changed"+
@@ -2325,13 +2325,13 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(2);
         onClickPawn.setWhoseTurn(4);
 
-        onClickPawn.start(throwDice.getDiceIndex(), blueP[3].getActualPositionIndex(), 'B');
-        blueP[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
-        greenP[1].gotCaptured(1);
+        onClickPawn.start(throwDice.getDiceIndex(), bluePawn[3].getActualPositionIndex(), 'B');
+        bluePawn[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        greenPawn[1].gotCaptured(1);
 
         //Then
-        Assertions.assertEquals(66, blueP[3].getActualPositionIndex());
-        Assertions.assertEquals(5, greenP[1].getActualPositionIndex());
+        Assertions.assertEquals(66, bluePawn[3].getActualPositionIndex());
+        Assertions.assertEquals(5, greenPawn[1].getActualPositionIndex());
     }
 
     @DisplayName("Blue [3] pawn's position should be changed"+
@@ -2348,13 +2348,13 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(6);
         onClickPawn.setWhoseTurn(4);
 
-        onClickPawn.start(throwDice.getDiceIndex(), blueP[3].getActualPositionIndex(), 'B');
-        blueP[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
-        redP[0].gotCaptured(0);
+        onClickPawn.start(throwDice.getDiceIndex(), bluePawn[3].getActualPositionIndex(), 'B');
+        bluePawn[3].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        redPawn[0].gotCaptured(0);
 
         //Then
-        Assertions.assertEquals(70, blueP[3].getActualPositionIndex());
-        Assertions.assertEquals(0, redP[0].getActualPositionIndex());
+        Assertions.assertEquals(70, bluePawn[3].getActualPositionIndex());
+        Assertions.assertEquals(0, redPawn[0].getActualPositionIndex());
     }
 
     @DisplayName("Green [1] pawn's position should be changed"+
@@ -2371,76 +2371,76 @@ public class CourseOfGameTestSuite {
         throwDice.setDiceIndex(4);
         onClickPawn.setWhoseTurn(3);
 
-        onClickPawn.start(throwDice.getDiceIndex(), greenP[1].getActualPositionIndex(), 'G');
-        greenP[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
-        redP[0].gotCaptured(0);
+        onClickPawn.start(throwDice.getDiceIndex(), greenPawn[1].getActualPositionIndex(), 'G');
+        greenPawn[1].setActualPositionIndex(onClickPawn.getNextPositionIndex());
+        redPawn[0].gotCaptured(0);
 
         //Then
-        Assertions.assertEquals(70, greenP[1].getActualPositionIndex());
-        Assertions.assertEquals(0, redP[0].getActualPositionIndex());
+        Assertions.assertEquals(70, greenPawn[1].getActualPositionIndex());
+        Assertions.assertEquals(0, redPawn[0].getActualPositionIndex());
     }
 
     private void setPawnsAtPositions() {
-        Red[] reds = {new Red(), new Red(), new Red(), new Red()};
-        Green[] greens = {new Green(), new Green(), new Green(), new Green()};
-        Yellow[] yellows = {new Yellow(), new Yellow(), new Yellow(), new Yellow()};
-        Blue[] blues = {new Blue(), new Blue(), new Blue(), new Blue()};
+        RedPawn[] redPawns = {new RedPawn(), new RedPawn(), new RedPawn(), new RedPawn()};
+        GreenPawn[] greenPawns = {new GreenPawn(), new GreenPawn(), new GreenPawn(), new GreenPawn()};
+        YellowPawn[] yellowPawns = {new YellowPawn(), new YellowPawn(), new YellowPawn(), new YellowPawn()};
+        BluePawn[] bluePawns = {new BluePawn(), new BluePawn(), new BluePawn(), new BluePawn()};
 
-        redP = reds;
-        greenP = greens;
-        yellowP = yellows;
-        blueP = blues;
+        redPawn = redPawns;
+        greenPawn = greenPawns;
+        yellowPawn = yellowPawns;
+        bluePawn = bluePawns;
 
-        redP[0].setActualPosition(new Constants().constantPawnPositions().get(70).getValueX(),
+        redPawn[0].setActualPosition(new Constants().constantPawnPositions().get(70).getValueX(),
                 new Constants().constantPawnPositions().get(70).getValueY());
-        redP[0].setActualPositionIndex(70);
-        redP[1].setActualPosition(new Constants().constantPawnPositions().get(52).getValueX(),
+        redPawn[0].setActualPositionIndex(70);
+        redPawn[1].setActualPosition(new Constants().constantPawnPositions().get(52).getValueX(),
                 new Constants().constantPawnPositions().get(52).getValueY());
-        redP[1].setActualPositionIndex(52);
-        redP[2].setActualPosition(new Constants().constantPawnPositions().get(33).getValueX(),
+        redPawn[1].setActualPositionIndex(52);
+        redPawn[2].setActualPosition(new Constants().constantPawnPositions().get(33).getValueX(),
                 new Constants().constantPawnPositions().get(33).getValueY());
-        redP[2].setActualPositionIndex(33);
-        redP[3].setActualPosition(new Constants().constantPawnPositions().get(22).getValueX(),
+        redPawn[2].setActualPositionIndex(33);
+        redPawn[3].setActualPosition(new Constants().constantPawnPositions().get(22).getValueX(),
                 new Constants().constantPawnPositions().get(22).getValueY());
-        redP[3].setActualPositionIndex(22);
+        redPawn[3].setActualPositionIndex(22);
 
-        greenP[0].setActualPosition(new Constants().constantPawnPositions().get(28).getValueX(),
+        greenPawn[0].setActualPosition(new Constants().constantPawnPositions().get(28).getValueX(),
                 new Constants().constantPawnPositions().get(28).getValueY());
-        greenP[0].setActualPositionIndex(28);
-        greenP[1].setActualPosition(new Constants().constantPawnPositions().get(66).getValueX(),
+        greenPawn[0].setActualPositionIndex(28);
+        greenPawn[1].setActualPosition(new Constants().constantPawnPositions().get(66).getValueX(),
                 new Constants().constantPawnPositions().get(66).getValueY());
-        greenP[1].setActualPositionIndex(66);
-        greenP[2].setActualPosition(new Constants().constantPawnPositions().get(47).getValueX(),
+        greenPawn[1].setActualPositionIndex(66);
+        greenPawn[2].setActualPosition(new Constants().constantPawnPositions().get(47).getValueX(),
                 new Constants().constantPawnPositions().get(47).getValueY());
-        greenP[2].setActualPositionIndex(47);
-        greenP[3].setActualPosition(new Constants().constantPawnPositions().get(36).getValueX(),
+        greenPawn[2].setActualPositionIndex(47);
+        greenPawn[3].setActualPosition(new Constants().constantPawnPositions().get(36).getValueX(),
                 new Constants().constantPawnPositions().get(36).getValueY());
-        greenP[3].setActualPositionIndex(36);
+        greenPawn[3].setActualPositionIndex(36);
 
-        yellowP[0].setActualPosition(new Constants().constantPawnPositions().get(56).getValueX(),
+        yellowPawn[0].setActualPosition(new Constants().constantPawnPositions().get(56).getValueX(),
                 new Constants().constantPawnPositions().get(56).getValueY());
-        yellowP[0].setActualPositionIndex(56);
-        yellowP[1].setActualPosition(new Constants().constantPawnPositions().get(24).getValueX(),
+        yellowPawn[0].setActualPositionIndex(56);
+        yellowPawn[1].setActualPosition(new Constants().constantPawnPositions().get(24).getValueX(),
                 new Constants().constantPawnPositions().get(24).getValueY());
-        yellowP[1].setActualPositionIndex(24);
-        yellowP[2].setActualPosition(new Constants().constantPawnPositions().get(61).getValueX(),
+        yellowPawn[1].setActualPositionIndex(24);
+        yellowPawn[2].setActualPosition(new Constants().constantPawnPositions().get(61).getValueX(),
                 new Constants().constantPawnPositions().get(61).getValueY());
-        yellowP[2].setActualPositionIndex(61);
-        yellowP[3].setActualPosition(new Constants().constantPawnPositions().get(50).getValueX(),
+        yellowPawn[2].setActualPositionIndex(61);
+        yellowPawn[3].setActualPosition(new Constants().constantPawnPositions().get(50).getValueX(),
                 new Constants().constantPawnPositions().get(50).getValueY());
-        yellowP[3].setActualPositionIndex(50);
+        yellowPawn[3].setActualPositionIndex(50);
 
-        blueP[0].setActualPosition(new Constants().constantPawnPositions().get(42).getValueX(),
+        bluePawn[0].setActualPosition(new Constants().constantPawnPositions().get(42).getValueX(),
                 new Constants().constantPawnPositions().get(42).getValueY());
-        blueP[0].setActualPositionIndex(42);
-        blueP[1].setActualPosition(new Constants().constantPawnPositions().get(38).getValueX(),
+        bluePawn[0].setActualPositionIndex(42);
+        bluePawn[1].setActualPosition(new Constants().constantPawnPositions().get(38).getValueX(),
                 new Constants().constantPawnPositions().get(38).getValueY());
-        blueP[1].setActualPositionIndex(38);
-        blueP[2].setActualPosition(new Constants().constantPawnPositions().get(19).getValueX(),
+        bluePawn[1].setActualPositionIndex(38);
+        bluePawn[2].setActualPosition(new Constants().constantPawnPositions().get(19).getValueX(),
                 new Constants().constantPawnPositions().get(19).getValueY());
-        blueP[2].setActualPositionIndex(19);
-        blueP[3].setActualPosition(new Constants().constantPawnPositions().get(64).getValueX(),
+        bluePawn[2].setActualPositionIndex(19);
+        bluePawn[3].setActualPosition(new Constants().constantPawnPositions().get(64).getValueX(),
                 new Constants().constantPawnPositions().get(64).getValueY());
-        blueP[3].setActualPositionIndex(64);
+        bluePawn[3].setActualPositionIndex(64);
     }
 }

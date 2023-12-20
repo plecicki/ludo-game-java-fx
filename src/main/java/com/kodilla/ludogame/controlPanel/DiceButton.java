@@ -1,9 +1,9 @@
 package com.kodilla.ludogame.controlPanel;
 
-import com.kodilla.ludogame.pawns.Blue;
-import com.kodilla.ludogame.pawns.Green;
-import com.kodilla.ludogame.pawns.Red;
-import com.kodilla.ludogame.pawns.Yellow;
+import com.kodilla.ludogame.pawns.BluePawn;
+import com.kodilla.ludogame.pawns.GreenPawn;
+import com.kodilla.ludogame.pawns.RedPawn;
+import com.kodilla.ludogame.pawns.YellowPawn;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.text.Font;
@@ -26,22 +26,22 @@ public class DiceButton {
     }
 
     public void availableMove(int whoseTurn, int diceValue,
-                              Red[] reds, Green[] greens,
-                              Yellow[] yellows, Blue[] blues) {
+                              RedPawn[] redPawns, GreenPawn[] greenPawns,
+                              YellowPawn[] yellowPawns, BluePawn[] bluePawns) {
         if (whoseTurn == 1) {
-            if ((reds[0].getActualPositionIndex() == 0 ||
-                    (reds[0].getActualPositionIndex() >= 72 && reds[0].getActualPositionIndex() < 77)) &&
-                    (reds[1].getActualPositionIndex() == 1 ||
-                            (reds[1].getActualPositionIndex() >= 72 && reds[1].getActualPositionIndex() < 77)) &&
-                    (reds[2].getActualPositionIndex() == 2 ||
-                            (reds[2].getActualPositionIndex() >= 72 && reds[2].getActualPositionIndex() < 77)) &&
-                    (reds[3].getActualPositionIndex() == 3 ||
-                            (reds[3].getActualPositionIndex() >= 72 && reds[3].getActualPositionIndex() < 77))) {
+            if ((redPawns[0].getActualPositionIndex() == 0 ||
+                    (redPawns[0].getActualPositionIndex() >= 72 && redPawns[0].getActualPositionIndex() < 77)) &&
+                    (redPawns[1].getActualPositionIndex() == 1 ||
+                            (redPawns[1].getActualPositionIndex() >= 72 && redPawns[1].getActualPositionIndex() < 77)) &&
+                    (redPawns[2].getActualPositionIndex() == 2 ||
+                            (redPawns[2].getActualPositionIndex() >= 72 && redPawns[2].getActualPositionIndex() < 77)) &&
+                    (redPawns[3].getActualPositionIndex() == 3 ||
+                            (redPawns[3].getActualPositionIndex() >= 72 && redPawns[3].getActualPositionIndex() < 77))) {
                 if (diceValue == 6 &&
-                        (reds[0].getActualPositionIndex() == 0 ||
-                                reds[1].getActualPositionIndex() == 1 ||
-                                reds[2].getActualPositionIndex() == 2 ||
-                                reds[3].getActualPositionIndex() == 3)) {
+                        (redPawns[0].getActualPositionIndex() == 0 ||
+                                redPawns[1].getActualPositionIndex() == 1 ||
+                                redPawns[2].getActualPositionIndex() == 2 ||
+                                redPawns[3].getActualPositionIndex() == 3)) {
                     available = true;
                 } else {
                     available = false;
@@ -50,19 +50,19 @@ public class DiceButton {
                 available = true;
             }
         } else if (whoseTurn == 2) {
-            if ((greens[0].getActualPositionIndex() == 4 ||
-                    (greens[0].getActualPositionIndex() >= 77 && greens[0].getActualPositionIndex() < 82)) &&
-                    (greens[1].getActualPositionIndex() == 5 ||
-                            (greens[1].getActualPositionIndex() >= 77 && greens[1].getActualPositionIndex() < 82)) &&
-                    (greens[2].getActualPositionIndex() == 6 ||
-                            (greens[2].getActualPositionIndex() >= 77 && greens[2].getActualPositionIndex() < 82)) &&
-                    (greens[3].getActualPositionIndex() == 7 ||
-                            (greens[3].getActualPositionIndex() >= 77 && greens[3].getActualPositionIndex() < 82))) {
+            if ((greenPawns[0].getActualPositionIndex() == 4 ||
+                    (greenPawns[0].getActualPositionIndex() >= 77 && greenPawns[0].getActualPositionIndex() < 82)) &&
+                    (greenPawns[1].getActualPositionIndex() == 5 ||
+                            (greenPawns[1].getActualPositionIndex() >= 77 && greenPawns[1].getActualPositionIndex() < 82)) &&
+                    (greenPawns[2].getActualPositionIndex() == 6 ||
+                            (greenPawns[2].getActualPositionIndex() >= 77 && greenPawns[2].getActualPositionIndex() < 82)) &&
+                    (greenPawns[3].getActualPositionIndex() == 7 ||
+                            (greenPawns[3].getActualPositionIndex() >= 77 && greenPawns[3].getActualPositionIndex() < 82))) {
                 if (diceValue == 6 &&
-                        (greens[0].getActualPositionIndex() == 4 ||
-                                greens[1].getActualPositionIndex() == 5 ||
-                                greens[2].getActualPositionIndex() == 6 ||
-                                greens[3].getActualPositionIndex() == 7)) {
+                        (greenPawns[0].getActualPositionIndex() == 4 ||
+                                greenPawns[1].getActualPositionIndex() == 5 ||
+                                greenPawns[2].getActualPositionIndex() == 6 ||
+                                greenPawns[3].getActualPositionIndex() == 7)) {
                     available = true;
                 } else {
                     available = false;
@@ -71,19 +71,19 @@ public class DiceButton {
                 available = true;
             }
         } else if (whoseTurn == 3) {
-            if ((yellows[0].getActualPositionIndex() == 8 ||
-                    (yellows[0].getActualPositionIndex() >= 82 && yellows[0].getActualPositionIndex() < 87)) &&
-                    (yellows[1].getActualPositionIndex() == 9 ||
-                            (yellows[1].getActualPositionIndex() >= 82 && yellows[1].getActualPositionIndex() < 87)) &&
-                    (yellows[2].getActualPositionIndex() == 10 ||
-                            (yellows[2].getActualPositionIndex() >= 82 && yellows[2].getActualPositionIndex() < 87)) &&
-                    (yellows[3].getActualPositionIndex() == 11 ||
-                            (yellows[3].getActualPositionIndex() >= 82 && yellows[3].getActualPositionIndex() < 87))) {
+            if ((yellowPawns[0].getActualPositionIndex() == 8 ||
+                    (yellowPawns[0].getActualPositionIndex() >= 82 && yellowPawns[0].getActualPositionIndex() < 87)) &&
+                    (yellowPawns[1].getActualPositionIndex() == 9 ||
+                            (yellowPawns[1].getActualPositionIndex() >= 82 && yellowPawns[1].getActualPositionIndex() < 87)) &&
+                    (yellowPawns[2].getActualPositionIndex() == 10 ||
+                            (yellowPawns[2].getActualPositionIndex() >= 82 && yellowPawns[2].getActualPositionIndex() < 87)) &&
+                    (yellowPawns[3].getActualPositionIndex() == 11 ||
+                            (yellowPawns[3].getActualPositionIndex() >= 82 && yellowPawns[3].getActualPositionIndex() < 87))) {
                 if (diceValue == 6 &&
-                        (yellows[0].getActualPositionIndex() == 8 ||
-                                yellows[1].getActualPositionIndex() == 9 ||
-                                yellows[2].getActualPositionIndex() == 10 ||
-                                yellows[3].getActualPositionIndex() == 11)) {
+                        (yellowPawns[0].getActualPositionIndex() == 8 ||
+                                yellowPawns[1].getActualPositionIndex() == 9 ||
+                                yellowPawns[2].getActualPositionIndex() == 10 ||
+                                yellowPawns[3].getActualPositionIndex() == 11)) {
                     available = true;
                 } else {
                     available = false;
@@ -92,19 +92,19 @@ public class DiceButton {
                 available = true;
             }
         } else if (whoseTurn == 4) {
-            if ((blues[0].getActualPositionIndex() == 12 ||
-                    (blues[0].getActualPositionIndex() >= 87 && blues[0].getActualPositionIndex() < 92)) &&
-                    (blues[1].getActualPositionIndex() == 13 ||
-                            (blues[1].getActualPositionIndex() >= 87 && blues[1].getActualPositionIndex() < 92)) &&
-                    (blues[2].getActualPositionIndex() == 14 ||
-                            (blues[2].getActualPositionIndex() >= 87 && blues[2].getActualPositionIndex() < 92)) &&
-                    (blues[3].getActualPositionIndex() == 15 ||
-                            (blues[3].getActualPositionIndex() >= 87 && blues[3].getActualPositionIndex() < 92))) {
+            if ((bluePawns[0].getActualPositionIndex() == 12 ||
+                    (bluePawns[0].getActualPositionIndex() >= 87 && bluePawns[0].getActualPositionIndex() < 92)) &&
+                    (bluePawns[1].getActualPositionIndex() == 13 ||
+                            (bluePawns[1].getActualPositionIndex() >= 87 && bluePawns[1].getActualPositionIndex() < 92)) &&
+                    (bluePawns[2].getActualPositionIndex() == 14 ||
+                            (bluePawns[2].getActualPositionIndex() >= 87 && bluePawns[2].getActualPositionIndex() < 92)) &&
+                    (bluePawns[3].getActualPositionIndex() == 15 ||
+                            (bluePawns[3].getActualPositionIndex() >= 87 && bluePawns[3].getActualPositionIndex() < 92))) {
                 if (diceValue == 6 &&
-                        (blues[0].getActualPositionIndex() == 12 ||
-                                blues[1].getActualPositionIndex() == 13 ||
-                                blues[2].getActualPositionIndex() == 14 ||
-                                blues[3].getActualPositionIndex() == 15)) {
+                        (bluePawns[0].getActualPositionIndex() == 12 ||
+                                bluePawns[1].getActualPositionIndex() == 13 ||
+                                bluePawns[2].getActualPositionIndex() == 14 ||
+                                bluePawns[3].getActualPositionIndex() == 15)) {
                     available = true;
                 } else {
                     available = false;

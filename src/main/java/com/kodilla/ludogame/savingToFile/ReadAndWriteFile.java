@@ -27,28 +27,28 @@ public class ReadAndWriteFile {
         return savedLines;
     }
 
-    public void saveGame(Red[] redP, Green[] greenP, Yellow[] yellowP, Blue[] blueP,
+    public void saveGame(RedPawn[] redPawn, GreenPawn[] greenPawn, YellowPawn[] yellowPawn, BluePawn[] bluePawn,
                          ThrowDice throwDice, OnClickPawn onClickPawn,
                          DiceButton diceButtonObject, CheckBox checkBox1,
                          CheckBox checkBox2, CheckBox checkBox3, CheckBox checkBox4)
             throws IOException {
         String writeToFile = "1\n";
-        writeToFile += redP[0].getActualPositionIndex() + "\n"; //1
-        writeToFile += redP[1].getActualPositionIndex() + "\n"; //2
-        writeToFile += redP[2].getActualPositionIndex() + "\n"; //3
-        writeToFile += redP[3].getActualPositionIndex() + "\n"; //4
-        writeToFile += greenP[0].getActualPositionIndex() + "\n"; //5
-        writeToFile += greenP[1].getActualPositionIndex() + "\n"; //6
-        writeToFile += greenP[2].getActualPositionIndex() + "\n"; //7
-        writeToFile += greenP[3].getActualPositionIndex() + "\n"; //8
-        writeToFile += yellowP[0].getActualPositionIndex() + "\n"; //9
-        writeToFile += yellowP[1].getActualPositionIndex() + "\n"; //10
-        writeToFile += yellowP[2].getActualPositionIndex() + "\n"; //11
-        writeToFile += yellowP[3].getActualPositionIndex() + "\n"; //12
-        writeToFile += blueP[0].getActualPositionIndex() + "\n"; //13
-        writeToFile += blueP[1].getActualPositionIndex() + "\n"; //14
-        writeToFile += blueP[2].getActualPositionIndex() + "\n"; //15
-        writeToFile += blueP[3].getActualPositionIndex() + "\n"; //16
+        writeToFile += redPawn[0].getActualPositionIndex() + "\n"; //1
+        writeToFile += redPawn[1].getActualPositionIndex() + "\n"; //2
+        writeToFile += redPawn[2].getActualPositionIndex() + "\n"; //3
+        writeToFile += redPawn[3].getActualPositionIndex() + "\n"; //4
+        writeToFile += greenPawn[0].getActualPositionIndex() + "\n"; //5
+        writeToFile += greenPawn[1].getActualPositionIndex() + "\n"; //6
+        writeToFile += greenPawn[2].getActualPositionIndex() + "\n"; //7
+        writeToFile += greenPawn[3].getActualPositionIndex() + "\n"; //8
+        writeToFile += yellowPawn[0].getActualPositionIndex() + "\n"; //9
+        writeToFile += yellowPawn[1].getActualPositionIndex() + "\n"; //10
+        writeToFile += yellowPawn[2].getActualPositionIndex() + "\n"; //11
+        writeToFile += yellowPawn[3].getActualPositionIndex() + "\n"; //12
+        writeToFile += bluePawn[0].getActualPositionIndex() + "\n"; //13
+        writeToFile += bluePawn[1].getActualPositionIndex() + "\n"; //14
+        writeToFile += bluePawn[2].getActualPositionIndex() + "\n"; //15
+        writeToFile += bluePawn[3].getActualPositionIndex() + "\n"; //16
         writeToFile += throwDice.getDiceIndex() + "\n"; //17
         writeToFile += onClickPawn.getWhoseTurn() + "\n"; //18
         if (diceButtonObject.isAvailable()) {

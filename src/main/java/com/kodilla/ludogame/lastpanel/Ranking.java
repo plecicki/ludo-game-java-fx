@@ -1,9 +1,9 @@
 package com.kodilla.ludogame.lastpanel;
 
-import com.kodilla.ludogame.pawns.Blue;
-import com.kodilla.ludogame.pawns.Green;
-import com.kodilla.ludogame.pawns.Red;
-import com.kodilla.ludogame.pawns.Yellow;
+import com.kodilla.ludogame.pawns.BluePawn;
+import com.kodilla.ludogame.pawns.GreenPawn;
+import com.kodilla.ludogame.pawns.RedPawn;
+import com.kodilla.ludogame.pawns.YellowPawn;
 import com.kodilla.ludogame.savingToFile.ReadAndWriteFile;
 import javafx.stage.Stage;
 
@@ -20,13 +20,13 @@ public class Ranking {
         this.primaryStage = primaryStage;
     }
 
-    public void checkIfRedWon(Red[] reds, int playerIndex, ReadAndWriteFile readAndWriteFile) {
-        if (reds[playerIndex].getActualPositionIndex() >= 72 && reds[playerIndex].getActualPositionIndex() < 77) {
-            reds[playerIndex].setFinish(true);
+    public void checkIfRedWon(RedPawn[] redPawns, int playerIndex, ReadAndWriteFile readAndWriteFile) {
+        if (redPawns[playerIndex].getActualPositionIndex() >= 72 && redPawns[playerIndex].getActualPositionIndex() < 77) {
+            redPawns[playerIndex].setFinish(true);
         }
 
-        if (reds[0].isFinish()==true && reds[1].isFinish()==true &&
-                reds[2].isFinish()==true && reds[3].isFinish()==true &&
+        if (redPawns[0].isFinish()==true && redPawns[1].isFinish()==true &&
+                redPawns[2].isFinish()==true && redPawns[3].isFinish()==true &&
                 areInRanking[0] == false) {
             this.playersRanking.add("RED");
             this.areInRanking[0] = true;
@@ -35,13 +35,13 @@ public class Ranking {
         }
     }
 
-    public void checkIfGreenWon(Green[] greens, int playerIndex, ReadAndWriteFile readAndWriteFile) {
-        if (greens[playerIndex].getActualPositionIndex() >= 77 && greens[playerIndex].getActualPositionIndex() < 82) {
-            greens[playerIndex].setFinish(true);
+    public void checkIfGreenWon(GreenPawn[] greenPawns, int playerIndex, ReadAndWriteFile readAndWriteFile) {
+        if (greenPawns[playerIndex].getActualPositionIndex() >= 77 && greenPawns[playerIndex].getActualPositionIndex() < 82) {
+            greenPawns[playerIndex].setFinish(true);
         }
 
-        if (greens[0].isFinish()==true && greens[1].isFinish()==true &&
-                greens[2].isFinish()==true && greens[3].isFinish()==true &&
+        if (greenPawns[0].isFinish()==true && greenPawns[1].isFinish()==true &&
+                greenPawns[2].isFinish()==true && greenPawns[3].isFinish()==true &&
                 areInRanking[1] == false) {
             this.playersRanking.add("GREEN");
             this.areInRanking[1] = true;
@@ -50,13 +50,13 @@ public class Ranking {
         }
     }
 
-    public void checkIfYellowWon(Yellow[] yellows, int playerIndex, ReadAndWriteFile readAndWriteFile) {
-        if (yellows[playerIndex].getActualPositionIndex() >= 82 && yellows[playerIndex].getActualPositionIndex() < 87) {
-            yellows[playerIndex].setFinish(true);
+    public void checkIfYellowWon(YellowPawn[] yellowPawns, int playerIndex, ReadAndWriteFile readAndWriteFile) {
+        if (yellowPawns[playerIndex].getActualPositionIndex() >= 82 && yellowPawns[playerIndex].getActualPositionIndex() < 87) {
+            yellowPawns[playerIndex].setFinish(true);
         }
 
-        if (yellows[0].isFinish()==true && yellows[1].isFinish()==true &&
-                yellows[2].isFinish()==true && yellows[3].isFinish()==true &&
+        if (yellowPawns[0].isFinish()==true && yellowPawns[1].isFinish()==true &&
+                yellowPawns[2].isFinish()==true && yellowPawns[3].isFinish()==true &&
                 areInRanking[2] == false) {
             this.playersRanking.add("YELLOW");
             this.areInRanking[2] = true;
@@ -65,13 +65,13 @@ public class Ranking {
         }
     }
 
-    public void checkIfBlueWon(Blue[] blues, int playerIndex, ReadAndWriteFile readAndWriteFile) {
-        if (blues[playerIndex].getActualPositionIndex() >= 87 && blues[playerIndex].getActualPositionIndex() < 92) {
-            blues[playerIndex].setFinish(true);
+    public void checkIfBlueWon(BluePawn[] bluePawns, int playerIndex, ReadAndWriteFile readAndWriteFile) {
+        if (bluePawns[playerIndex].getActualPositionIndex() >= 87 && bluePawns[playerIndex].getActualPositionIndex() < 92) {
+            bluePawns[playerIndex].setFinish(true);
         }
 
-        if (blues[0].isFinish()==true && blues[1].isFinish()==true &&
-                blues[2].isFinish()==true && blues[3].isFinish()==true &&
+        if (bluePawns[0].isFinish()==true && bluePawns[1].isFinish()==true &&
+                bluePawns[2].isFinish()==true && bluePawns[3].isFinish()==true &&
                 areInRanking[3] == false) {
             this.playersRanking.add("BLUE");
             this.areInRanking[3] = true;

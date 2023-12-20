@@ -1,6 +1,5 @@
 package com.kodilla.ludogame.pawns;
 
-import com.kodilla.ludogame.constants.Constants;
 import com.kodilla.ludogame.controlPanel.DiceButton;
 import com.kodilla.ludogame.dice.ThrowDice;
 import javafx.scene.image.ImageView;
@@ -36,7 +35,7 @@ public class OnClickPawn {
     }
 
     public boolean isThisPawnMovable(OnClickPawn onClickPawn, DiceButton diceButtonObject, ThrowDice throwDice,
-                                       AllPawnsColors[] colorP, int pawnIndex) {
+                                     Pawn[] colorP, int pawnIndex) {
         if (((onClickPawn.getWhoseTurn() == 1 && diceButtonObject.isWasClicked() == true) &&
                 !((throwDice.getDiceIndex() != 6 && colorP[0].getActualPositionIndex() == 0) ||
                         (colorP[0].getActualPositionIndex() >= 72 && colorP[0].getActualPositionIndex() < 77))) &&
@@ -121,316 +120,316 @@ public class OnClickPawn {
         return false;
     }
 
-    public void capturingPawn(GridPane grid, Red[] redP, Green[] greenP,
-                              Yellow[] yellowP, Blue[] blueP,
+    public void capturingPawn(GridPane grid, RedPawn[] redPawn, GreenPawn[] greenPawn,
+                              YellowPawn[] yellowPawn, BluePawn[] bluePawn,
                               ImageView[] redPawns, ImageView[] greenPawns,
                               ImageView[] yellowPawns, ImageView[] bluePawns,
                               int clickedPawnIndex) {
         if (clickedPawnIndex == 0) {
             for (int i=0; i <= 3; i++) {
-                if (redPositionIsTheSameAsGreen(redP, greenP[i], 0)) {
+                if (redPositionIsTheSameAsGreen(redPawn, greenPawn[i], 0)) {
                     grid.getChildren().remove(greenPawns[i]);
-                    greenP[i].gotCaptured(i);
-                    grid.add(greenPawns[i], greenP[i].getValueX(), greenP[i].getValueY(), greenP[i].getColspan(), greenP[i].getRowspan());
-                } else if (redPositionIsTheSameAsYellow(redP, yellowP[i], 0)) {
+                    greenPawn[i].gotCaptured(i);
+                    grid.add(greenPawns[i], greenPawn[i].getValueX(), greenPawn[i].getValueY(), greenPawn[i].getColspan(), greenPawn[i].getRowspan());
+                } else if (redPositionIsTheSameAsYellow(redPawn, yellowPawn[i], 0)) {
                     grid.getChildren().remove(yellowPawns[i]);
-                    yellowP[i].gotCaptured(i);
-                    grid.add(yellowPawns[i], yellowP[i].getValueX(), yellowP[i].getValueY(), yellowP[i].getColspan(), yellowP[i].getRowspan());
-                } else if (redPositionIsTheSameAsBlue(redP, blueP[i], 0)) {
+                    yellowPawn[i].gotCaptured(i);
+                    grid.add(yellowPawns[i], yellowPawn[i].getValueX(), yellowPawn[i].getValueY(), yellowPawn[i].getColspan(), yellowPawn[i].getRowspan());
+                } else if (redPositionIsTheSameAsBlue(redPawn, bluePawn[i], 0)) {
                     grid.getChildren().remove(bluePawns[i]);
-                    blueP[i].gotCaptured(i);
-                    grid.add(bluePawns[i], blueP[i].getValueX(), blueP[i].getValueY(), blueP[i].getColspan(), blueP[i].getRowspan());
+                    bluePawn[i].gotCaptured(i);
+                    grid.add(bluePawns[i], bluePawn[i].getValueX(), bluePawn[i].getValueY(), bluePawn[i].getColspan(), bluePawn[i].getRowspan());
                 }
             }
         } else if (clickedPawnIndex == 1) {
             for (int i=0; i <= 3; i++) {
-                if (redPositionIsTheSameAsGreen(redP, greenP[i], 1)) {
+                if (redPositionIsTheSameAsGreen(redPawn, greenPawn[i], 1)) {
                     grid.getChildren().remove(greenPawns[i]);
-                    greenP[i].gotCaptured(i);
-                    grid.add(greenPawns[i], greenP[i].getValueX(), greenP[i].getValueY(), greenP[i].getColspan(), greenP[i].getRowspan());
-                } else if (redPositionIsTheSameAsYellow(redP, yellowP[i], 1)) {
+                    greenPawn[i].gotCaptured(i);
+                    grid.add(greenPawns[i], greenPawn[i].getValueX(), greenPawn[i].getValueY(), greenPawn[i].getColspan(), greenPawn[i].getRowspan());
+                } else if (redPositionIsTheSameAsYellow(redPawn, yellowPawn[i], 1)) {
                     grid.getChildren().remove(yellowPawns[i]);
-                    yellowP[i].gotCaptured(i);
-                    grid.add(yellowPawns[i], yellowP[i].getValueX(), yellowP[i].getValueY(), yellowP[i].getColspan(), yellowP[i].getRowspan());
-                } else if (redPositionIsTheSameAsBlue(redP, blueP[i], 1)) {
+                    yellowPawn[i].gotCaptured(i);
+                    grid.add(yellowPawns[i], yellowPawn[i].getValueX(), yellowPawn[i].getValueY(), yellowPawn[i].getColspan(), yellowPawn[i].getRowspan());
+                } else if (redPositionIsTheSameAsBlue(redPawn, bluePawn[i], 1)) {
                     grid.getChildren().remove(bluePawns[i]);
-                    blueP[i].gotCaptured(i);
-                    grid.add(bluePawns[i], blueP[i].getValueX(), blueP[i].getValueY(), blueP[i].getColspan(), blueP[i].getRowspan());
+                    bluePawn[i].gotCaptured(i);
+                    grid.add(bluePawns[i], bluePawn[i].getValueX(), bluePawn[i].getValueY(), bluePawn[i].getColspan(), bluePawn[i].getRowspan());
                 }
             }
         } else if (clickedPawnIndex == 2) {
             for (int i=0; i <= 3; i++) {
-                if (redPositionIsTheSameAsGreen(redP, greenP[i], 2)) {
+                if (redPositionIsTheSameAsGreen(redPawn, greenPawn[i], 2)) {
                     grid.getChildren().remove(greenPawns[i]);
-                    greenP[i].gotCaptured(i);
-                    grid.add(greenPawns[i], greenP[i].getValueX(), greenP[i].getValueY(), greenP[i].getColspan(), greenP[i].getRowspan());
-                } else if (redPositionIsTheSameAsYellow(redP, yellowP[i], 2)) {
+                    greenPawn[i].gotCaptured(i);
+                    grid.add(greenPawns[i], greenPawn[i].getValueX(), greenPawn[i].getValueY(), greenPawn[i].getColspan(), greenPawn[i].getRowspan());
+                } else if (redPositionIsTheSameAsYellow(redPawn, yellowPawn[i], 2)) {
                     grid.getChildren().remove(yellowPawns[i]);
-                    yellowP[i].gotCaptured(i);
-                    grid.add(yellowPawns[i], yellowP[i].getValueX(), yellowP[i].getValueY(), yellowP[i].getColspan(), yellowP[i].getRowspan());
-                } else if (redPositionIsTheSameAsBlue(redP, blueP[i], 2)) {
+                    yellowPawn[i].gotCaptured(i);
+                    grid.add(yellowPawns[i], yellowPawn[i].getValueX(), yellowPawn[i].getValueY(), yellowPawn[i].getColspan(), yellowPawn[i].getRowspan());
+                } else if (redPositionIsTheSameAsBlue(redPawn, bluePawn[i], 2)) {
                     grid.getChildren().remove(bluePawns[i]);
-                    blueP[i].gotCaptured(i);
-                    grid.add(bluePawns[i], blueP[i].getValueX(), blueP[i].getValueY(), blueP[i].getColspan(), blueP[i].getRowspan());
+                    bluePawn[i].gotCaptured(i);
+                    grid.add(bluePawns[i], bluePawn[i].getValueX(), bluePawn[i].getValueY(), bluePawn[i].getColspan(), bluePawn[i].getRowspan());
                 }
             }
         } else if (clickedPawnIndex == 3) {
             for (int i=0; i <= 3; i++) {
-                if (redPositionIsTheSameAsGreen(redP, greenP[i], 3)) {
+                if (redPositionIsTheSameAsGreen(redPawn, greenPawn[i], 3)) {
                     grid.getChildren().remove(greenPawns[i]);
-                    greenP[i].gotCaptured(i);
-                    grid.add(greenPawns[i], greenP[i].getValueX(), greenP[i].getValueY(), greenP[i].getColspan(), greenP[i].getRowspan());
-                } else if (redPositionIsTheSameAsYellow(redP, yellowP[i], 3)) {
+                    greenPawn[i].gotCaptured(i);
+                    grid.add(greenPawns[i], greenPawn[i].getValueX(), greenPawn[i].getValueY(), greenPawn[i].getColspan(), greenPawn[i].getRowspan());
+                } else if (redPositionIsTheSameAsYellow(redPawn, yellowPawn[i], 3)) {
                     grid.getChildren().remove(yellowPawns[i]);
-                    yellowP[i].gotCaptured(i);
-                    grid.add(yellowPawns[i], yellowP[i].getValueX(), yellowP[i].getValueY(), yellowP[i].getColspan(), yellowP[i].getRowspan());
-                } else if (redPositionIsTheSameAsBlue(redP, blueP[i], 3)) {
+                    yellowPawn[i].gotCaptured(i);
+                    grid.add(yellowPawns[i], yellowPawn[i].getValueX(), yellowPawn[i].getValueY(), yellowPawn[i].getColspan(), yellowPawn[i].getRowspan());
+                } else if (redPositionIsTheSameAsBlue(redPawn, bluePawn[i], 3)) {
                     grid.getChildren().remove(bluePawns[i]);
-                    blueP[i].gotCaptured(i);
-                    grid.add(bluePawns[i], blueP[i].getValueX(), blueP[i].getValueY(), blueP[i].getColspan(), blueP[i].getRowspan());
+                    bluePawn[i].gotCaptured(i);
+                    grid.add(bluePawns[i], bluePawn[i].getValueX(), bluePawn[i].getValueY(), bluePawn[i].getColspan(), bluePawn[i].getRowspan());
                 }
             }
         } else if (clickedPawnIndex == 4) {
             for (int i=0; i <= 3; i++) {
-                if (greenPositionIsTheSameAsRed(greenP, redP[i], 0)) {
+                if (greenPositionIsTheSameAsRed(greenPawn, redPawn[i], 0)) {
                     grid.getChildren().remove(redPawns[i]);
-                    redP[i].gotCaptured(i);
-                    grid.add(redPawns[i], redP[i].getValueX(), redP[i].getValueY(), redP[i].getColspan(), redP[i].getRowspan());
-                } else if (greenPositionIsTheSameAsYellow(greenP, yellowP[i], 0)) {
+                    redPawn[i].gotCaptured(i);
+                    grid.add(redPawns[i], redPawn[i].getValueX(), redPawn[i].getValueY(), redPawn[i].getColspan(), redPawn[i].getRowspan());
+                } else if (greenPositionIsTheSameAsYellow(greenPawn, yellowPawn[i], 0)) {
                     grid.getChildren().remove(yellowPawns[i]);
-                    yellowP[i].gotCaptured(i);
-                    grid.add(yellowPawns[i], yellowP[i].getValueX(), yellowP[i].getValueY(), yellowP[i].getColspan(), yellowP[i].getRowspan());
-                } else if (greenPositionIsTheSameAsBlue(greenP, blueP[i], 0)) {
+                    yellowPawn[i].gotCaptured(i);
+                    grid.add(yellowPawns[i], yellowPawn[i].getValueX(), yellowPawn[i].getValueY(), yellowPawn[i].getColspan(), yellowPawn[i].getRowspan());
+                } else if (greenPositionIsTheSameAsBlue(greenPawn, bluePawn[i], 0)) {
                     grid.getChildren().remove(bluePawns[i]);
-                    blueP[i].gotCaptured(i);
-                    grid.add(bluePawns[i], blueP[i].getValueX(), blueP[i].getValueY(), blueP[i].getColspan(), blueP[i].getRowspan());
+                    bluePawn[i].gotCaptured(i);
+                    grid.add(bluePawns[i], bluePawn[i].getValueX(), bluePawn[i].getValueY(), bluePawn[i].getColspan(), bluePawn[i].getRowspan());
                 }
             }
         } else if (clickedPawnIndex == 5) {
             for (int i=0; i <= 3; i++) {
-                if (greenPositionIsTheSameAsRed(greenP, redP[i], 1)) {
+                if (greenPositionIsTheSameAsRed(greenPawn, redPawn[i], 1)) {
                     grid.getChildren().remove(redPawns[i]);
-                    redP[i].gotCaptured(i);
-                    grid.add(redPawns[i], redP[i].getValueX(), redP[i].getValueY(), redP[i].getColspan(), redP[i].getRowspan());
-                } else if (greenPositionIsTheSameAsYellow(greenP, yellowP[i], 1)) {
+                    redPawn[i].gotCaptured(i);
+                    grid.add(redPawns[i], redPawn[i].getValueX(), redPawn[i].getValueY(), redPawn[i].getColspan(), redPawn[i].getRowspan());
+                } else if (greenPositionIsTheSameAsYellow(greenPawn, yellowPawn[i], 1)) {
                     grid.getChildren().remove(yellowPawns[i]);
-                    yellowP[i].gotCaptured(i);
-                    grid.add(yellowPawns[i], yellowP[i].getValueX(), yellowP[i].getValueY(), yellowP[i].getColspan(), yellowP[i].getRowspan());
-                } else if (greenPositionIsTheSameAsBlue(greenP, blueP[i], 1)) {
+                    yellowPawn[i].gotCaptured(i);
+                    grid.add(yellowPawns[i], yellowPawn[i].getValueX(), yellowPawn[i].getValueY(), yellowPawn[i].getColspan(), yellowPawn[i].getRowspan());
+                } else if (greenPositionIsTheSameAsBlue(greenPawn, bluePawn[i], 1)) {
                     grid.getChildren().remove(bluePawns[i]);
-                    blueP[i].gotCaptured(i);
-                    grid.add(bluePawns[i], blueP[i].getValueX(), blueP[i].getValueY(), blueP[i].getColspan(), blueP[i].getRowspan());
+                    bluePawn[i].gotCaptured(i);
+                    grid.add(bluePawns[i], bluePawn[i].getValueX(), bluePawn[i].getValueY(), bluePawn[i].getColspan(), bluePawn[i].getRowspan());
                 }
             }
         } else if (clickedPawnIndex == 6) {
             for (int i=0; i <= 3; i++) {
-                if (greenPositionIsTheSameAsRed(greenP, redP[i], 2)) {
+                if (greenPositionIsTheSameAsRed(greenPawn, redPawn[i], 2)) {
                     grid.getChildren().remove(redPawns[i]);
-                    redP[i].gotCaptured(i);
-                    grid.add(redPawns[i], redP[i].getValueX(), redP[i].getValueY(), redP[i].getColspan(), redP[i].getRowspan());
-                } else if (greenPositionIsTheSameAsYellow(greenP, yellowP[i], 2)) {
+                    redPawn[i].gotCaptured(i);
+                    grid.add(redPawns[i], redPawn[i].getValueX(), redPawn[i].getValueY(), redPawn[i].getColspan(), redPawn[i].getRowspan());
+                } else if (greenPositionIsTheSameAsYellow(greenPawn, yellowPawn[i], 2)) {
                     grid.getChildren().remove(yellowPawns[i]);
-                    yellowP[i].gotCaptured(i);
-                    grid.add(yellowPawns[i], yellowP[i].getValueX(), yellowP[i].getValueY(), yellowP[i].getColspan(), yellowP[i].getRowspan());
-                } else if (greenPositionIsTheSameAsBlue(greenP, blueP[i], 2)) {
+                    yellowPawn[i].gotCaptured(i);
+                    grid.add(yellowPawns[i], yellowPawn[i].getValueX(), yellowPawn[i].getValueY(), yellowPawn[i].getColspan(), yellowPawn[i].getRowspan());
+                } else if (greenPositionIsTheSameAsBlue(greenPawn, bluePawn[i], 2)) {
                     grid.getChildren().remove(bluePawns[i]);
-                    blueP[i].gotCaptured(i);
-                    grid.add(bluePawns[i], blueP[i].getValueX(), blueP[i].getValueY(), blueP[i].getColspan(), blueP[i].getRowspan());
+                    bluePawn[i].gotCaptured(i);
+                    grid.add(bluePawns[i], bluePawn[i].getValueX(), bluePawn[i].getValueY(), bluePawn[i].getColspan(), bluePawn[i].getRowspan());
                 }
             }
         } else if (clickedPawnIndex == 7) {
             for (int i=0; i <= 3; i++) {
-                if (greenPositionIsTheSameAsRed(greenP, redP[i], 3)) {
+                if (greenPositionIsTheSameAsRed(greenPawn, redPawn[i], 3)) {
                     grid.getChildren().remove(redPawns[i]);
-                    redP[i].gotCaptured(i);
-                    grid.add(redPawns[i], redP[i].getValueX(), redP[i].getValueY(), redP[i].getColspan(), redP[i].getRowspan());
-                } else if (greenPositionIsTheSameAsYellow(greenP, yellowP[i], 3)) {
+                    redPawn[i].gotCaptured(i);
+                    grid.add(redPawns[i], redPawn[i].getValueX(), redPawn[i].getValueY(), redPawn[i].getColspan(), redPawn[i].getRowspan());
+                } else if (greenPositionIsTheSameAsYellow(greenPawn, yellowPawn[i], 3)) {
                     grid.getChildren().remove(yellowPawns[i]);
-                    yellowP[i].gotCaptured(i);
-                    grid.add(yellowPawns[i], yellowP[i].getValueX(), yellowP[i].getValueY(), yellowP[i].getColspan(), yellowP[i].getRowspan());
-                } else if (greenPositionIsTheSameAsBlue(greenP, blueP[i], 3)) {
+                    yellowPawn[i].gotCaptured(i);
+                    grid.add(yellowPawns[i], yellowPawn[i].getValueX(), yellowPawn[i].getValueY(), yellowPawn[i].getColspan(), yellowPawn[i].getRowspan());
+                } else if (greenPositionIsTheSameAsBlue(greenPawn, bluePawn[i], 3)) {
                     grid.getChildren().remove(bluePawns[i]);
-                    blueP[i].gotCaptured(i);
-                    grid.add(bluePawns[i], blueP[i].getValueX(), blueP[i].getValueY(), blueP[i].getColspan(), blueP[i].getRowspan());
+                    bluePawn[i].gotCaptured(i);
+                    grid.add(bluePawns[i], bluePawn[i].getValueX(), bluePawn[i].getValueY(), bluePawn[i].getColspan(), bluePawn[i].getRowspan());
                 }
             }
         } else if (clickedPawnIndex == 8) {
             for (int i=0; i <= 3; i++) {
-                if (yellowPositionIsTheSameAsRed(yellowP, redP[i], 0)) {
+                if (yellowPositionIsTheSameAsRed(yellowPawn, redPawn[i], 0)) {
                     grid.getChildren().remove(redPawns[i]);
-                    redP[i].gotCaptured(i);
-                    grid.add(redPawns[i], redP[i].getValueX(), redP[i].getValueY(), redP[i].getColspan(), redP[i].getRowspan());
-                } else if (yellowPositionIsTheSameAsGreen(yellowP, greenP[i], 0)) {
+                    redPawn[i].gotCaptured(i);
+                    grid.add(redPawns[i], redPawn[i].getValueX(), redPawn[i].getValueY(), redPawn[i].getColspan(), redPawn[i].getRowspan());
+                } else if (yellowPositionIsTheSameAsGreen(yellowPawn, greenPawn[i], 0)) {
                     grid.getChildren().remove(greenPawns[i]);
-                    greenP[i].gotCaptured(i);
-                    grid.add(greenPawns[i], greenP[i].getValueX(), greenP[i].getValueY(), greenP[i].getColspan(), greenP[i].getRowspan());
-                } else if (yellowPositionIsTheSameAsBlue(yellowP, blueP[i], 0)) {
+                    greenPawn[i].gotCaptured(i);
+                    grid.add(greenPawns[i], greenPawn[i].getValueX(), greenPawn[i].getValueY(), greenPawn[i].getColspan(), greenPawn[i].getRowspan());
+                } else if (yellowPositionIsTheSameAsBlue(yellowPawn, bluePawn[i], 0)) {
                     grid.getChildren().remove(bluePawns[i]);
-                    blueP[i].gotCaptured(i);
-                    grid.add(bluePawns[i], blueP[i].getValueX(), blueP[i].getValueY(), blueP[i].getColspan(), blueP[i].getRowspan());
+                    bluePawn[i].gotCaptured(i);
+                    grid.add(bluePawns[i], bluePawn[i].getValueX(), bluePawn[i].getValueY(), bluePawn[i].getColspan(), bluePawn[i].getRowspan());
                 }
             }
         } else if (clickedPawnIndex == 9) {
             for (int i=0; i <= 3; i++) {
-                if (yellowPositionIsTheSameAsRed(yellowP, redP[i], 1)) {
+                if (yellowPositionIsTheSameAsRed(yellowPawn, redPawn[i], 1)) {
                     grid.getChildren().remove(redPawns[i]);
-                    redP[i].gotCaptured(i);
-                    grid.add(redPawns[i], redP[i].getValueX(), redP[i].getValueY(), redP[i].getColspan(), redP[i].getRowspan());
-                } else if (yellowPositionIsTheSameAsGreen(yellowP, greenP[i], 1)) {
+                    redPawn[i].gotCaptured(i);
+                    grid.add(redPawns[i], redPawn[i].getValueX(), redPawn[i].getValueY(), redPawn[i].getColspan(), redPawn[i].getRowspan());
+                } else if (yellowPositionIsTheSameAsGreen(yellowPawn, greenPawn[i], 1)) {
                     grid.getChildren().remove(greenPawns[i]);
-                    greenP[i].gotCaptured(i);
-                    grid.add(greenPawns[i], greenP[i].getValueX(), greenP[i].getValueY(), greenP[i].getColspan(), greenP[i].getRowspan());
-                } else if (yellowPositionIsTheSameAsBlue(yellowP, blueP[i], 1)) {
+                    greenPawn[i].gotCaptured(i);
+                    grid.add(greenPawns[i], greenPawn[i].getValueX(), greenPawn[i].getValueY(), greenPawn[i].getColspan(), greenPawn[i].getRowspan());
+                } else if (yellowPositionIsTheSameAsBlue(yellowPawn, bluePawn[i], 1)) {
                     grid.getChildren().remove(bluePawns[i]);
-                    blueP[i].gotCaptured(i);
-                    grid.add(bluePawns[i], blueP[i].getValueX(), blueP[i].getValueY(), blueP[i].getColspan(), blueP[i].getRowspan());
+                    bluePawn[i].gotCaptured(i);
+                    grid.add(bluePawns[i], bluePawn[i].getValueX(), bluePawn[i].getValueY(), bluePawn[i].getColspan(), bluePawn[i].getRowspan());
                 }
             }
         } else if (clickedPawnIndex == 10) {
             for (int i=0; i <= 3; i++) {
-                if (yellowPositionIsTheSameAsRed(yellowP, redP[i], 2)) {
+                if (yellowPositionIsTheSameAsRed(yellowPawn, redPawn[i], 2)) {
                     grid.getChildren().remove(redPawns[i]);
-                    redP[i].gotCaptured(i);
-                    grid.add(redPawns[i], redP[i].getValueX(), redP[i].getValueY(), redP[i].getColspan(), redP[i].getRowspan());
-                } else if (yellowPositionIsTheSameAsGreen(yellowP, greenP[i], 2)) {
+                    redPawn[i].gotCaptured(i);
+                    grid.add(redPawns[i], redPawn[i].getValueX(), redPawn[i].getValueY(), redPawn[i].getColspan(), redPawn[i].getRowspan());
+                } else if (yellowPositionIsTheSameAsGreen(yellowPawn, greenPawn[i], 2)) {
                     grid.getChildren().remove(greenPawns[i]);
-                    greenP[i].gotCaptured(i);
-                    grid.add(greenPawns[i], greenP[i].getValueX(), greenP[i].getValueY(), greenP[i].getColspan(), greenP[i].getRowspan());
-                } else if (yellowPositionIsTheSameAsBlue(yellowP, blueP[i], 2)) {
+                    greenPawn[i].gotCaptured(i);
+                    grid.add(greenPawns[i], greenPawn[i].getValueX(), greenPawn[i].getValueY(), greenPawn[i].getColspan(), greenPawn[i].getRowspan());
+                } else if (yellowPositionIsTheSameAsBlue(yellowPawn, bluePawn[i], 2)) {
                     grid.getChildren().remove(bluePawns[i]);
-                    blueP[i].gotCaptured(i);
-                    grid.add(bluePawns[i], blueP[i].getValueX(), blueP[i].getValueY(), blueP[i].getColspan(), blueP[i].getRowspan());
+                    bluePawn[i].gotCaptured(i);
+                    grid.add(bluePawns[i], bluePawn[i].getValueX(), bluePawn[i].getValueY(), bluePawn[i].getColspan(), bluePawn[i].getRowspan());
                 }
             }
         } else if (clickedPawnIndex == 11) {
             for (int i=0; i <= 3; i++) {
-                if (yellowPositionIsTheSameAsRed(yellowP, redP[i], 3)) {
+                if (yellowPositionIsTheSameAsRed(yellowPawn, redPawn[i], 3)) {
                     grid.getChildren().remove(redPawns[i]);
-                    redP[i].gotCaptured(i);
-                    grid.add(redPawns[i], redP[i].getValueX(), redP[i].getValueY(), redP[i].getColspan(), redP[i].getRowspan());
-                } else if (yellowPositionIsTheSameAsGreen(yellowP, greenP[i], 3)) {
+                    redPawn[i].gotCaptured(i);
+                    grid.add(redPawns[i], redPawn[i].getValueX(), redPawn[i].getValueY(), redPawn[i].getColspan(), redPawn[i].getRowspan());
+                } else if (yellowPositionIsTheSameAsGreen(yellowPawn, greenPawn[i], 3)) {
                     grid.getChildren().remove(greenPawns[i]);
-                    greenP[i].gotCaptured(i);
-                    grid.add(greenPawns[i], greenP[i].getValueX(), greenP[i].getValueY(), greenP[i].getColspan(), greenP[i].getRowspan());
-                } else if (yellowPositionIsTheSameAsBlue(yellowP, blueP[i], 3)) {
+                    greenPawn[i].gotCaptured(i);
+                    grid.add(greenPawns[i], greenPawn[i].getValueX(), greenPawn[i].getValueY(), greenPawn[i].getColspan(), greenPawn[i].getRowspan());
+                } else if (yellowPositionIsTheSameAsBlue(yellowPawn, bluePawn[i], 3)) {
                     grid.getChildren().remove(bluePawns[i]);
-                    blueP[i].gotCaptured(i);
-                    grid.add(bluePawns[i], blueP[i].getValueX(), blueP[i].getValueY(), blueP[i].getColspan(), blueP[i].getRowspan());
+                    bluePawn[i].gotCaptured(i);
+                    grid.add(bluePawns[i], bluePawn[i].getValueX(), bluePawn[i].getValueY(), bluePawn[i].getColspan(), bluePawn[i].getRowspan());
                 }
             }
         } else if (clickedPawnIndex == 12) {
             for (int i=0; i <= 3; i++) {
-                if (bluePositionIsTheSameAsRed(blueP, redP[i], 0)) {
+                if (bluePositionIsTheSameAsRed(bluePawn, redPawn[i], 0)) {
                     grid.getChildren().remove(redPawns[i]);
-                    redP[i].gotCaptured(i);
-                    grid.add(redPawns[i], redP[i].getValueX(), redP[i].getValueY(), redP[i].getColspan(), redP[i].getRowspan());
-                } else if (bluePositionIsTheSameAsGreen(blueP, greenP[i], 0)) {
+                    redPawn[i].gotCaptured(i);
+                    grid.add(redPawns[i], redPawn[i].getValueX(), redPawn[i].getValueY(), redPawn[i].getColspan(), redPawn[i].getRowspan());
+                } else if (bluePositionIsTheSameAsGreen(bluePawn, greenPawn[i], 0)) {
                     grid.getChildren().remove(greenPawns[i]);
-                    greenP[i].gotCaptured(i);
-                    grid.add(greenPawns[i], greenP[i].getValueX(), greenP[i].getValueY(), greenP[i].getColspan(), greenP[i].getRowspan());
-                } else if (bluePositionIsTheSameAsYellow(blueP, yellowP[i], 0)) {
+                    greenPawn[i].gotCaptured(i);
+                    grid.add(greenPawns[i], greenPawn[i].getValueX(), greenPawn[i].getValueY(), greenPawn[i].getColspan(), greenPawn[i].getRowspan());
+                } else if (bluePositionIsTheSameAsYellow(bluePawn, yellowPawn[i], 0)) {
                     grid.getChildren().remove(yellowPawns[i]);
-                    yellowP[i].gotCaptured(i);
-                    grid.add(yellowPawns[i], yellowP[i].getValueX(), yellowP[i].getValueY(), yellowP[i].getColspan(), yellowP[i].getRowspan());
+                    yellowPawn[i].gotCaptured(i);
+                    grid.add(yellowPawns[i], yellowPawn[i].getValueX(), yellowPawn[i].getValueY(), yellowPawn[i].getColspan(), yellowPawn[i].getRowspan());
                 }
             }
         } else if (clickedPawnIndex == 13) {
             for (int i=0; i <= 3; i++) {
-                if (bluePositionIsTheSameAsRed(blueP, redP[i], 1)) {
+                if (bluePositionIsTheSameAsRed(bluePawn, redPawn[i], 1)) {
                     grid.getChildren().remove(redPawns[i]);
-                    redP[i].gotCaptured(i);
-                    grid.add(redPawns[i], redP[i].getValueX(), redP[i].getValueY(), redP[i].getColspan(), redP[i].getRowspan());
-                } else if (bluePositionIsTheSameAsGreen(blueP, greenP[i], 1)) {
+                    redPawn[i].gotCaptured(i);
+                    grid.add(redPawns[i], redPawn[i].getValueX(), redPawn[i].getValueY(), redPawn[i].getColspan(), redPawn[i].getRowspan());
+                } else if (bluePositionIsTheSameAsGreen(bluePawn, greenPawn[i], 1)) {
                     grid.getChildren().remove(greenPawns[i]);
-                    greenP[i].gotCaptured(i);
-                    grid.add(greenPawns[i], greenP[i].getValueX(), greenP[i].getValueY(), greenP[i].getColspan(), greenP[i].getRowspan());
-                } else if (bluePositionIsTheSameAsYellow(blueP, yellowP[i], 1)) {
+                    greenPawn[i].gotCaptured(i);
+                    grid.add(greenPawns[i], greenPawn[i].getValueX(), greenPawn[i].getValueY(), greenPawn[i].getColspan(), greenPawn[i].getRowspan());
+                } else if (bluePositionIsTheSameAsYellow(bluePawn, yellowPawn[i], 1)) {
                     grid.getChildren().remove(yellowPawns[i]);
-                    yellowP[i].gotCaptured(i);
-                    grid.add(yellowPawns[i], yellowP[i].getValueX(), yellowP[i].getValueY(), yellowP[i].getColspan(), yellowP[i].getRowspan());
+                    yellowPawn[i].gotCaptured(i);
+                    grid.add(yellowPawns[i], yellowPawn[i].getValueX(), yellowPawn[i].getValueY(), yellowPawn[i].getColspan(), yellowPawn[i].getRowspan());
                 }
             }
         } else if (clickedPawnIndex == 14) {
             for (int i=0; i <= 3; i++) {
-                if (bluePositionIsTheSameAsRed(blueP, redP[i], 2)) {
+                if (bluePositionIsTheSameAsRed(bluePawn, redPawn[i], 2)) {
                     grid.getChildren().remove(redPawns[i]);
-                    redP[i].gotCaptured(i);
-                    grid.add(redPawns[i], redP[i].getValueX(), redP[i].getValueY(), redP[i].getColspan(), redP[i].getRowspan());
-                } else if (bluePositionIsTheSameAsGreen(blueP, greenP[i], 2)) {
+                    redPawn[i].gotCaptured(i);
+                    grid.add(redPawns[i], redPawn[i].getValueX(), redPawn[i].getValueY(), redPawn[i].getColspan(), redPawn[i].getRowspan());
+                } else if (bluePositionIsTheSameAsGreen(bluePawn, greenPawn[i], 2)) {
                     grid.getChildren().remove(greenPawns[i]);
-                    greenP[i].gotCaptured(i);
-                    grid.add(greenPawns[i], greenP[i].getValueX(), greenP[i].getValueY(), greenP[i].getColspan(), greenP[i].getRowspan());
-                } else if (bluePositionIsTheSameAsYellow(blueP, yellowP[i], 2)) {
+                    greenPawn[i].gotCaptured(i);
+                    grid.add(greenPawns[i], greenPawn[i].getValueX(), greenPawn[i].getValueY(), greenPawn[i].getColspan(), greenPawn[i].getRowspan());
+                } else if (bluePositionIsTheSameAsYellow(bluePawn, yellowPawn[i], 2)) {
                     grid.getChildren().remove(yellowPawns[i]);
-                    yellowP[i].gotCaptured(i);
-                    grid.add(yellowPawns[i], yellowP[i].getValueX(), yellowP[i].getValueY(), yellowP[i].getColspan(), yellowP[i].getRowspan());
+                    yellowPawn[i].gotCaptured(i);
+                    grid.add(yellowPawns[i], yellowPawn[i].getValueX(), yellowPawn[i].getValueY(), yellowPawn[i].getColspan(), yellowPawn[i].getRowspan());
                 }
             }
         } else if (clickedPawnIndex == 15) {
             for (int i=0; i <= 3; i++) {
-                if (bluePositionIsTheSameAsRed(blueP, redP[i], 3)) {
+                if (bluePositionIsTheSameAsRed(bluePawn, redPawn[i], 3)) {
                     grid.getChildren().remove(redPawns[i]);
-                    redP[i].gotCaptured(i);
-                    grid.add(redPawns[i], redP[i].getValueX(), redP[i].getValueY(), redP[i].getColspan(), redP[i].getRowspan());
-                } else if (bluePositionIsTheSameAsGreen(blueP, greenP[i], 3)) {
+                    redPawn[i].gotCaptured(i);
+                    grid.add(redPawns[i], redPawn[i].getValueX(), redPawn[i].getValueY(), redPawn[i].getColspan(), redPawn[i].getRowspan());
+                } else if (bluePositionIsTheSameAsGreen(bluePawn, greenPawn[i], 3)) {
                     grid.getChildren().remove(greenPawns[i]);
-                    greenP[i].gotCaptured(i);
-                    grid.add(greenPawns[i], greenP[i].getValueX(), greenP[i].getValueY(), greenP[i].getColspan(), greenP[i].getRowspan());
-                } else if (bluePositionIsTheSameAsYellow(blueP, yellowP[i], 3)) {
+                    greenPawn[i].gotCaptured(i);
+                    grid.add(greenPawns[i], greenPawn[i].getValueX(), greenPawn[i].getValueY(), greenPawn[i].getColspan(), greenPawn[i].getRowspan());
+                } else if (bluePositionIsTheSameAsYellow(bluePawn, yellowPawn[i], 3)) {
                     grid.getChildren().remove(yellowPawns[i]);
-                    yellowP[i].gotCaptured(i);
-                    grid.add(yellowPawns[i], yellowP[i].getValueX(), yellowP[i].getValueY(), yellowP[i].getColspan(), yellowP[i].getRowspan());
+                    yellowPawn[i].gotCaptured(i);
+                    grid.add(yellowPawns[i], yellowPawn[i].getValueX(), yellowPawn[i].getValueY(), yellowPawn[i].getColspan(), yellowPawn[i].getRowspan());
                 }
             }
         }
     }
 
-    private boolean bluePositionIsTheSameAsYellow(Blue[] blueP, Yellow yellowP, int bluePIndex) {
-        return blueP[bluePIndex].getActualPositionIndex() == yellowP.getActualPositionIndex();
+    private boolean bluePositionIsTheSameAsYellow(BluePawn[] bluePawn, YellowPawn yellowPawn, int bluePIndex) {
+        return bluePawn[bluePIndex].getActualPositionIndex() == yellowPawn.getActualPositionIndex();
     }
 
-    private boolean bluePositionIsTheSameAsGreen(Blue[] blueP, Green greenP, int bluePIndex) {
-        return blueP[bluePIndex].getActualPositionIndex() == greenP.getActualPositionIndex();
+    private boolean bluePositionIsTheSameAsGreen(BluePawn[] bluePawn, GreenPawn greenPawn, int bluePIndex) {
+        return bluePawn[bluePIndex].getActualPositionIndex() == greenPawn.getActualPositionIndex();
     }
 
-    private boolean bluePositionIsTheSameAsRed(Blue[] blueP, Red redP, int bluePIndex) {
-        return blueP[bluePIndex].getActualPositionIndex() == redP.getActualPositionIndex();
+    private boolean bluePositionIsTheSameAsRed(BluePawn[] bluePawn, RedPawn redPawn, int bluePIndex) {
+        return bluePawn[bluePIndex].getActualPositionIndex() == redPawn.getActualPositionIndex();
     }
 
-    private boolean yellowPositionIsTheSameAsBlue(Yellow[] yellowP, Blue blueP, int yellowPIndex) {
-        return yellowP[yellowPIndex].getActualPositionIndex() == blueP.getActualPositionIndex();
+    private boolean yellowPositionIsTheSameAsBlue(YellowPawn[] yellowPawn, BluePawn bluePawn, int yellowPIndex) {
+        return yellowPawn[yellowPIndex].getActualPositionIndex() == bluePawn.getActualPositionIndex();
     }
 
-    private boolean yellowPositionIsTheSameAsGreen(Yellow[] yellowP, Green greenP, int yellowPIndex) {
-        return yellowP[yellowPIndex].getActualPositionIndex() == greenP.getActualPositionIndex();
+    private boolean yellowPositionIsTheSameAsGreen(YellowPawn[] yellowPawn, GreenPawn greenPawn, int yellowPIndex) {
+        return yellowPawn[yellowPIndex].getActualPositionIndex() == greenPawn.getActualPositionIndex();
     }
 
-    private boolean yellowPositionIsTheSameAsRed(Yellow[] yellowP, Red redP, int yellowPIndex) {
-        return yellowP[yellowPIndex].getActualPositionIndex() == redP.getActualPositionIndex();
+    private boolean yellowPositionIsTheSameAsRed(YellowPawn[] yellowPawn, RedPawn redPawn, int yellowPIndex) {
+        return yellowPawn[yellowPIndex].getActualPositionIndex() == redPawn.getActualPositionIndex();
     }
 
-    private boolean greenPositionIsTheSameAsBlue(Green[] greenP, Blue blueP, int greenPIndex) {
-        return greenP[greenPIndex].getActualPositionIndex() == blueP.getActualPositionIndex();
+    private boolean greenPositionIsTheSameAsBlue(GreenPawn[] greenPawn, BluePawn bluePawn, int greenPIndex) {
+        return greenPawn[greenPIndex].getActualPositionIndex() == bluePawn.getActualPositionIndex();
     }
 
-    private boolean greenPositionIsTheSameAsYellow(Green[] greenP, Yellow yellowP, int greenPIndex) {
-        return greenP[greenPIndex].getActualPositionIndex() == yellowP.getActualPositionIndex();
+    private boolean greenPositionIsTheSameAsYellow(GreenPawn[] greenPawn, YellowPawn yellowPawn, int greenPIndex) {
+        return greenPawn[greenPIndex].getActualPositionIndex() == yellowPawn.getActualPositionIndex();
     }
 
-    private boolean greenPositionIsTheSameAsRed(Green[] greenP, Red redP, int greenPIndex) {
-        return greenP[greenPIndex].getActualPositionIndex() == redP.getActualPositionIndex();
+    private boolean greenPositionIsTheSameAsRed(GreenPawn[] greenPawn, RedPawn redPawn, int greenPIndex) {
+        return greenPawn[greenPIndex].getActualPositionIndex() == redPawn.getActualPositionIndex();
     }
 
-    private boolean redPositionIsTheSameAsBlue(Red[] redP, Blue blueP, int redPIndex) {
-        return redP[redPIndex].getActualPositionIndex() == blueP.getActualPositionIndex();
+    private boolean redPositionIsTheSameAsBlue(RedPawn[] redPawn, BluePawn bluePawn, int redPIndex) {
+        return redPawn[redPIndex].getActualPositionIndex() == bluePawn.getActualPositionIndex();
     }
 
-    private boolean redPositionIsTheSameAsYellow(Red[] redP, Yellow yellowP, int redPIndex) {
-        return redP[redPIndex].getActualPositionIndex() == yellowP.getActualPositionIndex();
+    private boolean redPositionIsTheSameAsYellow(RedPawn[] redPawn, YellowPawn yellowPawn, int redPIndex) {
+        return redPawn[redPIndex].getActualPositionIndex() == yellowPawn.getActualPositionIndex();
     }
 
-    private boolean redPositionIsTheSameAsGreen(Red[] redP, Green greenP, int redPIndex) {
-        return redP[redPIndex].getActualPositionIndex() == greenP.getActualPositionIndex();
+    private boolean redPositionIsTheSameAsGreen(RedPawn[] redPawn, GreenPawn greenPawn, int redPIndex) {
+        return redPawn[redPIndex].getActualPositionIndex() == greenPawn.getActualPositionIndex();
     }
 
     public void setWhoIsNext(ThrowDice throwDice, OnClickPawn onClickPawn, int clickedPawnIndex) {
